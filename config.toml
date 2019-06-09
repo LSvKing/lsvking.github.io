@@ -2,7 +2,7 @@
 # If you want to see the full configuration, please check `full-config.toml` .
 # And see https://gohugo.io/getting-started/configuration/ .
 
-baseURL = "http://blog.lsvking.com"
+baseURL = "https://blog.lsvking.com"
 title = "龙舍·嬴皇志 - 透过我的双眼看世界"
 enableRobotsTXT = true
 enableEmoji = true
