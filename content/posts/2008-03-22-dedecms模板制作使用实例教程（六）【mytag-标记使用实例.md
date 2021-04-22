@@ -28,7 +28,7 @@ tags:
 我有一个网站模板底部信息，其长度已经超出了系统可以设置的网站版权（cfg_powerby）的长度，但是我想实现一段代码，可以在不同模板（页面）中显示相同内容的效果。   
 我们就可以使用自定义宏标记来实现这个效果   
 如图进行设置：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="450" alt="clip_image001" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-thumb.gif" width="599" border="0" />][1]   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="450" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-thumb.gif" width="599" border="0" />][1]   
 然后我们回到模板制作的界面，将模板中的{dede:global name=&#8217;cfg_powerby&#8217;/}，替换为我们设置的自定义宏标记：   
 {dede:mytag name=&#8217;footer&#8217;/},更新下，是不是已经变为我们设置的标记内容了啊。   
 当然，自定义宏标记里面也可以加入dedecms的标记内容，适合当前栏目的显示内容，不过需要在调用代码中将ismake设为yes才可以，也可以通过设置typeid使自定义宏标记在特定栏目中显示。   
@@ -38,4 +38,4 @@ tags:
 我们将刚才的{dede:mytag name=&#8217;footer&#8217;/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。   
 怎么样，自定义宏标记内容强大吧，相信他的引入会给你的模板制作带来更好的效果。
 
- [1]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-2.gif
+ [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-2.gif

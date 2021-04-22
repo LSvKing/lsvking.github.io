@@ -20,7 +20,7 @@ publishDir = "docs"
     tabWidth = 4
 
 [params]
-subtitle = "Themed by Diary."
+subtitle = "透过我的双眼看世界"
 enableGitalk = true
 
 # Twitter Card and Open Graph settings

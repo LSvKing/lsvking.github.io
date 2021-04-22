@@ -21,14 +21,14 @@ tags:
 我调试的方法是：   
 将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Flink 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。   
 补充：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="379" alt="clip_image001" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image001-thumb.gif" width="555" border="0" />][1]   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="379" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image001-thumb.gif" width="555" border="0" />][1]   
 我调试【Flink 标记】的具体代码如下：   
 全部用文字显示：{dede:flink type=&#8217;textall&#8217; row=&#8217;4&#8217;&#160; titlelen=&#8217;20&#8217;}{/dede:flink}<br />   
 文字和图文混合排列：{dede:flink type=&#8217;textimage&#8217; row=&#8217;4&#8217;&#160; titlelen=&#8217;20&#8217;}{/dede:flink}<br />   
 仅显示不带Logo的链接：{dede:flink type=&#8217;text&#8217; row=&#8217;4&#8217;&#160; titlelen=&#8217;20&#8217;}{/dede:flink}<br />   
 仅显示带Logo的链接：{dede:flink type=&#8217;image&#8217; row=&#8217;4&#8217;&#160; titlelen=&#8217;20&#8217;}{/dede:flink}<br />   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="193" alt="clip_image003" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image003-thumb.gif" width="624" border="0" />][2]
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="193" alt="clip_image003" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image003-thumb.gif" width="624" border="0" />][2]
 
- [1]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image001-2.gif
- [2]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image003-2.gif
+ [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image001-2.gif
+ [2]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image003-2.gif

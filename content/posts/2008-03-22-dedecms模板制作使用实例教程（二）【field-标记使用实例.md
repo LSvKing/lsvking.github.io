@@ -33,7 +33,7 @@ tags:
 <font color="red">主页路径：</font>{dede:field name=&#8217;indexurl&#8217;/}<br/>   
 <font color="red">主页名称：</font>{dede:field name=&#8217;indexname&#8217;/}<br/>   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="231" alt="clip_image001" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-thumb.gif" width="389" border="0" />][1]   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="231" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-thumb.gif" width="389" border="0" />][1]   
 请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。   
 用法二：   
 这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，   
@@ -42,7 +42,7 @@ tags:
 注意：本页面的文字和链接都是经过dede.css处理的<br />   
 <a href="http://bbs.dedecms.com/">织梦论坛</a> <br />   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="94" alt="clip_image002" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-thumb.gif" width="289" border="0" />][2]
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="94" alt="clip_image002" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-thumb.gif" width="289" border="0" />][2]
 
- [1]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-2.gif
- [2]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif
+ [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-2.gif
+ [2]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif

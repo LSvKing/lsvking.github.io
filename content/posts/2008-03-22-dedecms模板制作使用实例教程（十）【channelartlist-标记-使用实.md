@@ -35,7 +35,7 @@ tags:
 </div>   
 {/dede:channelArtlist}   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="345" alt="clip_image001" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannelartlist-1216eclip-image001-thumb.gif" width="555" border="0" />][1]   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="345" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannelartlist-1216eclip-image001-thumb.gif" width="555" border="0" />][1]   
 注意：细心的朋友会发现，使用【Channelartlist 标记】时，需要你对div + css或者table的控制能力较强，否则在页面中很难控制它。请大家他细看下面例2，例1与例2代码上相差很小，但得到的布局却相差很大。仔细对比一下吧！   
 例2   
 我调试【Channelartlist 标记】的具体代码如下：   
@@ -56,7 +56,7 @@ tags:
 </div>   
 {/dede:channelArtlist}   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="256" alt="clip_image002" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannelartlist-1216eclip-image002-thumb.gif" width="604" border="0" />][2]
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="256" alt="clip_image002" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannelartlist-1216eclip-image002-thumb.gif" width="604" border="0" />][2]
 
- [1]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannelartlist-1216eclip-image001-2.gif
- [2]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannelartlist-1216eclip-image002-2.gif
+ [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannelartlist-1216eclip-image001-2.gif
+ [2]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannelartlist-1216eclip-image002-2.gif

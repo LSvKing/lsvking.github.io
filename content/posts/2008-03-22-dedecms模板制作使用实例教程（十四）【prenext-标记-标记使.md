@@ -22,6 +22,6 @@ tags:
 {dede:pagebreak/}<br />   
 {dede:prenext/} <br />   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="307" alt="clip_image001" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-thumb.gif" width="621" border="0" />][1]
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="307" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-thumb.gif" width="621" border="0" />][1]
 
- [1]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-2.gif
+ [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-2.gif

@@ -15,7 +15,7 @@ tags:
 
 【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分&#8220;type = top,sun/son,self &#8221;的所调用的对象就行了。   
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="347" alt="clip_image001" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-thumb.gif" width="438" border="0" />][1]   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="347" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-thumb.gif" width="438" border="0" />][1]   
 使用思路、步骤：   
 一、明确使用范围   
 我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Channel 标记】的使用范围是：   
@@ -29,15 +29,15 @@ tags:
 <a href="[field:typelink/]">[field:typename/]</a>   
 {/dede:channel}   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="103" alt="clip_image002" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image002-thumb.gif" width="237" border="0" />][2]   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="103" alt="clip_image002" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image002-thumb.gif" width="237" border="0" />][2]   
 调用方法二：   
 我调试【imglist标记】的具体代码如下：   
 {dede:channel row=&#8217;3&#8242; type=&#8217;sun&#8217; typeid=&#8217;96&#8217;}   
 <a href="[field:typelink/]">[field:typename/]</a>   
 {/dede:channel}   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="115" alt="clip_image003" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-thumb.gif" width="244" border="0" />][3]
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="115" alt="clip_image003" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-thumb.gif" width="244" border="0" />][3]
 
- [1]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-2.gif
- [2]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image002-2.gif
- [3]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-2.gif
+ [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-2.gif
+ [2]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image002-2.gif
+ [3]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-2.gif

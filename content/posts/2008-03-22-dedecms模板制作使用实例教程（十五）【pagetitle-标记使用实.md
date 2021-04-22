@@ -23,11 +23,11 @@ tags:
 {dede:pagetitle style=&#8217;select&#8217;/}<br />   
 {dede:prenext/} <br />   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="288" alt="clip_image001" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmspagetitle-129b0clip-image001-thumb.gif" width="502" border="0" />][1]   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="288" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmspagetitle-129b0clip-image001-thumb.gif" width="502" border="0" />][1]   
 注意：   
 想要使用【Pagetitle 标记】的前提条件是，文章存在分页，而且要手动在需分的地方加上#p#副标题#e#，实现分页的。   
 而且要将&#8220;#p#副标题#e#&#8221;，替换成相应的标题，如下图较所示。能得到到如上面的返回数据。   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="299" alt="clip_image002" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmspagetitle-129b0clip-image002-thumb.gif" width="358" border="0" />][2]
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="299" alt="clip_image002" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmspagetitle-129b0clip-image002-thumb.gif" width="358" border="0" />][2]
 
- [1]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmspagetitle-129b0clip-image001-2.gif
- [2]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmspagetitle-129b0clip-image002-2.gif
+ [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmspagetitle-129b0clip-image001-2.gif
+ [2]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmspagetitle-129b0clip-image002-2.gif

@@ -39,7 +39,7 @@ imgwidth=&#8217;100&#8242; imgheight=&#8217;80&#8217;}
 <font color="red">文章的缩略图:</font>[field:image/] <br />   
 {/dede:arclist}   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="476" alt="clip_image001" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image001-thumb.gif" width="500" border="0" />][1]   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="476" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image001-thumb.gif" width="500" border="0" />][1]   
 文章篇幅所限，未能列出所有的属性和字段调用的方法。请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。   
 三、【Arclist 标记】延伸出来的别名标记（实用又个性化，建议关注使用）   
 为了使网页内容更具个性化，人性化，官方在【Arclist 标记】的基础上延伸出来一些别外标签，如：hotart、coolart、likeart、artlist、imglist、imginfolist、specart、autolist 。非常好！   
@@ -49,8 +49,8 @@ imgwidth=&#8217;100&#8242; imgheight=&#8217;80&#8217;}
 [field:imglink/]&#160; [field:textlink/]<br />   
 {/dede:imglist}   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="287" alt="clip_image002" src="http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-thumb.gif" width="392" border="0" />][2]   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="287" alt="clip_image002" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-thumb.gif" width="392" border="0" />][2]   
 如上例，其它的别名标记，朋友们可以举一反三，融会贯通！
 
- [1]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image001-2.gif
- [2]: http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-2.gif
+ [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image001-2.gif
+ [2]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-2.gif
