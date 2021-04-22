@@ -27,6 +27,6 @@ tags:
 内容：[field:body/] <br /><br /><br />   
 {/dede:mynews}   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="386" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsmynews-119fdclip-image001-thumb.gif" width="456" border="0" />][1]
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="386" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmynews-119fdclip-image001-thumb.gif" width="456" border="0" />][1]
 
- [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsmynews-119fdclip-image001-2.gif
+ [1]: http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmynews-119fdclip-image001-2.gif

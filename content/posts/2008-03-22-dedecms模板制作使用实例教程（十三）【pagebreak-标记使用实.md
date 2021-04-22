@@ -21,7 +21,7 @@ tags:
 <font color="red">文章内容:</font>{dede:field name="body"/}<br />   
 {dede:pagebreak/}   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="280" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-thumb.gif" width="604" border="0" />][1]   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="280" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-thumb.gif" width="604" border="0" />][1]   
 注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。
 
- [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-2.gif
+ [1]: http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-2.gif

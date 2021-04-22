@@ -30,7 +30,7 @@ tablewidth=’100%’ titlebgcolor=’#EDEDE2′&lt;br&gt;
 titlebackground=” tablebgcolor=’#FFFFFF’}&lt;br&gt;
 {/dede:vote}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsvote-1114fclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsvote-1114fclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
 - https://blog.lsvking.com/137/ - </description>
         </item>
     
@@ -58,7 +58,7 @@ titlebackground=” tablebgcolor=’#FFFFFF’}&lt;br&gt;
 我有一个网站模板底部信息，其长度已经超出了系统可以设置的网站版权（cfg_powerby）的长度，但是我想实现一段代码，可以在不同模板（页面）中显示相同内容的效果。&lt;br&gt;
 我们就可以使用自定义宏标记来实现这个效果&lt;br&gt;
 如图进行设置：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 然后我们回到模板制作的界面，将模板中的{dede:global name=’cfg_powerby’/}，替换为我们设置的自定义宏标记：&lt;br&gt;
 {dede:mytag name=’footer’/},更新下，是不是已经变为我们设置的标记内容了啊。&lt;br&gt;
 当然，自定义宏标记里面也可以加入dedecms的标记内容，适合当前栏目的显示内容，不过需要在调用代码中将ismake设为yes才可以，也可以通过设置typeid使自定义宏标记在特定栏目中显示。&lt;br&gt;

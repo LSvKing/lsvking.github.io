@@ -21,7 +21,7 @@
         <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/125/ -&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分“type = top,sun/son,self ”的所调用的对象就行了。&lt;br&gt;
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
 我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Channel 标记】的使用范围是：&lt;br&gt;
@@ -35,14 +35,14 @@
 &lt;!-- raw HTML omitted --&gt;[field:typename/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 {/dede:channel}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 调用方法二：&lt;br&gt;
 我调试【imglist标记】的具体代码如下：&lt;br&gt;
 {dede:channel row=’3′ type=’sun’ typeid=’96’}&lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;[field:typename/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 {/dede:channel}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
 - https://lsvking.github.io/125/ - This is a customized copyright.</description>
         </item>
     
@@ -76,7 +76,7 @@
 &lt;!-- raw HTML omitted --&gt;主页路径：&lt;!-- raw HTML omitted --&gt;{dede:field name=’indexurl’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;主页名称：&lt;!-- raw HTML omitted --&gt;{dede:field name=’indexname’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。&lt;br&gt;
 用法二：&lt;br&gt;
 这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，&lt;br&gt;
@@ -85,7 +85,7 @@
 注意：本页面的文字和链接都是经过dede.css处理的&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;织梦论坛&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
 - https://lsvking.github.io/118/ - This is a customized copyright.</description>
         </item>
     
@@ -125,7 +125,7 @@ imgwidth=’100′ imgheight=’80’}&lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;文章的缩略图:&lt;!-- raw HTML omitted --&gt;[field:image/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 {/dede:arclist}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 文章篇幅所限，未能列出所有的属性和字段调用的方法。请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。&lt;br&gt;
 三、【Arclist 标记】延伸出来的别名标记（实用又个性化，建议关注使用）&lt;br&gt;
 为了使网页内容更具个性化，人性化，官方在【Arclist 标记】的基础上延伸出来一些别外标签，如：hotart、coolart、likeart、artlist、imglist、imginfolist、specart、autolist 。非常好！&lt;br&gt;
@@ -135,7 +135,7 @@ imgwidth=’100′ imgheight=’80’}&lt;br&gt;
 [field:imglink/]  [field:textlink/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 {/dede:imglist}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 如上例，其它的别名标记，朋友们可以举一反三，融会贯通！&lt;/p&gt;
 - https://lsvking.github.io/109/ - This is a customized copyright.</description>
         </item>

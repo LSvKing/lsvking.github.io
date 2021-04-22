@@ -25,6 +25,6 @@ infolen=&#8217;100&#8242; imgwidth=&#8217;120&#8242; imgheight=&#8217;80&#8217; 
 </ul>   
 {dede:pagelist listsize=&#8217;3&#8242; listitem=&#8217;index pre pageno next end option&#8217;/}   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="362" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmspagelist-1230cclip-image001-thumb.gif" width="624" border="0" />][1]
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="362" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmspagelist-1230cclip-image001-thumb.gif" width="624" border="0" />][1]
 
- [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmspagelist-1230cclip-image001-2.gif
+ [1]: http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmspagelist-1230cclip-image001-2.gif

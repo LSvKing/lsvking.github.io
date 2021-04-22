@@ -54,7 +54,7 @@ categories:
 
 <div class="wlWriterSmartContent" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:03cacfaa-5c8f-44e0-8bab-2f7c42ba7d70" style="padding-right: 0px; display: inline; padding-left: 0px; float: none; padding-bottom: 0px; margin: 0px; padding-top: 0px">
   <p>
-    <a href="http://lsvking.github.iot/wp-content/uploads/2008/02/web11.zip" target="_blank">模板包</a>
+    <a href="http://lsvking.github.io/wp-content/uploads/2008/02/web11.zip" target="_blank">模板包</a>
   </p>
 </div>
 

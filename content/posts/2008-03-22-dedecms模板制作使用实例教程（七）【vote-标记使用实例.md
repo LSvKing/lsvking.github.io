@@ -24,6 +24,6 @@ tablewidth=&#8217;100%&#8217; titlebgcolor=&#8217;#EDEDE2&#8242;
 titlebackground=&#8221; tablebgcolor=&#8217;#FFFFFF&#8217;}   
 {/dede:vote}   
 得到如下返回数据：   
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="166" alt="clip_image001" src="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsvote-1114fclip-image001-thumb.gif" width="403" border="0" />][1]
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="166" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsvote-1114fclip-image001-thumb.gif" width="403" border="0" />][1]
 
- [1]: http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsvote-1114fclip-image001-2.gif
+ [1]: http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsvote-1114fclip-image001-2.gif

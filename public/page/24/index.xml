@@ -19,7 +19,7 @@
         <guid>https://blog.lsvking.com/130/</guid>
         <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/130/ -&lt;p&gt;【Type 标记】表示指定的单个栏目的链接，用法非常简单。&lt;br&gt;
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmstype-102f8clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmstype-102f8clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
 我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Type 标记】的使用范围是：&lt;br&gt;
@@ -35,7 +35,7 @@
 &amp;lt;a href=&#39;[field:typelink /]’&amp;gt;[field:typename/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 {/dede:channel}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmstype-102f8clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmstype-102f8clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 通过以上两行代码的对比，相信你的认识会更深刻。前者是生成单一的数据，后者通过数组生成一组的数据。&lt;/p&gt;
 - https://blog.lsvking.com/130/ - </description>
         </item>
@@ -51,7 +51,7 @@
         <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/125/ -&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分“type = top,sun/son,self ”的所调用的对象就行了。&lt;br&gt;
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
 我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Channel 标记】的使用范围是：&lt;br&gt;
@@ -65,14 +65,14 @@
 &lt;!-- raw HTML omitted --&gt;[field:typename/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 {/dede:channel}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 调用方法二：&lt;br&gt;
 我调试【imglist标记】的具体代码如下：&lt;br&gt;
 {dede:channel row=’3′ type=’sun’ typeid=’96’}&lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;[field:typename/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 {/dede:channel}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
 - https://blog.lsvking.com/125/ - </description>
         </item>
     
@@ -106,7 +106,7 @@
 &lt;!-- raw HTML omitted --&gt;主页路径：&lt;!-- raw HTML omitted --&gt;{dede:field name=’indexurl’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;主页名称：&lt;!-- raw HTML omitted --&gt;{dede:field name=’indexname’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。&lt;br&gt;
 用法二：&lt;br&gt;
 这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，&lt;br&gt;
@@ -115,7 +115,7 @@
 注意：本页面的文字和链接都是经过dede.css处理的&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;织梦论坛&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
 - https://blog.lsvking.com/118/ - </description>
         </item>
     

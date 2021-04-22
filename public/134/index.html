@@ -340,7 +340,7 @@
 我有一个网站模板底部信息，其长度已经超出了系统可以设置的网站版权（cfg_powerby）的长度，但是我想实现一段代码，可以在不同模板（页面）中显示相同内容的效果。<br>
 我们就可以使用自定义宏标记来实现这个效果<br>
 如图进行设置：<br>
-<a href="http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-2.gif"><!-- raw HTML omitted --></a><br>
+<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-2.gif"><!-- raw HTML omitted --></a><br>
 然后我们回到模板制作的界面，将模板中的{dede:global name=’cfg_powerby’/}，替换为我们设置的自定义宏标记：<br>
 {dede:mytag name=’footer’/},更新下，是不是已经变为我们设置的标记内容了啊。<br>
 当然，自定义宏标记里面也可以加入dedecms的标记内容，适合当前栏目的显示内容，不过需要在调用代码中将ismake设为yes才可以，也可以通过设置typeid使自定义宏标记在特定栏目中显示。<br>

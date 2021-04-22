@@ -12,7 +12,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp;&nbsp; FireFox也支持迅雷，不过下东西时左键点击下载地址时，默认情况下会弹出，
 
-[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="142" alt="image" src="http://lsvking.github.iot/wp-content/uploads/2008/04/windowslivewriterfirefox-d2d7image-thumb1.png" width="447" border="0" />][1] 
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="142" alt="image" src="http://lsvking.github.io/wp-content/uploads/2008/04/windowslivewriterfirefox-d2d7image-thumb1.png" width="447" border="0" />][1] 
 
 此操作被浏览器拒绝！
 
@@ -28,4 +28,4 @@ categories:
 
 这样以后再用左键点击迅雷的下载就可以正常使用了
 
- [1]: http://lsvking.github.iot/wp-content/uploads/2008/04/windowslivewriterfirefox-d2d7image-21.png
+ [1]: http://lsvking.github.io/wp-content/uploads/2008/04/windowslivewriterfirefox-d2d7image-21.png

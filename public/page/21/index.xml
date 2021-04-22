@@ -28,7 +28,7 @@
 {dede:pagebreak/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 {dede:prenext/} &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
 - https://blog.lsvking.com/160/ - </description>
         </item>
     
@@ -50,7 +50,7 @@
 &lt;!-- raw HTML omitted --&gt;文章内容:&lt;!-- raw HTML omitted --&gt;{dede:field name=&amp;ldquo;body&amp;rdquo;/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 {dede:pagebreak/}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。&lt;/p&gt;
 - https://blog.lsvking.com/157/ - </description>
         </item>

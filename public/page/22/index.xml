@@ -53,7 +53,7 @@
 内容：[field:body/] &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 {/dede:mynews}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsmynews-119fdclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmynews-119fdclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
 - https://blog.lsvking.com/145/ - </description>
         </item>
     
@@ -75,14 +75,14 @@
 我调试的方法是：&lt;br&gt;
 将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Flink 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。&lt;br&gt;
 补充：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 我调试【Flink 标记】的具体代码如下：&lt;br&gt;
 全部用文字显示：{dede:flink type=’textall’ row=’4’  titlelen=’20’}{/dede:flink}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 文字和图文混合排列：{dede:flink type=’textimage’ row=’4’  titlelen=’20’}{/dede:flink}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 仅显示不带Logo的链接：{dede:flink type=’text’ row=’4’  titlelen=’20’}{/dede:flink}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 仅显示带Logo的链接：{dede:flink type=’image’ row=’4’  titlelen=’20’}{/dede:flink}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
-&lt;a href=&#34;http://lsvking.github.iot/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image003-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image003-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
 - https://blog.lsvking.com/142/ - </description>
         </item>
     
