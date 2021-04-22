@@ -4,6 +4,7 @@ languageCode = "en-us"
 title = "龙舍·嬴皇志 - 透过我的双眼看世界"
 copyright = "This is a customized copyright."
 theme = "diary"
+publishDir = "docs"
 # googleAnalytics = "UA-123-45"
 
 [markup]
