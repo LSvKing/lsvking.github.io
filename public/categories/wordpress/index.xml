@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WordPress on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/categories/wordpress/</link>
+    <description>Recent content in WordPress on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 22 Jul 2008 13:00:18 +0000</lastBuildDate><atom:link href="https://blog.lsvking.com/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为simple-tags添加多彩标签云</title>
+      <link>https://blog.lsvking.com/283/</link>
+      <pubDate>Tue, 22 Jul 2008 13:00:18 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/283/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>给博客加上每日一句学英语功能！</title>
+      <link>https://blog.lsvking.com/262/</link>
+      <pubDate>Sun, 20 Jul 2008 00:26:23 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/262/</guid>
+      <description>在本博客右边栏最上边的那个每日一句，当鼠标划过小喇叭还会真人发音，这个其实是用了dict.cn提供的一个小工具，应用起来很简单，将 这段代码放</description>
+    </item>
+    
+    <item>
+      <title>《龟虽寿》-竖文插件。</title>
+      <link>https://blog.lsvking.com/237/</link>
+      <pubDate>Fri, 18 Jul 2008 15:08:13 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/237/</guid>
+      <description>[shuwen10]神龟虽寿，猷有竟时。腾蛇乘雾，终为土灰。老骥伏枥，志在千里；烈士暮年，壮心不已。盈缩之期，不但在天；养怡之福，可得永年。</description>
+    </item>
+    
+    <item>
+      <title>WordPress自动升级插件 wordpress automatic upgrade</title>
+      <link>https://blog.lsvking.com/229/</link>
+      <pubDate>Fri, 18 Jul 2008 13:44:56 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/229/</guid>
+      <description>今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。 将下载的文件</description>
+    </item>
+    
+    <item>
+      <title>WordPress 2.6 正式版及中文版发布</title>
+      <link>https://blog.lsvking.com/219/</link>
+      <pubDate>Thu, 17 Jul 2008 14:13:51 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/219/</guid>
+      <description>对于 WordPress 的爱好者而言，今天又是一个值得庆贺的日子。WordPress 团队刚刚发布了令人期待的 WordPress 2.6 正式版。这是 WordPress 又一个重要的版本。根据此版本，我</description>
+    </item>
+    
+    <item>
+      <title>测试wp-t-wap插件</title>
+      <link>https://blog.lsvking.com/207/</link>
+      <pubDate>Tue, 22 Apr 2008 15:30:21 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/207/</guid>
+      <description>为了给博客增加个wap功能给博客装了个wp-wap在搜索相关信息时无意间出现了一款叫做wp-t-wap得插件，这也是一款使wp实现wap功能</description>
+    </item>
+    
+    <item>
+      <title>100个优秀的免费 WordPress 主题</title>
+      <link>https://blog.lsvking.com/71/</link>
+      <pubDate>Mon, 28 Jan 2008 16:10:21 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/71/</guid>
+      <description>&lt;p&gt;   今天来转一篇伟大的文章，虽然我每一次转的文章都很伟大，这一篇写的确实让我佩服，收集这么多东西在一起是件十分费神的体力活，我这种懒人自然只会转啦，不说废话了，这100个主题都是英文的，我看了下里边也有咱们中国的，但不知道为什么做的都是英文的。&lt;/p&gt;
+&lt;p&gt;我是从&lt;a href=&#34;http://jandan.net&#34;&gt;煎蛋&lt;/a&gt;先生那里看到的&lt;a href=&#34;http://jandan.net/2008/01/09/100-excellent-free-wordpress-themes.html&#34;&gt;这篇文章&lt;/a&gt;，他说原作者是&lt;a href=&#34;http://www.smashingmagazine.com/2008/01/08/100-excellent-free-high-quality-wordpress-themes/&#34;&gt;SmashingMagazine&lt;/a&gt;，我也不太认识这位先生，在这里就都谢过啦～&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WordPress 2.4? 不，是 WordPress 2.5</title>
+      <link>https://blog.lsvking.com/68/</link>
+      <pubDate>Sun, 06 Jan 2008 07:51:03 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/68/</guid>
+      <description>下面是 Matt Mullenweg 在 WordPress Hackers 邮件列表中给出的信息。 In light of the big changes happening in the codebase and admin section, we’re going to push back the next release to be aimed for early March. This is the timeframe when 2.5 was originally schedule for, so we’re treating the originally planned</description>
+    </item>
+    
+  </channel>
+</rss>

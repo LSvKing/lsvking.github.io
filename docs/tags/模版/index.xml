@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>模版 on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>http://example.org/tags/%E6%A8%A1%E7%89%88/</link>
+    <description>Recent content in 模版 on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This is a customized copyright.</copyright>
+    <lastBuildDate>Sat, 22 Mar 2008 21:13:29 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E6%A8%A1%E7%89%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DedeCMS模板制作使用实例教程（十五）【Pagetitle 标记使用实例】</title>
+      <link>http://example.org/165/</link>
+      <pubDate>Sat, 22 Mar 2008 21:13:29 +0000</pubDate>
+      
+      <guid>http://example.org/165/</guid>
+      <description>【Pagetitle 标记】
+功能说明：表示获取文档的分页标题
+适用范围：仅文档模板。
+通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Pagetitle 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
+我调试【Pagetitle 标记】的具体代码如下：
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagetitle style=’select’/}{dede:prenext/} 得到如下返回数据：
+
+注意：
+想要使用【Pagetitle 标记】的前提条件是，文章存在分页，而且要手动在需分的地方加上#p#副标题#e#，实现分页的。
+而且要将“#p#副标题#e#”，替换成相应的标题，如下图较所示。能得到到如上面的返回数据。</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（十四）【Prenext 标记 标记使用实例】</title>
+      <link>http://example.org/160/</link>
+      <pubDate>Sat, 22 Mar 2008 21:08:15 +0000</pubDate>
+      
+      <guid>http://example.org/160/</guid>
+      <description>【Prenext 标记】表示获取文档“上一篇／下一篇”的链接列表。
+适用范围：仅文档模板。
+通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Prenext 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
+我调试【Pagelist 标记】的具体代码如下：
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagebreak/}{dede:prenext/} 得到如下返回数据：</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（十三）【Pagebreak 标记使用实例】</title>
+      <link>http://example.org/157/</link>
+      <pubDate>Sat, 22 Mar 2008 20:49:16 +0000</pubDate>
+      
+      <guid>http://example.org/157/</guid>
+      <description>【Pagebreak 标记】表示文档的分页链接列表。
+适用范围：仅文档模板。
+通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
+我调试【Pagelist 标记】的具体代码如下：
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagebreak/}
+得到如下返回数据：
+
+注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（十二）【Pagelist 标记使用实例】</title>
+      <link>http://example.org/154/</link>
+      <pubDate>Sat, 22 Mar 2008 20:44:49 +0000</pubDate>
+      
+      <guid>http://example.org/154/</guid>
+      <description>【Pagelist 标记】表示分页页码列表
+适用范围：列表模板
+通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新栏目HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。
+我调试【Pagelist 标记】的具体代码如下：</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（十）【Channelartlist 标记 使用实例】</title>
+      <link>http://example.org/151/</link>
+      <pubDate>Sat, 22 Mar 2008 20:38:28 +0000</pubDate>
+      
+      <guid>http://example.org/151/</guid>
+      <description>【Channelartlist 标记】用于获取当前频道的下级栏目的内容列表。该标记在封面模板（包括主页）中的经常被用到，具体用法见下面实例。
+除了宏标记外，channelArtlist 是唯一一个可以直接嵌套其它标记的标记，不过仅限于嵌套 {dede:type}{/dede:type} 和 {dede:arclist}{/dede:arclist} 两个标记。
+通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Channelartlist 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。
+例1
+我调试【Channelartlist 标记】的具体代码如下：
+{dede:channelArtlist typeid=&amp;ldquo;94&amp;rdquo; col=&amp;ldquo;1&amp;rdquo;}</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（九）【Mynews 标记 使用实例】</title>
+      <link>http://example.org/145/</link>
+      <pubDate>Sat, 22 Mar 2008 20:06:15 +0000</pubDate>
+      
+      <guid>http://example.org/145/</guid>
+      <description>【Mynews 标记】用于获取站内新闻。
+站内新闻有利于站长及时与会员沟通。
+使用思路、步骤：
+一、明确使用范围
+我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Mynews 标记】的使用范围是：
+封面模板
+二、通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Mynews 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。
+我调试【Mynews 标记】的具体代码如下：
+{dede:mynews row=’2′ titlelen=’30’}标题：[field:title/] 作者：[field:writer/] 时间：[field:senddate function=&amp;ldquo;strftime(‘%y-%m-%d %H:%M’,@me)&amp;quot;/] 内容：[field:body/] {/dede:mynews}
+得到如下返回数据：</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（八）【Flink 标记使用实例】</title>
+      <link>http://example.org/142/</link>
+      <pubDate>Sat, 22 Mar 2008 20:04:25 +0000</pubDate>
+      
+      <guid>http://example.org/142/</guid>
+      <description>【Flink 标记】用于获取友情链接。
+调用该标记后可以得到四种友情链接的形式。
+使用思路、步骤：
+一、明确使用范围
+我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Flink 标记】的使用范围是：
+封面模板
+二、通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Flink 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。
+补充：
+
+我调试【Flink 标记】的具体代码如下：
+全部用文字显示：{dede:flink type=’textall’ row=’4’ titlelen=’20’}{/dede:flink}文字和图文混合排列：{dede:flink type=’textimage’ row=’4’ titlelen=’20’}{/dede:flink}仅显示不带Logo的链接：{dede:flink type=’text’ row=’4’ titlelen=’20’}{/dede:flink}仅显示带Logo的链接：{dede:flink type=’image’ row=’4’ titlelen=’20’}{/dede:flink}得到如下返回数据：</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（七）【Vote 标记使用实例】</title>
+      <link>http://example.org/137/</link>
+      <pubDate>Sat, 22 Mar 2008 19:29:03 +0000</pubDate>
+      
+      <guid>http://example.org/137/</guid>
+      <description>【Vote 标记】用于获取一组投票表单。
+其使用范围限于：封面模板。
+可先进入后台，按下面操作方法填写好调查内容：
+辅助插件–&amp;gt;投票模块–&amp;gt;增加一组投票
+通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Vote 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。
+我调试【Channel 标记】的具体代码如下：
+{dede:vote id=’2′ lineheight=’22’
+tablewidth=’100%’ titlebgcolor=’#EDEDE2′
+titlebackground=” tablebgcolor=’#FFFFFF’}
+{/dede:vote}
+得到如下返回数据：</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（六）【Mytag 标记使用实例】</title>
+      <link>http://example.org/134/</link>
+      <pubDate>Sat, 22 Mar 2008 19:20:13 +0000</pubDate>
+      
+      <guid>http://example.org/134/</guid>
+      <description>自定义宏标记【Mytag 标记】的作用：
+可以将模板中多次出现的相同元素用一个自定义标记表示出来，从而达到，一次更改，全局更换的效果。辅助插件的广告管理也有相似的效果。
+今天天涯来介绍下自定义宏标记的应用，大家可以进入后台，在“模板管理”-》“自定义宏标记”中查看到该选项。
+自定义宏标记的作用：
+可以将模板中多次出现的相同元素用一个自定义标记表示出来，从而达到，一次更改，全局更换的效果。辅助插件的广告管理也有相似的效果。
+适用范围：
+网页模板中多次出现的相同元素，例如：网站的导航条、网站的站点公告、网站的底部信息等，在我之前发布的几套模板中都运用到了自定义宏标记。
+自定义宏标记的调用办法：
+{dede:mytag name=’标记名称’ ismake=’是否含板块代码（yes 或 no）’ typeid=’栏目ID’/}
+1、name 标记名称，该项是必须的属性，以下 2、3是可选属性；
+2、ismake 默认是 no 表示设定的纯HTML代码， yes 表示含板块标记的代码；
+3、typeid 表示所属栏目的ID，默认为 0 ，表示所有栏目通用的显示内容，在列表和文档模板中，typeid默认是这个列表或文档本身的栏目ＩＤ。
+下面来通过一个实例进行说明：
+我有一个网站模板底部信息，其长度已经超出了系统可以设置的网站版权（cfg_powerby）的长度，但是我想实现一段代码，可以在不同模板（页面）中显示相同内容的效果。
+我们就可以使用自定义宏标记来实现这个效果
+如图进行设置：
+
+然后我们回到模板制作的界面，将模板中的{dede:global name=’cfg_powerby’/}，替换为我们设置的自定义宏标记：
+{dede:mytag name=’footer’/},更新下，是不是已经变为我们设置的标记内容了啊。
+当然，自定义宏标记里面也可以加入dedecms的标记内容，适合当前栏目的显示内容，不过需要在调用代码中将ismake设为yes才可以，也可以通过设置typeid使自定义宏标记在特定栏目中显示。
+有人会问，我已经生成了很多页面了，现在想更改了一下自定义宏标记的内容，那岂不是要更改后重新再生成一遍，那样就不方便了。
+其实柏拉图早就考虑到这点，在自定义宏标记中可以使用javascript调用，这样以来，只要改变一次就可以实现全局改变的效果。
+具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&amp;lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&amp;gt;我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
+怎么样，自定义宏标记内容强大吧，相信他的引入会给你的模板制作带来更好的效果。</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（五）【Autochannel 标记使用实例】</title>
+      <link>http://example.org/131/</link>
+      <pubDate>Sat, 22 Mar 2008 19:16:50 +0000</pubDate>
+      
+      <guid>http://example.org/131/</guid>
+      <description>{dede:autochannel partsort=’1’/}
+{dede:channel typeid=’1′} [field:typename/] {/dede:channel}
+{dede:autolist row=12 titlelen=38 orderby=pubdate partsort=’1′}
+[field:textlink/] {/dede:autolist}
+autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排列顺序为某位置，它是栏目排列的位置，不是ID，这样的好处是，没有某个ID，只要有足够的栏目，也会显示内容，这个标记如果加了 typeid，则变成获取特定栏目的子栏目的这个排序位置的内容了</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（四）【Type 标记使用实例】</title>
+      <link>http://example.org/130/</link>
+      <pubDate>Sat, 22 Mar 2008 18:28:03 +0000</pubDate>
+      
+      <guid>http://example.org/130/</guid>
+      <description>【Type 标记】表示指定的单个栏目的链接，用法非常简单。
+说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：
+
+使用思路、步骤：
+一、明确使用范围
+我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Type 标记】的使用范围是：
+封面模板、列表模板、文档模板。
+通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Type 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。
+我调试【Channel 标记】的具体代码如下：
+{dede:type typeid=’96’}{/dede:type}
+{dede:channel typeid=’96’}
+&amp;lt;a href=&#39;[field:typelink /]’&amp;gt;[field:typename/]{/dede:channel}
+得到如下返回数据：
+
+通过以上两行代码的对比，相信你的认识会更深刻。前者是生成单一的数据，后者通过数组生成一组的数据。</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（三）【Channel 标记使用实例】</title>
+      <link>http://example.org/125/</link>
+      <pubDate>Sat, 22 Mar 2008 18:03:48 +0000</pubDate>
+      
+      <guid>http://example.org/125/</guid>
+      <description>【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分“type = top,sun/son,self ”的所调用的对象就行了。
+说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：
+
+使用思路、步骤：
+一、明确使用范围
+我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Channel 标记】的使用范围是：
+封面模板、列表模板、文档模板。
+二、通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Channel 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。
+调用方法一：
+我调试【Channel 标记】的具体代码如下：
+{dede:channel row=’3′ type=’top’}
+[field:typename/]{/dede:channel}
+得到如下返回数据：
+
+调用方法二：
+我调试【imglist标记】的具体代码如下：
+{dede:channel row=’3′ type=’sun’ typeid=’96’}
+[field:typename/]{/dede:channel}
+得到如下返回数据：</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（二）【Field 标记使用实例】</title>
+      <link>http://example.org/118/</link>
+      <pubDate>Sat, 22 Mar 2008 17:54:06 +0000</pubDate>
+      
+      <guid>http://example.org/118/</guid>
+      <description>【Field 标记】在封面模板、列表模板、文档模板的使用频率很高，实用。主要用来获得到系统变量的值或者路径，用法很灵活。可以直接展示数据，如调用 position，得到栏目一 &amp;gt; 栏目二” 这样形式的链接；或者，调用templeturl得到/templets这样路径。
+使用思路、步骤：
+一、明确使用范围
+我们在使用【Field 标记】的过程中，必须明确其使用的范围，否则可能无法正常调用该标签，其使用范围是：
+封面模板（如index_article.htm）、列表模板（如list_article.htm）、文档模板（如article_article.htm）。
+index_article.htm、list_article.htm、article_article.htm等类似的模板文档都在templets\default\文件夹中。
+注意：
+1、封面模板与列表模板是有区别的，但调用【Field 标记】可以相同；
+2、封面模板有不同的类型，我们最常用的是文章模板（index_article.htm），其它的还有图片模板（index_image.htm），简 介模板（index_info.htm），软件模板（index_soft.htm）等等，这些模板调用【Field 标记】的道理都是一样的。
+二、通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Field 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新栏目HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。
+用法一：
+这种用法，主要是从数据库获取相关的数据，特别是系统变量的数据。
+我调试【Arclist 标记】的具体代码如下：
+调用position标记,得到:栏目一 &amp;gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}插件路径：{dede:field name=’phpurl’/}模板路径：{dede:field name=’templeturl’/}版权信息：{dede:field name=’powerby’/}主页路径：{dede:field name=’indexurl’/}主页名称：{dede:field name=’indexname’/}得到如下返回数据：
+
+请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。
+用法二：
+这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，
+我调试【Arclist 标记】的具体代码如下：
+注意：本页面的文字和链接都是经过dede.css处理的织梦论坛得到如下返回数据：</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（一）【Arclist 标记使用实例】</title>
+      <link>http://example.org/109/</link>
+      <pubDate>Sat, 22 Mar 2008 17:36:00 +0000</pubDate>
+      
+      <guid>http://example.org/109/</guid>
+      <description>从本文开始，我将根据我的学习心得写一系列的实例教程。通过实例说明DedeCMS标记的使用方法。本实例教程使用的版本是DedeCms 2007 V5.0版，在本地架设的php+mysql （APMServ）环境中测试。安装、架设等相关方法参阅寂寞天涯的整理：http://bbs.dedecms.com/read.php?tid=33332。以后一系列教程都是在这个环境中使用，不再重复。因测试需要数据，我已事先在数据库录入，就不理啰嗦，马上进入正题。
+现在先讲【Arclist 标记】。【Arclist 标记】是使用率很高，相当实用，所以我们使用都必须熟练掌握。它的详细使用说明在官方Dedecms文档中已经有严密的解释，见：http://www.dedecms.com/archives/templethelp/help/index.htm，我们在使用过程中可以随时查阅。
+使用思路、步骤：
+一、明确使用范围
+我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Arclist 标记】的使用范围是：
+封面模板、列表模板、文档模板。
+即对应templets\default\文件夹下的
+index_识别ID.htm模板、list_识别ID.htm模板、article_识别ID.htm模板）
+二、通过调试了解其使用方法
+我调试的方法是：
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Arclist 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。
+注意：其它文件保持不变，我不懂PHP，只能用这种方式调试，相信朋友们很容易上手的。
+我调试【Arclist 标记】的具体代码如下：
+{dede:arclist typeid=” row=’1’ titlelen=’20’ infolen=”
+imgwidth=’100′ imgheight=’80’}
+文章ID:[field:ID/] 文章标题:[field:title/] 文章短标题:[field:shorttitle/] 文章标题的文字链接:[field:textlink/] 文章作者:[field:writer/] 文章发表日期:[field:stime/] 文章所属栏目的目录:[field:typedir/] 文章所属栏目的名称:[field:typename/] 文章所属栏目的文字链接:[field:typelink/] 文章的图片链接:[field:imglink/] 文章的缩略图:[field:image/] {/dede:arclist}
+得到如下返回数据：
+
+文章篇幅所限，未能列出所有的属性和字段调用的方法。请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。
+三、【Arclist 标记】延伸出来的别名标记（实用又个性化，建议关注使用）
+为了使网页内容更具个性化，人性化，官方在【Arclist 标记】的基础上延伸出来一些别外标签，如：hotart、coolart、likeart、artlist、imglist、imginfolist、specart、autolist 。非常好！
+我调试【imglist标记】的具体代码如下：
+{dede:imglist typeid=” row=’2′ col=’1’ titlelen=’20’ infolen=”
+imgwidth=’100′ imgheight=’80’}
+[field:imglink/] [field:textlink/]{/dede:imglist}
+得到如下返回数据：
+
+如上例，其它的别名标记，朋友们可以举一反三，融会贯通！</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程  序</title>
+      <link>http://example.org/108/</link>
+      <pubDate>Sat, 22 Mar 2008 17:21:34 +0000</pubDate>
+      
+      <guid>http://example.org/108/</guid>
+      <description>1、怎样调用数据？
+DedeCMS是大型的动态网站程序，其数据主要在存储在数据库中的，做模板就必须知道，数据是如何从数据库读取并展示在大家面前的。官方写了很多程序，将数据的提取过程变得相当简单。大家只要懂得调用适当的&amp;quot;DedeCMS标记&amp;quot;就可以调取相应的数据。调用&amp;quot;DedeCMS标记&amp;quot;的三种代码样式：
+A、{dede:标记名称 属性=’值’/}
+B、{dede:标记名称 属性=’值’}{/dede:标记名称}
+C、{dede:标记名称 属性=’值’}自定义样式模板(InnerText){/dede:标记名称}
+详细的说明参阅官方文件：http://www.dedecms.com/archives/templethelp/help/index.htm。使用时可随时查阅该文档。
+我自己想出了一种方法来加深认识，并通过实例调试这些标签，这样认识就比其它人更深一层次。
+具体方法是：
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入自己想要调试的标签，再在IE中访问网站主页index.php，就可以得到返回的数据。
+比如：
+a、放入标签{dede:global name=&amp;ldquo;cfg_webname&amp;rdquo; /}就得到了“网站名称”
+b、放入标签{dede:artlist typeid=” row=5}[field:title/]{/dede:artlist}就返回5篇文章的标题。
+c、放入标签{dede:arclist infolen=’100′ row=5}[field:textlink/][field:info/]{/dede:arclist}就返回5篇文章的标题和相应的内容简介
+注意：abc实例是与上面ABC三种形式相对应的。大家可以按照官方的文档，逐个测试，举一反三。
+至于DedeCMS程序是怎样实现的，我不懂PHP，搞不清楚，我觉得也没必要全都弄懂，搞模板的就专心搞模板，程序的归由技术人员去处理。
+搞清楚上面内容，基本上就会调用数据库中自己需要的数据了。
+在这里还必须搞清楚DedeCMS模板的不同类型的标记。
+寂寞天涯把标记分为两种不同的类型，详细内容见http://bbs.dedecms.com/read.php?tid=51186
+2、怎样将网站内容展示给访问者？
+访问网的朋友希望看到的是经过组织的完整和系统的内容，而不是散落的各种数据。所以我们就必须将数据组织在一个网页中，DedeCMS的强大就在于通过某一PHP页面，调用相对应的htm页面，将数据库数据有组织的生成在一个静态网页（档案页）中。
+比如：网站主页的模板就是templets\default\index.html，DedeCMS通过根目录中的index.php文件调用相应的程序，获取数据库的数据，生成主页。
+上面是生成主页的大概过程，其它页面的生成都是一样的道理。
+相关的模板有：
+A、主页模板
+B、板块（封面）模板
+C、列表模板
+D、档案模板
+E、搜索模板
+F、ＲＳＳ功能模板
+G、ＪＳ编译功能模板
+H、站内新闻发布模板
+I、友情链接模板
+J、留言簿模板
+…… ……
+注意：上面这些模板都是通过相对应的PHP程序来调用并生成网页实现其功能的，这些模板主要集中在templets\default\和templets \plus\文件夹中，详细情况请朋友自己查询。修改这两个文件夹中的模板文件，就可以得到各种各样自己想要的网页的样式，想要多漂亮就能有多漂亮，当然要看你的技术水平了！呵呵
+看到这么多样化的模板，有的人可能就傻眼了，觉得很乱，其实，你只要把网站的页面分为三个级别就起到一个提纲挈领的作用了。即理解成类似于：【主页=&amp;gt;列表页=&amp;gt;档案页】就行了。即官方所说的“板块（封面）模板、列表模板、档案模板”三种不同的级别。
+3、如何根据自己的需要制作网站？
+网站的功能主要靠程序来实现，这方面当然有赖于柏拉图带领下的DedeCMS技术人员了，希望功能越来越多，越来越人性化，加油！！！
+根据客户提出的要求，调用相关的标签……
+DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合的网站……
+4、精通模板制作需要哪方面的基本知识？
+我个人认为，做模板的只要懂得html,css，美工等基本的常识就行了。
+比如……
+我已经用“DedeCms OX V4.0版”制作了两个网站:www.0750ly.com,www.tour-tibet.org 但都是修改别人的模板，我自己也相当不满意，希望这次认真学习DedeCms模板制作后，能有质的飞跃，拥有一个漂亮的综合网站。
+对建站和DedeCms模板制作有兴趣的朋友，请加我的群51584591，一起讨论，共同进步！
+小贴士：
+不懂的地方一定要充分利用搜索引擎和论坛搜索功能或者向技术人员提问。
+本教程适合超级菜鸟，高手飘过！
+ 原作者wwwlikespcn</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,77 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>WordPress自动升级插件 wordpress automatic upgrade</title>
+        <link>https://blog.lsvking.com/229/</link>
+        <pubDate>Fri, 18 Jul 2008 13:44:56 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/229/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/229/ -&lt;p&gt;  今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。&lt;/p&gt;
+&lt;p&gt;  将下载的文件传到插件目录下，启动插件，一直Next就差不多了，第一步他会备份数据库的，会给出个下载地址，大家最好下载到本地。我升级完后却怎么也登录不上后台了，想了一下清除了下Cookie就OK了。&lt;/p&gt;
+&lt;p&gt;他是从官方下载的版本安装的，大家安装完后，自己在去下中文包吧。&lt;/p&gt;
+&lt;p&gt;此插件是经过了如下几个步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;1.备份数据库和文件到本地。&lt;/li&gt;
+&lt;li&gt;2.从 &lt;a href=&#34;http://wordpress.org/latest.zip&#34;&gt;http://wordpress.org/latest.zip&lt;/a&gt; 下载最新的补丁并解压。&lt;/li&gt;
+&lt;li&gt;3.将你的站点设置为维护状态，主页被提示更新页暂时替换。&lt;/li&gt;
+&lt;li&gt;4.锁定所有插件。&lt;/li&gt;
+&lt;li&gt;5.后台更新 WordPress。&lt;/li&gt;
+&lt;li&gt;6.在新窗口中显示更新后主页&lt;/li&gt;
+&lt;li&gt;7.自动激活所有插件(按照 Keith 所说这一步应该可以实现，但是在我的 BLOG 上并没有完成，所有插件最后还是由我手动激活)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;个人角度来看，这款插件在很大程度上解决了因为 WordPress 版本更新的问题，而且最大限度的避免了数据和文件的丢失(其备份的过程和 WordPress Database Backup 插件基本类似)。由于使用 FTP 来进行更新操作，所以更新完成的速度也是很快的(我的BLOG更新大约前后用了不到一分钟)，基本不会因为更新而导致你的站点无法访问。&lt;/p&gt;
+&lt;p&gt;下载地址:&lt;a href=&#34;http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/&#34; title=&#34;http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/&#34;&gt;http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本站下载:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+- https://blog.lsvking.com/229/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>批量下载picasa相册中的图片</title>
+        <link>https://blog.lsvking.com/224/</link>
+        <pubDate>Fri, 18 Jul 2008 13:14:27 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/224/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/224/ -&lt;p&gt;今天想把Picasa相册中的图片备份下来，但一个一个下还不累死，于是Google了一下，找到了这个方法。&lt;/p&gt;
+&lt;p&gt;一直想把picasa网络相册上的图片下载回来,一张一张的下不是咱们的风格,刚开始想用asp解析相册的rss,然后输出真实地址用迅雷批量下载,然而 真正的图片地址保存在名字空间当中,搜索了很长时间也没找到读取名字空间里的数据的办法,最后放弃了,后来偶尔听人说英文版的picasaweb曾经有过 批量下载功能,后来可能是因为占资源太大取消了,我抱着试试看的想法查看了一下源代码&lt;del&gt;&lt;del&gt;结果&lt;/del&gt;&lt;/del&gt;真的有批量下载的链接,只不过所在的层被隐藏了,说 了这么多没用的,下边是具体方法:&lt;br&gt;
+1.首先下载软件版的picasa,因为批量下载的地址是picasa的专用地址~~&lt;br&gt;
+点击下边的图标下载picasa&lt;br&gt;
+2.打开你要下载的相册,点击右键查看源代码.搜索&amp;quot;下载相册&amp;quot;,搜索结果前边有个类似这样的地址picasa://downloadfeed /?url=http%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fback_compat%2Fuser%2Fluyeah521%2Falbumid&lt;/p&gt;
+&lt;p&gt;%2F5048183041609230097%3Fkind%3Dphoto%26alt%3Drss%26imgdl%3D1&lt;br&gt;
+这就是下册的批量下载地址&lt;br&gt;
+3.在确认软件版picasa打开的情况下,把上边的链接复制到地址栏,稍等片刻软件版picasa就会弹出一个窗口问你是否要将此相册下载到您的计算机,直接点下载,然后就慢慢等把~~&lt;br&gt;
+&lt;img src=&#34;http://www.killadm.com/upload/pic/picasa.jpg&#34; alt=&#34;麓&#34;&gt;&lt;/p&gt;
+- https://blog.lsvking.com/224/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Fs2you下载小帮手</title>
+        <link>https://blog.lsvking.com/220/</link>
+        <pubDate>Thu, 17 Jul 2008 14:15:58 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/220/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/220/ -&lt;p&gt;一款用于分析Fs2you网络硬盘真实下载地址的工具，Fs2you网络硬盘的用户越来越多，因为它的速度快和不限制文件大小得到了网友们的青睐，但是人气高了，文件动不动就要安装他们自己的下载工具才能下载，很郁闷。&lt;/p&gt;
+&lt;p&gt;于是写了这款简单的工具，原理非常简单源码分析而已，希望对大家有用。&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+- https://blog.lsvking.com/220/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/categories/linux/</link>
+    <description>Recent content in Linux on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 16 Dec 2013 15:18:00 +0000</lastBuildDate><atom:link href="https://blog.lsvking.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>awk切割字符串后赋值给shell变量的方法</title>
+      <link>https://blog.lsvking.com/939/</link>
+      <pubDate>Mon, 16 Dec 2013 15:18:00 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/939/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux压缩Tar命令介绍</title>
+      <link>https://blog.lsvking.com/932/</link>
+      <pubDate>Thu, 13 Oct 2011 03:18:00 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/932/</guid>
+      <description>tar命令</description>
+    </item>
+    
+  </channel>
+</rss>

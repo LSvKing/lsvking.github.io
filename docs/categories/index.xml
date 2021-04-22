@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>http://example.org/categories/</link>
+    <description>Recent content in Categories on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This is a customized copyright.</copyright>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>技术</title>
+      <link>http://example.org/categories/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Mon, 05 Sep 2016 15:41:13 +0000</pubDate>
+      
+      <guid>http://example.org/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>杂谈</title>
+      <link>http://example.org/categories/%E6%9D%82%E8%B0%88/</link>
+      <pubDate>Thu, 24 Sep 2015 07:20:47 +0000</pubDate>
+      
+      <guid>http://example.org/categories/%E6%9D%82%E8%B0%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>http://example.org/categories/go/</link>
+      <pubDate>Wed, 09 Apr 2014 07:25:00 +0000</pubDate>
+      
+      <guid>http://example.org/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://example.org/categories/linux/</link>
+      <pubDate>Mon, 16 Dec 2013 15:18:00 +0000</pubDate>
+      
+      <guid>http://example.org/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网络</title>
+      <link>http://example.org/categories/%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Tue, 09 Aug 2011 02:42:09 +0000</pubDate>
+      
+      <guid>http://example.org/categories/%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>资源</title>
+      <link>http://example.org/categories/%E8%B5%84%E6%BA%90/</link>
+      <pubDate>Tue, 15 Mar 2011 13:57:00 +0000</pubDate>
+      
+      <guid>http://example.org/categories/%E8%B5%84%E6%BA%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件</title>
+      <link>http://example.org/categories/%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Tue, 15 Mar 2011 13:57:00 +0000</pubDate>
+      
+      <guid>http://example.org/categories/%E8%BD%AF%E4%BB%B6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>http://example.org/categories/mysql/</link>
+      <pubDate>Wed, 09 Mar 2011 06:39:56 +0000</pubDate>
+      
+      <guid>http://example.org/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>http://example.org/categories/php/</link>
+      <pubDate>Tue, 26 Oct 2010 05:15:49 +0000</pubDate>
+      
+      <guid>http://example.org/categories/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>游戏</title>
+      <link>http://example.org/categories/%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Thu, 30 Jul 2009 17:25:46 +0000</pubDate>
+      
+      <guid>http://example.org/categories/%E6%B8%B8%E6%88%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前端</title>
+      <link>http://example.org/categories/%E5%89%8D%E7%AB%AF/</link>
+      <pubDate>Mon, 28 Jul 2008 14:02:21 +0000</pubDate>
+      
+      <guid>http://example.org/categories/%E5%89%8D%E7%AB%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WordPress</title>
+      <link>http://example.org/categories/wordpress/</link>
+      <pubDate>Tue, 22 Jul 2008 13:00:18 +0000</pubDate>
+      
+      <guid>http://example.org/categories/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DEDECMS</title>
+      <link>http://example.org/categories/dedecms/</link>
+      <pubDate>Sat, 22 Mar 2008 21:13:29 +0000</pubDate>
+      
+      <guid>http://example.org/categories/dedecms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>体育</title>
+      <link>http://example.org/categories/%E4%BD%93%E8%82%B2/</link>
+      <pubDate>Fri, 27 Apr 2007 11:51:37 +0000</pubDate>
+      
+      <guid>http://example.org/categories/%E4%BD%93%E8%82%B2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

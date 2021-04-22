@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html><head>
+<title>关天培</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://blog.lsvking.com/scss/journal.min.5e8f3f653e9f6ce67bf72ff8ee6fee69decf7b5639a3ae7f8344750ad4e065b1.css" integrity="sha256-Xo8/ZT6fbOZ79y/47m/uad7Pe1Y5o65/g0R1CtTgZbE=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://blog.lsvking.com/scss/dark-mode.min.bdfa63b2e89903517dcbb1032b537d54cff3f425c19d008a78dfe49e6cd07ced.css" integrity="sha256-vfpjsuiZA1F9y7EDK1N9VM/z9CXBnQCKeN/knmzQfO0=" media="screen">
+
+
+<script src="/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="/js/toc-collapse.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.lsvking.com">
+    
+        <div class="nav-title">
+            龙舍·嬴皇志 - 透过我的双眼看世界
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/">
+                This is Home
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/post/">
+                Archives
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags/">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="https://gohugo.io">
+                external-link
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+ <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>  <a href="https://amazingrise.net">Rise</a>
+<br>
+ <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2016 龙舍·嬴皇志 - 透过我的双眼看世界
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/">
+                    This is Home
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/post/">
+                    Archives
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags/">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="https://gohugo.io">
+                    external-link
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://blog.lsvking.com">
+            龙舍·嬴皇志 - 透过我的双眼看世界
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.lsvking.com">
+        <div class="single-column-header-title">龙舍·嬴皇志 - 透过我的双眼看世界</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    关天培
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/">[杂谈]</a>
+                                &nbsp;
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>关天培(1781-1841)，字仲因，号滋圃，江南淮安府山阳县(今江苏淮安县)人，<!-- raw HTML omitted -->行伍出身。嘉庆八年(1803年)二十三岁时考取武庠生，历任把总、千总、守备、游击、参将、副将等军职。道光六年(1826年)任太湖营水师副将，同年以督押海运漕米船自吴淞到天津，途中虽遇惊涛骇浪，仍能安全抵达，因之受到特别嘉奖。次年提升为江南苏松镇总兵。道光十三年(1833年)署江南提督，十四年授广东水师提督。</p>
+<p>　　关天培调任广东水师提督的这年，正是英国商务监督律劳卑率兵船蛮横闯入广东省河之后，为了加强海防，清政府调他到这个当时是全国对外交往和贸易的唯一口岸广州。关天培面临着艰巨的任务，为了专心致志搞好海防，先令妻子奉老母归里，自己带着三个家丁到广州赴任。就任后，他“亲历重洋，遍观厄塞”，根据虎门的险要形势，进行严密设防，设置了三重门户：以沙角、大角两炮台为第一重门户；南山、镇远、横档三炮台为第二重门户，并将其中的南山炮台加以改建，加筑石基，增设月台，改变炮位过高的弱点，改称为威远炮台；狮子洋口的大虎门炮台为第三重门户①。这三重门户也就是三条防线，紧紧地把守住珠江口的南大门。他一方面在第二、三防线之间，威远、镇远与横档的适当地段设置大铁链和木排，以阻拦敌闯入内洋；另方面又亲自监督铸造大炮八千斤、六千斤者四十尊，六千斤以下者数百尊，分置各炮台，以加强防守力量。与此同时，他又加紧训练水师部队，亲自驻扎在虎门督军操练，每年二月末、八月初，“分饬本标将备，率亲兵五百余名，分赴威远、镇远、横档、大浇、永安、巩固六处，练习炮准，其大角、沙角炮台等处，共兵六百四十名。每次操练可十日为度”②。他还将建设虎门要塞的经验和汇集的有关资料，编成《筹海初集》四卷并附有许多详细的地图和训练图、表等，以资参考。</p>
+<p>　　这时鸦片烟流毒全国，英、美的鸦片趸船源源不断东来，鸦片走私贸易极为猖撅，关天培积极协助两广总督邓廷桢进行侦缉。到道光十九年(1839年)春林则徐到广东后，关天培更是尽力支持和配合禁烟运动，取得了迫使义律缴出二万余箱、袋鸦片，并在虎门全数销毁的伟大胜利。在林则徐的赞助下，他又在武山上的威远炮台和镇远炮台之间新修筑起一座大炮台，名为靖远，炮洞六十八个，配炮六十位。其建筑之坚固与火力之充沛，为虎门各炮台最。当时关天培除自铸铁炮外，还在林则徐、邓廷桢的大力支持下，从澳门等地购进洋炮二百多尊，并严格训练大批招募来的水师兵勇，改革编制，将大鹏营由营改为协，拨副将驻扎那里，与香山协相呼应，又雇用一批米船、红单船、拖风船，利用有利地形与军民在海上与陆上的紧密协作，切实做到严阵以待，以迎击来犯的敌人。林则徐对关天培这些整顿防务的努力予以很高的评价，称赞他“殚精竭虑，寝食以之”。</p>
+<p>　　由于关天培在广东沿海的严密布防，使英国侵略者在这个时期的挑衅与袭击都未能得逞。道光十九年七月二十七日(1839年9月4日)，义律率兵船二艘、货船三艘到九龙山口岸以索食为名，突发炮火，进行挑衅活动，遭到大鹏营参将赖恩爵率领的水师猛烈反击，狼狈逃跑。两个月以后，九月二十八日(11月3日)义律又阻挡英国商船具结，破坏中英正常贸易，挑起穿鼻之战，这次战斗可说是揭开了中英鸦片战争的序幕，实际上是英国发动鸦片战争的开始。在这次战斗中，关天培亲临督阵，虽手背受伤，仍奋不顾身，执刀屹立，督令弁兵，对准英舰连轰数炮，使它遭到重创，仓皇遁去。此后十天内，英舰又接连向官涌守军发动六次进攻，结果都被增城营参将陈连升等所率领的守军所击退，获得全胜。战斗结束后，关天培得到清政府的嘉奖，在道光帝的上谕里写道：“此次攻击夷船，提督关天培奋勇直前，</p>
+<!-- raw HTML omitted -->
+<p>　　①《鸦片战争》，新知识出版社，第6册，第269-270页。</p>
+<p>　　②《鸦片战争》，第6册，第276页。</p>
+<p>　　③《筹办夷务始末》(道光朝)，中华书局，第1册，第244页。</p>
+<p>　　④《鸦片战争》，新知识出版社，第6册，第273页。</p>
+<p>　　⑤同上，第278页。</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;"></p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://blog.lsvking.com/37/">
+			<br>林则徐
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://blog.lsvking.com/35/">
+			<br>10年了～真快啊，问一声《香港别来无恙》
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+ <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>  <a href="https://amazingrise.net">Rise</a>
+<br>
+ <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2016 龙舍·嬴皇志 - 透过我的双眼看世界
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="/js/journal.js"></script>
+
+    </body>
+</html>

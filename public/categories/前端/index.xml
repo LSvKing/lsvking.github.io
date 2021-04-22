@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/categories/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in 前端 on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 28 Jul 2008 14:02:21 +0000</lastBuildDate><atom:link href="https://blog.lsvking.com/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>翻译: 编写具有良好结构的CSS文件</title>
+      <link>https://blog.lsvking.com/300/</link>
+      <pubDate>Mon, 28 Jul 2008 14:02:21 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/300/</guid>
+      <description>&amp;lt;div id=&amp;quot;logo&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;navbar&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;welcome-section&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- Main Content --&amp;gt; &amp;lt;div id=&amp;quot;column_left&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;sidebar&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- Footer --&amp;gt; &amp;lt;div id=&amp;quot;footer&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>常用CSS命名参考</title>
+      <link>https://blog.lsvking.com/107/</link>
+      <pubDate>Sat, 22 Mar 2008 00:31:38 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/107/</guid>
+      <description>在XHTML中定义ID时都用得上，主要是方便CSS定义样式时能一眼看穿。所以，CSS命名仅作参考。 (1)页面结构类 容器: container 页头：header</description>
+    </item>
+    
+    <item>
+      <title>HTML5的结构和语义——内嵌媒体（五）</title>
+      <link>https://blog.lsvking.com/106/</link>
+      <pubDate>Sun, 09 Mar 2008 14:09:35 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/106/</guid>
+      <description>视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用 Windows Media®，Apple 使用 Qui</description>
+    </item>
+    
+    <item>
+      <title>HTML5的结构和语义——语义性的内联元素（四）</title>
+      <link>https://blog.lsvking.com/105/</link>
+      <pubDate>Sun, 09 Mar 2008 14:04:39 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/105/</guid>
+      <description>HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HT</description>
+    </item>
+    
+    <item>
+      <title>HTML5的结构和语义——语义性的块级元素（三）</title>
+      <link>https://blog.lsvking.com/104/</link>
+      <pubDate>Sun, 09 Mar 2008 13:59:11 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/104/</guid>
+      <description>HTML 5 还增加了一些纯语义性的块级元素： aside figure dialog 我在文章和书中一直使用前两个元素。第三个元素我不经常用，它主要用于书面文本。 aside aside 元素代表说明、提示</description>
+    </item>
+    
+    <item>
+      <title>HTML5的结构和语义——结构</title>
+      <link>https://blog.lsvking.com/103/</link>
+      <pubDate>Sun, 09 Mar 2008 13:53:25 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/103/</guid>
+      <description>转载 52CSS 由于缺少结构，即使是形式良好的 HTML 页面也比较难以处理。必须分析标题的级别，才能看出各个部分的划分方式。边栏、页脚、页眉、导航条、主内容区</description>
+    </item>
+    
+    <item>
+      <title>HTML 5.0 新一代的HTML标准~</title>
+      <link>https://blog.lsvking.com/95/</link>
+      <pubDate>Mon, 25 Feb 2008 21:27:04 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/95/</guid>
+      <description>新千年以来，超文本标记语言（HTML）5 第一次向 HTML 中引入新的元素。新的结构元素包括 aside、figure 和section。新的内联元素包括</description>
+    </item>
+    
+    <item>
+      <title>CSS Hacks 和 问题解决</title>
+      <link>https://blog.lsvking.com/88/</link>
+      <pubDate>Sat, 23 Feb 2008 13:41:13 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/88/</guid>
+      <description>———————————————————————————————————————————– 目录 介绍 针对浏览器的选择器 让IE6支持PNG透明 移除</description>
+    </item>
+    
+  </channel>
+</rss>

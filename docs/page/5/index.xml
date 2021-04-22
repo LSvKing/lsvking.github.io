@@ -1,0 +1,244 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>http://example.org/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This is a customized copyright.</copyright>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>XP SP3和打上补丁953230（KB951748）后TCP/IP连接数修改工具</title>
+        <link>http://example.org/305/</link>
+        <pubDate>Thu, 31 Jul 2008 12:28:12 +0000</pubDate>
+        
+        <guid>http://example.org/305/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/305/ -&lt;p&gt;Microsoft 安全公告 MS08-037 – 重要&lt;/p&gt;
+&lt;p&gt;DNS 中的漏洞可允许欺骗 (953230)&lt;/p&gt;
+&lt;p&gt;发布日期： 七月 8, 2008&lt;/p&gt;
+&lt;p&gt;版本： 1.0&lt;/p&gt;
+&lt;p&gt;一般信息&lt;/p&gt;
+&lt;p&gt;摘要&lt;/p&gt;
+&lt;p&gt;此安全更新可解决 Windows 域名系统 (DNS) 中两个秘密报告的漏洞，这些漏洞可允许欺骗。 DNS 客户端和 DNS 服务器中均存在这些漏洞，这些漏洞可能会允许远程攻击者将 Internet 上针对系统的网络通信重定向至攻击者自己的系统。&lt;/p&gt;
+&lt;p&gt;打上这个补丁953230（KB951748）后TCP/IP连接数会恢复到原来的限制10 ，原来的关于破解TCP/IP的都失效了。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- http://example.org/305/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>SourceForge解封了。。</title>
+        <link>http://example.org/297/</link>
+        <pubDate>Mon, 28 Jul 2008 15:45:57 +0000</pubDate>
+        
+        <guid>http://example.org/297/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/297/ -&lt;p&gt;&lt;!-- raw HTML omitted --&gt;SourceForge&lt;!-- raw HTML omitted --&gt; 俗称SF，大家经常去的地方，有很多的软件项目都托管在这个网站，不过我一直记不住这个域名，你也记不住，没关系 &lt;!-- raw HTML omitted --&gt;SF.Net&lt;!-- raw HTML omitted --&gt; 你总记住了吧。&lt;/p&gt;
+&lt;p&gt;前些日子被封了，造成不少麻烦，今天玩玩PHPBB3，偶然点了一个链接，居然打开了，再看自己也没挂代理，让别人看了下，也开了，HOHo 解封了。&lt;/p&gt;
+- http://example.org/297/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>翻译: 编写具有良好结构的CSS文件</title>
+        <link>http://example.org/300/</link>
+        <pubDate>Mon, 28 Jul 2008 14:02:21 +0000</pubDate>
+        
+        <guid>http://example.org/300/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/300/ -&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;logo&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&amp;quot;navbar&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&amp;quot;welcome-section&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;!-- Main Content --&amp;gt;
+
+&amp;lt;div id=&amp;quot;column_left&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&amp;quot;sidebar&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;!-- Footer --&amp;gt;
+
+&amp;lt;div id=&amp;quot;footer&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- http://example.org/300/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>《蚕》耗资300W的MV，号称中国之最，遭多家封杀，不过我挺喜欢的。</title>
+        <link>http://example.org/291/</link>
+        <pubDate>Tue, 22 Jul 2008 16:51:50 +0000</pubDate>
+        
+        <guid>http://example.org/291/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/291/ -&lt;p&gt;&lt;a href=&#34;http://player.youku.com/player.php/sid/XMTk0OTM5Mg==/v.swf&#34;&gt;《蚕》&lt;/a&gt;&lt;/p&gt;
+- http://example.org/291/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>《红楼梦》选秀中的一位超级变态(视频) – 真嘎。。</title>
+        <link>http://example.org/287/</link>
+        <pubDate>Tue, 22 Jul 2008 14:14:56 +0000</pubDate>
+        
+        <guid>http://example.org/287/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/287/ -&lt;p&gt;世间还真有这等人物。。。&lt;/p&gt;
+- http://example.org/287/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>为simple-tags添加多彩标签云</title>
+        <link>http://example.org/283/</link>
+        <pubDate>Tue, 22 Jul 2008 13:00:18 +0000</pubDate>
+        
+        <guid>http://example.org/283/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/283/ -&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- http://example.org/283/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>给博客加上每日一句学英语功能！</title>
+        <link>http://example.org/262/</link>
+        <pubDate>Sun, 20 Jul 2008 00:26:23 +0000</pubDate>
+        
+        <guid>http://example.org/262/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/262/ -&lt;p&gt;在本博客右边栏最上边的那个每日一句，当鼠标划过小喇叭还会真人发音，这个其实是用了&lt;a href=&#34;http://dict.cn&#34;&gt;dict.cn&lt;/a&gt;提供的一个小工具，应用起来很简单，将&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;这段代码放到Widgets，文本块里就行了！&lt;/p&gt;
+- http://example.org/262/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>《龟虽寿》-竖文插件。</title>
+        <link>http://example.org/237/</link>
+        <pubDate>Fri, 18 Jul 2008 15:08:13 +0000</pubDate>
+        
+        <guid>http://example.org/237/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/237/ -&lt;p&gt;[shuwen10]神龟虽寿，猷有竟时。腾蛇乘雾，终为土灰。老骥伏枥，志在千里；烈士暮年，壮心不已。盈缩之期，不但在天；养怡之福，可得永年。幸甚至哉！歌以咏志。[/shuwen]&lt;/p&gt;
+&lt;p&gt;这个有意思么？哈哈这个是用了&lt;a href=&#34;http://www.e-xia.com/&#34;&gt;轶姐&lt;/a&gt;的&lt;a href=&#34;http://www.e-xia.com/2008/07/wordpress-shuwen-plugin/&#34;&gt;竖文插件&lt;/a&gt;的效果，用的时候有个小插曲，php4的用不来，呵呵！&lt;/p&gt;
+- http://example.org/237/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>WordPress自动升级插件 wordpress automatic upgrade</title>
+        <link>http://example.org/229/</link>
+        <pubDate>Fri, 18 Jul 2008 13:44:56 +0000</pubDate>
+        
+        <guid>http://example.org/229/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/229/ -&lt;p&gt;  今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。&lt;/p&gt;
+&lt;p&gt;  将下载的文件传到插件目录下，启动插件，一直Next就差不多了，第一步他会备份数据库的，会给出个下载地址，大家最好下载到本地。我升级完后却怎么也登录不上后台了，想了一下清除了下Cookie就OK了。&lt;/p&gt;
+&lt;p&gt;他是从官方下载的版本安装的，大家安装完后，自己在去下中文包吧。&lt;/p&gt;
+&lt;p&gt;此插件是经过了如下几个步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;1.备份数据库和文件到本地。&lt;/li&gt;
+&lt;li&gt;2.从 &lt;a href=&#34;http://wordpress.org/latest.zip&#34;&gt;http://wordpress.org/latest.zip&lt;/a&gt; 下载最新的补丁并解压。&lt;/li&gt;
+&lt;li&gt;3.将你的站点设置为维护状态，主页被提示更新页暂时替换。&lt;/li&gt;
+&lt;li&gt;4.锁定所有插件。&lt;/li&gt;
+&lt;li&gt;5.后台更新 WordPress。&lt;/li&gt;
+&lt;li&gt;6.在新窗口中显示更新后主页&lt;/li&gt;
+&lt;li&gt;7.自动激活所有插件(按照 Keith 所说这一步应该可以实现，但是在我的 BLOG 上并没有完成，所有插件最后还是由我手动激活)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;个人角度来看，这款插件在很大程度上解决了因为 WordPress 版本更新的问题，而且最大限度的避免了数据和文件的丢失(其备份的过程和 WordPress Database Backup 插件基本类似)。由于使用 FTP 来进行更新操作，所以更新完成的速度也是很快的(我的BLOG更新大约前后用了不到一分钟)，基本不会因为更新而导致你的站点无法访问。&lt;/p&gt;
+&lt;p&gt;下载地址:&lt;a href=&#34;http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/&#34; title=&#34;http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/&#34;&gt;http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本站下载:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+- http://example.org/229/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>批量下载picasa相册中的图片</title>
+        <link>http://example.org/224/</link>
+        <pubDate>Fri, 18 Jul 2008 13:14:27 +0000</pubDate>
+        
+        <guid>http://example.org/224/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/224/ -&lt;p&gt;今天想把Picasa相册中的图片备份下来，但一个一个下还不累死，于是Google了一下，找到了这个方法。&lt;/p&gt;
+&lt;p&gt;一直想把picasa网络相册上的图片下载回来,一张一张的下不是咱们的风格,刚开始想用asp解析相册的rss,然后输出真实地址用迅雷批量下载,然而 真正的图片地址保存在名字空间当中,搜索了很长时间也没找到读取名字空间里的数据的办法,最后放弃了,后来偶尔听人说英文版的picasaweb曾经有过 批量下载功能,后来可能是因为占资源太大取消了,我抱着试试看的想法查看了一下源代码&lt;del&gt;&lt;del&gt;结果&lt;/del&gt;&lt;/del&gt;真的有批量下载的链接,只不过所在的层被隐藏了,说 了这么多没用的,下边是具体方法:&lt;br&gt;
+1.首先下载软件版的picasa,因为批量下载的地址是picasa的专用地址~~&lt;br&gt;
+点击下边的图标下载picasa&lt;br&gt;
+2.打开你要下载的相册,点击右键查看源代码.搜索&amp;quot;下载相册&amp;quot;,搜索结果前边有个类似这样的地址picasa://downloadfeed /?url=http%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fback_compat%2Fuser%2Fluyeah521%2Falbumid&lt;/p&gt;
+&lt;p&gt;%2F5048183041609230097%3Fkind%3Dphoto%26alt%3Drss%26imgdl%3D1&lt;br&gt;
+这就是下册的批量下载地址&lt;br&gt;
+3.在确认软件版picasa打开的情况下,把上边的链接复制到地址栏,稍等片刻软件版picasa就会弹出一个窗口问你是否要将此相册下载到您的计算机,直接点下载,然后就慢慢等把~~&lt;br&gt;
+&lt;img src=&#34;http://www.killadm.com/upload/pic/picasa.jpg&#34; alt=&#34;麓&#34;&gt;&lt;/p&gt;
+- http://example.org/224/ - This is a customized copyright.</description>
+        </item>
+    
+    
+  </channel>
+</rss> 

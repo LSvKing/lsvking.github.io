@@ -1,0 +1,78 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>DedeCMS模板制作使用实例教程（十四）【Prenext 标记 标记使用实例】</title>
+        <link>https://blog.lsvking.com/160/</link>
+        <pubDate>Sat, 22 Mar 2008 21:08:15 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/160/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/160/ -&lt;p&gt;【Prenext 标记】表示获取文档“上一篇／下一篇”的链接列表。&lt;br&gt;
+适用范围：仅文档模板。&lt;br&gt;
+通过调试了解其使用方法&lt;br&gt;
+我调试的方法是：&lt;br&gt;
+将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Prenext 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。&lt;br&gt;
+我调试【Pagelist 标记】的具体代码如下：&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章标标题:&lt;!-- raw HTML omitted --&gt;{dede:field name=&amp;ldquo;title&amp;rdquo;/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章内容:&lt;!-- raw HTML omitted --&gt;{dede:field name=&amp;ldquo;body&amp;rdquo;/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{dede:pagebreak/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{dede:prenext/} &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+- https://blog.lsvking.com/160/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>DedeCMS模板制作使用实例教程（十三）【Pagebreak 标记使用实例】</title>
+        <link>https://blog.lsvking.com/157/</link>
+        <pubDate>Sat, 22 Mar 2008 20:49:16 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/157/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/157/ -&lt;p&gt;【Pagebreak 标记】表示文档的分页链接列表。&lt;br&gt;
+适用范围：仅文档模板。&lt;br&gt;
+通过调试了解其使用方法&lt;br&gt;
+我调试的方法是：&lt;br&gt;
+将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。&lt;br&gt;
+我调试【Pagelist 标记】的具体代码如下：&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章标标题:&lt;!-- raw HTML omitted --&gt;{dede:field name=&amp;ldquo;title&amp;rdquo;/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章内容:&lt;!-- raw HTML omitted --&gt;{dede:field name=&amp;ldquo;body&amp;rdquo;/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{dede:pagebreak/}&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。&lt;/p&gt;
+- https://blog.lsvking.com/157/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>DedeCMS模板制作使用实例教程（十二）【Pagelist 标记使用实例】</title>
+        <link>https://blog.lsvking.com/154/</link>
+        <pubDate>Sat, 22 Mar 2008 20:44:49 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/154/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/154/ -&lt;p&gt;【Pagelist 标记】表示分页页码列表&lt;br&gt;
+适用范围：列表模板&lt;br&gt;
+通过调试了解其使用方法&lt;br&gt;
+我调试的方法是：&lt;br&gt;
+将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新栏目HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。&lt;br&gt;
+我调试【Pagelist 标记】的具体代码如下：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+- https://blog.lsvking.com/154/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

@@ -1,0 +1,193 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Ubuntu的真实3D桌面，很炫啊～</title>
+        <link>https://blog.lsvking.com/89/</link>
+        <pubDate>Sat, 23 Feb 2008 15:50:47 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/89/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/89/ -&lt;p&gt;   开发者们正在研制在 linux 的 Compiz Fusion 下的相关软件。根据这些研究人员的想象，可能性总是无穷无尽的。如果这种东西真的实现了，用户就可以让电脑来追踪自己的脑袋，鼠标甚至是手指了&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- https://blog.lsvking.com/89/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>CSS Hacks 和 问题解决</title>
+        <link>https://blog.lsvking.com/88/</link>
+        <pubDate>Sat, 23 Feb 2008 13:41:13 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/88/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/88/ -&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;———————————————————————————————————————————–&lt;/p&gt;
+&lt;h2 id=&#34;目录&#34;&gt;&lt;strong&gt;目录&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;介绍&lt;/li&gt;
+&lt;li&gt;针对浏览器的选择器&lt;/li&gt;
+&lt;li&gt;让IE6支持PNG透明&lt;/li&gt;
+&lt;li&gt;移除超链接的虚线&lt;/li&gt;
+&lt;li&gt;给行内元素定义宽度&lt;/li&gt;
+&lt;li&gt;让固定宽度的页面居中&lt;/li&gt;
+&lt;li&gt;图片替换技术&lt;/li&gt;
+&lt;li&gt;最小宽度&lt;/li&gt;
+&lt;li&gt;隐藏水平滚动条&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;———————————————————————————————————————————–&lt;/p&gt;
+&lt;h3 id=&#34;一-介绍&#34;&gt;&lt;strong&gt;一. 介绍&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.&lt;/p&gt;
+&lt;h3 id=&#34;二-针对浏览器的选择器&#34;&gt;&lt;strong&gt;二. 针对浏览器的选择器&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;这些选择器在你需要针对某款浏览器进行css设计时将非常有用.&lt;/p&gt;
+&lt;p&gt;IE6及其更低版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;html {}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;IE7及其更低版本&lt;/p&gt;
+&lt;p&gt;*:first-child+html {} * html {}&lt;/p&gt;
+&lt;p&gt;仅针对IE7&lt;/p&gt;
+&lt;p&gt;*:first-child+html {}&lt;/p&gt;
+&lt;p&gt;IE7和当代浏览器&lt;/p&gt;
+&lt;p&gt;html&amp;gt;body{}&lt;/p&gt;
+&lt;p&gt;仅当代浏览器(IE7不适用)&lt;/p&gt;
+&lt;p&gt;html&amp;gt;/**/body{}&lt;/p&gt;
+&lt;p&gt;Opera9及其更低版本&lt;/p&gt;
+&lt;p&gt;html:first-child {}&lt;/p&gt;
+&lt;p&gt;Safari&lt;/p&gt;
+&lt;p&gt;html[xmlns*=&amp;quot;&amp;quot;] body:last-child {}&lt;/p&gt;
+&lt;p&gt;要使用这些选择器,请将它们放在样式之前. 例如:&lt;/p&gt;
+&lt;p&gt;#content-box {&lt;br&gt;
+width: 300px;&lt;br&gt;
+height: 150px;&lt;br&gt;
+}&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;html&lt;br&gt;
+#content-box {&lt;br&gt;
+width: 250px;&lt;br&gt;
+} /* overrides the above style and changes the width to 250px in IE 6 and below */&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;三-让ie6支持png透明&#34;&gt;&lt;strong&gt;三. 让IE6支持PNG透明&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;一个IE6的Bug引起了大麻烦, 他不支持透明的PNG图片.&lt;/p&gt;
+&lt;p&gt;你需要使用一个css滤镜&lt;/p&gt;
+&lt;p&gt;*html #image-style {&lt;br&gt;
+background-image: none;&lt;br&gt;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&amp;ldquo;fil&lt;br&gt;
+ename.png&amp;rdquo;, sizingMethod=&amp;ldquo;scale&amp;rdquo;);&lt;br&gt;
+}&lt;/p&gt;
+&lt;h3 id=&#34;四-移除超链接的虚线仅对ff有效&#34;&gt;&lt;strong&gt;四. 移除超链接的虚线(仅对FF有效)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;FireFox下,当你点击一个超链接时会在外围出现一个虚线轮廓. 这很容易解决, 只需要在标签样式中加入 outline:none .&lt;/p&gt;
+&lt;p&gt;a{&lt;br&gt;
+outline: none;&lt;br&gt;
+}&lt;/p&gt;
+&lt;h3 id=&#34;五-给行内元素定义宽度&#34;&gt;&lt;strong&gt;五. 给行内元素定义宽度&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;如果你给一个行内元素定义宽度,那么它只是在IE6下有效. 所有的HTML元素要么是行内元素要么就好是块元素. 行内元素包括: &lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt; 和 &lt;!-- raw HTML omitted --&gt;. 块元素包括&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;和&lt;!-- raw HTML omitted --&gt; . 你不能定义行内元素的宽度, 为了解决这个问题你可以将行内元素转变为块元素.&lt;/p&gt;
+&lt;p&gt;span { width: 150px; display: block }&lt;/p&gt;
+&lt;h3 id=&#34;六-让固定宽度的页面居中&#34;&gt;&lt;strong&gt;六. 让固定宽度的页面居中&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;为了让页面在浏览器居中显示, 需要相对定位外层div, 然后把margin设置为auto.&lt;/p&gt;
+&lt;p&gt;#wrapper {&lt;br&gt;
+margin: auto;&lt;br&gt;
+position: relative;&lt;br&gt;
+}&lt;/p&gt;
+&lt;h3 id=&#34;七-图片替换技术&#34;&gt;&lt;strong&gt;七. 图片替换技术&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;用文字总比用图片做标题好一些. 文字对屏幕阅读机和SEO都是非常友好的.&lt;/p&gt;
+&lt;p&gt;HTML:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;CSS&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
+&lt;p&gt;h1 { background: url(heading-image.gif) no-repeat; }&lt;br&gt;
+h1 span {&lt;br&gt;
+position:absolute;&lt;br&gt;
+text-indent: -5000px;&lt;br&gt;
+}&lt;br&gt;
+你可以看到我们对标题使用了标准的&lt;!-- raw HTML omitted --&gt;作为标签并且用css来将文本替换为图片. text-indent属性将文字推到了浏览器左边5000px处, 这样对于浏览者来说就看不见了.&lt;/p&gt;
+&lt;p&gt;关掉css,然后看看头部会是什么样子的.&lt;/p&gt;
+&lt;h3 id=&#34;八-最小宽度&#34;&gt;&lt;strong&gt;八. 最小宽度&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;IE6另外一个bug就是它不支持 min-width 属性. min-width又是相当有用的, 特别是对于弹性模板来说, 它们有一个100%的宽度,min-width 可以告诉浏览器何时就不要再压缩宽度了.&lt;/p&gt;
+&lt;p&gt;除IE6以外所有的浏览器你只需要一个 min-width: Xpx; 例如:&lt;/p&gt;
+&lt;p&gt;.container {&lt;br&gt;
+min-width:300px;&lt;br&gt;
+}&lt;/p&gt;
+&lt;p&gt;为了让他在IE6下工作, 我们需要一些额外的工作. 开始的时候我们需要创建两个div, 一个包含另一个:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;然后你需要定义外层div的min-width属性&lt;/p&gt;
+&lt;p&gt;.container {&lt;br&gt;
+min-width:300px;&lt;br&gt;
+}&lt;/p&gt;
+&lt;p&gt;这时该是IE &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;hack&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;大显身手的时候了. 你需要包含如下的代码:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;html .container {&lt;br&gt;
+border-right: 300px solid #FFF;&lt;br&gt;
+}&lt;/li&gt;
+&lt;li&gt;html .holder {&lt;br&gt;
+display: inline-block;&lt;br&gt;
+position: relative;&lt;br&gt;
+margin-right: -300px;&lt;br&gt;
+}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As the browser window is resized the outer div width reduces to suit until it shrinks to the border width, at which point it will not shrink any further. The holder div follows suit and also stops shrinking. The outer div border width becomes the minimum width of the inner div.&lt;/p&gt;
+&lt;h3 id=&#34;九-隐藏水平滚动条&#34;&gt;&lt;strong&gt;九. 隐藏水平滚动条&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;为了避免出现水平滚动条, 在body里加入 overflow-x:hidden .&lt;/p&gt;
+&lt;p&gt;body { overflow-x: hidden; }&lt;/p&gt;
+&lt;p&gt;当你决定使用一个比浏览器窗口大的图片或者flash时, 这个技巧将非常有用.&lt;/p&gt;
+&lt;p&gt;———————————————————————————————————————————–&lt;/p&gt;
+&lt;p&gt;原作者: Chris Thomas &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; 原文&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;  &lt;img src=&#34;http://www.yeeyan.com/img/div.gif&#34; alt=&#34;&#34;&gt;  译者: &lt;a href=&#34;http://www.yeeyan.com/space/show/10947&#34;&gt;&lt;!-- raw HTML omitted --&gt;Rlog&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;  &lt;img src=&#34;http://www.yeeyan.com/img/div.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+- https://blog.lsvking.com/88/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>12个制作视频教程的屏幕录像工具</title>
+        <link>https://blog.lsvking.com/87/</link>
+        <pubDate>Sat, 23 Feb 2008 12:54:56 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/87/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/87/ -&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- https://blog.lsvking.com/87/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

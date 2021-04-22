@@ -1,0 +1,92 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>WordPress 2.6 正式版及中文版发布</title>
+        <link>https://blog.lsvking.com/219/</link>
+        <pubDate>Thu, 17 Jul 2008 14:13:51 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/219/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/219/ -&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;    对于 WordPress 的爱好者而言，今天又是一个值得庆贺的日子。WordPress 团队刚刚发布了令人期待的 WordPress 2.6 正式版。这是 WordPress 又一个重要的版本。根据此版本，我们 WordPress 中文站制作了相应的 W&lt;strong&gt;ordPress 2.6 中文版&lt;/strong&gt;，与 WordPress 中文社区的爱好者来及时分享这一版本。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WordPress 2.6 中文版下载地址：&lt;/strong&gt;&lt;a href=&#34;http://wpchina.org/downloads/&#34;&gt;http://wpchina.org/downloads/&lt;/a&gt;&lt;a href=&#34;http://www.lsvking.com/wp-content/uploads/2008/07/wordpress1.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+您也可以从以下地址直接下载：&lt;br&gt;
+WordPress 2.6 中文版 （zip压缩包）&lt;br&gt;
+&lt;a href=&#34;http://wordpresschina.googlecode.com/files/wordpress.26.chs.zip&#34;&gt;http://wordpresschina.googlecode.com/files/wordpress.26.chs.zip&lt;/a&gt;&lt;br&gt;
+WordPress 2.6 中文版 （gz压缩包）&lt;br&gt;
+&lt;a href=&#34;http://wordpresschina.googlecode.com/files/wordpress.26.chs.tar.gz&#34;&gt;http://wordpresschina.googlecode.com/files/wordpress.26.chs.tar.gz&lt;/a&gt;&lt;br&gt;
+WordPress 2.6 中文语言包 （zip压缩包）&lt;br&gt;
+&lt;a href=&#34;http://wordpresschina.googlecode.com/files/wordpress.26.chs.languages.only.zip&#34;&gt;http://wordpresschina.googlecode.com/files/wordpress.26.chs.languages.only.zip&lt;/a&gt;&lt;br&gt;
+WordPress 2.6 中文语言包 （gz压缩包）&lt;br&gt;
+&lt;a href=&#34;http://wordpresschina.googlecode.com/files/wordpress.26.chs.languages.only.tar.gz&#34;&gt;http://wordpresschina.googlecode.com/files/wordpress.26.chs.languages.only.tar.gz&lt;/a&gt;&lt;br&gt;
+自 WordPress 2.5 以来，WordPress 2.6 的主要更新包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文章版本管理功能，将保存你每次所修改的版本，允许你查看（不是编辑）每次修改的版本，可以对任何两个版本进行比较；&lt;/li&gt;
+&lt;li&gt;允许在文章和页面中显示图片的说明；&lt;/li&gt;
+&lt;li&gt;在管理面板的设计中，增加了主题分页功能；&lt;/li&gt;
+&lt;li&gt;在撰写和编辑文章的时候，自动统计字数；&lt;/li&gt;
+&lt;li&gt;增加里“快速发布”书签；&lt;/li&gt;
+&lt;li&gt;增加了相册排序功能；&lt;/li&gt;
+&lt;li&gt;导入/导出文章摘要；&lt;/li&gt;
+&lt;li&gt;增加了主题预览工具；&lt;/li&gt;
+&lt;li&gt;TinyMCE 编辑器升级到 3.1；&lt;/li&gt;
+&lt;li&gt;允许两个分类有相同的子分类。&lt;br&gt;
+与英文版本相比，&lt;strong&gt;WordPress 2.6 中文版&lt;/strong&gt;主要完成了本地化工作，包括：&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;我们添加了中文语言包&lt;/strong&gt;，添加于 wp-content/languages/ 目录下 。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;我们修改了配置文件&lt;/strong&gt;，即根目录 wp-config.php 文件，将默认语言设置为中文，并列出了两个实用参数。 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;我们调整了默认主题&lt;/strong&gt;，默认字体太小，不太适合中文，我们适当调大的字体。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;我们翻译了说明文档&lt;/strong&gt;，详细介绍了 WordPress 2.6 的安装和升级步骤。英文说明文档保存为 readme-en.html。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;我们翻译了几个包含错误信息的文件&lt;/strong&gt;。WordPress 发生错误时，语言包无法调用，这些信息只能通过文件显示。这些文件包括：&lt;/li&gt;
+&lt;li&gt;wp-admin/setup-config.php&lt;/li&gt;
+&lt;li&gt;wp-admin/import.php&lt;/li&gt;
+&lt;li&gt;wp-includes/class-IXR.php&lt;/li&gt;
+&lt;li&gt;wp-includes/functions.php&lt;/li&gt;
+&lt;li&gt;wp-includes/wp-db.php&lt;/li&gt;
+&lt;li&gt;wp-config-sample.php&lt;/li&gt;
+&lt;li&gt;wp-load.php&lt;/li&gt;
+&lt;li&gt;wp-settings.php&lt;br&gt;
+我们 WordPress 中文站的目标是为中文用户&lt;strong&gt;打造一个优雅的 WordPress 中文版&lt;/strong&gt;。在 WordPress 2.6 版本的翻译过程中，我们得到了秋天、枫叶等许多网友的热情协助，在这里我们一并向所有这些热心网友表示感谢！&lt;br&gt;
+如果您在使用这一版本中，发现有任何翻译不妥，或者有更好的译法，都欢迎指出，我们将积极进行改进。你在使用了 WordPress 2.6 之后，如果有什么体会也可以写下来，向我们 WordPress 中文站投稿（&lt;a href=&#34;http://wpchina.org/submit-news/&#34;&gt;http://wpchina.org/submit-news/&lt;/a&gt;），与大家共同分享你的 WordPress 2.6 使用经验。&lt;/li&gt;
+&lt;/ul&gt;
+- https://blog.lsvking.com/219/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>我又回来写博客了。</title>
+        <link>https://blog.lsvking.com/211/</link>
+        <pubDate>Tue, 08 Jul 2008 19:18:53 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/211/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/211/ -&lt;p&gt;  前些日子因为Godaddy的空间没有用独立IP，而访问不了了，一直没有写博客，不过最近购置了独立IP博客又回来了，继续更新博客。&lt;/p&gt;
+&lt;p&gt;  我的Google AdSense帐号被停了，原因很很简单，我的收入达到100美元了，Google这个即是球员又是裁判的人判我犯规了。只能认了，希望帐号还在的朋友们自重吧。&lt;/p&gt;
+- https://blog.lsvking.com/211/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>用上了菊子曰 测试下试试！</title>
+        <link>https://blog.lsvking.com/209/</link>
+        <pubDate>Sun, 01 Jun 2008 19:35:26 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/209/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/209/ -&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- https://blog.lsvking.com/209/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

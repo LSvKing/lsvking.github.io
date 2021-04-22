@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>插件 on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/tags/%E6%8F%92%E4%BB%B6/</link>
+    <description>Recent content in 插件 on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 22 Apr 2008 15:30:21 +0000</lastBuildDate><atom:link href="https://blog.lsvking.com/tags/%E6%8F%92%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试wp-t-wap插件</title>
+      <link>https://blog.lsvking.com/207/</link>
+      <pubDate>Tue, 22 Apr 2008 15:30:21 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/207/</guid>
+      <description>为了给博客增加个wap功能给博客装了个wp-wap在搜索相关信息时无意间出现了一款叫做wp-t-wap得插件，这也是一款使wp实现wap功能</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,103 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>强！少林铁裆功！ 牛X 实在牛X！！！</title>
+        <link>https://blog.lsvking.com/78/</link>
+        <pubDate>Wed, 20 Feb 2008 21:33:12 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/78/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/78/ -&lt;p&gt;强到喷血～&lt;/p&gt;
+&lt;p&gt; 此片为限制级的，U18的朋友可要回避了。&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+- https://blog.lsvking.com/78/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>技巧：动动鼠标 Windows XP提速十倍</title>
+        <link>https://blog.lsvking.com/77/</link>
+        <pubDate>Sun, 17 Feb 2008 16:48:22 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/77/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/77/ -&lt;p&gt;&lt;strong&gt;1.加快系统启动速度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　Windows XP的启动速度比Windows 2000要快30%左右，但相对于Windows 98仍然要慢了不少，不过，我们可以通过优化设置，来大大提高Windows XP的启动速度。加快系统启动速度主要有以下方法：尽量减少系统在启动时加载的程序与服务；对磁盘及CPU等硬件进行优化设置；修改默认设置，减少启动等待时间等。这些方法大部分既可减少系统启动的时间，又可以节省系统资源，加快电脑运行速度。&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;(1)Msconfig&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　Windows XP的启动速度在系统安装初期还比较快，但随着安装的软件不断增多，系统的启动速度会越来越慢，这是由于许多软件把自己加在了启动程序中，这样开机即需运行，大大降低了启动速度，而且也占用了大量的系统资源。对于这样一些程序，我们可以通过系统配置实用程序Msconfig将它们从启动组中排除出去。&lt;/p&gt;
+&lt;p&gt;　　选择“开始”菜单中的“运行”命令，在“运行”对话框中键入“Msconfig”，回车后会弹出“系统配置实用程序”对话框，选择其中的“启动”选项卡(如图1)，该选项卡中列出了系统启动时加载的项目及来源，仔细查看每个项目是否需要自动加载，否则清除项目前的复选框，加载的项目越少，启动的速度就越快。设置完成后需要重新启动方能生效。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://uimg.qihoo.com/qhimg/quc//450_314/10/01/85/100185dqe3cc5.ca3ae3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;(2)Bootvis&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　Bootvis是微软提供的一个启动优化工具，可提高Windows XP的启动速度。&lt;/p&gt;
+&lt;p&gt;　　用BootVis提升Windows XP的启动速度必须按照正确的顺序进行操作，否则将不会起到提速的效果。其正确的操作方法如下：&lt;/p&gt;
+&lt;p&gt;　　启动Bootvis，从其主窗口(如图2)中选择“工具”菜单下的“选项”命令，在“符号路径”处键入Bootvis的安装路径，如“C:Program FilesBootvis”，单击“保存”退出。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://uimg.qihoo.com/qhimg/quc//359_288/10/01/66/1001663qe36f4.2c3eeb.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;从“跟踪”菜单中选择“下次引导”命令，会弹出“重复跟踪”对话框，单击“确定”按钮，BootVis将引导Windows XP重新启动，默认的重新启动时间是10秒。&lt;/p&gt;
+&lt;p&gt;　系统重新启动后，BootVis自动开始运行并记录启动进程，生成启动进程的相关BIN文件，并把这个记录文件自动命名为TRACE_BOOT_1_1。程序记录完启动进程文件后，会重新启动BootVis主界面，在“文件”菜单中选择刚刚生成的启动进程文件“TRACE_BOOT_1_1”。&lt;/p&gt;
+&lt;p&gt;　窗口中即会出现“CPU使用”、“磁盘I/O”、“磁盘使用”、“驱动程序延迟”等几项具体图例供我们分析，不过最好还是让BootVis程序来自动进行分析：从“跟踪”菜单中选择“系统优化”命令，程序会再次重新启动计算机，并分析启动进程文件，从而使计算机启动得更快。&lt;/p&gt;
+&lt;p&gt;　&lt;strong&gt;(3)禁用多余的服务&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　Windows XP在启动时会有众多程序或服务被调入到系统的内存中，它们往往用来控制Windows系统的硬件设备、内存、文件管理或者其他重要的系统功能。但这些服务有很多对我们用途不大甚至根本没有用，它们的存在会占用内存和系统资源，所以应该将它们禁用，这样最多可以节省70MB的内存空间，系统速度自然也会有很大的提高。&lt;/p&gt;
+&lt;p&gt;　选择“开始”菜单中的“运行”命令，在“运行”对话框键入“services.msc”后回车，即可打开“服务”窗口。窗口的服务列表中列出了系统提供的所有服务的名称、状态及启动类型。要修改某个服务，可从列表双击它，会弹出它的属性对话框(如图3)，你可从“常规”选项卡对服务进行修改，通过单击“启动”、“停止”、“暂停”、“恢复”四个按钮来修改服务的状态，并可从“启动类型”下拉列表中修改启动类型，启动类型有“自动”、“手动”、“已禁用”三种。如果要禁止某个服务在启动自动加载，可将其启动类型改为“已禁用”。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://uimg.qihoo.com/qhimg/quc//400_443/1f/02/d1/1f02d11qe3802.bc3464.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Windows XP提供的所有服务有36个默认是自动启动的，实际上，其中只有8个是必须保留的(见下表)，其他的则可根据自己的需要进行设置，每种服务的作用在软件中有提示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://uimg.qihoo.com/qhimg/quc//447_471/19/02/95/190295eqe2f64.6cf2e2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;(4)修改注册表来减少预读取，减少进度条等待时间&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　Windows XP在启动过程中会出现一个进度条，我们可以通过修改注册表，让进度条只跑一圈就进入登录画面。&lt;/p&gt;
+&lt;p&gt;　　选择“开始”菜单中的“运行”命令，在“运行”对话框键入“regedit”命令后回车，即可启动注册表编辑器，在注册表中找HKEY_LOCAL_MACHINESYSTEMCurrentControlSetControlSession ManagerMemory ManagementPrefetchParameters，选择其下的EnablePrefetcher键，把它的键值改为“1”即可。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（５)减少开机磁盘扫描等待时间&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　当Windows日志中记录有非正常关机、死机引起的重新启动，系统就会自动在启动的时候运行磁盘扫描程序。在默认情况下，扫描每个分区前会等待10秒钟，如果每个分区都要等上10秒才能开始进行扫描，再加上扫描本身需要的时间，会耗费相当长的时间才能完成启动过程。对于这种情况我们可以设置取消磁盘扫描的等待时间，甚至禁止对某个磁盘分区进行扫描。&lt;/p&gt;
+&lt;p&gt;　　选择“开始→运行”，在运行对话框中键入“chkntfs /t:0”，即可将磁盘扫描等待时间设置为0；如果要在计算机启动时忽略扫描某个分区，比如C盘，可以输入“chkntfs /x c:”命令；如果要恢复对C盘的扫描，可使用“chkntfs /d c:”命令，即可还原所有chkntfs默认设置，除了自动文件检查的倒计时之外。&lt;/p&gt;
+- https://blog.lsvking.com/77/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>XP中自带的免费教程和一些有用的小东西</title>
+        <link>https://blog.lsvking.com/76/</link>
+        <pubDate>Sun, 17 Feb 2008 16:44:40 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/76/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/76/ -&lt;p&gt;以下所有有用的小东西都在system32文件夹里边&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;1.免费的系统教程&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　安装完WindowsXP后很想马上学习并体验一下它的魅力吗？我们无需再东奔西走去找烦人的文字教材。只要选择“开始”→“漫游WindowsXP”，就会出现界面，它将引导我们游历WindowsXP的新功能。&lt;/p&gt;
+&lt;p&gt;　　小提示：WindowsXP中自带的教程非常形象，是图形界面的，而且制作得相当精美，微软的权威性可想而知。如果你的“开始”菜单上没有“漫游WindowsXP”项目，则可以运行C:＼Windows＼System32＼tourstart.exe进入。&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;2.字符映射表~Charmap&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　是不是觉得Word的“插入符号”功能非常方便？我们在其他Windows程序中也常常要插入一些特殊符号，而一个个地找又麻烦，这时可使用“字符映射表”程序帮忙。通过“字符映射表”可查看选定字体中有哪些字符，选中后单击“选定”和“复制”按钮，即可把选定字符复制到Windows剪贴板中，供字处理软件粘贴使用。&lt;/p&gt;
+&lt;p&gt;　　小提示：用它来复制特殊字体中的特殊符号特别有用。&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;3.磁盘清理大师~Cleanmgr&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　尽管现在的硬盘越来越大，但它总有容量的限制。在你不经意地安装这个或那个软件的过程中，可能会因为硬盘空间已频频告急而影响了正常Windows程序的执行。不要急，请打开此程序，它会自动地释放出一部分硬盘空间，并会智能化地进行删除xx作，保证你的系统万无一失。这比从资源管理器中删除要安全多了。&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;4.控制面板启动器~Control.exe&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　控制面板是Windows的一个重要组成部分，许多设置都通过他完成。而双击这个文件就是最快打开系统控制面板的方法，可省去从“开始”菜单上层层点击的麻烦。你要是喜欢还可以把它给粘出来。&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;5.WindowsXP的诊断医生~Drwtsn32&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　Drwtsn32是一个程序错误调试器。DrWatson程序会获得并记录运行Windows的计算机上的程序错误的信息。只要检测到错误，就会创建一个文本文件(Drwtsn32.log)，提供错误原因的详细说明，并给出解决问题的建议性xx作，在与Microsoft技术支持联系并请求帮助时，Drwatson将会起到很大作用。不过以前看过一个帖子说可以关掉这个东西。&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;6.DVD播放器~DVDplay&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　随着DVD驱动器和DVD光盘价格的下降，在普通家庭电脑上配置一个DVD播放器已不是一件奢侈的事情。而要播放DVD需要播放器的支持，WindowsXP提供了一个“免费”的DVD播放器，有了它我们可以省去一笔购买第三方DVD播放软件的费用。&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;7.自解压文件制作工具~Iexpress&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　你不知道吧，xp里还个自解压的东东呢。&lt;/p&gt;
+&lt;p&gt;　　用过压缩软件的一定对自解压文件不陌生，自解压文件可在没有相应解压缩程序的情况下直接将压缩包文件解压缩到相应的文件夹下，极大地方便了用户。利用Iexpress可制作两种自解压文件，一种是标准自解压文件（StandardSelf-Extractor），另一种是安装程序式自解压文件（Self-ExtractorforSoftwareInstallation），这样我们在发布程序时就方便多了。另外大家要注意，尽管使用Iexpress的运行界面是英文的，但利用它生成的自解压文件却是中文的，省去了繁琐的本地化工作。&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;8.重要de备份工具~Ntbackup&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　数据是计算机中最为宝贵的资料，因此经常备份你的资料也应该成为一个好习惯。现在许多人都寻求第三方的备份工具，其实大可不必。使用WindowsXP中内置的备份工具就可以非常方便地将资料进行备份，而且由于你使用的是微软产品，所以根本不存在兼容性问题。&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;9.IP地址侦测器~Nslookup&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　在联入互联网的每台电脑都有一个IP地址，同样，每个网站也有它的IP地址，而且是唯一的。通过这个IP侦测工具ping就可以轻而易举地得到它们的真正IP地址。如你要想知道&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.xxx.com&#34;&gt;http://www.xxx.com&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;的IP地址，…S窗口下输入ping&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.xxx.com&#34;&gt;http://www.xxx.com&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;即可看到。&lt;img src=&#34;http://360.qihoo.com/img/face/22.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;10.系统文件检查器~Sfc&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　使用Windows难免不会出现系统文件损坏或丢失的毛病，而如果为了几个小小的文件就去重装系统，又显得稍微麻烦了一些。通过系统文件检查器Sfc.exe，一切都会变得非常简单。还可以查看你的上网时间呢&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;11.共享文件夹设置工具~Shrpubw&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　同一工作组的同事在一起工作，有时必须与同事们共享文件夹，这时我们可以利用此工具轻松搞定。它的作用与右击一文件夹，选择“共享”基本上等价。&lt;/p&gt;
+- https://blog.lsvking.com/76/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

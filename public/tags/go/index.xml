@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/tags/go/</link>
+    <description>Recent content in go on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 09 Apr 2014 07:25:00 +0000</lastBuildDate><atom:link href="https://blog.lsvking.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang strings 包中的函数和方法</title>
+      <link>https://blog.lsvking.com/945/</link>
+      <pubDate>Wed, 09 Apr 2014 07:25:00 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/945/</guid>
+      <description>------------------------------------------------------------ // Count 计算字符串 sep 在 s 中的非重叠个数 // 如果 sep 为空字符串，则返回 s 中的字符(非字节)个数 + 1 // 使用 Rabin-Karp 算法实现 func Count(s, sep string) int func main() { s := &amp;#34;He</description>
+    </item>
+    
+  </channel>
+</rss>

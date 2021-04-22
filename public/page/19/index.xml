@@ -1,0 +1,106 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>测试wp-t-wap插件</title>
+        <link>https://blog.lsvking.com/207/</link>
+        <pubDate>Tue, 22 Apr 2008 15:30:21 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/207/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/207/ -&lt;p&gt;为了给博客增加个wap功能给博客装了个wp-wap在搜索相关信息时无意间出现了一款叫做wp-t-wap得插件，这也是一款使wp实现wap功能得插件，是有wp-wap 修改而来改善了对中文的支持，本文就是用手机发布的，感觉很不错，希望有这方面需求的朋友安装个试试看。&lt;/p&gt;
+&lt;p&gt;最信1.6版下载地址&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.tanggaowei.com/2008/01/04/7.html&#34;&gt;http://www.tanggaowei.com/2008/01/04/7.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4ec9c3aa&lt;/p&gt;
+&lt;p&gt;e9fbc5f7&lt;/p&gt;
+- https://blog.lsvking.com/207/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>FireFox左键无法使用迅雷？</title>
+        <link>https://blog.lsvking.com/205/</link>
+        <pubDate>Sat, 12 Apr 2008 15:03:06 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/205/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/205/ -&lt;p&gt;      一直喜欢用迅雷下东西，虽然他有点“流氓”不过正是他的流氓才给我们带来了高速度的下载。&lt;/p&gt;
+&lt;p&gt;     FireFox也支持迅雷，不过下东西时左键点击下载地址时，默认情况下会弹出，&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.lsvking.com/wp-content/uploads/2008/04/windowslivewriterfirefox-d2d7image-21.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此操作被浏览器拒绝！&lt;/p&gt;
+&lt;p&gt;请在浏览器地址栏输入“about:config”并回车&lt;/p&gt;
+&lt;p&gt;然后将[signed.applets.codebase_principal_support]设置为’true’&lt;/p&gt;
+&lt;p&gt;这是FF默认禁用了某个参数开启它就行，开启他的步骤：&lt;/p&gt;
+&lt;p&gt;1.在地址栏输入 “about:config”并回车&lt;/p&gt;
+&lt;p&gt;2.在“过滤器”栏输入 “princ” 就会过滤出这条控制，然后双击 默认值是’false’  双击后会变成’true’。&lt;/p&gt;
+&lt;p&gt;这样以后再用左键点击迅雷的下载就可以正常使用了&lt;/p&gt;
+- https://blog.lsvking.com/205/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>什么是？MIU Hdpc?</title>
+        <link>https://blog.lsvking.com/202/</link>
+        <pubDate>Sun, 06 Apr 2008 16:29:23 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/202/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/202/ -&lt;p&gt;赞！！！全功能威盛芯怪兽机MIU “HDPC”&lt;/p&gt;
+&lt;p&gt;“HDPC”是Hybrid Dual Portable Computer的所写，简单翻译就是“多功能便携电脑”。韩国公司总是能抓住大家最为敏感的神经，这采用&lt;strong&gt;威盛处理器&lt;/strong&gt;的&lt;strong&gt;MIU HDPC&lt;/strong&gt;就是韩国公司呕心沥血做出的怪兽级别的超强便携设备，而海外媒体报道中的报价低的惊人，据说为4000000-500000韩元，也就是2800–3513元人民币，而这款设备却能变身成为卫星导航仪、游戏机、&lt;strong&gt;UMPC&lt;/strong&gt;、电子数、手机、数码相机、&lt;strong&gt;MP&lt;/strong&gt;3、电视机等设备。这家名叫MIU的韩国公司是一家ODM厂商，他设计出一些完备的概念产品，再由其他的OEM厂商生产，其网址是：www.miubit.com。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.lsvking.com/wp-content/uploads/2008/04/windowslivewritermiuhdpc-d962clip-image001-21.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.lsvking.com/wp-content/uploads/2008/04/windowslivewritermiuhdpc-d962clip-image002-21.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这款设备完美的诠释了威盛电子提出了“‘UMD”概念，也就是Ultra Mobile Device的所写，是“超便携设备”的意思，突破了传统的掌上电脑或者智能手机的概念，是真正意义上的全功能便携设备。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.lsvking.com/wp-content/uploads/2008/04/windowslivewritermiuhdpc-d962clip-image003-21.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;据海外媒体消息，这款设备将在今年的7月正式上市。下面是这个视频的演示视频：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;以下为这款设备基本的配置，但是我们对其手机制式等参数还不了解，如果我得到最新消息，必将第一时间和你分享：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;配件&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;中央处理器&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;500MHz VIA C7M ULV处理器（可选1GHz）/200 MHz的ARM 9 处理器&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;操作系统&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;双OS，Windows XP&amp;amp;Windows CE 5.0 /Linux Qplus嵌入式系统&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;系统芯片组&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;VIA VX-700 整合型芯片组&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;内存&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;DDR2, 最大4GB物理内存&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;显示屏幕&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;三星 SDI 4寸800 x 480&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;硬盘&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;1.3”吋硬盘，最高60GB，可换用4GB SSD&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;光驱&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;支持USB外接式光驱 (刻录机)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;输入&lt;/strong&gt;**/****输出接口** ****&lt;/p&gt;
+&lt;p&gt;迷你SD/T Flash插槽 , USB 2.0 * 2, 耳机及麦克风插座, VGA 端口 * 1, DC-in * 1,迷你全键盘&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;内建摄影机&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;300/500万画素CMOS摄像镜头&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;无线局域网络&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;支持802.11bg规范无线网络，蓝牙2.0 ，DMB移动电视，可外接GPS模块&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;电池&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;充电式锂电池 4 cells, 待机时间约 7小时，低功耗情况下90小时&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;尺寸&lt;/strong&gt; ****&lt;/p&gt;
+&lt;p&gt;163(W)x67(D)x24.5(H)mm&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;电源&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;交流适配器100-240电压输入，直流输入12V 2A&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;重量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;大约 387g (包含电池)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;随附配件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;触控屏幕专用笔, 变压器，电池&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可选服务&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;6芯扩展电池，用作GPS功能的车内固定器&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;MIU HDPC中文网&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+- https://blog.lsvking.com/202/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

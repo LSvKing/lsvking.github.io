@@ -1,0 +1,68 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>awk切割字符串后赋值给shell变量的方法</title>
+        <link>https://blog.lsvking.com/939/</link>
+        <pubDate>Mon, 16 Dec 2013 15:18:00 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/939/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/939/ -&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+- https://blog.lsvking.com/939/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Win8下编译Go go.exe 崩溃</title>
+        <link>https://blog.lsvking.com/935/</link>
+        <pubDate>Tue, 30 Jul 2013 13:03:45 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/935/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/935/ -&lt;p&gt;在windows8 下 编译啊运行啊什么的 就会报崩溃&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://lsvking.com/attachment/933/&#34; title=&#34;QQ图片20130730205409.jpg&#34;&gt;&lt;img src=&#34;http://lsvking.com/wp-content/uploads/2013/07/1645993778.jpg&#34; alt=&#34;QQ图片20130730205409.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://lsvking.com/attachment/934/&#34; title=&#34;QQ图片20130730205412.jpg&#34;&gt;&lt;img src=&#34;http://lsvking.com/wp-content/uploads/2013/07/1998453011.jpg&#34; alt=&#34;QQ图片20130730205412.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一直困惑不已,所以一直在Linux下学习Golang。此事一直让我觉得可能是我起床的方式不对。。。&lt;/p&gt;
+&lt;p&gt;直到有一天我搜到了一个同样问题的,原来是MacType 的问题。。停掉就好了&lt;/p&gt;
+- https://blog.lsvking.com/935/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Linux压缩Tar命令介绍</title>
+        <link>https://blog.lsvking.com/932/</link>
+        <pubDate>Thu, 13 Oct 2011 03:18:00 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/932/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/932/ -&lt;h3 id=&#34;a-idtar-styledirection-ltr-nametarstrong-styledirection-ltrtar命令stronga&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;tar命令&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- https://blog.lsvking.com/932/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

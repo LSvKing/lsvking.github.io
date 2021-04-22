@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html><head>
+<title>2007年度游戏产业总结：“痛并快乐着”</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://blog.lsvking.com/scss/journal.min.5e8f3f653e9f6ce67bf72ff8ee6fee69decf7b5639a3ae7f8344750ad4e065b1.css" integrity="sha256-Xo8/ZT6fbOZ79y/47m/uad7Pe1Y5o65/g0R1CtTgZbE=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://blog.lsvking.com/scss/dark-mode.min.bdfa63b2e89903517dcbb1032b537d54cff3f425c19d008a78dfe49e6cd07ced.css" integrity="sha256-vfpjsuiZA1F9y7EDK1N9VM/z9CXBnQCKeN/knmzQfO0=" media="screen">
+
+
+<script src="/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="/js/toc-collapse.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.lsvking.com">
+    
+        <div class="nav-title">
+            龙舍·嬴皇志 - 透过我的双眼看世界
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/">
+                This is Home
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/post/">
+                Archives
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags/">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="https://gohugo.io">
+                external-link
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+ <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>  <a href="https://amazingrise.net">Rise</a>
+<br>
+ <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2016 龙舍·嬴皇志 - 透过我的双眼看世界
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/">
+                    This is Home
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/post/">
+                    Archives
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags/">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="https://gohugo.io">
+                    external-link
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://blog.lsvking.com">
+            龙舍·嬴皇志 - 透过我的双眼看世界
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.lsvking.com">
+        <div class="single-column-header-title">龙舍·嬴皇志 - 透过我的双眼看世界</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    2007年度游戏产业总结：“痛并快乐着”
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/">[游戏]</a>
+                                &nbsp;
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>2007年，游戏行业继续保持高速的增长态势。在资本并购重组的主旋律下，各游戏企业或演绎着撤资关闭的落寞，或谱写出上市的辉煌。　　各家推出的网游新品，亦是一家欢喜一家愁。而最大的惊喜，则是经历了数年韩游的涤荡，中国本土原创网游在2007年以强硬姿态将韩国产品的市场占有率压到了20%以下。</p>
+<p>　　国产网游，路虽仍漫长，却让我们有了更多的期望。</p>
+<p>　　<strong>第三届游戏产业年会在成都举办</strong></p>
+<p>　　1月17日上午，以“和谐、责任、创新”为主题的2006年度中国游戏产业年会在成都隆重开幕。</p>
+<p>　　盛大唯美德握手言和 《传奇世界》“抄袭案”最终和解上海盛大4年前推出网络游戏《传奇世界》之后，被其合作伙伴韩国游戏厂商唯美德公司以涉嫌抄袭为由告上法院。2月3日，北京市一中院终于将一事件画上句号。这起延续3年多的国内首起网络游戏跨国知识产权纠纷案，经调解，以上海盛大和唯美德公司握手言和而告终。</p>
+<p>　　<strong>久游网签约运营《仙剑OL》《大富翁OL》</strong></p>
+<p>　　4月6日，久游网宣布与台湾地区著名游戏企业大宇资讯正式签约，获得《仙剑奇侠传Online》和《大富翁Online（。Net版）》在中国大陆地区的独家运营权。《仙剑Online》获得中国玩家的广泛关注。</p>
+<p>　　<strong>网络游戏防沉迷系统试行</strong></p>
+<p>　　4月9日上午，新闻出版总署与教育部、公安部等八部委联合宣布，将于4月15日开始在全国网络游戏中推行只针对未成年人的防沉迷系统，7月16日全面实施。新闻出版署音像电子和网络出版管理司副司长寇晓伟表示，该系统将针对所有在中国运营的网络游戏，除大型网游外，也包括腾讯和联众运营的休闲网游。</p>
+<p>　　<strong>网易《天下贰》回炉重造</strong></p>
+<p>　　网易07年重要新产品《天下贰》，是网易第一款全3D、即时战斗的网络游戏，区别于其两大主力2D网游《大话西游》和《梦幻西游》，这也是网易游戏的全新尝试。但在公测两月后宣布回炉重做。大多数玩家提出，《天下贰》上手复杂，游戏内容在许多方面也与玩家的预期存在距离。</p>
+<p>　　<strong>香港财华社涉足网游 1.5亿收购杭州天畅</strong></p>
+<p>　　5月16日，香港财华社集团宣布，收购中国杭州的网络游戏公司杭州天畅网络科技。</p>
+<p>　　收购代价为1.5亿元（人民币）。据了解，天畅前期投入包括注册资本1250万元（人民币），及不超过5000万元（人民币）的额外投资。</p>
+<p>　　<strong>《征途》成“最烧钱的网游”</strong></p>
+<p>　　5月20日，《征途》最高同时在线人数顺利突破百万，成为全球范围内第三款同时在线人数突破100万的网游产品。之前，《魔兽世界》在全球市场和《梦幻西游》在中国市场曾达到过100万同时在线人数的高度。凭借《征途》的表现，征途网络在收入规模上进入行业第一阵营。</p>
+<p>　　<strong>九城获得EA投资，金额达1.67亿美元</strong></p>
+<p>　　5月21日，九城宣布来自“美国艺电”（简称“EA”）的股权投资。此项股权投资完成后，EA将持有第九城市约15%的普通股股份，投资金额约为1亿6700万美元。第九城市同时还宣布了在中国大陆独家代理运营EA Sports 《FIFA Online》的合作协议。通过这项协议，九城在中国网游市场进一步扩展了其游戏产品线。而EA则通过与本土知名运营商达成合作伙伴关系，获得向亚洲市场推广网络游戏的良机。</p>
+<p>　　<strong>盛大Q1财报超越网易，回到行业第一地位</strong></p>
+<p>　　5月23日，盛大发布2007年第一季度财报。财报显示，盛大业绩创造历史和行业最好成绩，超越曾经一度代替其取得市场领先地位的网易，回到行业领袖地位。 财报显示，盛大本季度净营收为6880万美元，同比增长55.9%；其中游戏收入6530 万美元，同比增长 63.1%；净利润为5800万美元，同比增长四十倍，创下了互联网行业有史以来最高的利润。由于业绩超过华尔街最佳预期，盛大股价也受此利好影响，盘后上涨近4%.业内人士指出，盛大战略方向的正确性和对于商业模式的大胆创新是其成功的关键因素。</p>
+<p>　　<strong>CDC游戏公司收购光通上海游戏事业部</strong></p>
+<p>　　5月27日，中华网将收购广州光通通信发展有限公司上海网游事业部。这一消息在6月11日得到中华网投资集团旗下的CDC游戏公司的正式确认和宣布。收购后，光通上海游戏事业部仍将继续利用其品牌经营游戏业务，继续推出更多游戏，并利用其推广游戏方面的经验来支持CDC游戏在中国市场的业务。</p>
+<p>　　<strong>世嘉解散在华网络游戏运营分公司，《莎木Online》、《樱花大战Online》无限推迟</strong></p>
+<p>　　5月30日，日本最著名的游戏开发公司世嘉，在中国上海成立的“世嘉（中国）网络科技有限公司”于当日下午宣布解散。　世嘉（中国）网络科技有限公司在2005年10月北京正式成立，后设上海分公司，逐渐将业务重心迁移到华东地区。世嘉最初在中国的门户发展战略失败后，将发展重心转变为产品，但依旧没有取得较好的运营成绩，休闲游戏平台《嘉游》，以及两款休闲游戏产品《彩虹骑士》、《桶桶OL》运营惨淡。而新作《莎木Online》、《樱花大战Online》均迟迟未能推出。世嘉放弃网游后，在华业务转向了街机游戏领域。</p>
+<p>　　<strong>新锐游戏企业盛宣鸣“悄然倒闭”</strong></p>
+<p>　　6月15日，国内《大航海时代Online》的运营商盛宣鸣公司发生人事震荡。包括首席运营官刘阳等高层在内，盛宣鸣公司在此次人事震荡事件中约有70%员工离职。同时CEO杨峰铭“失踪”无法联系。7月，位于丰联广场A座27层的盛宣鸣公司办公场所处于半关闭状态。盛宣鸣数字科技（北京）有限公司，原名中青创先软件产业发展有限公司，1998年7月成立，2006年5月更名为盛宣鸣，代理运营日本光荣公司的《信长之野望online》及《大航海时代Online》。并在2006年度游戏产业年会上获得“年度中国游戏企业新锐奖”。此事件再度引发业界对于纯代理模式面临风险的大讨论。</p>
+<p>　　<strong>久游网上市前夕陷入与韩国T3公司的欠款纠纷，九城争夺《劲舞团》导致久游无法上市</strong></p>
+<p>　　7月4日，韩国T3突然在久游赴日挂牌前夕发表公告称，与久游网就偿还欠款的谈判没有成功，该公司将通过包括法律手段在内的各种手段追回欠款并声称不再与久游续约。　这一意外情况迫使久游中止上市进程，开始了与韩方的谈判拉锯战。 随后，九城介入争夺《劲舞团》，并一度宣布与韩方就《劲舞团》达成代理协议。9月，久游最终以4500万美元代价保有《劲舞团》代理权至2010年。至此，这场2007年游戏业爆发的最激烈的中韩企业纠纷以和解告终。</p>
+<p>　　<strong>上海盛大收购成都锦天科技</strong></p>
+<p>　　7月5日，上海盛大网络宣布已达成收购协议，收购国内网络游戏公司成都锦天科技。锦天科技创立于2004年7月，是中国本土比较著名的网络游戏公司之一，在西部地区拥有较大市场占有率。目前运营两款自主研发的3D大型多人角色扮演游戏《风云Online》和《传说Online》。 通过此次收购，盛大在中国西部获得了重要研发基地以及市场份额。</p>
+<p>　　<strong>7月16日网络游戏防沉迷系统正式启动</strong></p>
+<p>　　7月16日，我国网络游戏的防沉迷系统强制上线。第一批防沉迷系统将在七大网络游戏公司的11款网络游戏中运行。该标准的核心内容是：未成年人累计3小时以内的游戏时间为“健康”游戏时间；超过3小时以后的2小时为“疲劳”游戏时间，在此时间段，游戏收益减半；如累计游戏时间超过5小时即为“不健康”游戏时间，收益将降为零，强迫未成年人下线休息。</p>
+<p>　　<strong>完美时空成功登陆美国纳斯达克股市</strong></p>
+<p>　　美国东部时间7月26日下午5时14分（北京时间7月27日5时14分）消息，中国网络游戏开发和运营商完美时空（纳斯达克：PWRD）于北京时间7月26日晚在纳斯达克市场首次公开募股，其发行价为16美元，但其开盘价则为17.5美元。 据悉，完美时空的IPO承销商包括摩根士丹利、瑞士信贷、CIBC世界市场以及SIG.对于完美时空的成功上市，业内人士表示，这证明资本市场再度恢复对游戏产业的信心。</p>
+<p>　　<strong>第五届Chinajoy成功举办</strong></p>
+<p>　　第五届ChinaJoy 2007年7月12日在上海新国际博览中心开幕，为期四天于7月15日圆满结束。本次展会的参观人数达到173383人，其中海外观众人数为4832人，专业观众11016人，媒体1867人，普通观众155668人。</p>
+<p>　　<strong>廉政网游仅存20天</strong></p>
+<p>　　8月14日，宁波市海曙区纪委、海曙区西门街道党工委等推出的反腐题材游戏《清廉战士》官方网站发出公告宣布关闭。该游戏自7月25日正式开放到关闭服务器仅存活了20天。</p>
+<p>　　《清廉战士》一开放就有玩家反映该游戏制作粗糙，涉及版权等问题。剧情的幼稚被网民所诟病，基本上各类任务都是去杀死贪官，这其中玩家将遭到贪官的卫兵、大群情妇（穿比基尼，还可能诱惑玩家）的攻击，以及其儿子、女儿的复仇。这一明显悖于现代法律的血腥执法方式被许多网民所批评。</p>
+<p>　　<strong>瑞星原副总卖传奇3外挂赚280万，加刑至6年</strong></p>
+<p>　　8月19日消息瑞星原副总谈文明等人研发出网游“传奇3”的多款外挂，销售获利280多万。因犯非法运营罪，谈文明于今年2月被判处有期徒刑2年6个月，该案是全国首例追究刑责的网游外挂案。北京市一中院终审改判谈文明6年徒刑。</p>
+<p>　　<strong>《魔兽世界》资料片推出，同时最高在线人数达到80万，九城股价大涨</strong></p>
+<p>　　9月6日，由暴雪娱乐研发、第九城市代理的大型在线网络游戏《魔兽世界》资料片《燃烧的远征》在历经半年的波折之后终于于正式向中国内地玩家开放。</p>
+<p>　　10月3日，据外电报道美国当地时间周四，中国网络游戏公司第九城市和美国暴雪娱乐公司宣布，《魔兽世界》中国大陆服务器同时最高在线人数达到了80万，是自该游戏2005年6月发布以来的最高水平。</p>
+<p>　　消息公布后，第九城市的美国存托股（ADS）大涨10.27%，收于32.97美元/股。在过去的1年里，股价一直在20.86美元/股到52.43美元/股之间徘徊。</p>
+<p>　　<strong>“再见若有缘”上海软星解散</strong></p>
+<p>　　9月14日，软星科技（上海）有限公司官方论坛正式关闭随后官方主页也无法打开。在官方网站关闭之前，上海软星主要负责人公司副总、企划总监、仙四项目总监张毅君宣布离职，此后又研发总监、美术总监《仙剑奇侠传四》项目制作人张孝全也将同时离开，上海软星濒临解散。这一切都发生在《仙剑4》发售短短一个月之内，让不少玩家和网友既吃惊又痛惜</p>
+<p>　　仙剑四难道成了仙剑系列的绝响？</p>
+<p>　　<a href="http://news.duowan.com/0712/61129414094.html">再见 若有缘：上软仙剑4项目组集体加入新公司</a></p>
+<p>　　<strong>2007年第五届中国网络文化博览会成功举办</strong></p>
+<p>　　2007年10月25日下午，第五届中国国际网络文化博览会在北京展览馆举行了盛大的开幕式。本次展会不仅汇聚了国内知名游戏的运营企业、3G为重点的应用产品企业、国内著名网吧企业、知名门户网站、搜索引擎、交易网站、生活服务类网站、博客、论坛、互动交流软件、网络教育、培训机构数字新生活展示。</p>
+<p>　　<strong>金山在香港上市结束8年长跑</strong></p>
+<p>　　10月9日上午10点，国内著名游戏和软件开发商金山软件在香港联交所正式挂牌交易，发行价是3.60港币，预计集资达6.261亿港元，至此金山八年上市之路得以圆满。</p>
+<p>　　从招股说明以及业界分析，金山可能将大部分的投资用于游戏研发，目前金山软件股份全球配售基本完成，预计集资6.26亿港元。其中的1.915亿港元用作招聘新员工组建研发团队，增强网络游戏和软件的研发实力。1.3亿港元用于收购及合资运营项目，另外还将投入1.059亿港元用于基础设施建设，包括增加网络游戏服务器、收费系统的升级等。</p>
+<p>　　<strong>征途更名巨人网络，在纽约交易所上市</strong></p>
+<p>　　10月19日，上海征途网络科技有限公司正式更名为上海巨人网络科技有限公司，为海外上市做好准备。</p>
+<p>　　北京时间11月1日晚，巨人网络在美国纽约证券交易所挂牌上市。巨人网络通过首次公开招股（IPO）发售了6739万股美国存托凭证，融资10.45亿美元。其发行价为15.50美元，超过此前预期的12美元到14美元。按照IPO发行价计算，巨人网络的初始市值约为42亿美元，成为在美国发行规模最大的中国民营企业。</p>
+<p>　　<strong>门户网站开始继网易后逐步涉足网游</strong></p>
+<p>　　10月29日搜狐公布了截至2007年9月30日的未经审计的2007年第三季度财务报告，搜狐2007年第三季度总收入达到5150万美元，比公司预期上限高出450万美元，比上年同期增长46% 第三季度搜狐在线游戏收入达到1270万美元，比去年同期增长473%，比上一季度增长232%.自主研发的在线游戏“天龙八部”收入达到1090万美元，比上一季度增长384% .</p>
+<p>　　<a href="http://news.duowan.com/0712/60864383833.html">张朝阳：网游太赚钱 搜狐要进入前三</a></p>
+<p>　　<strong>Tom退出新闻门户，游戏频道裁员</strong></p>
+<p>　　11月27日，TOM在线宣布内容部裁员，退出新闻门户。TOM在线将对采编部门实施裁员，包括游戏、科技、数码及新闻等多个频道将被裁撤，涉及近百人。继网易游戏频道后又一门户网站裁去了游戏频道。</p>
+<p>　　<strong>网龙在香港成功上市</strong></p>
+<p>　　11月2日上午，国内知名网游开发和运营商网龙（8288.HK）在香港创业板挂牌上市，招股价13.18港元，开盘价19港元，涨幅44.16%.加上超额配售股份，融资总额约16亿港元。</p>
+<p>　　网龙的招股说明书显示，其2005年亏损人民币2920万元，2006年扭亏为盈，营收达人民币4300万元，净利率为35.2%.</p>
+<p>　　<strong>盛大投资900万美元入股NCsoft China占30%股权，并取得《AION》运营权</strong></p>
+<p>　　11月7日，盛大网络与韩国网络游戏开发和发行商NCsoft签署了一项协议，盛大将投资900万美元入股NCsoft China.同时盛大取得了NCsoft耗时4年开发的网络游戏《AION》在内地的独家运营权。11月相关数据显示，韩国网游产品在中国的市场份额跌至10%-20%</p>
+<p>　　11月19日，据韩国驻华大使馆透露，今年中国网络游戏市场的规模增长到100亿元人民币，但曾占有中国市场九成的韩国网络游戏市场占有率最近却跌至10%.</p>
+<p>　　2005年韩国网游夺走了中国网游市场15亿元中的75%，获得收入超过11亿元。截至2006年8月，韩国游戏在中国游戏的占有率仅为36%，而这一数字继续呈下跌之势。到2007年，韩国网游仅占10%.</p>
+<p>　　<strong>中国游戏行业年会召开 多玩网与其他八个游戏媒体被评为“2007年度中国游戏行业优秀游戏媒体”</strong></p>
+<p>　　2007年12月6日下午 2007年度(第五届)中国游戏行业年会在北京人民大会堂隆重举行。</p>
+<p>　　年会由信息产业部、文化部、科技部支持，财政部、教育部、广电总局、税务总局等多部位领导出席。年会总结了中国游戏行业一年来的发展情况，表彰行业内的先进会员单位、个人和优秀产品，并对未来的发展进行展望和分析。本届年会的主题是：和谐、发展、腾飞。</p>
+<p>　　<a href="http://news.duowan.com/0712/61135510028.html">多玩网被评为2007年度中国游戏行业优秀游戏媒体</a></p>
+<p>　　<strong>雷军辞去金山CEO职务</strong></p>
+<p>　　12月20日，金山软件正式公布，被称为金山“精神领袖”的雷军，卸任金山软件总裁及CEO、CTO等职务，仍担任金山公司副董事长。求伯君暂代CEO一职。引发业界高度关注。</p>
+<p>　　<a href="http://news.duowan.com/0712/62689003942.html">雷军欲做天使投资人 成中关村第二代转型代表</a></p>
+<p>　　<a href="http://news.duowan.com/0712/62178470063.html">金山最勤奋CEO突然离职 自称终于把债还完</a></p>
+<p>　　<a href="http://news.duowan.com/0712/62161129175.html">求伯君评价雷军：鞠躬尽瘁 功在金山</a></p>
+<p>　　<a href="http://news.duowan.com/0712/62107050505.html">雷军卸任金山日常管理职务 将专注公司长期战略</a></p>
+<p>　　<strong>财华社收购杭州天畅资金大幅度缩水，裁员近50%</strong></p>
+<p>　　12月20日香港财华社集团公布，将收购大陆网络游戏厂商杭州天畅网络全部已发行股本的代价，由人民币1.5亿元（约1.6亿港元），降至人民币5，950万元（约6，330万港元）。</p>
+<p>　　12月26日传闻，杭州天畅正在进行大规模裁员，裁员比例已达总人数的40-50%.其中，推广部门“整个都被端了”，运营、客服部门的被裁人数过半，总裁郭羽也已离职。</p>
+<!-- raw HTML omitted -->
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;"></p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://blog.lsvking.com/63/">
+			<br>AV天后穗花出演!AV中的禁烟公益广告!
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://blog.lsvking.com/61/">
+			<br>MSCD ESET NOD32 Antivirus BUSINESS EDITION 3.0.621.0 简体中文版
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+ <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>  <a href="https://amazingrise.net">Rise</a>
+<br>
+ <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2016 龙舍·嬴皇志 - 透过我的双眼看世界
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="/js/journal.js"></script>
+
+    </body>
+</html>

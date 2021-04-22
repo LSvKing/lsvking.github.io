@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/categories/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate><atom:link href="https://blog.lsvking.com/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MongoDB用mongoimport 导入大文件报错解决方案</title>
+      <link>https://blog.lsvking.com/1152/</link>
+      <pubDate>Mon, 05 Sep 2016 15:41:13 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/1152/</guid>
+      <description>用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的</description>
+    </item>
+    
+    <item>
+      <title>vagrant 打包box时候提示 “VM not created. Moving on…”</title>
+      <link>https://blog.lsvking.com/1134/</link>
+      <pubDate>Thu, 13 Nov 2014 09:48:10 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/1134/</guid>
+      <description>在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。 名称要完全一样，大小写也要一样</description>
+    </item>
+    
+    <item>
+      <title>VirtualBox OS X Mavericks 分辨率修改</title>
+      <link>https://blog.lsvking.com/951/</link>
+      <pubDate>Wed, 30 Jul 2014 10:16:11 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/951/</guid>
+      <description>需要开启EFI模式 然后在命令行下 VirtualBox目录 输入一下命令： VBoxManage setextradata &amp;quot;虚拟机名称&amp;quot; VBoxInternal2/EfiGopMode N 其中 N 可以是 0,1,2,3,4,5 其中一个，分别</description>
+    </item>
+    
+    <item>
+      <title>利用cloudHQ在网盘间快速拷贝和同步文件</title>
+      <link>https://blog.lsvking.com/944/</link>
+      <pubDate>Wed, 12 Mar 2014 17:11:16 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/944/</guid>
+      <description>幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务： 1、网盘综合管理，你可以将常</description>
+    </item>
+    
+    <item>
+      <title>【转发】关于MySQL表设计应该注意的问题</title>
+      <link>https://blog.lsvking.com/921/</link>
+      <pubDate>Wed, 09 Mar 2011 06:39:56 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/921/</guid>
+      <description>如有错误欢迎大家指出。这段时间在家里，做了点修正。 1、慎重选择表名。 有两种选择： 按照多数开发语言的命名规则。比如（myCustomer）。 按</description>
+    </item>
+    
+    <item>
+      <title>用CI的 AR类进行 跨库关联查操作</title>
+      <link>https://blog.lsvking.com/917/</link>
+      <pubDate>Tue, 26 Oct 2010 05:15:49 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/917/</guid>
+      <description>比较早写的东西了,发现博客很急没更新了发过来充数。。。 最近在写套系统，上来就遇到麻烦了，具体情况就不说了，大概就是 A 库里有张表 写了一些用户信</description>
+    </item>
+    
+    <item>
+      <title>68KB Knowledge Base 中文语言文件</title>
+      <link>https://blog.lsvking.com/905/</link>
+      <pubDate>Wed, 28 Apr 2010 08:38:41 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/905/</guid>
+      <description>68KB Knowledge Base 是一款类似于FAQ等知识库类的PHP开源程序，基于Codeigniter开源框架编写的，我制作了个中文版的语言文件，有些地方难免有些生</description>
+    </item>
+    
+    <item>
+      <title>谈谈HMVC。。。。</title>
+      <link>https://blog.lsvking.com/794/</link>
+      <pubDate>Mon, 21 Dec 2009 05:32:52 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/794/</guid>
+      <description>&lt;p&gt;最近在写东西，看到有些HMVC的教程，于是就花了些时间去了解了一下，下边就来谈一谈。&lt;/p&gt;
+&lt;p&gt;HMVC(Hierarchical-Model-View-Controller)，故名思意，就是按等级划分的MVC模式，MVC我想不必多解释了，至于什么叫做按等级划分的，我们来看几张图就明白了。&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>彻底优化让Firefox不再卡</title>
+      <link>https://blog.lsvking.com/327/</link>
+      <pubDate>Fri, 14 Nov 2008 14:45:06 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/327/</guid>
+      <description>&lt;p&gt;Firefox是Linux用户首选的浏览器，对其不作过多的介绍。只要看看LDCN的访客留言就知道他的流行程度了。&lt;/p&gt;
+&lt;p&gt;Firefox虽然是一款优秀的浏览器，但是不免还有些不足。对我而言，最大的不足就是其性能，简单的说，刚开始用很流畅，用久了，会越用越卡。&lt;/p&gt;
+&lt;p&gt;今天琢磨了一下Firefox，分析下Firefox卡的原因，并通过设定相关参数解决了这个问题。从此上网变得更加畅快！&lt;/p&gt;
+&lt;p&gt;—–&lt;/p&gt;
+&lt;p&gt;我的Firefox用户目录（~/.mozilla/firefox）是从Ubuntu 7.10时开始建立的，前前后后用过十几个插件，经历了从Firefox 2到Firefox 3，从Ubuntu 7.10到Ubuntu 8.04。&lt;/p&gt;
+&lt;p&gt;在Ubuntu 7.10的Firefox 2时，就遇到卡的问题，常常界面灰掉。&lt;/p&gt;
+&lt;p&gt;等到Ubuntu 8.04的Firefox 3，情况好一点，但是还是卡。后来我用极致编译参数编译了回Firefox 3.0，情况好了点，地址栏反应快了一点点，仅此而已。关闭Firefox的时候，还是会有很长的停顿时间，有时还卡死。&lt;/p&gt;
+&lt;p&gt;虽然重新建立用户目录会解决问题（即把~/.mozilla/firefox删除掉），但是相当多的资料/插件要重来，这个代价受不了，所以还得从Firefox本身动手脚。&lt;/p&gt;
+&lt;p&gt;查阅了相关资料，终于发现是由“历史访问”和“位置”引起的。&lt;/p&gt;
+&lt;p&gt;这个可不是我们能看到的“历史记录”和“地址栏”的已访问纪录，而是数据层面的。&lt;/p&gt;
+&lt;p&gt;让我们来看看，你的数据是不是过大了&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;查到数据库的大小&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;来到~/.mozilla/firefox/***.default（因人而异），下面有一个places.sqlite文件，看看它的大小。如果超过了10MB，理论上就能引起Firefox卡了。像我是21MB，一般用了一年左右的话，会有这个程度。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CSS技巧补遗二十四则</title>
+      <link>https://blog.lsvking.com/308/</link>
+      <pubDate>Thu, 31 Jul 2008 12:36:45 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/308/</guid>
+      <description>在CSS网页布局开发中，会有很多小技巧，新手朋友往往对此很不熟悉。在某一两个小问题上，或许纠缠很长时间才能搞明白，虽然在52CSS.com的</description>
+    </item>
+    
+    <item>
+      <title>为simple-tags添加多彩标签云</title>
+      <link>https://blog.lsvking.com/283/</link>
+      <pubDate>Tue, 22 Jul 2008 13:00:18 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/283/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>给博客加上每日一句学英语功能！</title>
+      <link>https://blog.lsvking.com/262/</link>
+      <pubDate>Sun, 20 Jul 2008 00:26:23 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/262/</guid>
+      <description>在本博客右边栏最上边的那个每日一句，当鼠标划过小喇叭还会真人发音，这个其实是用了dict.cn提供的一个小工具，应用起来很简单，将 这段代码放</description>
+    </item>
+    
+    <item>
+      <title>《龟虽寿》-竖文插件。</title>
+      <link>https://blog.lsvking.com/237/</link>
+      <pubDate>Fri, 18 Jul 2008 15:08:13 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/237/</guid>
+      <description>[shuwen10]神龟虽寿，猷有竟时。腾蛇乘雾，终为土灰。老骥伏枥，志在千里；烈士暮年，壮心不已。盈缩之期，不但在天；养怡之福，可得永年。</description>
+    </item>
+    
+    <item>
+      <title>WordPress自动升级插件 wordpress automatic upgrade</title>
+      <link>https://blog.lsvking.com/229/</link>
+      <pubDate>Fri, 18 Jul 2008 13:44:56 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/229/</guid>
+      <description>今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。 将下载的文件</description>
+    </item>
+    
+    <item>
+      <title>WordPress 2.6 正式版及中文版发布</title>
+      <link>https://blog.lsvking.com/219/</link>
+      <pubDate>Thu, 17 Jul 2008 14:13:51 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/219/</guid>
+      <description>对于 WordPress 的爱好者而言，今天又是一个值得庆贺的日子。WordPress 团队刚刚发布了令人期待的 WordPress 2.6 正式版。这是 WordPress 又一个重要的版本。根据此版本，我</description>
+    </item>
+    
+    <item>
+      <title>测试wp-t-wap插件</title>
+      <link>https://blog.lsvking.com/207/</link>
+      <pubDate>Tue, 22 Apr 2008 15:30:21 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/207/</guid>
+      <description>为了给博客增加个wap功能给博客装了个wp-wap在搜索相关信息时无意间出现了一款叫做wp-t-wap得插件，这也是一款使wp实现wap功能</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（十五）【Pagetitle 标记使用实例】</title>
+      <link>https://blog.lsvking.com/165/</link>
+      <pubDate>Sat, 22 Mar 2008 21:13:29 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/165/</guid>
+      <description>【Pagetitle 标记】 功能说明：表示获取文档的分页标题 适用范围：仅文档模板。 通过调试了解其使用方法 我调试的方法是： 将templets\d</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（十四）【Prenext 标记 标记使用实例】</title>
+      <link>https://blog.lsvking.com/160/</link>
+      <pubDate>Sat, 22 Mar 2008 21:08:15 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/160/</guid>
+      <description>【Prenext 标记】表示获取文档“上一篇／下一篇”的链接列表。 适用范围：仅文档模板。 通过调试了解其使用方法 我调试的方法是： 将templet</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（十三）【Pagebreak 标记使用实例】</title>
+      <link>https://blog.lsvking.com/157/</link>
+      <pubDate>Sat, 22 Mar 2008 20:49:16 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/157/</guid>
+      <description>【Pagebreak 标记】表示文档的分页链接列表。 适用范围：仅文档模板。 通过调试了解其使用方法 我调试的方法是： 将templets\defau</description>
+    </item>
+    
+    <item>
+      <title>DedeCMS模板制作使用实例教程（十二）【Pagelist 标记使用实例】</title>
+      <link>https://blog.lsvking.com/154/</link>
+      <pubDate>Sat, 22 Mar 2008 20:44:49 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/154/</guid>
+      <description>【Pagelist 标记】表示分页页码列表 适用范围：列表模板 通过调试了解其使用方法 我调试的方法是： 将templets\default\文件夹下</description>
+    </item>
+    
+  </channel>
+</rss>

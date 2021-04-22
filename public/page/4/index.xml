@@ -1,0 +1,101 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>G&#43;邀请数枚,需要的请留言。。。</title>
+        <link>https://blog.lsvking.com/927/</link>
+        <pubDate>Tue, 09 Aug 2011 02:42:09 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/927/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/927/ -&lt;p&gt;Google+邀请数枚，请留言。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://bcs.duapp.com/lsvking-wp//blog/201410//131939415.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+- https://blog.lsvking.com/927/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>True Launch Bar 5.2 正版授权 (可当作破解版)</title>
+        <link>https://blog.lsvking.com/922/</link>
+        <pubDate>Tue, 15 Mar 2011 13:57:00 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/922/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/922/ -&lt;blockquote&gt;
+&lt;p&gt;True Launch Bar是一款功能强悍的快速启动栏工具栏软件，完全可以取代Windows传统的“快速启动”工具栏。它和普通的“快速启动”工具栏采用相同的工作原理，启动迅速；不同之处在于，True Launch Bar可以对大量快捷图标进行分组，鼠标滑过图标时弹出下级快捷图标，支持拖放操作；快捷方式可自由更换ico/png图标，可显示大/小图标，隐藏标题文字等等。使用True Launch Bar，图标调用大为方便，电脑也更为活泼美观&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  &lt;!-- raw HTML omitted --&gt;   &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a href=&#34;http://cid-d95d59e0a78b1c85.office.live.com/self.aspx/%E8%BD%AF%E4%BB%B6/True%20Launch%20Bar%5E_v5.2.zip&#34;&gt;Skydiver&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PS：此版本为 Giveawayoftheday赠送正版授权版,请安装时将系统时间调整到2.9号安装.&lt;/p&gt;
+- https://blog.lsvking.com/922/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>【转发】关于MySQL表设计应该注意的问题</title>
+        <link>https://blog.lsvking.com/921/</link>
+        <pubDate>Wed, 09 Mar 2011 06:39:56 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/921/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/921/ -&lt;p&gt;如有错误欢迎大家指出。这段时间在家里，做了点修正。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、慎重选择表名。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;有两种选择：&lt;/p&gt;
+&lt;p&gt;按照多数开发语言的命名规则。比如（myCustomer）。&lt;/p&gt;
+&lt;p&gt;按照多数开源思想命名规则。比如（my_customer）。&lt;/p&gt;
+&lt;p&gt;按照咱们中国人的思想。比如（我的客户）。&lt;/p&gt;
+&lt;p&gt;第一种有个缺点，很容易忘掉大写的字母。&lt;/p&gt;
+&lt;p&gt;第二种则比较好，每个WORD间用下划线连接，避免遗忘。&lt;/p&gt;
+&lt;p&gt;第三种建议不要用，虽然很好记。不觉得解析这个表的时候还需要编码转化吗？我个人理解，大家可以补充。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; &lt;strong&gt;关于编码的设定。&lt;/strong&gt;****&lt;/p&gt;
+&lt;p&gt;A． GBK/GB2312.（适用于纯中文存储）。&lt;/p&gt;
+&lt;p&gt;B． UTF8.（适用于中英文混合存储）。&lt;/p&gt;
+&lt;p&gt;C． LATIN1。（适用于纯英文存储）。&lt;/p&gt;
+&lt;p&gt;D.     其他的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; &lt;strong&gt;关于表引擎的选择。&lt;/strong&gt;****&lt;/p&gt;
+&lt;p&gt;A. MYISAM.（很多人说她的表级锁定会带来好多问题，其实只要设计好对应的表以及写好对应的SQL查询就没有那么大的问题。）&lt;/p&gt;
+&lt;p&gt;B. INNODB. （如果要用到事务，选择她不会错。至于多数人讲的MASTER/SLAVE结构上用INNODB在MASTER的选择是否正确，就要看你怎么用了。不能一味的疯狂使用INNODB。除非你想要确保非常高可用性，&lt;/p&gt;
+&lt;p&gt;）&lt;/p&gt;
+&lt;p&gt;C. CSV. （以前我写过文章，关于这个引擎。个人觉得最主要的是来存储少量数据以及从EXCEL到MYSQL的转换方面会很有用。当然只要涉及到规则数据的导入，她就可以办到。）&lt;/p&gt;
+&lt;p&gt;D. BLACKHOLE. （觉得最完美的用处在于MASETR/SLAVE上面，并且MASTER是一个临时的专门负责写的机器。不过缺点也很多，会与MYISAM或者INNODB或者其他的引擎有所冲突，这点自己要做个权衡）。&lt;/p&gt;
+&lt;p&gt;E. MEMORY. （应该说是MYISAM的兄弟了。不过在读内存总比读磁盘的速度要快。不过要注意，它不支持动态数据类型）。&lt;/p&gt;
+&lt;p&gt;F. FEDERATED. （典型的分布式引擎。我以前文章中有介绍。）&lt;/p&gt;
+&lt;p&gt;G.    NDB。（网络版存储引擎。因为Replication 总是有延迟，所以如果系统容不得任何延迟，就用这个吧。）&lt;br&gt;
+   H.    FOLCON。（6.0后用来代替INNODB的引擎。）&lt;/p&gt;
+&lt;p&gt;I. 其他旧的以及新开发的引擎具体介绍：&lt;a href=&#34;http://dev.mysql.com/doc/refman/6.0/en/storage-engines.html&#34;&gt;http://dev.mysql.com/doc/refman/6.0/en/storage-engines.html&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; &lt;strong&gt;关于属性数据类型的选择。&lt;/strong&gt;****&lt;/p&gt;
+&lt;p&gt;A. INT（一个字节的TINYINT，两个字节的SMALLINT，三个字节的MEDIUMINT，四个字节的INT，8个字节的BIGINT。记住：UNSIGNED不管你定义或者不定义，都不影响内部的存储字节大小）&lt;/p&gt;
+&lt;p&gt;B. 少于10个字符用CHAR是在合适不过了。（不过要记住在MEMORY引擎里面会自动把VARCHAR转化为CHAR）&lt;/p&gt;
+&lt;p&gt;C. 我一般用DECIMAL或者NUMERIC来代替FLOAT 或者DOUBLE。因为老板要求精确的数字。如果不要求精确的，那就用FLOAT吧。速度快，占空间小。（DECIMA、FLOAT(P)是动态存储。比如:DECIMAL(10,2)占用5个字节。FLOAT占4个字节，）&lt;/p&gt;
+&lt;p&gt;D. BLOB，TEXT,VARCHAR（一般存放文章内容，特别是新闻网站。需要的字节数是所存储的字符长度+1。记住BLOB和VARCHAR是TEXT和CHAR的BINARY类型）&lt;/p&gt;
+&lt;p&gt;E. ENUM（在一定范围内绝佳的代替VARCHAR和CHAR的工具，因为她只占一到两个字节。）&lt;/p&gt;
+&lt;p&gt;F. 时间和日期类型（占3个字节的DATE，8个字节的DATETIME，4个字节的TIMESTAMP，3个字节的TIME，1个字节的YEAR。）。如果要存储比如‘1983’这样的年份，用YEAR明显比VARCHAR或者CHAR要节省空间。因为后者要占5个字节。&lt;/p&gt;
+&lt;p&gt;G. BOOLEAN（用来存储YES或者NO之类的值，占用一个字节。）&lt;/p&gt;
+&lt;p&gt;H. 关于自增字段。目前我们的项目中涉及到好多ORDER BY RAND()操作。此类语句在数据库并发大的时候会造成CPU严重阻塞，持续产生数据库死锁！解决此类问题最好的办法就是利用自增字段，用程序随即生成数字序列，或者在数据库端随即生成数字序列。&lt;/p&gt;
+&lt;p&gt;I. 关于ZEROFILL。非常好用的前置填补0的存储，而不是用用对应个数的空串来代替。在需要前置补零的操作中INT ZEROFILL可以用来代替CHAR或者VARCHR。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; &lt;strong&gt;关于默认值。&lt;/strong&gt;****&lt;/p&gt;
+&lt;p&gt;A. 在5.0之后，只要设定字段为NOT NULL，系统自动给出默认值。对应CHAR-&amp;gt;’’,INT-&amp;gt;0,BOOLEAN-&amp;gt;0等等。&lt;/p&gt;
+&lt;p&gt;B. 在5.0之前的版本，需要手动指定默认值，否则会出现一定的异常。到时候查都不好查了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6.&lt;/strong&gt; &lt;strong&gt;关于多数据库建立。&lt;/strong&gt;****&lt;/p&gt;
+&lt;p&gt;A. 应该把对应的业务放在各自不同的数据库里，而不是所有业务放到一个库里面。&lt;/p&gt;
+&lt;p&gt;B. 数据库的命名和表命名一样。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7.&lt;/strong&gt; &lt;strong&gt;关于索引。&lt;/strong&gt;****&lt;/p&gt;
+&lt;p&gt;A. 设计表初期尽量考虑到应该建立的索引。所有建立的索引一定要测试一下，看是否有必要，否则会翻倍的减少写数据的性能。&lt;/p&gt;
+&lt;p&gt;B. 对于只有存储0或者1的列，尽量干掉索引，单独分出两个表。一个代替0，另外一个代替1。或者在一个字段里面用EMUM或者CHAR(0)或者CHAR(1)来代替。&lt;/p&gt;
+&lt;p&gt;   PS： 最后一个要值得注意的，就是尽量所有的字段用NOT NULL。虽然MYSQL可以对NULL列进行索引，不过我不建议。&lt;/p&gt;
+- https://blog.lsvking.com/921/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

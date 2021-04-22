@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongodb on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/tags/mongodb/</link>
+    <description>Recent content in Mongodb on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate><atom:link href="https://blog.lsvking.com/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MongoDB用mongoimport 导入大文件报错解决方案</title>
+      <link>https://blog.lsvking.com/1152/</link>
+      <pubDate>Mon, 05 Sep 2016 15:41:13 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/1152/</guid>
+      <description>用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的</description>
+    </item>
+    
+  </channel>
+</rss>

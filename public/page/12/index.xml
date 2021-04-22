@@ -1,0 +1,150 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>彻底优化让Firefox不再卡</title>
+        <link>https://blog.lsvking.com/327/</link>
+        <pubDate>Fri, 14 Nov 2008 14:45:06 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/327/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/327/ -&lt;p&gt;Firefox是Linux用户首选的浏览器，对其不作过多的介绍。只要看看LDCN的访客留言就知道他的流行程度了。&lt;/p&gt;
+&lt;p&gt;Firefox虽然是一款优秀的浏览器，但是不免还有些不足。对我而言，最大的不足就是其性能，简单的说，刚开始用很流畅，用久了，会越用越卡。&lt;/p&gt;
+&lt;p&gt;今天琢磨了一下Firefox，分析下Firefox卡的原因，并通过设定相关参数解决了这个问题。从此上网变得更加畅快！&lt;/p&gt;
+&lt;p&gt;—–&lt;/p&gt;
+&lt;p&gt;我的Firefox用户目录（~/.mozilla/firefox）是从Ubuntu 7.10时开始建立的，前前后后用过十几个插件，经历了从Firefox 2到Firefox 3，从Ubuntu 7.10到Ubuntu 8.04。&lt;/p&gt;
+&lt;p&gt;在Ubuntu 7.10的Firefox 2时，就遇到卡的问题，常常界面灰掉。&lt;/p&gt;
+&lt;p&gt;等到Ubuntu 8.04的Firefox 3，情况好一点，但是还是卡。后来我用极致编译参数编译了回Firefox 3.0，情况好了点，地址栏反应快了一点点，仅此而已。关闭Firefox的时候，还是会有很长的停顿时间，有时还卡死。&lt;/p&gt;
+&lt;p&gt;虽然重新建立用户目录会解决问题（即把~/.mozilla/firefox删除掉），但是相当多的资料/插件要重来，这个代价受不了，所以还得从Firefox本身动手脚。&lt;/p&gt;
+&lt;p&gt;查阅了相关资料，终于发现是由“历史访问”和“位置”引起的。&lt;/p&gt;
+&lt;p&gt;这个可不是我们能看到的“历史记录”和“地址栏”的已访问纪录，而是数据层面的。&lt;/p&gt;
+&lt;p&gt;让我们来看看，你的数据是不是过大了&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;查到数据库的大小&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;来到~/.mozilla/firefox/***.default（因人而异），下面有一个places.sqlite文件，看看它的大小。如果超过了10MB，理论上就能引起Firefox卡了。像我是21MB，一般用了一年左右的话，会有这个程度。&lt;/p&gt;
+&lt;p&gt;这个文件里存了些什么呢？让我用SQLite Manager这个扩展来看看：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在moz_favicons这张中，存了1500多个站点的Favicon，就是网站的Logo图标&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-3.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;moz_historyvisits这张表中，保存着所有访问过的纪录，我这里是六万条！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-4.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;而moz_places这里存着近三万多的places：地址，标题和反转域名信息。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-5.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这些数据量到底对Firefox的性能有啥影响呢？我试着把places.sqlite改了个名，然后重启Firefox。&lt;/p&gt;
+&lt;p&gt;所有的停顿和卡都不复存在了！Firefox变得非常流畅。&lt;/p&gt;
+&lt;p&gt;当然问题是所有的历史纪录和地址栏信息都没有了，相当于起到了彻底“清除隐私纪录”的作用，只是这个的程度比“工具”-&amp;gt;“清除隐私纪录”更深。&lt;/p&gt;
+&lt;p&gt;于是得出结论，在使用Firefox当中只要你要访问网站，它就会频繁的操作这个数据库，因为数据库很大，就影响了查询效率，所以会卡。而在关闭Firefox时，要对数据库作写入保存的操作，因为文件大，所以停顿很久也就不奇怪了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;清理数据&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;查明了是这个文件里面数据太多的原因，如果你对当前的历史和纪录没什么要求的话，直接删除就行了。&lt;/p&gt;
+&lt;p&gt;或者也可以用“工具”-&amp;gt;“清除隐私纪录”，指定一些删除选项，也会有不错的效果，不过这并不能使文件变小，你需要用SQLite Manager，然后选择好数据库，并Database-&amp;gt;Compact Database。这样会压缩数据库，使文件减少。&lt;/p&gt;
+&lt;p&gt;如果你熟悉Sql数据操作，那就更好了。可以有所保留地清理数据库。&lt;/p&gt;
+&lt;p&gt;在moz_places这张表中，有个字段（frencency）记录着每个条目的“频繁程度”，通过这个，你可以把一些不常使用的纪录全都通过sql语句查询并删除掉。只留下一些常用的纪录。&lt;/p&gt;
+&lt;p&gt;比如不常用的纪录frencnecy值一般为0，两三天才访问一次的网站可能为140，而我每天上的Gmail是6000！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;永久性优化&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;“OK，我也会手动清理历史纪录，让我的Firefox快起来，问题是如何让它不再慢下去呢？”&lt;/p&gt;
+&lt;p&gt;我们来更改一个Firefox的隐藏设定，让它少记录点条目，我们就可以不用定期去清理它了。&lt;/p&gt;
+&lt;p&gt;在地址栏输入：about:config，过滤器中输入history，注意图中的以browser.history_expire_为前缀的条目：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;browser.history_expire_days&lt;/strong&gt;：表示历史纪录过期天数，默认是180天！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;browser.history_expire_days.mirror&lt;/strong&gt;：这个不详，跟镜像有关？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;browser.history_expire_days_min&lt;/strong&gt;：是用户值，即在“Firefox首选项”、“隐私”、“历史”当中，表示“保存我的历史，至少X天”。即使你在首选项中把“至少X天”设置成了了1天，或取消，Firefox还是会保存浏览历史，因为系统保留值为180天。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;browser.history_expire_sites&lt;/strong&gt;：这个是最大保存的站点数量，默认是四万个。&lt;/p&gt;
+&lt;p&gt;也就是说，系统要么保存180天的纪录，要么保存四万个浏览纪录，不过我上面的moz_historyvisits怎么达到了六万个呢？可能是指moz_places这张表。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-1.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;差不多搞明白后，把值设置成下面的样子，站点数保存四千个就够了，系统保存3天的浏览纪录，用户最少1天。那个mirror随便设置了个值。&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;需要注意的是，如果你没有手动清理过places.sqlite，仅仅设定了这些值的话，文件是不会有变化的。清理还是得手动来。&lt;/p&gt;
+&lt;p&gt;接下来，就用实践来检验一切了，再过个半年查询一下places.sqlite的纪录，看看是否是被限制在了四千以内，这样的话Firefox应该再也卡不起来了。&lt;/p&gt;
+&lt;p&gt;另外，建议把“首选项”，“安全”，把有关”嫌疑攻击站点“和”伪造站点“的两个选择勾掉，有关这两个东西的文件也会相当大。不过没有places.sqlite夸张罢了。&lt;/p&gt;
+&lt;p&gt;转载请注明：转自&lt;a href=&#34;http://linuxdesktop.cn&#34;&gt;Linux桌面中文网&lt;/a&gt; – &lt;a href=&#34;http://linuxdesktop.cn/2008/09/26/optimize-firefox.html&#34;&gt;彻底优化让Firefox不再卡&lt;/a&gt;&lt;/p&gt;- https://blog.lsvking.com/327/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>08最新周星驰监制《少林少女》DVD中字</title>
+        <link>https://blog.lsvking.com/326/</link>
+        <pubDate>Fri, 14 Nov 2008 12:25:17 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/326/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/326/ -&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;◎译　　名　少林少女&lt;/p&gt;
+&lt;p&gt;◎片　　名　Shaolin Girl&lt;/p&gt;
+&lt;p&gt;◎年　　代　2008&lt;/p&gt;
+&lt;p&gt;◎国　　家　日本/中国香港&lt;/p&gt;
+&lt;p&gt;◎类　　别　动作/喜剧&lt;/p&gt;
+&lt;p&gt;◎语　　言　日语&lt;/p&gt;
+&lt;p&gt;◎字　　幕　日文&lt;/p&gt;
+&lt;p&gt;◎IMDB评分 5.2/10 (42 votes)&lt;/p&gt;
+&lt;p&gt;◎IMDB链接 &lt;a href=&#34;http://www.imdb.com/title/tt1133594&#34;&gt;http://www.imdb.com/title/tt1133594&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;◎文件格式　XviD + AC3&lt;/p&gt;
+&lt;p&gt;◎视频尺寸　672 x 288&lt;/p&gt;
+&lt;p&gt;◎文件大小　2CD 2 x 50 x 15MB&lt;/p&gt;
+&lt;p&gt;◎片　　长　107 min&lt;/p&gt;
+&lt;p&gt;◎导　　演　本广克行 Katsuyuki Motohiro&lt;/p&gt;
+&lt;p&gt;◎主　　演　柴崎幸 Kou Shibasaki  …..樱泽凛&lt;/p&gt;
+&lt;p&gt;仲村亨 T?ru Nakamura  …..大场雄一郎&lt;/p&gt;
+&lt;p&gt;江口洋介 Yosuke Eguchi  …..岩井拳儿&lt;/p&gt;
+&lt;p&gt;张雨绮 Yuqi Zhang  …..刘珉珉&lt;/p&gt;
+&lt;p&gt;林子聪 Chi Chung Lam  …..林&lt;/p&gt;
+&lt;p&gt;田启文 Kai Man Tin  …..田&lt;/p&gt;
+&lt;p&gt;冈村隆史 Takashi Okamura  …..田村龙司&lt;/p&gt;
+&lt;p&gt;◎简　　介&lt;/p&gt;
+&lt;p&gt;樱泽凛在中国的武术学校结束了为期三千日的艰苦修行，她即将返回故乡日本。“我要在日本将少林拳发扬光大！”阿凛充满雄心壮志，然而目送着她的背影的老师们却很担心——这个少女身上埋藏着未知的巨大力量，一步走错就会踏入黑暗的邪道。&lt;/p&gt;
+&lt;p&gt;回到日本后，阿凛直奔爷爷留下的少林拳道场。不料昔日生气勃勃的道场竟然已经关门大吉，学生们也都各奔东西。阿凛向熟人打听之后，找到了自己的师傅岩井。岩井如今经营着一家中国餐馆，他从身手不凡的武林高手变成了锅碗瓢盆堆里的妙手厨师。得知师傅放弃了少林拳之道后，阿凛大为震惊，她飞奔跑出餐馆，决心凭一己之力重振道场。&lt;/p&gt;
+&lt;p&gt;第二天一早，一个女孩来找阿凛。她是中国餐馆里的女服务生刘珉珉，昨天看到阿凛的功夫后对她非常感兴趣，想拉她进女子曲棍球队。阿凛跟着珉珉来到了国际星馆大学女子曲棍球队的活动室，她以所有队员跟她学少林拳为交换条件，加入了球队。&lt;/p&gt;
+&lt;p&gt;学长大场雄一郎察觉到了阿凛非凡的斗气，一直追求强敌的他，提出要和阿凛一比高下。热血少女阿凛的战斗刚刚拉开序幕……&lt;/p&gt;
+&lt;p&gt;◎剧　　照&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;幕后制作：&lt;/p&gt;
+&lt;p&gt;日本每年春季的黄金周假期都是电影旺季，许多新片都选择此时上映抢占票房。今年黄金周的大银幕依然精彩纷呈，在接踵出炉的本土新片中，最引人注目的当属号称第一部正宗日产武打片的《少林少女》。&lt;/p&gt;
+&lt;p&gt;虽然《少林少女》并没有展开狂轰滥炸式的宣传攻势，但它强大的阵容足以让每一个影迷为之怦然心动。缔造《跳跃大搜查线》神话的制作人龟山千广和香港著名电影人周星驰携手创意，富士电视台金牌导演本广克行执掌导筒，再加上性格美女柴崎幸领衔主演，这几个响当当的名字本身就是影片最好的宣传词。&lt;/p&gt;
+&lt;p&gt;从片名上就可以看出些端倪，《少林少女》的灵感其实来源于星爷的经典之作《少林足球》。2002年6月，在香港刷新票房纪录的《少林足球》借世界杯之机登陆日本大银幕。当时，龟山千广也去了看了电影，并对之大加赞赏。他和周星驰聊天时突发奇想，说起希望拍一部女版少林足球，让女孩子来一场轰轰烈烈的体育大格斗。没想到，几年前玩笑似的闲聊竟然变成了现实，龟P和星爷还真凑在一起弄出了这么一部《少林少女》来。&lt;/p&gt;
+&lt;p&gt;《少林少女》的故事构架和《少林足球》颇为相似，两部影片都把揉合了功夫的体育竞技作为看点，星爷玩的是足球，而本片的女主人公樱泽凛则玩起了曲棍球。不过，本片并不是换一下主角的性别了事，当故事围绕一个女孩展开时，无论是情节走向还是场景氛围都发生了变化。女孩的出拳抬脚同样凌厉却没有萧杀之气，女孩的执着倔强不仅让人感动还透出一丝可爱的气息。龟山制作人并不打算把樱泽凛塑造成一个英雄，而是希望她能成为千千万万为梦想而打拼的现代人的缩影。同时，他力图让樱泽凛诉说出一种真正的侠义精神——“武功不是打斗的道具，变强也会让人变得温柔。”&lt;/p&gt;
+&lt;p&gt;当红明星柴崎幸早在《大逃杀》中就显示出了不凡的身手，去年她主演的奇幻大片《多罗罗》也有不少精彩动作戏，不过，出演实打实的功夫片对她来说还是头一遭。本片正式开拍是在2007年4月，早在2006年，柴崎幸就开始了少林拳的特训。虽说有了一年多的充分准备，但开拍之后依然相当辛苦，肌肉酸痛小磕小碰是家常便饭，据说还差点骨折。除了一身帅气的功夫装、力战群敌的柴崎幸，留着长发一脸大胡子的江口洋介也是不可错过的看点。&lt;/p&gt;
+&lt;p&gt;酣畅淋漓的功夫、飒爽可爱的美女、捧腹不断的笑料，《少林少女》绝对是一道有滋有味的娱乐大餐。&lt;/p&gt;
+&lt;p&gt;花絮：&lt;/p&gt;
+&lt;p&gt;本片中，有一场柴崎幸和一群黑衣人大战的精彩动作戏，出演黑衣人头领的其实是柴崎幸的功夫教练兼本片制作人西冬彦。&lt;/p&gt;
+&lt;p&gt;配合《少林少女》的上映，《少林足球》于2008年4月2日在日本推出了特别版DVD。&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【下载地址】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CD1&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;ftp://dygod1:dygod1@d062.dygod.cn:3009/%E5%B0%91%E6%9E%97%E5%B0%91%E5%A5%B3DVD%E4%B8%AD%E5%AD%97%EF%BC%88DYGOD%E9%A6%96%E5%8F%91%EF%BC%89/%5B%E7%94%B5%E5%BD%B1%E5%A4%A9%E5%A0%82www.dygod.cn%E9%A6%96%E5%8F%91%5D%E5%B0%91%E6%9E%97%E5%B0%91%E5%A5%B3DVD%E4%B8%AD%E5%AD%97cd1.rmvb&#34;&gt;ftp://dygod1:dygod1@d062.dygod.cn:3009/少林少女DVD中字（DYGOD首发）/[电影天堂www.dygod.cn首发]少林少女DVD中字cd1.rmvb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CD2&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;ftp://dygod2:dygod2@d062.dygod.cn:3009/%E5%B0%91%E6%9E%97%E5%B0%91%E5%A5%B3DVD%E4%B8%AD%E5%AD%97%EF%BC%88DYGOD%E9%A6%96%E5%8F%91%EF%BC%89/%5B%E7%94%B5%E5%BD%B1%E5%A4%A9%E5%A0%82www.dygod.cn%E9%A6%96%E5%8F%91%5D%E5%B0%91%E6%9E%97%E5%B0%91%E5%A5%B3DVD%E4%B8%AD%E5%AD%97cd2.rmvb&#34;&gt;ftp://dygod2:dygod2@d062.dygod.cn:3009/少林少女DVD中字（DYGOD首发）/[电影天堂www.dygod.cn首发]少林少女DVD中字cd2.rmvb&lt;/a&gt;&lt;/p&gt;- https://blog.lsvking.com/326/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>郭德刚相生大全</title>
+        <link>https://blog.lsvking.com/320/</link>
+        <pubDate>Mon, 10 Nov 2008 12:50:03 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/320/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/320/ -&lt;p&gt;日本邦子.MP3 5223 KB师傅经.mp3 2237 KB寿比南山.mp3 3.3MB.mp3 3348 KB水泊梁山-巧入江州城.mp3 8467 KB太平歌词《秦琼观阵》(郭德纲).mp3 1850 KB托妻献子.mp3 4254 KB托妻献子1.mp3 8048 KB王月波 郭德纲 批捉放.mp3 580 KB王月波 郭德纲 做推车.mp3 424 KB&lt;/p&gt;
+- https://blog.lsvking.com/320/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

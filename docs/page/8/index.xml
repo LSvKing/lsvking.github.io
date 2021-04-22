@@ -1,0 +1,868 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>http://example.org/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This is a customized copyright.</copyright>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>DedeCMS模板制作使用实例教程（三）【Channel 标记使用实例】</title>
+        <link>http://example.org/125/</link>
+        <pubDate>Sat, 22 Mar 2008 18:03:48 +0000</pubDate>
+        
+        <guid>http://example.org/125/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/125/ -&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分“type = top,sun/son,self ”的所调用的对象就行了。&lt;br&gt;
+说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+使用思路、步骤：&lt;br&gt;
+一、明确使用范围&lt;br&gt;
+我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Channel 标记】的使用范围是：&lt;br&gt;
+封面模板、列表模板、文档模板。&lt;br&gt;
+二、通过调试了解其使用方法&lt;br&gt;
+我调试的方法是：&lt;br&gt;
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Channel 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。&lt;br&gt;
+调用方法一：&lt;br&gt;
+我调试【Channel 标记】的具体代码如下：&lt;br&gt;
+{dede:channel row=’3′ type=’top’}&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;[field:typename/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{/dede:channel}&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+调用方法二：&lt;br&gt;
+我调试【imglist标记】的具体代码如下：&lt;br&gt;
+{dede:channel row=’3′ type=’sun’ typeid=’96’}&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;[field:typename/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{/dede:channel}&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+- http://example.org/125/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>DedeCMS模板制作使用实例教程（二）【Field 标记使用实例】</title>
+        <link>http://example.org/118/</link>
+        <pubDate>Sat, 22 Mar 2008 17:54:06 +0000</pubDate>
+        
+        <guid>http://example.org/118/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/118/ -&lt;p&gt;【Field 标记】在封面模板、列表模板、文档模板的使用频率很高，实用。主要用来获得到系统变量的值或者路径，用法很灵活。可以直接展示数据，如调用 position，得到栏目一 &amp;gt; 栏目二” 这样形式的链接；或者，调用templeturl得到/templets这样路径。&lt;br&gt;
+使用思路、步骤：&lt;br&gt;
+一、明确使用范围&lt;br&gt;
+我们在使用【Field 标记】的过程中，必须明确其使用的范围，否则可能无法正常调用该标签，其使用范围是：&lt;br&gt;
+封面模板（如index_article.htm）、列表模板（如list_article.htm）、文档模板（如article_article.htm）。&lt;br&gt;
+  index_article.htm、list_article.htm、article_article.htm等类似的模板文档都在templets\default\文件夹中。&lt;br&gt;
+注意：&lt;br&gt;
+  1、封面模板与列表模板是有区别的，但调用【Field 标记】可以相同；&lt;br&gt;
+  2、封面模板有不同的类型，我们最常用的是文章模板（index_article.htm），其它的还有图片模板（index_image.htm），简 介模板（index_info.htm），软件模板（index_soft.htm）等等，这些模板调用【Field 标记】的道理都是一样的。&lt;br&gt;
+二、通过调试了解其使用方法&lt;br&gt;
+我调试的方法是：&lt;br&gt;
+将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Field 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新栏目HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。&lt;br&gt;
+用法一：&lt;br&gt;
+这种用法，主要是从数据库获取相关的数据，特别是系统变量的数据。&lt;br&gt;
+我调试【Arclist 标记】的具体代码如下：&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;调用position标记,得到:栏目一 &amp;gt; 栏目二” 这样形式的链接：&lt;!-- raw HTML omitted --&gt;{dede:field name=’position’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;插件路径：&lt;!-- raw HTML omitted --&gt;{dede:field name=’phpurl’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;模板路径：&lt;!-- raw HTML omitted --&gt;{dede:field name=’templeturl’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;版权信息：&lt;!-- raw HTML omitted --&gt;{dede:field name=’powerby’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;主页路径：&lt;!-- raw HTML omitted --&gt;{dede:field name=’indexurl’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;主页名称：&lt;!-- raw HTML omitted --&gt;{dede:field name=’indexname’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。&lt;br&gt;
+用法二：&lt;br&gt;
+这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，&lt;br&gt;
+我调试【Arclist 标记】的具体代码如下：&lt;br&gt;
+  &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+注意：本页面的文字和链接都是经过dede.css处理的&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;织梦论坛&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+- http://example.org/118/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>DedeCMS模板制作使用实例教程（一）【Arclist 标记使用实例】</title>
+        <link>http://example.org/109/</link>
+        <pubDate>Sat, 22 Mar 2008 17:36:00 +0000</pubDate>
+        
+        <guid>http://example.org/109/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/109/ -&lt;p&gt;从本文开始，我将根据我的学习心得写一系列的实例教程。通过实例说明DedeCMS标记的使用方法。本实例教程使用的版本是DedeCms 2007 V5.0版，在本地架设的php+mysql （APMServ）环境中测试。安装、架设等相关方法参阅寂寞天涯的整理：&lt;a href=&#34;http://bbs.dedecms.com/read.php?tid=33332&#34;&gt;http://bbs.dedecms.com/read.php?tid=33332&lt;/a&gt;。以后一系列教程都是在这个环境中使用，不再重复。因测试需要数据，我已事先在数据库录入，就不理啰嗦，马上进入正题。&lt;br&gt;
+现在先讲【Arclist 标记】。【Arclist 标记】是使用率很高，相当实用，所以我们使用都必须熟练掌握。它的详细使用说明在官方Dedecms文档中已经有严密的解释，见：&lt;a href=&#34;http://www.dedecms.com/archives/templethelp/help/index.htm&#34;&gt;http://www.dedecms.com/archives/templethelp/help/index.htm&lt;/a&gt;，我们在使用过程中可以随时查阅。&lt;br&gt;
+使用思路、步骤：&lt;br&gt;
+一、明确使用范围&lt;br&gt;
+我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Arclist 标记】的使用范围是：&lt;br&gt;
+封面模板、列表模板、文档模板。&lt;br&gt;
+即对应templets\default\文件夹下的&lt;br&gt;
+index_识别ID.htm模板、list_识别ID.htm模板、article_识别ID.htm模板）&lt;br&gt;
+二、通过调试了解其使用方法&lt;br&gt;
+我调试的方法是：&lt;br&gt;
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Arclist 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。&lt;br&gt;
+注意：其它文件保持不变，我不懂PHP，只能用这种方式调试，相信朋友们很容易上手的。&lt;br&gt;
+我调试【Arclist 标记】的具体代码如下：&lt;br&gt;
+{dede:arclist typeid=” row=’1’  titlelen=’20’ infolen=”&lt;br&gt;
+imgwidth=’100′ imgheight=’80’}&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章ID:&lt;!-- raw HTML omitted --&gt;[field:ID/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章标题:&lt;!-- raw HTML omitted --&gt;[field:title/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章短标题:&lt;!-- raw HTML omitted --&gt;[field:shorttitle/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章标题的文字链接:&lt;!-- raw HTML omitted --&gt;[field:textlink/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章作者:&lt;!-- raw HTML omitted --&gt;[field:writer/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章发表日期:&lt;!-- raw HTML omitted --&gt;[field:stime/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章所属栏目的目录:&lt;!-- raw HTML omitted --&gt;[field:typedir/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章所属栏目的名称:&lt;!-- raw HTML omitted --&gt;[field:typename/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章所属栏目的文字链接:&lt;!-- raw HTML omitted --&gt;[field:typelink/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章的图片链接:&lt;!-- raw HTML omitted --&gt;[field:imglink/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;文章的缩略图:&lt;!-- raw HTML omitted --&gt;[field:image/] &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{/dede:arclist}&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+文章篇幅所限，未能列出所有的属性和字段调用的方法。请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。&lt;br&gt;
+三、【Arclist 标记】延伸出来的别名标记（实用又个性化，建议关注使用）&lt;br&gt;
+为了使网页内容更具个性化，人性化，官方在【Arclist 标记】的基础上延伸出来一些别外标签，如：hotart、coolart、likeart、artlist、imglist、imginfolist、specart、autolist 。非常好！&lt;br&gt;
+我调试【imglist标记】的具体代码如下：&lt;br&gt;
+{dede:imglist typeid=” row=’2′ col=’1’  titlelen=’20’ infolen=”&lt;br&gt;
+imgwidth=’100′ imgheight=’80’}&lt;br&gt;
+[field:imglink/]  [field:textlink/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{/dede:imglist}&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+如上例，其它的别名标记，朋友们可以举一反三，融会贯通！&lt;/p&gt;
+- http://example.org/109/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>DedeCMS模板制作使用实例教程  序</title>
+        <link>http://example.org/108/</link>
+        <pubDate>Sat, 22 Mar 2008 17:21:34 +0000</pubDate>
+        
+        <guid>http://example.org/108/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/108/ -&lt;p&gt;1、怎样调用数据？&lt;br&gt;
+    DedeCMS是大型的动态网站程序，其数据主要在存储在数据库中的，做模板就必须知道，数据是如何从数据库读取并展示在大家面前的。官方写了很多程序，将数据的提取过程变得相当简单。大家只要懂得调用适当的&amp;quot;DedeCMS标记&amp;quot;就可以调取相应的数据。调用&amp;quot;DedeCMS标记&amp;quot;的三种代码样式：&lt;br&gt;
+    A、{dede:标记名称 属性=’值’/}&lt;br&gt;
+    B、{dede:标记名称 属性=’值’}{/dede:标记名称}&lt;br&gt;
+    C、{dede:标记名称 属性=’值’}自定义样式模板(InnerText){/dede:标记名称}&lt;br&gt;
+    详细的说明参阅官方文件：&lt;a href=&#34;http://www.dedecms.com/archives/templethelp/help/index.htm&#34;&gt;http://www.dedecms.com/archives/templethelp/help/index.htm&lt;/a&gt;。使用时可随时查阅该文档。&lt;br&gt;
+    我自己想出了一种方法来加深认识，并通过实例调试这些标签，这样认识就比其它人更深一层次。&lt;br&gt;
+    具体方法是：&lt;br&gt;
+    将templets\default\文件夹下的index.html文件代码，全部掏空。放入自己想要调试的标签，再在IE中访问网站主页index.php，就可以得到返回的数据。&lt;br&gt;
+    比如：&lt;br&gt;
+    a、放入标签{dede:global name=&amp;ldquo;cfg_webname&amp;rdquo; /}就得到了“网站名称”&lt;br&gt;
+    b、放入标签{dede:artlist typeid=” row=5}[field:title/]&lt;!-- raw HTML omitted --&gt;{/dede:artlist}就返回5篇文章的标题。&lt;br&gt;
+    c、放入标签{dede:arclist infolen=’100′ row=5}[field:textlink/]&lt;!-- raw HTML omitted --&gt;[field:info/]&lt;!-- raw HTML omitted --&gt;{/dede:arclist}就返回5篇文章的标题和相应的内容简介&lt;br&gt;
+    注意：abc实例是与上面ABC三种形式相对应的。大家可以按照官方的文档，逐个测试，举一反三。&lt;br&gt;
+    至于DedeCMS程序是怎样实现的，我不懂PHP，搞不清楚，我觉得也没必要全都弄懂，搞模板的就专心搞模板，程序的归由技术人员去处理。&lt;br&gt;
+    搞清楚上面内容，基本上就会调用数据库中自己需要的数据了。&lt;br&gt;
+    在这里还必须搞清楚DedeCMS模板的不同类型的标记。&lt;br&gt;
+    寂寞天涯把标记分为两种不同的类型，详细内容见&lt;a href=&#34;http://bbs.dedecms.com/read.php?tid=51186&#34;&gt;http://bbs.dedecms.com/read.php?tid=51186&lt;/a&gt;&lt;br&gt;
+2、怎样将网站内容展示给访问者？&lt;br&gt;
+    访问网的朋友希望看到的是经过组织的完整和系统的内容，而不是散落的各种数据。所以我们就必须将数据组织在一个网页中，DedeCMS的强大就在于通过某一PHP页面，调用相对应的htm页面，将数据库数据有组织的生成在一个静态网页（档案页）中。&lt;br&gt;
+    比如：网站主页的模板就是templets\default\index.html，DedeCMS通过根目录中的index.php文件调用相应的程序，获取数据库的数据，生成主页。&lt;br&gt;
+    上面是生成主页的大概过程，其它页面的生成都是一样的道理。&lt;br&gt;
+    相关的模板有：&lt;br&gt;
+    A、主页模板&lt;br&gt;
+    B、板块（封面）模板&lt;br&gt;
+    C、列表模板&lt;br&gt;
+    D、档案模板&lt;br&gt;
+    E、搜索模板&lt;br&gt;
+    F、ＲＳＳ功能模板&lt;br&gt;
+    G、ＪＳ编译功能模板&lt;br&gt;
+    H、站内新闻发布模板&lt;br&gt;
+    I、友情链接模板&lt;br&gt;
+    J、留言簿模板&lt;br&gt;
+    ……  ……&lt;br&gt;
+    注意：上面这些模板都是通过相对应的PHP程序来调用并生成网页实现其功能的，这些模板主要集中在templets\default\和templets \plus\文件夹中，详细情况请朋友自己查询。修改这两个文件夹中的模板文件，就可以得到各种各样自己想要的网页的样式，想要多漂亮就能有多漂亮，当然要看你的技术水平了！呵呵&lt;br&gt;
+    看到这么多样化的模板，有的人可能就傻眼了，觉得很乱，其实，你只要把网站的页面分为三个级别就起到一个提纲挈领的作用了。即理解成类似于：【主页=&amp;gt;列表页=&amp;gt;档案页】就行了。即官方所说的“板块（封面）模板、列表模板、档案模板”三种不同的级别。&lt;br&gt;
+3、如何根据自己的需要制作网站？&lt;br&gt;
+    网站的功能主要靠程序来实现，这方面当然有赖于柏拉图带领下的DedeCMS技术人员了，希望功能越来越多，越来越人性化，加油！！！&lt;br&gt;
+    根据客户提出的要求，调用相关的标签……&lt;br&gt;
+    DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合的网站……&lt;br&gt;
+4、精通模板制作需要哪方面的基本知识？&lt;br&gt;
+    我个人认为，做模板的只要懂得html,css，美工等基本的常识就行了。&lt;br&gt;
+    比如……&lt;br&gt;
+    我已经用“DedeCms OX V4.0版”制作了两个网站:&lt;a href=&#34;http://www.0750ly.com&#34;&gt;www.0750ly.com&lt;/a&gt;,&lt;a href=&#34;http://www.tour-tibet.org&#34;&gt;www.tour-tibet.org&lt;/a&gt;  但都是修改别人的模板，我自己也相当不满意，希望这次认真学习DedeCms模板制作后，能有质的飞跃，拥有一个漂亮的综合网站。&lt;br&gt;
+对建站和DedeCms模板制作有兴趣的朋友，请加我的群51584591，一起讨论，共同进步！&lt;br&gt;
+小贴士：&lt;br&gt;
+不懂的地方一定要充分利用搜索引擎和论坛搜索功能或者向技术人员提问。&lt;br&gt;
+  本教程适合超级菜鸟，高手飘过！&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;原作者&lt;a href=&#34;http://bbs.dedecms.com/profile.php?action=show&amp;amp;uid=26029&#34;&gt;wwwlikespcn&lt;/a&gt;&lt;/p&gt;
+- http://example.org/108/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>常用CSS命名参考</title>
+        <link>http://example.org/107/</link>
+        <pubDate>Sat, 22 Mar 2008 00:31:38 +0000</pubDate>
+        
+        <guid>http://example.org/107/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/107/ -&lt;p&gt;在XHTML中定义ID时都用得上，主要是方便CSS定义样式时能一眼看穿。所以，CSS命名仅作参考。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(1)页面结构类&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;容器: container&lt;/p&gt;
+&lt;p&gt;页头：header&lt;/p&gt;
+&lt;p&gt;内容：content/container&lt;/p&gt;
+&lt;p&gt;页面主体：main&lt;/p&gt;
+&lt;p&gt;页尾：footer&lt;/p&gt;
+&lt;p&gt;导航：nav&lt;/p&gt;
+&lt;p&gt;侧栏：sidebar&lt;/p&gt;
+&lt;p&gt;栏目：column&lt;/p&gt;
+&lt;p&gt;页面外围控制整体布局宽度：wrapper&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(2)导航类&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;导航：nav&lt;/p&gt;
+&lt;p&gt;主导航：mainnav&lt;/p&gt;
+&lt;p&gt;子导航：subnav&lt;/p&gt;
+&lt;p&gt;顶导航：topnav&lt;/p&gt;
+&lt;p&gt;边导航：sidebar&lt;/p&gt;
+&lt;p&gt;左导航：leftsidebar&lt;/p&gt;
+&lt;p&gt;右导航：rightsidebar&lt;/p&gt;
+&lt;p&gt;位置导航： crumb&lt;/p&gt;
+&lt;p&gt;菜单：menu&lt;/p&gt;
+&lt;p&gt;子菜单：submenu&lt;/p&gt;
+&lt;p&gt;面包屑：breadcrumb(即页面所处位置导航提示）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(3)网页内容类&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;标题: title&lt;/p&gt;
+&lt;p&gt;摘要: summary&lt;/p&gt;
+&lt;p&gt;箭头： arrow&lt;/p&gt;
+&lt;p&gt;商标： label&lt;/p&gt;
+&lt;p&gt;网站标志： logo&lt;/p&gt;
+&lt;p&gt;转角/圆角： corner&lt;/p&gt;
+&lt;p&gt;横幅广告： banner&lt;/p&gt;
+&lt;p&gt;栏目： column&lt;/p&gt;
+&lt;p&gt;子菜单： subMenu&lt;/p&gt;
+&lt;p&gt;搜索： search&lt;/p&gt;
+&lt;p&gt;搜索框： searchBox&lt;/p&gt;
+&lt;p&gt;登录： login&lt;/p&gt;
+&lt;p&gt;工具条： toolbar&lt;/p&gt;
+&lt;p&gt;下拉： drop&lt;/p&gt;
+&lt;p&gt;标签页： tab&lt;/p&gt;
+&lt;p&gt;当前的： current&lt;/p&gt;
+&lt;p&gt;列表： list&lt;/p&gt;
+&lt;p&gt;滚动： scroll&lt;/p&gt;
+&lt;p&gt;服务： service&lt;/p&gt;
+&lt;p&gt;提示信息： msg&lt;/p&gt;
+&lt;p&gt;新闻： news&lt;/p&gt;
+&lt;p&gt;小技巧： tips&lt;/p&gt;
+&lt;p&gt;下载： download&lt;/p&gt;
+&lt;p&gt;栏目标题： title&lt;/p&gt;
+&lt;p&gt;热点： hot&lt;/p&gt;
+&lt;p&gt;加入： joinus&lt;/p&gt;
+&lt;p&gt;注册： regsiter&lt;/p&gt;
+&lt;p&gt;指南： guide&lt;/p&gt;
+&lt;p&gt;友情链接： friendlink&lt;/p&gt;
+&lt;p&gt;状态： status&lt;/p&gt;
+&lt;p&gt;版权： copyright&lt;/p&gt;
+&lt;p&gt;按钮： btn&lt;/p&gt;
+&lt;p&gt;合作伙伴： partner&lt;/p&gt;
+&lt;p&gt;投票： vote&lt;/p&gt;
+&lt;p&gt;tag:css\web标准&lt;/p&gt;
+- http://example.org/107/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>HTML5的结构和语义——内嵌媒体（五）</title>
+        <link>http://example.org/106/</link>
+        <pubDate>Sun, 09 Mar 2008 14:09:35 +0000</pubDate>
+        
+        <guid>http://example.org/106/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/106/ -&lt;p&gt;  视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用  Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影  “a Sora in Prospect Park”：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;    对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和  MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了  BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。  &lt;br&gt;
+还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;  autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。  &lt;br&gt;
+浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。  &lt;br&gt;
+因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的  John F. Kennedy 的就职演说。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt;     Vice President Johnson, Mr. Speaker, Mr. Chief Justice,&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   4:&amp;lt;/span&amp;gt;     President Eisenhower, Vice President Nixon, President Truman,&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   5:&amp;lt;/span&amp;gt;     Reverend Clergy, fellow citizens:&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   6:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   7:&amp;lt;/span&amp;gt;     &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   8:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   9:&amp;lt;/span&amp;gt;     We observe today not a victory of party, but a celebration of&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  10:&amp;lt;/span&amp;gt;     freedom -- symbolizing an end, as well as a beginning -- &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  11:&amp;lt;/span&amp;gt;    signifying renewal, as well as change. For I have sworn before&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  12:&amp;lt;/span&amp;gt;     you and Almighty God the same solemn oath our forebears&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  13:&amp;lt;/span&amp;gt;     prescribed nearly a century and three-quarters ago.&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  14:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  15:&amp;lt;/span&amp;gt;     &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  16:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  17:&amp;lt;/span&amp;gt;     The world is very different now. For man holds in his mortal&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  18:&amp;lt;/span&amp;gt;     hands the power to abolish all forms of human poverty and all&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  19:&amp;lt;/span&amp;gt;     forms of human life. And yet the same revolutionary beliefs for&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  20:&amp;lt;/span&amp;gt;     which our forebears fought are still at issue around the globe -- &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  21:&amp;lt;/span&amp;gt;     the belief that the rights of man come not from the&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  22:&amp;lt;/span&amp;gt;     generosity of the state, but from the hand of God.&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  23:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  24:&amp;lt;/span&amp;gt;     &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  25:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  26:&amp;lt;/span&amp;gt;     ...&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  27:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  28:&amp;lt;/span&amp;gt;     &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  29:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;audio&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;转载自:&lt;a href=&#34;http://52CSS.com&#34;&gt;52CSS&lt;/a&gt;&lt;/p&gt;
+- http://example.org/106/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>HTML5的结构和语义——语义性的内联元素（四）</title>
+        <link>http://example.org/105/</link>
+        <pubDate>Sun, 09 Mar 2008 14:04:39 +0000</pubDate>
+        
+        <guid>http://example.org/105/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/105/ -&lt;p&gt;HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HTML 5 提供了几个新的内联元素来满足非技术作者的需求。 &lt;br&gt;
+&lt;strong&gt;   m&lt;/strong&gt;&lt;br&gt;
+m 元素表示文本被 “加上标志”，但是不一定要强调。可以把它想像成书中突出显示的一节。Google 的缓存页面就是典型的用例。如果链接到一个缓存的副本，搜索词就被加上标志。例如，如果搜索 “Egret”，那么缓存的 Google 页面可能像下面这样：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt; American &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Egret&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;)  is a large white wading bird found worldwide.&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt; The Great &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Egret&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; flies with slow wing beats. The&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   4:&amp;lt;/span&amp;gt; scientific name of the Great &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Egret&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; is &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;i&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Casmerodius&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   5:&amp;lt;/span&amp;gt; albus&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;i&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;. &amp;lt;/pre&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;   对于这个元素的名称当前还有争议。在规范发布之前，它可能从 m 改为 mark。 &lt;br&gt;
+&lt;strong&gt;time&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;time 元素表示一个时间值，比如 5:35 P.M., EST, April 23, 2007。例如：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;time&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;5:35 P.M. on April 23rd&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;time&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;.&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/pre&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;   time 元素可以帮助浏览器和其他程序识别出 HTML 页面中的时间。它不要求对元素内容应用任何特定的格式。但是，每个 time 元素都应该有一个 datetime 属性，其中包含更适合机器识别的时间值，比如：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;time&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;datetime&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;2007-04-23T17:35:00-05:00&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;5:35 P.M. on April 23rd&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;time&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;.&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/pre&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;   适合机器读取的时间值可能对搜索引擎、日历程序等有帮助。 &lt;br&gt;
+&lt;strong&gt;meter&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;meter 元素表示指定范围内的数字值。例如，可以用它表示薪水、投票给 Le Pen 的法国选民的百分比或考试分数。在这里，我使用 meter 标出 Software Development 2007 上一位 Google 程序员提供的数据：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt; can expect to start around &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;meter&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;$90,000&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;meter&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; per year.&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/pre&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;  meter 元素帮助浏览器和其他客户机识别 HTML 页面中的数量。它不要求对元素内容应用任何特定的格式。但是，每个 meter 元素可以有最多 6 个属性，它们按照更适合机器识别的形式表示这个数量： &lt;br&gt;
+value &lt;br&gt;
+min &lt;br&gt;
+low &lt;br&gt;
+high &lt;br&gt;
+max &lt;br&gt;
+optimum &lt;br&gt;
+这些属性都应该包含一个十进制数字。例如，期末考试的分数可以写成下面这样：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;meter&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;value&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;88.7&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;min&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;0&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;max&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;100&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;low&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;65&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;high&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;96&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;optimum&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;100&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;B+&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;meter&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;.&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/pre&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;   这表示这个学生的分数是百分制中的 88.7。可能的最低分数是 0，但是实际的最低分数是 65。可能的最高分数是 100，但是实际的最高分数是  96。用户代理可以用某种数值控件显示这一信息，也可以在工具提示中显示额外的数据，但是最常见的情况可能是像其他内联元素一样对它应用样式。 &lt;br&gt;
+&lt;strong&gt;progress&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;progress 元素表示一个正在进行的过程的状态，就像图形用户界面（GUI）应用程序中的进度条。例如，可以用它表示一个文件已经下载的百分比或者播放电影时的当前位置。下面这个进度控件表示下载已经完成了 33%：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt;   &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;progress&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;value&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;1534602&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;max&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;4603807&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;33%&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;progress&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/pre&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;   value 属性表示操作的当前状态。max 属性表示操作的总量。这个元素指出要下载的数据总量是 4,603,807 字节，已经下载了 1,534,602 字节。 &lt;br&gt;
+忽略 max 属性，就可以显示无限的进度。 &lt;br&gt;
+在操作进行时，应该使用 JavaScript 语言动态地更新进度条。在静态情况下，这个元素没什么意义。&lt;/p&gt;
+&lt;p&gt;转载自:&lt;a href=&#34;http://52CSS.com&#34;&gt;52CSS&lt;/a&gt;&lt;/p&gt;
+- http://example.org/105/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>HTML5的结构和语义——语义性的块级元素（三）</title>
+        <link>http://example.org/104/</link>
+        <pubDate>Sun, 09 Mar 2008 13:59:11 +0000</pubDate>
+        
+        <guid>http://example.org/104/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/104/ -&lt;p&gt;     HTML 5 还增加了一些纯语义性的块级元素： &lt;br&gt;
+&lt;strong&gt;aside figure  dialog&lt;/strong&gt; &lt;br&gt;
+我在文章和书中一直使用前两个元素。第三个元素我不经常用，它主要用于书面文本。 &lt;br&gt;
+&lt;strong&gt;aside&lt;/strong&gt; &lt;br&gt;
+aside 元素代表说明、提示、边栏、引用、附加注释等，也就是叙述主线之外的内容。例如，在 developerWorks 文章中，常常会看到用表格形式编写的边栏，见代码3 用 HTML 4 编写的 developerWorks 边栏。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;10&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;img&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;alt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;src&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;//www.ibm.com/i/c.gif&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;height&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;1&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;10&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   4:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   5:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;table&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;border&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;1&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;cellpadding&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;5&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;cellspacing&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;0&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;100%&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   6:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;bgcolor&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;#eeeeee&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   7:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;name&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;xf-value&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;span&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;smalltitle&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;.xf-value&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;span&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   8:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   9:&amp;lt;/span&amp;gt; The &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;code&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;type&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;inline&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;.xf-value&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;code&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; selector used here styles the input&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  10:&amp;lt;/span&amp;gt; field value but not its label. This is actually inconsistent&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  11:&amp;lt;/span&amp;gt; with the current CSS3 draft. The example really should use the&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  12:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;code&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;type&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;inline&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;::value&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;code&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; pseudo-class instead like so:&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  13:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  14:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;table&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;border&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;0&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;cellpadding&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;0&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;cellspacing&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;0&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;100%&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  15:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;code-outline&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  16:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;pre&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;displaycode&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;input::value { width: 20em; }&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  17:&amp;lt;/span&amp;gt; #ccnumber::value { width: 18em }&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  18:&amp;lt;/span&amp;gt; #zip::value { width: 12em }&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  19:&amp;lt;/span&amp;gt; #state::value { width: 3em  }&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;pre&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  20:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;table&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;br&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  21:&amp;lt;/span&amp;gt;&amp;amp;#160; &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  22:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  23:&amp;lt;/span&amp;gt; However, Firefox doesn&#39;t yet support this syntax. &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  24:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  25:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;table&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;  在 HTML 5 中，可以按照更有意义的方式编写这个边栏，见代码4 用 HTML 5 编写的 developerWorks 边栏。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h3&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;.xf-value&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h3&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   4:&amp;lt;/span&amp;gt; The &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;code&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;type&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;inline&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;.xf-value&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;code&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; selector used here styles the input&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   5:&amp;lt;/span&amp;gt; field value but not its label. This is actually inconsistent&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   6:&amp;lt;/span&amp;gt; with the current CSS3 draft. The example really should use the&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   7:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;code&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;type&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;inline&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;::value&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;code&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; pseudo-class instead like so:&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   8:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   9:&amp;lt;/span&amp;gt;   &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  10:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;pre&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;displaycode&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;input::value { width: 20em; }&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  11:&amp;lt;/span&amp;gt; #ccnumber::value { width: 18em }&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  12:&amp;lt;/span&amp;gt; #zip::value { width: 12em }&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  13:&amp;lt;/span&amp;gt; #state::value { width: 3em  }&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;pre&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  14:&amp;lt;/span&amp;gt;&amp;amp;#160; &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  15:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  16:&amp;lt;/span&amp;gt; However, Firefox doesn&#39;t yet support this syntax. &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  17:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  18:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;aside&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;  浏览器可以决定把这个边栏放在哪里（可能需要用一点儿 CSS 代码）。 &lt;br&gt;
+&lt;strong&gt;figure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;figure 元素代表一个块级图像，还可以包含说明。例如，在许多 developerWorks 文章中，可以看到代码5 用 HTML 4 编写的 developerWorks 图 这样的标记其结果见图1。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;img&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;alt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;A Web site is requesting permission to install the following item: &amp;lt;/pre&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt;   &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;legend&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Figure 2. Install Mozilla XForms dialog&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;legend&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt;   &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;img&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;alt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;A Web site is requesting permission to install the following item: &amp;lt;/pre&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Simplicius &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dd&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;According to the straight line AF,&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   4:&amp;lt;/span&amp;gt;     and not according to the curve, such being already excluded&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   5:&amp;lt;/span&amp;gt;     for such a use.&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dd&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   6:&amp;lt;/span&amp;gt;&amp;amp;#160; &amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   7:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Sagredo &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   8:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dd&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;But I should take neither of them,&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   9:&amp;lt;/span&amp;gt;     seeing that the straight line AF runs obliquely. I should&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  10:&amp;lt;/span&amp;gt;     draw a line perpendicular to CD, for this would seem to me&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  11:&amp;lt;/span&amp;gt;     to be the shortest, as well as being unique among the&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  12:&amp;lt;/span&amp;gt;     infinite number of longer and unequal ones which may be&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  13:&amp;lt;/span&amp;gt;     drawn from the point A to every other point of the opposite&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  14:&amp;lt;/span&amp;gt;     line CD. &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dd&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  15:&amp;lt;/span&amp;gt;&amp;amp;#160; &amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  16:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Salviati &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  17:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dd&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; Your choice and the reason you&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  18:&amp;lt;/span&amp;gt;     adduce for it seem to me most excellent. So now we have it&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  19:&amp;lt;/span&amp;gt;     that the first dimension is determined by a straight line;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  20:&amp;lt;/span&amp;gt;     the second (namely, breadth) by another straight line, and&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  21:&amp;lt;/span&amp;gt;     not only straight, but at right angles to that which&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  22:&amp;lt;/span&amp;gt;     determines the length. Thus we have defined the two&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  23:&amp;lt;/span&amp;gt;     dimensions of a surface; that is, length and breadth. &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  24:&amp;lt;/span&amp;gt;&amp;amp;#160; &amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  25:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; But suppose you had to determine a height&amp;amp;#8212;for&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  26:&amp;lt;/span&amp;gt;     example, how high this platform is from the pavement down&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  27:&amp;lt;/span&amp;gt;     below there. Seeing that from any point in the platform we&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  28:&amp;lt;/span&amp;gt;     may draw infinite lines, curved or straight, and all of&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  29:&amp;lt;/span&amp;gt;     different lengths, to the infinite points of the pavement&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  30:&amp;lt;/span&amp;gt;     below, which of all these lines would you make use of? &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  31:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dd&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  32:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;dialog&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- http://example.org/104/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>HTML5的结构和语义——结构</title>
+        <link>http://example.org/103/</link>
+        <pubDate>Sun, 09 Mar 2008 13:53:25 +0000</pubDate>
+        
+        <guid>http://example.org/103/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/103/ -&lt;p&gt;转载 &lt;a href=&#34;http://www.52css.com/article.asp?id=672&#34;&gt;52CSS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;    由于缺少结构，即使是形式良好的 HTML 页面也比较难以处理。必须分析标题的级别，才能看出各个部分的划分方式。边栏、页脚、页眉、导航条、主内容区和各篇文章都由通用的 div 元素来表示。HTML 5 添加了一些新元素，专门用来标识这些常见的结构：  &lt;br&gt;
+· section：这可以是书中的一章或一节，实际上可以是在 HTML 4 中有自己的标题的任何东西  &lt;br&gt;
+· header：页面上显示的页眉；与 head 元素不一样  &lt;br&gt;
+· footer：页脚；可以显示电子邮件中的签名  &lt;br&gt;
+· nav：指向其他页面的一组链接  &lt;br&gt;
+· article：blog、杂志、文章汇编等中的一篇文章  &lt;br&gt;
+我们来考虑一个典型的 blog 主页，它的顶部有页眉，底部有页脚，还有几篇文章、一个导航区和一个边栏，见代码&lt;/p&gt;
+&lt;p&gt;  1 典型的 blog 页面&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt;   &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Mokka mit Schlag &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   4:&amp;lt;/span&amp;gt;  &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   5:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;body&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   6:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;page&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   7:&amp;lt;/span&amp;gt;   &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;header&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   8:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h1&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;href&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;http://www.elharo.com/blog&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Mokka mit Schlag&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h1&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   9:&amp;lt;/span&amp;gt;   &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  10:&amp;lt;/span&amp;gt;   &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;container&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  11:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;center&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;column&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;               &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  12:&amp;lt;/span&amp;gt;       &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;post&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;post-1000572&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  13:&amp;lt;/span&amp;gt;         &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h2&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;href&amp;lt;/span&amp;gt;=&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  14:&amp;lt;/span&amp;gt;       &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;quot;/blog/birding/2007/04/23/spring-comes-and-goes-in-sussex-county/&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  15:&amp;lt;/span&amp;gt;       Spring Comes (and Goes) in Sussex County&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h2&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  16:&amp;lt;/span&amp;gt;         &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  17:&amp;lt;/span&amp;gt;         &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;entry&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  18:&amp;lt;/span&amp;gt;           &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Yesterday I joined the Brooklyn Bird Club for our&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  19:&amp;lt;/span&amp;gt;           annual trip to Western New Jersey, specifically Hyper&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  20:&amp;lt;/span&amp;gt;           Humus, a relatively recently discovered hot spot. It&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  21:&amp;lt;/span&amp;gt;           started out as a nice winter morning when we arrived&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  22:&amp;lt;/span&amp;gt;           at the site at 7:30 A.M., progressed to Spring around&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  23:&amp;lt;/span&amp;gt;           10:00 A.M., and reached early summer by 10:15. &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  24:&amp;lt;/span&amp;gt;         &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  25:&amp;lt;/span&amp;gt;       &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  26:&amp;lt;/span&amp;gt;&amp;amp;#160; &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  27:&amp;lt;/span&amp;gt;&amp;amp;#160; &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  28:&amp;lt;/span&amp;gt;       &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;post&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;post-1000571&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  29:&amp;lt;/span&amp;gt;         &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h2&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;href&amp;lt;/span&amp;gt;=&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  30:&amp;lt;/span&amp;gt;           &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;quot;/blog/birding/2007/04/23/but-does-it-count-for-your-life-list/&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  31:&amp;lt;/span&amp;gt;            But does it count for your life list?&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h2&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  32:&amp;lt;/span&amp;gt;         &amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  33:&amp;lt;/span&amp;gt;         &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;entry&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  34:&amp;lt;/span&amp;gt;           &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Seems you can now go &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  35:&amp;lt;/span&amp;gt;           &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;href&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;http://www.wired.com/science/discoveries/news/&amp;lt;/pre&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   2:&amp;lt;/span&amp;gt;  &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   3:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Mokka mit Schlag &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   4:&amp;lt;/span&amp;gt;  &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   5:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;body&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   6:&amp;lt;/span&amp;gt;   &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;header&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   7:&amp;lt;/span&amp;gt;     &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h1&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;href&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;http://www.elharo.com/blog&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Mokka mit Schlag&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h1&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   8:&amp;lt;/span&amp;gt;   &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;header&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;   9:&amp;lt;/span&amp;gt;   &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;section&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;               &amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  10:&amp;lt;/span&amp;gt;       &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;article&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  11:&amp;lt;/span&amp;gt;         &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h2&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;href&amp;lt;/span&amp;gt;=&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  12:&amp;lt;/span&amp;gt;         &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;quot;/blog/birding/2007/04/23/spring-comes-and-goes-in-sussex-county/&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  13:&amp;lt;/span&amp;gt;          Spring Comes (and Goes) in Sussex County&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h2&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  14:&amp;lt;/span&amp;gt;         &amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  15:&amp;lt;/span&amp;gt;         &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;p&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Yesterday I joined the Brooklyn Bird Club for our&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  16:&amp;lt;/span&amp;gt;         annual trip to Western New Jersey, specifically Hyper&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  17:&amp;lt;/span&amp;gt;         Humus, a relatively recently discovered hot spot. It&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  18:&amp;lt;/span&amp;gt;         started out as a nice winter morning when we arrived at&amp;lt;/pre&amp;gt;
+
+
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  19:&amp;lt;/span&amp;gt;         the site at 7:30 A.M., progressed to Spring around 10:00&amp;lt;/pre&amp;gt;
+&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; b
+&lt;/code&gt;&lt;/pre&gt;
+- http://example.org/103/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>LanQQ – 飞鸽传输增加版</title>
+        <link>http://example.org/100/</link>
+        <pubDate>Thu, 06 Mar 2008 20:28:33 +0000</pubDate>
+        
+        <guid>http://example.org/100/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/100/ -&lt;p&gt;          LanQQ 修改自十分著名的飞鸽传输，在原传输功能基础上，增加了添加好友，聊天室等功能。俨然一个局域网版本的 QQ 聊天加文件传输工具。&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- http://example.org/100/ - This is a customized copyright.</description>
+        </item>
+    
+    
+  </channel>
+</rss> 

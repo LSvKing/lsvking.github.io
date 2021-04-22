@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html><head>
+<title>口袋水晶绝密攻略（２）</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://blog.lsvking.com/scss/journal.min.5e8f3f653e9f6ce67bf72ff8ee6fee69decf7b5639a3ae7f8344750ad4e065b1.css" integrity="sha256-Xo8/ZT6fbOZ79y/47m/uad7Pe1Y5o65/g0R1CtTgZbE=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://blog.lsvking.com/scss/dark-mode.min.bdfa63b2e89903517dcbb1032b537d54cff3f425c19d008a78dfe49e6cd07ced.css" integrity="sha256-vfpjsuiZA1F9y7EDK1N9VM/z9CXBnQCKeN/knmzQfO0=" media="screen">
+
+
+<script src="/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="/js/toc-collapse.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.lsvking.com">
+    
+        <div class="nav-title">
+            龙舍·嬴皇志 - 透过我的双眼看世界
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/">
+                This is Home
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/post/">
+                Archives
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags/">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="https://gohugo.io">
+                external-link
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+ <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>  <a href="https://amazingrise.net">Rise</a>
+<br>
+ <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2016 龙舍·嬴皇志 - 透过我的双眼看世界
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/">
+                    This is Home
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/post/">
+                    Archives
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags/">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="https://gohugo.io">
+                    external-link
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://blog.lsvking.com">
+            龙舍·嬴皇志 - 透过我的双眼看世界
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.lsvking.com">
+        <div class="single-column-header-title">龙舍·嬴皇志 - 透过我的双眼看世界</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    口袋水晶绝密攻略（２）
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/">[游戏]</a>
+                                &nbsp;
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>32.回到槐树市，来到会馆，比较难走，这里设置了看不见的玻璃，如果走错就会重新回到门口．具体走法(<a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s3.album.sina.com.cn/pic/4a7b474d02000ute"><!-- raw HTML omitted --></a><a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s4.album.sina.com.cn/pic/4a7b474d02000utf"><!-- raw HTML omitted --></a><a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s5.album.sina.com.cn/pic/4a7b474d02000utg"><!-- raw HTML omitted --></a>)这个会馆多是幽灵系的，哈哈，那就用大力鄂虐待吧！水拳对付超能系和幽灵系可不是吃素的，在这里你一却多能轻松搞定．打败会馆得到徽章和技能３０影子球（比较实用的技能），这时能也允许在不战斗的时候使用冲浪，终于可以下海玩啦！＾＿＾</p>
+<p>３３．回到３８号路，一路狂奔，这个时候如果你手上有６个血果的话就可以去触发毛毛牧场剧情啦！搞定所有路障后来到浅木市，刚到会馆边上，你的死敌就从会馆里跑了出来，告诉你会馆的主人不在．．．．．不管了，先逛逛在说；</p>
+<p>３４．这是一个靠近海边的城市，一圈下来后收获不少，不但得到了海杆，也从海之子手上得到了密技０５（推岩）与口袋金不同的是这里多出了一所不知名的建筑，到底有什么用我也不知道．这里海边上有岩石，<a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s6.album.sina.com.cn/pic/4a7b474d02000uth"><!-- raw HTML omitted --></a>用敲碎技能打破其中一个，可从中捡到隐匿的银丹．有时还能从中跑出大钳蟹，哈哈，收服吧，正好这个城市有个渔夫要换，那就和他换吧，反正多的要死．．．．．（用大钳蟹换来顽皮蛋）</p>
+<p>35.这里有个灯塔，那就上去探个究竟吧！在顶层看到了浅木市的会馆馆主，原来他的精灵生病了，<a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s7.album.sina.com.cn/pic/4a7b474d02000uti"><!-- raw HTML omitted --></a>发不出光也使得灯塔发挥不出了应有的效果，答应帮她渡海拿药，从而触发找药剧情．在最顶层可以捡到技能３４剑．</p>
+<p>36.<a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s4.album.sina.com.cn/pic/4a7b474d02000vcf"><!-- raw HTML omitted --></a>从浅木市的40路海道经过旋涡山，这里共有４个海岛，其中一个还是传说中的海神露基亚的老窝，但是在没有拿到旋涡技能和银色羽毛之前是进不了的．路过海道４１，这里可以捉到巨翅飞鱼．</p>
+<p>３７.经过长时间海水的洗礼后终于登上了丹皮市．狂完一圈后可以得到以下东东（在一个房子的男孩手中取得壶壶龟，但身上只能放５个精灵他才会给你,下面的房子取得浅木市会馆的药．）往上走这里有６个巨石，分为二组，用碎石技能个个击破，在每个巨石最下面的一个可得到，井尖和雷胡（<a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s5.album.sina.com.cn/pic/4a7b474d02000vcg"><!-- raw HTML omitted --></a><a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s6.album.sina.com.cn/pic/4a7b474d02000vch"><!-- raw HTML omitted --></a>）再往上走，天！！！！！！那个身影不是水君吗？ＮＮＤ我不找他他倒自动送上门来了，不多说了，赶快上去抢吧！！！没想到水君一见你就跑啦！跑完过后就莫名奇妙地杀出个＊＊，二话没说就打了过来（对手情况，素利柏，雷电球，鬼斯．能力多在２７级以下，轻松搞定）</p>
+<p>３８．现在就去打会馆吧，这个会馆多是格斗系的，，肌肉男，不过在和会馆对战时得搞定能三个拦住路口的巨石．（具体推法：用推岩石技能先把两边的各推到一边，然后再把中间的推到另一边，，ＫＯ<a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s7.album.sina.com.cn/pic/4a7b474d02000vci"><!-- raw HTML omitted --></a>．．上去打会馆．馆主情况（２７的火爆猴，３０级的快泳蛙，以你这个时候的实力这点就是小菜一碟．打完后赢得徽章，并得到技能０１钻孔机．而且还能在不战斗的情况下使用飞天技能）</p>
+<p>３９．出会馆后别忘了从边上一个女孩手上拿飞天密技，拿到后就教给鸟系的吧！哈哈现在终于不用一步一个脚印地走啦．．．．．</p>
+<p>４０．到现在游戏里面的时间差不多过了一天了吧，以就是星期一啦．回到浅木市，在海道４０上面一点有巨石的地方从一个女孩手上得到鸟嘴巴，配带在身上可提升飞行系绝招的威力，不错的ＭＭ．还有现在毛毛牧场的那只生病的毛毛剧情可以解决了．仔细想想，有哪些地方的路有摘得血果的树．３４号路和３９号路，收集到２个后回到毛毛牧场和那只大奶罐对话给她血果后恢复精力，在边上的房子里面牧场主人因为感激你．．男的可以每天在他那花５００元买到鲜牛奶，功效为恢复体力１００，女的给你个技能１３呼噜声；比较鸡肋的技能，只在睡觉时才能用</p>
+<p>４１．拿到冲浪后可以回到阿鲁夫遗迹，用冲浪技能过了一块池塘．来到一个洞穴．呵呵，再来拼图吧．这次拼的是化石翼龙，拼出如图<a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s8.album.sina.com.cn/pic/4a7b474d02000vcj"><!-- raw HTML omitted --></a></p>
+<p>42.回到浅木市，上精灵灯塔把药拿给会馆馆主．馆主拿到药治好了精灵的病，也使得精灵塔又重新恢复了作用，而</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;"></p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://blog.lsvking.com/49/">
+			<br>口袋水晶绝密攻略（三）
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://blog.lsvking.com/47/">
+			<br>口袋水晶(绝密功略)
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+ <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>  <a href="https://amazingrise.net">Rise</a>
+<br>
+ <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2016 龙舍·嬴皇志 - 透过我的双眼看世界
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="/js/journal.js"></script>
+
+    </body>
+</html>

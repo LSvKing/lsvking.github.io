@@ -1,0 +1,861 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>http://example.org/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This is a customized copyright.</copyright>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>MongoDB用mongoimport 导入大文件报错解决方案</title>
+        <link>http://example.org/1152/</link>
+        <pubDate>Mon, 05 Sep 2016 15:41:13 +0000</pubDate>
+        
+        <guid>http://example.org/1152/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/1152/ -&lt;p&gt;用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的文件，大的数据迁移都是用的restore导入的。这次遇到一次数据迁移导出的json 文件大概有4.7G左右,再倒入的时候出现了问题&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;却出现了如下的错误提示&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Mongo的错误提示也是醉了，这也忒不友好了, 完全是再猜,不过通过万能的大G还是搜到了解决方案,原来是因为Mongo对单次处理好像有大小限制（16m）好像是，所以大文件会出问题,这应该是个Bug mongoimport 默认会10000条 为一个批量导入数据，但实际上我的单条数据太大了,每51条数据就达到了16m 所以10000条导入一次肯定是不行的。幸好他有个参数 &amp;ndash;batchSize 可以指定每次批量导入的条数 设置小一些就OK了。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat --batchSize 1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这样你会看到他会分开执行导入任务&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+- http://example.org/1152/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>话糙理不糙的名言</title>
+        <link>http://example.org/1140/</link>
+        <pubDate>Thu, 24 Sep 2015 07:20:47 +0000</pubDate>
+        
+        <guid>http://example.org/1140/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/1140/ -&lt;p&gt;生活就像强奸，既然无法去反抗不如懂得去享受&lt;/p&gt;
+&lt;p&gt;工作就像轮奸，如果您不行了就换别人上&lt;/p&gt;
+&lt;p&gt;社会就像自慰，所有的都要靠自己的双手来解决​&lt;/p&gt;
+&lt;p&gt;好朋友就象内裤，就算你大起大落他也永远包容着你&lt;/p&gt;
+&lt;p&gt;非常好的朋友象避孕套，永远为你安全性福着想&lt;/p&gt;
+&lt;p&gt;更好的朋友象伟哥，当你抬不起头时他给予你力量​&lt;/p&gt;
+&lt;p&gt;好朋友象bra，永远支撑着你&lt;/p&gt;
+&lt;p&gt;更好的朋友象丝袜，在一起永远都那么紧密&lt;/p&gt;
+&lt;p&gt;更好的朋友象卫生巾，你每次流血，她帮你擦&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;作弊就像是服用伟哥,也许你自认为非常强悍,但若不嗑这个你永远无法让所有人满意.&lt;/p&gt;
+&lt;p&gt;重修就像计划外怀胎,你在操作的时候再小心翼翼,也必须要有心理准备直面面对这种惨淡的失败.&lt;/p&gt;
+&lt;p&gt;四级证书就像是杰士邦保险套,只在找工作的时候拿出用,之后没人愿意把它捡起来洗干净再用第二次.&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;网恋就像是梦遗,人人都认为它会来,但没人知道它到底么时候来.55岁以上或者有前列腺炎病史者可以略过不看.&lt;/p&gt;
+&lt;p&gt;师生恋就像月经来潮,虽然不是不光彩的事情,但在对别人讲述的时候,人人都遮遮掩掩装作羞于启齿.​&lt;/p&gt;
+&lt;p&gt;上课就像和你老婆做爱,虽然你未必情愿,但她会时不时点名要求你来上一次.&lt;/p&gt;
+&lt;p&gt;逃课就像习惯性自慰,明明知道太过频繁会伤身体,但你仍然无法抗拒那一刻的快感.&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;开学就像接客,你还没有休息够,新一批的客人就又来打扰你了.&lt;/p&gt;
+&lt;p&gt;毕业就像生产,不管你认为你们在计划怀孕的时候它会多么的畸形,但再畸形它也在10个月或者4年后瓜熟蒂落.​&lt;/p&gt;
+&lt;p&gt;辅导员就像是阴毛,这不是什么问题,但有它存在的时候你总有摩擦,并且因此感到有些不爽.&lt;/p&gt;
+&lt;p&gt;后期集团也像保险套,它让你感到很不舒服,人人都希望抛弃它,但它的宣传广告上则宣称这个贵而不惠的东西会带给你多少多少的好处.​&lt;/p&gt;
+- http://example.org/1140/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>vagrant 打包box时候提示 “VM not created. Moving on…”</title>
+        <link>http://example.org/1134/</link>
+        <pubDate>Thu, 13 Nov 2014 09:48:10 +0000</pubDate>
+        
+        <guid>http://example.org/1134/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/1134/ -&lt;p&gt;在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;a href=&#34;http://bcs.duapp.com/lsvking-wp//blog/201411//QQ%E5%9B%BE%E7%89%87201411131745041.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;名称要完全一样，大小写也要一样哦。折腾了半天，也是醉了。。&lt;/p&gt;
+- http://example.org/1134/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>VirtualBox OS X Mavericks 分辨率修改</title>
+        <link>http://example.org/951/</link>
+        <pubDate>Wed, 30 Jul 2014 10:16:11 +0000</pubDate>
+        
+        <guid>http://example.org/951/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/951/ -&lt;p&gt;需要开启EFI模式 然后在命令行下 VirtualBox目录 输入一下命令：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;VBoxManage setextradata &amp;quot;虚拟机名称&amp;quot; VBoxInternal2/EfiGopMode N&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中 N 可以是 0,1,2,3,4,5 其中一个，分别代表 640×480, 800×600, 1024×768, 1280×1024, 1440×900, 1920×1200 几种分辨率&lt;/p&gt;
+- http://example.org/951/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Golang strings 包中的函数和方法</title>
+        <link>http://example.org/945/</link>
+        <pubDate>Wed, 09 Apr 2014 07:25:00 +0000</pubDate>
+        
+        <guid>http://example.org/945/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/945/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Count 计算字符串 sep 在 s 中的非重叠个数
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 sep 为空字符串，则返回 s 中的字符(非字节)个数 + 1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 使用 Rabin-Karp 算法实现
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Count&lt;/span&gt;(s, sep &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello,世界!!!!!&amp;#34;&lt;/span&gt;
+	n := strings.&lt;span style=&#34;color:#008b45&#34;&gt;Count&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;!&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(n) &lt;span style=&#34;color:#228b22&#34;&gt;// 5
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	n = strings.&lt;span style=&#34;color:#008b45&#34;&gt;Count&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;!!&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(n) &lt;span style=&#34;color:#228b22&#34;&gt;// 2
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Contains 判断字符串 s 中是否包含子串 substr
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 substr 为空，则返回 true
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Contains&lt;/span&gt;(s, substr &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello,世界!!!!!&amp;#34;&lt;/span&gt;
+	b := strings.&lt;span style=&#34;color:#008b45&#34;&gt;Contains&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;!!&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// true
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b = strings.&lt;span style=&#34;color:#008b45&#34;&gt;Contains&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;!?&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// false
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b = strings.&lt;span style=&#34;color:#008b45&#34;&gt;Contains&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// true
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// ContainsAny 判断字符串 s 中是否包含 chars 中的任何一个字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 chars 为空，则返回 false
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;ContainsAny&lt;/span&gt;(s, chars &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello,世界!&amp;#34;&lt;/span&gt;
+	b := strings.&lt;span style=&#34;color:#008b45&#34;&gt;ContainsAny&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// false
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b = strings.&lt;span style=&#34;color:#008b45&#34;&gt;ContainsAny&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;def&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// true
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b = strings.&lt;span style=&#34;color:#008b45&#34;&gt;Contains&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// true
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// ContainsRune 判断字符串 s 中是否包含字符 r
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;ContainsRune&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, r &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello,世界!&amp;#34;&lt;/span&gt;
+	b := strings.&lt;span style=&#34;color:#008b45&#34;&gt;ContainsRune&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// false
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b = strings.&lt;span style=&#34;color:#008b45&#34;&gt;ContainsRune&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;界&amp;#39;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// true
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b = strings.&lt;span style=&#34;color:#008b45&#34;&gt;ContainsRune&lt;/span&gt;(s, &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// false
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Index 返回子串 sep 在字符串 s 中第一次出现的位置
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果找不到，则返回 -1，如果 sep 为空，则返回 0。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 使用 Rabin-Karp 算法实现
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Index&lt;/span&gt;(s, sep &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello,世界!&amp;#34;&lt;/span&gt;
+	i := strings.&lt;span style=&#34;color:#008b45&#34;&gt;Index&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;h&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i = strings.&lt;span style=&#34;color:#008b45&#34;&gt;Index&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;!&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// 12
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i = strings.&lt;span style=&#34;color:#008b45&#34;&gt;Index&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// 0
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// LastIndex 返回子串 sep 在字符串 s 中最后一次出现的位置
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果找不到，则返回 -1，如果 sep 为空，则返回字符串的长度
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 使用朴素字符串比较算法实现
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;LastIndex&lt;/span&gt;(s, sep &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello,世界! Hello!&amp;#34;&lt;/span&gt;
+	i := strings.&lt;span style=&#34;color:#008b45&#34;&gt;LastIndex&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;h&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i = strings.&lt;span style=&#34;color:#008b45&#34;&gt;LastIndex&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;H&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// 14
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i = strings.&lt;span style=&#34;color:#008b45&#34;&gt;LastIndex&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// 20
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// IndexRune 返回字符 r 在字符串 s 中第一次出现的位置
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果找不到，则返回 -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;IndexRune&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, r &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello,世界! Hello!&amp;#34;&lt;/span&gt;
+	i := strings.&lt;span style=&#34;color:#008b45&#34;&gt;IndexRune&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i = strings.&lt;span style=&#34;color:#008b45&#34;&gt;IndexRune&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;界&amp;#39;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// 9
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i = strings.&lt;span style=&#34;color:#008b45&#34;&gt;IndexRune&lt;/span&gt;(s, &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// IndexAny 返回字符串 chars 中的任何一个字符在字符串 s 中第一次出现的位置
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果找不到，则返回 -1，如果 chars 为空，则返回 -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;IndexAny&lt;/span&gt;(s, chars &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello,世界! Hello!&amp;#34;&lt;/span&gt;
+	i := strings.&lt;span style=&#34;color:#008b45&#34;&gt;IndexAny&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i = strings.&lt;span style=&#34;color:#008b45&#34;&gt;IndexAny&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;def&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// 1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i = strings.&lt;span style=&#34;color:#008b45&#34;&gt;IndexAny&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// LastIndexAny 返回字符串 chars 中的任何一个字符在字符串 s 中最后一次出现的位置
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果找不到，则返回 -1，如果 chars 为空，也返回 -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;LastIndexAny&lt;/span&gt;(s, chars &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello,世界! Hello!&amp;#34;&lt;/span&gt;
+	i := strings.&lt;span style=&#34;color:#008b45&#34;&gt;LastIndexAny&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i = strings.&lt;span style=&#34;color:#008b45&#34;&gt;LastIndexAny&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;def&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// 15
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i = strings.&lt;span style=&#34;color:#008b45&#34;&gt;LastIndexAny&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(i) &lt;span style=&#34;color:#228b22&#34;&gt;// -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// SplitN 以 sep 为分隔符，将 s 切分成多个子串，结果中不包含 sep 本身
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 sep 为空，则将 s 切分成 Unicode 字符列表。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 s 中没有 sep 子串，则将整个 s 作为 []string 的第一个元素返回
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 参数 n 表示最多切分出几个子串，超出的部分将不再切分。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 n 为 0，则返回 nil，如果 n 小于 0，则不限制切分个数，全部切分
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;SplitN&lt;/span&gt;(s, sep &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, n &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;) []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello, 世界! Hello!&amp;#34;&lt;/span&gt;
+	ss := strings.&lt;span style=&#34;color:#008b45&#34;&gt;SplitN&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;Hello,&amp;#34; &amp;#34;世界! Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	ss = strings.&lt;span style=&#34;color:#008b45&#34;&gt;SplitN&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;, -&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;Hello,&amp;#34; &amp;#34;世界!&amp;#34; &amp;#34;Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	ss = strings.&lt;span style=&#34;color:#008b45&#34;&gt;SplitN&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;3&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;H&amp;#34; &amp;#34;e&amp;#34; &amp;#34;llo, 世界! Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// SplitN 以 sep 为分隔符，将 s 切分成多个子串，结果中包含 sep 本身
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 sep 为空，则将 s 切分成 Unicode 字符列表。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 s 中没有 sep 子串，则将整个 s 作为 []string 的第一个元素返回
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 参数 n 表示最多切分出几个子串，超出的部分将不再切分。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 n 为 0，则返回 nil，如果 n 小于 0，则不限制切分个数，全部切分
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;SplitAfterN&lt;/span&gt;(s, sep &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, n &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;) []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello, 世界! Hello!&amp;#34;&lt;/span&gt;
+	ss := strings.&lt;span style=&#34;color:#008b45&#34;&gt;SplitAfterN&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;2&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;Hello, &amp;#34; &amp;#34;世界! Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	ss = strings.&lt;span style=&#34;color:#008b45&#34;&gt;SplitAfterN&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;, -&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;Hello, &amp;#34; &amp;#34;世界! &amp;#34; &amp;#34;Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	ss = strings.&lt;span style=&#34;color:#008b45&#34;&gt;SplitAfterN&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;3&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;H&amp;#34; &amp;#34;e&amp;#34; &amp;#34;llo, 世界! Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Split 以 sep 为分隔符，将 s 切分成多个子切片，结果中不包含 sep 本身
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 sep 为空，则将 s 切分成 Unicode 字符列表。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 s 中没有 sep 子串，则将整个 s 作为 []string 的第一个元素返回
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Split&lt;/span&gt;(s, sep &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello, 世界! Hello!&amp;#34;&lt;/span&gt;
+	ss := strings.&lt;span style=&#34;color:#008b45&#34;&gt;Split&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;Hello,&amp;#34; &amp;#34;世界!&amp;#34; &amp;#34;Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	ss = strings.&lt;span style=&#34;color:#008b45&#34;&gt;Split&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;, &amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;Hello&amp;#34; &amp;#34;世界! Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	ss = strings.&lt;span style=&#34;color:#008b45&#34;&gt;Split&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// 单个字符列表
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// SplitAfter 以 sep 为分隔符，将 s 切分成多个子切片，结果中包含 sep 本身
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 sep 为空，则将 s 切分成 Unicode 字符列表。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 s 中没有 sep 子串，则将整个 s 作为 []string 的第一个元素返回
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;SplitAfter&lt;/span&gt;(s, sep &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello, 世界! Hello!&amp;#34;&lt;/span&gt;
+	ss := strings.&lt;span style=&#34;color:#008b45&#34;&gt;SplitAfter&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;Hello, &amp;#34; &amp;#34;世界! &amp;#34; &amp;#34;Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	ss = strings.&lt;span style=&#34;color:#008b45&#34;&gt;SplitAfter&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;, &amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;Hello, &amp;#34; &amp;#34;世界! Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	ss = strings.&lt;span style=&#34;color:#008b45&#34;&gt;SplitAfter&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// 单个字符列表
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Fields 以连续的空白字符为分隔符，将 s 切分成多个子串，结果中不包含空白字符本身
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 空白字符有：\t, \n, \v, \f, \r, &amp;#39; &amp;#39;, U+0085 (NEL), U+00A0 (NBSP)
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 s 中只包含空白字符，则返回一个空列表
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Fields&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello, 世界! Hello!&amp;#34;&lt;/span&gt;
+	ss := strings.&lt;span style=&#34;color:#008b45&#34;&gt;Fields&lt;/span&gt;(s)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;Hello,&amp;#34; &amp;#34;世界!&amp;#34; &amp;#34;Hello!&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// FieldsFunc 以一个或多个满足 f(rune) 的字符为分隔符，
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 将 s 切分成多个子串，结果中不包含分隔符本身。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 s 中没有满足 f(rune) 的字符，则返回一个空列表。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;FieldsFunc&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, f &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;) []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;isSlash&lt;/span&gt;(r &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt; {
+	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\\&amp;#39;&lt;/span&gt; || r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;C:\\Windows\\System32\\FileName&amp;#34;&lt;/span&gt;
+	ss := strings.&lt;span style=&#34;color:#008b45&#34;&gt;FieldsFunc&lt;/span&gt;(s, isSlash)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ss) &lt;span style=&#34;color:#228b22&#34;&gt;// [&amp;#34;C:&amp;#34; &amp;#34;Windows&amp;#34; &amp;#34;System32&amp;#34; &amp;#34;FileName&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Join 将 a 中的子串连接成一个单独的字符串，子串之间用 sep 分隔
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Join&lt;/span&gt;(a []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, sep &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	ss := []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Monday&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Tuesday&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Wednesday&amp;#34;&lt;/span&gt;}
+	s := strings.&lt;span style=&#34;color:#008b45&#34;&gt;Join&lt;/span&gt;(ss, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;|&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, s) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;Monday|Tuesday|Wednesday&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// HasPrefix 判断字符串 s 是否以 prefix 开头
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;HasPrefix&lt;/span&gt;(s, prefix &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello 世界!&amp;#34;&lt;/span&gt;
+	b := strings.&lt;span style=&#34;color:#008b45&#34;&gt;HasPrefix&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// false
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b = strings.&lt;span style=&#34;color:#008b45&#34;&gt;HasPrefix&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// true
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// HasPrefix 判断字符串 s 是否以 prefix 结尾
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;HasSuffix&lt;/span&gt;(s, suffix &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello 世界!&amp;#34;&lt;/span&gt;
+	b := strings.&lt;span style=&#34;color:#008b45&#34;&gt;HasSuffix&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;世界&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// false
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b = strings.&lt;span style=&#34;color:#008b45&#34;&gt;HasSuffix&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;世界!&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(b) &lt;span style=&#34;color:#228b22&#34;&gt;// true
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Map 将 s 中满足 mapping(rune) 的字符替换为 mapping(rune) 的返回值。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 mapping(rune) 返回负数，则相应的字符将被删除。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Map&lt;/span&gt;(mapping &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;, s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Slash&lt;/span&gt;(r &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt; {
+	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\\&amp;#39;&lt;/span&gt; {
+		&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
+	}
+	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; r
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;C:\\Windows\\System32\\FileName&amp;#34;&lt;/span&gt;
+	ms := strings.&lt;span style=&#34;color:#008b45&#34;&gt;Map&lt;/span&gt;(Slash, s)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ms) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;C:/Windows/System32/FileName&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Repeat 将 count 个字符串 s 连接成一个新的字符串
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Repeat&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, count &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello!&amp;#34;&lt;/span&gt;
+	rs := strings.&lt;span style=&#34;color:#008b45&#34;&gt;Repeat&lt;/span&gt;(s, &lt;span style=&#34;color:#b452cd&#34;&gt;3&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, rs) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;Hello!Hello!Hello!&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// ToUpper 将 s 中的所有字符修改为其大写格式
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 对于非 ASCII 字符，它的大写格式需要查表转换
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;ToUpper&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;// ToLower 将 s 中的所有字符修改为其小写格式
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 对于非 ASCII 字符，它的小写格式需要查表转换
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;ToLower&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;// ToTitle 将 s 中的所有字符修改为其 Title 格式
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 大部分字符的 Title 格式就是其 Upper 格式
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 只有少数字符的 Title 格式是特殊字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 这里的 ToTitle 主要给 Title 函数调用
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;ToTitle&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;heLLo worLd Ａｂｃ&amp;#34;&lt;/span&gt;
+	us := strings.&lt;span style=&#34;color:#008b45&#34;&gt;ToUpper&lt;/span&gt;(s)
+	ls := strings.&lt;span style=&#34;color:#008b45&#34;&gt;ToLower&lt;/span&gt;(s)
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;ToTitle&lt;/span&gt;(s)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, us) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;HELLO WORLD ＡＢＣ&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ls) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;hello world ａｂｃ&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;HELLO WORLD ＡＢＣ&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+&lt;span style=&#34;color:#228b22&#34;&gt;// 获取非 ASCII 字符的 Title 格式列表
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; _, cr := &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;range&lt;/span&gt; unicode.CaseRanges {
+		&lt;span style=&#34;color:#228b22&#34;&gt;// u := uint32(cr.Delta[unicode.UpperCase]) // 大写格式
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;		&lt;span style=&#34;color:#228b22&#34;&gt;// l := uint32(cr.Delta[unicode.LowerCase]) // 小写格式
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;		t := &lt;span style=&#34;color:#658b00&#34;&gt;uint32&lt;/span&gt;(cr.Delta[unicode.TitleCase]) &lt;span style=&#34;color:#228b22&#34;&gt;// Title 格式
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;		&lt;span style=&#34;color:#228b22&#34;&gt;// if t != 0 &amp;amp;&amp;amp; t != u {
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;		&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; t != &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt; {
+			&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; i := cr.Lo; i &amp;lt;= cr.Hi; i++ {
+				fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%c -&amp;gt; %c\n&amp;#34;&lt;/span&gt;, i, i+t)
+			}
+		}
+	}
+}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// ToUpperSpecial 将 s 中的所有字符修改为其大写格式。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 优先使用 _case 中的规则进行转换
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;ToUpperSpecial&lt;/span&gt;(_case unicode.SpecialCase, s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;// ToLowerSpecial 将 s 中的所有字符修改为其小写格式。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 优先使用 _case 中的规则进行转换
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;ToLowerSpecial&lt;/span&gt;(_case unicode.SpecialCase, s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#228b22&#34;&gt;// ToTitleSpecial 将 s 中的所有字符修改为其 Title 格式。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 优先使用 _case 中的规则进行转换
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;ToTitleSpecial&lt;/span&gt;(_case unicode.SpecialCase, s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+_case 规则说明&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;，&lt;/span&gt;以下列语句为例&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;：&lt;/span&gt;
+unicode.CaseRange{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Z&amp;#39;&lt;/span&gt;, [unicode.MaxCase]&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;{&lt;span style=&#34;color:#b452cd&#34;&gt;3&lt;/span&gt;, -&lt;span style=&#34;color:#b452cd&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;}}
+&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;·&lt;/span&gt;其中 &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Z&amp;#39;&lt;/span&gt; 表示此规则只影响 &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt; 到 &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Z&amp;#39;&lt;/span&gt; 之间的字符&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;。&lt;/span&gt;
+&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;·&lt;/span&gt;其中 [unicode.MaxCase]&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt; 数组表示&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;：&lt;/span&gt;
+当使用 ToUpperSpecial 转换时&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;，&lt;/span&gt;将字符的 Unicode 编码与第一个元素值&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;（&lt;/span&gt;&lt;span style=&#34;color:#b452cd&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;）&lt;/span&gt;相加
+当使用 ToLowerSpecial 转换时&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;，&lt;/span&gt;将字符的 Unicode 编码与第二个元素值&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;（&lt;/span&gt;-&lt;span style=&#34;color:#b452cd&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;）&lt;/span&gt;相加
+当使用 ToTitleSpecial 转换时&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;，&lt;/span&gt;将字符的 Unicode 编码与第三个元素值&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;（&lt;/span&gt;&lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;）&lt;/span&gt;相加
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 定义转换规则
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;var&lt;/span&gt; _MyCase = unicode.SpecialCase{
+		&lt;span style=&#34;color:#228b22&#34;&gt;// 将半角逗号替换为全角逗号，ToTitle 不处理
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;		unicode.CaseRange{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;,
+			[unicode.MaxCase]&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;，&amp;#39;&lt;/span&gt; - &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;，&amp;#39;&lt;/span&gt; - &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;}},
+		&lt;span style=&#34;color:#228b22&#34;&gt;// 将半角句号替换为全角句号，ToTitle 不处理
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;		unicode.CaseRange{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;,
+			[unicode.MaxCase]&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;。&amp;#39;&lt;/span&gt; - &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;。&amp;#39;&lt;/span&gt; - &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;}},
+		&lt;span style=&#34;color:#228b22&#34;&gt;// 将 ABC 分别替换为全角的 ＡＢＣ、ａｂｃ，ToTitle 不处理
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;		unicode.CaseRange{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;C&amp;#39;&lt;/span&gt;,
+			[unicode.MaxCase]&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;Ａ&amp;#39;&lt;/span&gt; - &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;ａ&amp;#39;&lt;/span&gt; - &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;}},
+	}
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;ABCDEF,abcdef.&amp;#34;&lt;/span&gt;
+	us := strings.&lt;span style=&#34;color:#008b45&#34;&gt;ToUpperSpecial&lt;/span&gt;(_MyCase, s)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, us) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;ＡＢＣDEF，ABCDEF。&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	ls := strings.&lt;span style=&#34;color:#008b45&#34;&gt;ToLowerSpecial&lt;/span&gt;(_MyCase, s)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ls) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;ａｂｃdef，abcdef。&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;ToTitleSpecial&lt;/span&gt;(_MyCase, s)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;ABCDEF,ABCDEF.&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Title 将 s 中的所有单词的首字母修改为其 Title 格式
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// BUG: Title 规则不能正确处理 Unicode 标点符号
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Title&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;heLLo worLd&amp;#34;&lt;/span&gt;
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;Title&lt;/span&gt;(s)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;HeLLo WorLd&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// TrimLeftFunc 将删除 s 头部连续的满足 f(rune) 的字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;TrimLeftFunc&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, f &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;isSlash&lt;/span&gt;(r &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt; {
+	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\\&amp;#39;&lt;/span&gt; || r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;\\\\HostName\\C\\Windows\\&amp;#34;&lt;/span&gt;
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;TrimLeftFunc&lt;/span&gt;(s, isSlash)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;HostName\\C\\Windows\\&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// TrimRightFunc 将删除 s 尾部连续的满足 f(rune) 的字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;TrimRightFunc&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, f &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;isSlash&lt;/span&gt;(r &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt; {
+	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\\&amp;#39;&lt;/span&gt; || r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;\\\\HostName\\C\\Windows\\&amp;#34;&lt;/span&gt;
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;TrimRightFunc&lt;/span&gt;(s, isSlash)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;\\\\HostName\\C\\Windows&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// TrimFunc 将删除 s 首尾连续的满足 f(rune) 的字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;TrimFunc&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, f &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;isSlash&lt;/span&gt;(r &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt; {
+	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\\&amp;#39;&lt;/span&gt; || r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;\\\\HostName\\C\\Windows\\&amp;#34;&lt;/span&gt;
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;TrimFunc&lt;/span&gt;(s, isSlash)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;HostName\\C\\Windows&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// 返回 s 中第一个满足 f(rune) 的字符的字节位置。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果没有满足 f(rune) 的字符，则返回 -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;IndexFunc&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, f &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;isSlash&lt;/span&gt;(r &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt; {
+	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\\&amp;#39;&lt;/span&gt; || r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;C:\\Windows\\System32&amp;#34;&lt;/span&gt;
+	i := strings.&lt;span style=&#34;color:#008b45&#34;&gt;IndexFunc&lt;/span&gt;(s, isSlash)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%v\n&amp;#34;&lt;/span&gt;, i) &lt;span style=&#34;color:#228b22&#34;&gt;// 2
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// 返回 s 中最后一个满足 f(rune) 的字符的字节位置。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果没有满足 f(rune) 的字符，则返回 -1
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;LastIndexFunc&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, f &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;isSlash&lt;/span&gt;(r &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt; {
+	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;\\&amp;#39;&lt;/span&gt; || r == &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
+}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;C:\\Windows\\System32&amp;#34;&lt;/span&gt;
+	i := strings.&lt;span style=&#34;color:#008b45&#34;&gt;LastIndexFunc&lt;/span&gt;(s, isSlash)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%v\n&amp;#34;&lt;/span&gt;, i) &lt;span style=&#34;color:#228b22&#34;&gt;// 10
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Trim 将删除 s 首尾连续的包含在 cutset 中的字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Trim&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, cutset &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;    Hello 世界!   &amp;#34;&lt;/span&gt;
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;Trim&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; Helo!&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;世界&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// TrimLeft 将删除 s 头部连续的包含在 cutset 中的字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;TrimLeft&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, cutset &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;    Hello 世界!   &amp;#34;&lt;/span&gt;
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;TrimLeft&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; Helo&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;世界!   &amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// TrimRight 将删除 s 尾部连续的包含在 cutset 中的字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;TrimRight&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, cutset &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;    Hello 世界!   &amp;#34;&lt;/span&gt;
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;TrimRight&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; 世界!&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;    Hello&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// TrimSpace 将删除 s 首尾连续的的空白字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;TrimSpace&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;    Hello 世界!   &amp;#34;&lt;/span&gt;
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;TrimSpace&lt;/span&gt;(s)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;Hello 世界!&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// TrimPrefix 删除 s 头部的 prefix 字符串
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 s 不是以 prefix 开头，则返回原始 s
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;TrimPrefix&lt;/span&gt;(s, prefix &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello 世界!&amp;#34;&lt;/span&gt;
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;TrimPrefix&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34; 世界&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// TrimSuffix 删除 s 尾部的 suffix 字符串
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 s 不是以 suffix 结尾，则返回原始 s
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;TrimSuffix&lt;/span&gt;(s, suffix &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello 世界!!!!!&amp;#34;&lt;/span&gt;
+	ts := strings.&lt;span style=&#34;color:#008b45&#34;&gt;TrimSuffix&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;!!!!&amp;#34;&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, ts) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34; 世界&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Replace 返回 s 的副本，并将副本中的 old 字符串替换为 new 字符串
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 替换次数为 n 次，如果 n 为 -1，则全部替换
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 old 为空，则在副本的每个字符之间都插入一个 new
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;Replace&lt;/span&gt;(s, old, new &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;, n &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello 世界！&amp;#34;&lt;/span&gt;
+	s = strings.&lt;span style=&#34;color:#008b45&#34;&gt;Replace&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt;, -&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(s)
+	s = strings.&lt;span style=&#34;color:#008b45&#34;&gt;Replace&lt;/span&gt;(s, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;|&amp;#34;&lt;/span&gt;, -&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(s)
+}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// EqualFold 判断 s 和 t 是否相等。忽略大小写，同时它还会对特殊字符进行转换
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 比如将“ϕ”转换为“Φ”、将“Ǆ”转换为“ǅ”等，然后再进行比较
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;EqualFold&lt;/span&gt;(s, t &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;bool&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s1 := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello 世界! ϕ Ǆ&amp;#34;&lt;/span&gt;
+	s2 := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;hello 世界! Φ ǅ&amp;#34;&lt;/span&gt;
+	b := strings.&lt;span style=&#34;color:#008b45&#34;&gt;EqualFold&lt;/span&gt;(s1, s2)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%v\n&amp;#34;&lt;/span&gt;, b) &lt;span style=&#34;color:#228b22&#34;&gt;// true
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+============================================================
+&lt;span style=&#34;color:#228b22&#34;&gt;// reader.go
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Reader 结构通过读取字符串，实现了 io.Reader，io.ReaderAt，
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// io.Seeker，io.WriterTo，io.ByteScanner，io.RuneScanner 接口
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;type&lt;/span&gt; Reader &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;struct&lt;/span&gt; {
+	s        &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#228b22&#34;&gt;// 要读取的字符串
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	i        &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// 当前读取的索引位置，从 i 处开始读取数据
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	prevRune &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;    &lt;span style=&#34;color:#228b22&#34;&gt;// 读取的前一个字符的索引位置，小于 0 表示之前未读取字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+&lt;span style=&#34;color:#228b22&#34;&gt;// 通过字符串 s 创建 strings.Reader 对象
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 这个函数类似于 bytes.NewBufferString
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 但比 bytes.NewBufferString 更有效率，而且只读
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;NewReader&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) *Reader { &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; &amp;amp;Reader{s, &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;, -&lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;} }
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Len 返回 r.i 之后的所有数据的字节长度
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Reader) &lt;span style=&#34;color:#008b45&#34;&gt;Len&lt;/span&gt;() &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello 世界!&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建 Reader
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReader&lt;/span&gt;(s)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 获取字符串的编码长度
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Println&lt;/span&gt;(r.&lt;span style=&#34;color:#008b45&#34;&gt;Len&lt;/span&gt;()) &lt;span style=&#34;color:#228b22&#34;&gt;// 13
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Read 将 r.i 之后的所有数据写入到 b 中（如果 b 的容量足够大）
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 返回读取的字节数和读取过程中遇到的错误
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果无可读数据，则返回 io.EOF
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Reader) &lt;span style=&#34;color:#008b45&#34;&gt;Read&lt;/span&gt;(b []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;byte&lt;/span&gt;) (n &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;, err &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;error&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建 Reader
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReader&lt;/span&gt;(s)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建长度为 5 个字节的缓冲区
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b := &lt;span style=&#34;color:#658b00&#34;&gt;make&lt;/span&gt;([]&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;byte&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 循环读取 r 中的字符串
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; n, _ := r.&lt;span style=&#34;color:#008b45&#34;&gt;Read&lt;/span&gt;(b); n &amp;gt; &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; n, _ = r.&lt;span style=&#34;color:#008b45&#34;&gt;Read&lt;/span&gt;(b) {
+		fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q, &amp;#34;&lt;/span&gt;, b[:n])  &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;Hello&amp;#34;, &amp;#34; Worl&amp;#34;, &amp;#34;d!&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	}
+}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// ReadAt 将 off 之后的所有数据写入到 b 中（如果 b 的容量足够大）
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 返回读取的字节数和读取过程中遇到的错误
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果无可读数据，则返回 io.EOF
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果数据被一次性读取完毕，则返回 io.EOF
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Reader) &lt;span style=&#34;color:#008b45&#34;&gt;ReadAt&lt;/span&gt;(b []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;byte&lt;/span&gt;, off &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int64&lt;/span&gt;) (n &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;, err &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;error&lt;/span&gt;) 
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建 Reader
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReader&lt;/span&gt;(s)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建长度为 5 个字节的缓冲区
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b := &lt;span style=&#34;color:#658b00&#34;&gt;make&lt;/span&gt;([]&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;byte&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 读取 r 中指定位置的字符串
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	n, _ := r.&lt;span style=&#34;color:#008b45&#34;&gt;ReadAt&lt;/span&gt;(b, &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, b[:n]) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;Hello&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#228b22&#34;&gt;// 读取 r 中指定位置的字符串
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	n, _ = r.&lt;span style=&#34;color:#008b45&#34;&gt;ReadAt&lt;/span&gt;(b, &lt;span style=&#34;color:#b452cd&#34;&gt;6&lt;/span&gt;)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, b[:n]) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;World&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// ReadByte 将 r.i 之后的一个字节写入到返回值 b 中
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 返回读取的字节和读取过程中遇到的错误
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果无可读数据，则返回 io.EOF
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Reader) &lt;span style=&#34;color:#008b45&#34;&gt;ReadByte&lt;/span&gt;() (b &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;byte&lt;/span&gt;, err &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;error&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建 Reader
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReader&lt;/span&gt;(s)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 读取 r 中的一个字节
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; i := &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span style=&#34;color:#b452cd&#34;&gt;3&lt;/span&gt;; i++ {
+		b, _ := r.&lt;span style=&#34;color:#008b45&#34;&gt;ReadByte&lt;/span&gt;()
+		fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q, &amp;#34;&lt;/span&gt;, b) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#39;H&amp;#39;, &amp;#39;e&amp;#39;, &amp;#39;l&amp;#39;, 
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	}
+}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// UnreadByte 撤消前一次的 ReadByte 操作，即 r.i--
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Reader) &lt;span style=&#34;color:#008b45&#34;&gt;UnreadByte&lt;/span&gt;() &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;error&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建 Reader
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReader&lt;/span&gt;(s)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 读取 r 中的一个字节
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; i := &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span style=&#34;color:#b452cd&#34;&gt;3&lt;/span&gt;; i++ {
+		b, _ := r.&lt;span style=&#34;color:#008b45&#34;&gt;ReadByte&lt;/span&gt;()
+		fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q, &amp;#34;&lt;/span&gt;, b) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#39;H&amp;#39;, &amp;#39;H&amp;#39;, &amp;#39;H&amp;#39;,
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;		r.&lt;span style=&#34;color:#008b45&#34;&gt;UnreadByte&lt;/span&gt;()        &lt;span style=&#34;color:#228b22&#34;&gt;// 撤消前一次的字节读取操作
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	}
+}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// ReadRune 将 r.i 之后的一个字符写入到返回值 ch 中
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// ch：  读取的字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// size：ch 的编码长度
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// err： 读取过程中遇到的错误
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果无可读数据，则返回 io.EOF
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 r.i 之后不是一个合法的 UTF-8 字符编码，则返回 utf8.RuneError 字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Reader) &lt;span style=&#34;color:#008b45&#34;&gt;ReadRune&lt;/span&gt;() (ch &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;rune&lt;/span&gt;, size &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;, err &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;error&lt;/span&gt;) 
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;你好 世界！&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建 Reader
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReader&lt;/span&gt;(s)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 读取 r 中的一个字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; i := &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;; i++ {
+		b, n, _ := r.&lt;span style=&#34;color:#008b45&#34;&gt;ReadRune&lt;/span&gt;()
+		fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;`&amp;#34;%c:%v&amp;#34;, `&lt;/span&gt;, b, n)
+		&lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;你:3&amp;#34;, &amp;#34;好:3&amp;#34;, &amp;#34; :1&amp;#34;, &amp;#34;世:3&amp;#34;, &amp;#34;界:3&amp;#34;, 
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	}
+}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// 撤消前一次的 ReadRune 操作
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Reader) &lt;span style=&#34;color:#008b45&#34;&gt;UnreadRune&lt;/span&gt;() &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;error&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;你好 世界！&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建 Reader
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReader&lt;/span&gt;(s)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 读取 r 中的一个字符
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;for&lt;/span&gt; i := &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;; i++ {
+		b, _, _ := r.&lt;span style=&#34;color:#008b45&#34;&gt;ReadRune&lt;/span&gt;()
+		fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q, &amp;#34;&lt;/span&gt;, b)
+		&lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#39;你&amp;#39;, &amp;#39;你&amp;#39;, &amp;#39;你&amp;#39;, &amp;#39;你&amp;#39;, &amp;#39;你&amp;#39;,
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;		r.&lt;span style=&#34;color:#008b45&#34;&gt;UnreadRune&lt;/span&gt;() &lt;span style=&#34;color:#228b22&#34;&gt;// 撤消前一次的字符读取操作
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	}
+}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Seek 用来移动 r 中的索引位置
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// offset：要移动的偏移量，负数表示反向移动
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// whence：从那里开始移动，0：起始位置，1：当前位置，2：结尾位置
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 whence 不是 0、1、2，则返回错误信息
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果目标索引位置超出字符串范围，则返回错误信息
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 目标索引位置不能超出 1 &amp;lt;&amp;lt; 31，否则返回错误信息
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Reader) &lt;span style=&#34;color:#008b45&#34;&gt;Seek&lt;/span&gt;(offset &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int64&lt;/span&gt;, whence &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;) (&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int64&lt;/span&gt;, &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;error&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建 Reader
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReader&lt;/span&gt;(s)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建读取缓冲区
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	b := &lt;span style=&#34;color:#658b00&#34;&gt;make&lt;/span&gt;([]&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;byte&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 读取 r 中指定位置的内容
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r.&lt;span style=&#34;color:#008b45&#34;&gt;Seek&lt;/span&gt;(&lt;span style=&#34;color:#b452cd&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#228b22&#34;&gt;// 移动索引位置到第 7 个字节
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r.&lt;span style=&#34;color:#008b45&#34;&gt;Read&lt;/span&gt;(b)    &lt;span style=&#34;color:#228b22&#34;&gt;// 开始读取
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, b)
+	r.&lt;span style=&#34;color:#008b45&#34;&gt;Seek&lt;/span&gt;(-&lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#228b22&#34;&gt;// 将索引位置移回去
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r.&lt;span style=&#34;color:#008b45&#34;&gt;Read&lt;/span&gt;(b)     &lt;span style=&#34;color:#228b22&#34;&gt;// 继续读取
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, b)
+}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// WriteTo 将 r.i 之后的数据写入接口 w 中
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Reader) &lt;span style=&#34;color:#008b45&#34;&gt;WriteTo&lt;/span&gt;(w io.Writer) (n &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int64&lt;/span&gt;, err &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;error&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建 Reader
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReader&lt;/span&gt;(s)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 创建 bytes.Buffer 对象，它实现了 io.Reader 接口
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	buf := bytes.&lt;span style=&#34;color:#008b45&#34;&gt;NewBuffer&lt;/span&gt;(&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;nil&lt;/span&gt;)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 将 r 中的数据写入 buf 中
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;	r.&lt;span style=&#34;color:#008b45&#34;&gt;WriteTo&lt;/span&gt;(buf)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;%q\n&amp;#34;&lt;/span&gt;, buf) &lt;span style=&#34;color:#228b22&#34;&gt;// &amp;#34;Hello World!&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+============================================================
+&lt;span style=&#34;color:#228b22&#34;&gt;// replace.go
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Replacer 根据一个替换列表执行替换操作
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;type&lt;/span&gt; Replacer &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;struct&lt;/span&gt; {
+	&lt;span style=&#34;color:#008b45&#34;&gt;Replace&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+	&lt;span style=&#34;color:#008b45&#34;&gt;WriteString&lt;/span&gt;(w io.Writer, s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) (n &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;, err &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;error&lt;/span&gt;)
+}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// NewReplacer 通过“替换列表”创建一个 Replacer 对象。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 按照“替换列表”中的顺序进行替换，只替换非重叠部分。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果参数的个数不是偶数，则抛出异常。
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果在“替换列表”中有相同的“查找项”，则后面重复的“查找项”会被忽略
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;NewReplacer&lt;/span&gt;(oldnew ...&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) *Replacer
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// Replace 返回对 s 进行“查找和替换”后的结果
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// Replace 使用的是 Boyer-Moore 算法，速度很快
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Replacer) &lt;span style=&#34;color:#008b45&#34;&gt;Replace&lt;/span&gt;(s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	srp := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReplacer&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;你好&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;World&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;世界&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;!&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;！&amp;#34;&lt;/span&gt;)
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello World!Hello World!hello world!&amp;#34;&lt;/span&gt;
+	rst := srp.&lt;span style=&#34;color:#008b45&#34;&gt;Replace&lt;/span&gt;(s)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Print&lt;/span&gt;(rst) &lt;span style=&#34;color:#228b22&#34;&gt;// 你好 世界！你好 世界！hello world！
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	wl := []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hi&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;你好&amp;#34;&lt;/span&gt;}
+	srp := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReplacer&lt;/span&gt;(wl...)
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello World! Hello World! hello world!&amp;#34;&lt;/span&gt;
+	rst := srp.&lt;span style=&#34;color:#008b45&#34;&gt;Replace&lt;/span&gt;(s)
+	fmt.&lt;span style=&#34;color:#008b45&#34;&gt;Print&lt;/span&gt;(rst) &lt;span style=&#34;color:#228b22&#34;&gt;// Hi World! Hi World! hello world!
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+------------------------------------------------------------
+&lt;span style=&#34;color:#228b22&#34;&gt;// WriteString 对 s 进行“查找和替换”，然后将结果写入 w 中
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; (r *Replacer) &lt;span style=&#34;color:#008b45&#34;&gt;WriteString&lt;/span&gt;(w io.Writer, s &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;) (n &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;int&lt;/span&gt;, err &lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;error&lt;/span&gt;)
+&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#008b45&#34;&gt;main&lt;/span&gt;() {
+	wl := []&lt;span style=&#34;color:#00688b;font-weight:bold&#34;&gt;string&lt;/span&gt;{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;你好&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;World&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;世界&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;!&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;！&amp;#34;&lt;/span&gt;}
+	srp := strings.&lt;span style=&#34;color:#008b45&#34;&gt;NewReplacer&lt;/span&gt;(wl...)
+	s := &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Hello World!Hello World!hello world!&amp;#34;&lt;/span&gt;
+	srp.&lt;span style=&#34;color:#008b45&#34;&gt;WriteString&lt;/span&gt;(os.Stdout, s)
+	&lt;span style=&#34;color:#228b22&#34;&gt;// 你好 世界！你好 世界！hello world！
+&lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- http://example.org/945/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>利用cloudHQ在网盘间快速拷贝和同步文件</title>
+        <link>http://example.org/944/</link>
+        <pubDate>Wed, 12 Mar 2014 17:11:16 +0000</pubDate>
+        
+        <guid>http://example.org/944/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/944/ -&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务：&lt;/p&gt;
+&lt;p&gt;1、网盘综合管理，你可以将常用的网盘添加到cloudHQ，通过cloudHQ管理所有网盘的文件；&lt;/p&gt;
+&lt;p&gt;2、网盘间文件拷贝/移动；&lt;/p&gt;
+&lt;p&gt;3、网盘间文件的同步(这是cloudHQ的主打功能)。&lt;/p&gt;
+&lt;p&gt;cloudHQ的注册非常简单，打开 &lt;a href=&#34;https://cloudHQ.net?r=9rel&#34;&gt;https://cloudHQ.net?r=9rel&lt;/a&gt;，直接使用Google帐号注册，免费用户可以试用14天。cloudHQ目前支持Dropbox、SugarSync、Box.net、Google Drive等几种常用的网盘，还支持Evernote笔记本。&lt;/p&gt;
+&lt;p&gt;注册完成后就自动转到同步向导，在这里可以添加一对同步的网盘，并可选择单向还是双向同步。&lt;/p&gt;
+&lt;p&gt;添加完成后的网盘可以在Browse标签卡下进行管理，cloudHQ的这个文件管理器非常不错，在这里可以方便地查看网盘容量以及完成对网盘的文件上传/下载/删除等管理操作。在网盘间拷贝和移动文件也是非常简单的，由于使用cloudHQ的服务器中转，速度非常不错。当然，对于网盘间大量文件的拷贝，建议使用cloudHQ的同步功能来实现。&lt;/p&gt;
+&lt;p&gt;cloudHQ的同步速度还是不错的，我从Dropbox同步了7G的数据共6000多个文件到Box.net，大概用了3个小时。cloudHQ还会自动将Box.net不支持的文件比如点开头的文件重命名，从而避免文件缺失。&lt;/p&gt;
+- http://example.org/944/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>awk切割字符串后赋值给shell变量的方法</title>
+        <link>http://example.org/939/</link>
+        <pubDate>Mon, 16 Dec 2013 15:18:00 +0000</pubDate>
+        
+        <guid>http://example.org/939/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/939/ -&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+- http://example.org/939/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Win8下编译Go go.exe 崩溃</title>
+        <link>http://example.org/935/</link>
+        <pubDate>Tue, 30 Jul 2013 13:03:45 +0000</pubDate>
+        
+        <guid>http://example.org/935/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/935/ -&lt;p&gt;在windows8 下 编译啊运行啊什么的 就会报崩溃&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://lsvking.com/attachment/933/&#34; title=&#34;QQ图片20130730205409.jpg&#34;&gt;&lt;img src=&#34;http://lsvking.com/wp-content/uploads/2013/07/1645993778.jpg&#34; alt=&#34;QQ图片20130730205409.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://lsvking.com/attachment/934/&#34; title=&#34;QQ图片20130730205412.jpg&#34;&gt;&lt;img src=&#34;http://lsvking.com/wp-content/uploads/2013/07/1998453011.jpg&#34; alt=&#34;QQ图片20130730205412.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一直困惑不已,所以一直在Linux下学习Golang。此事一直让我觉得可能是我起床的方式不对。。。&lt;/p&gt;
+&lt;p&gt;直到有一天我搜到了一个同样问题的,原来是MacType 的问题。。停掉就好了&lt;/p&gt;
+- http://example.org/935/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Linux压缩Tar命令介绍</title>
+        <link>http://example.org/932/</link>
+        <pubDate>Thu, 13 Oct 2011 03:18:00 +0000</pubDate>
+        
+        <guid>http://example.org/932/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/932/ -&lt;h3 id=&#34;a-idtar-styledirection-ltr-nametarstrong-styledirection-ltrtar命令stronga&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;tar命令&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- http://example.org/932/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>G&#43;邀请数枚,需要的请留言。。。</title>
+        <link>http://example.org/927/</link>
+        <pubDate>Tue, 09 Aug 2011 02:42:09 +0000</pubDate>
+        
+        <guid>http://example.org/927/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/927/ -&lt;p&gt;Google+邀请数枚，请留言。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://bcs.duapp.com/lsvking-wp//blog/201410//131939415.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+- http://example.org/927/ - This is a customized copyright.</description>
+        </item>
+    
+    
+  </channel>
+</rss> 

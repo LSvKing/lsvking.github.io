@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html><head>
+<title>口袋水晶(绝密功略)</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://blog.lsvking.com/scss/journal.min.5e8f3f653e9f6ce67bf72ff8ee6fee69decf7b5639a3ae7f8344750ad4e065b1.css" integrity="sha256-Xo8/ZT6fbOZ79y/47m/uad7Pe1Y5o65/g0R1CtTgZbE=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://blog.lsvking.com/scss/dark-mode.min.bdfa63b2e89903517dcbb1032b537d54cff3f425c19d008a78dfe49e6cd07ced.css" integrity="sha256-vfpjsuiZA1F9y7EDK1N9VM/z9CXBnQCKeN/knmzQfO0=" media="screen">
+
+
+<script src="/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="/js/toc-collapse.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://blog.lsvking.com">
+    
+        <div class="nav-title">
+            龙舍·嬴皇志 - 透过我的双眼看世界
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/">
+                This is Home
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/post/">
+                Archives
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags/">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="https://gohugo.io">
+                external-link
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+ <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>  <a href="https://amazingrise.net">Rise</a>
+<br>
+ <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2016 龙舍·嬴皇志 - 透过我的双眼看世界
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/">
+                    This is Home
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/post/">
+                    Archives
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags/">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="https://gohugo.io">
+                    external-link
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://blog.lsvking.com">
+            龙舍·嬴皇志 - 透过我的双眼看世界
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://blog.lsvking.com">
+        <div class="single-column-header-title">龙舍·嬴皇志 - 透过我的双眼看世界</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    口袋水晶(绝密功略)
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/">[游戏]</a>
+                                &nbsp;
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p><!-- raw HTML omitted -->看过了所有网站上关于水晶的攻略,而大部份的却不是很详细,对于那些刚接触就想深入的玩家来说，那种攻略还不如自己在游戏里慢慢钻研，我写这个功略只是写下一些自己在游戏中的心得吧！！也算是为自己步入成年以后理下深情的一笔回忆！   1。冒险开始，所先让你选择主角的性别，然后是时间，这里以游戏给你的时间为准（晚10点0分）在奥凯博士一段废话以后进入选择自己的名字，如果不喜欢游戏中给你的名字，当然也可以自己取，只不过多是一些数字罢了。。</p>
+<p>   2。名字取好后发现你正在自己的阁楼上，下楼妈妈告诉你宇津木博士有事找你，让你去下研究所，在走这前妈妈会给你个精灵装置，在用之前输入星期几，这里就以星期天吧！给你的精灵装置上妈妈的电话号码已经存在。</p>
+<p>   3。出门后向上走，来到研究所，发现你未来的死敌在窥视研究所，上前打招呼被扁了下来，不管了，进去后发现原来博士要你当跑腿，答应下来他就会让你在桌上选择精灵，（火球鼠，小巨鄂，和桔草叶）当然在选的时候最好存下档，因为有时候拿到的是精灵未必是自己想要的性别（精灵也分了公和母，公的功击力相对高些，母的防御会好些，自己看着办吧）呵呵，这里推荐大家选水系，原因下面慢慢叙说：</p>
+<p>   4。拿到精灵出门前博士会给你电话号码，博士的助手会给你个药，（对了你选的精灵身上带有果子哟，在这里就给他取下吧，方便以后在牛奶罐的使用）</p>
+<p>   5。出来后来到29号路，（在这里的精灵有，小立尾，波波，小拉达）就在这里练级吧，别忘了精灵没体力的话回研究所用机器恢复哟~~一路练过去。在这里的靠近博士研究所的角上捡到一个药，，在果树上摘到血之果。</p>
+<p>   6。从29号路步入第二个城镇，在路口看到一个老伯，上前搭话后给你地图，呵呵，这里现在有精灵中心和商品店哟！可惜的是商品店中在你没完成博士给你的任务前，是买不到精灵球的。在精灵中心恢复下体力往上走，来到30号路，（这里的精灵白天有，波波和虫子和键子草）在果树上和房内主人的手中拿到血之果，继续向上走，发现这里有人在战斗，不管后一直向上走，来到爷爷家，进去从爷爷手中拿到神奇蛋，在乌糍木手中拿到图鉴，出门后宇津木就给你来电话，告诉你研究所发生了点意外，精灵被偷。</p>
+<p>  7。拿到精灵蛋后就回研究所吧！在路上遇到死敌，发现他已经有了精灵，二话没说就战斗，（死敌清况，某种克你的精灵5级。虽然属性上不利，但5级还不能使用强有力的绝招，且等级低）搞定死敌来到研究所，发现精灵被偷，且警察也在，（不是君沙小姐<!-- raw HTML omitted -->）哈哈，原来偷精灵的就是在路上和你战斗的红发男孩，（<!-- raw HTML omitted -->原来自己还可以为对手取名）</p>
+<p>  8。给博士看你拿到的精灵蛋，博士大吃一惊。告诉你这个蛋是变异的，然后就建义你出去旅行，出去前助手会给你5个精灵球（哈，终于能捉精灵了）旅行前跟妈妈搭下话她会为你存钱，好了正真的旅行开始了。。来到29号路，一个大男人拦住要教你怎样捉精灵，可不用他教。继续赶路，哈哈，在这里波波就不用收服了吧！！对了从29号的房子内进去可来到46号路，这里有小拳石。烈雀。和小拉达。</p>
+<p>  9。来到第二个城镇，现在可以买到精灵球了，那就去抢吧！最好买几个解毒的药，来到30号路，这里就收服只绿毛虫！（收服绿虫当然是为了进化成蝴蝶后好捉神兽，技能催睡和麻痹粉可不是吹的）哈哈，在这里终于可以和别人战斗了，第一个人，4级小拉达，打完后不要忘了和他搭话，他会给你电话号码哟~~向上走，第二个人加入战斗，2级的波波和4级的拉达。哈哈，在这里你的能力可以搞定一切，向上走，第三个加入战斗，两只3级的绿虫，搞定，向上走来到31号路，这里有个洞穴，但里面黑黑一片，没闪光技能是不行的，在这里的草地上收服只公的喇叭芽吧（最好收服两只，一只换大岩蛇一只自己用）<!-- raw HTML omitted -->！在这里也有个对手。3只2级绿毛虫和一只3级独角虫，搞定，在胖子边上的树上得到苦果。</p>
+<p>  10。来到第三个城镇了，归桥镇，在精灵中心的左下角的房内，用公的喇叭芽和一个小孩换得大岩蛇，这里有个私塾，但老师不在。在商店和道馆的中间找到老师，搭话他会给你带入私塾，不清楚的就学习下吧！！<!-- raw HTML omitted -->，最上面有个喇叭芽塔，晚上可捉到鬼斯哟，只可惜来这里还没到晚上，不管了，上去挑战上面修行的和尚吧！你会发现在这里的和常多是用喇叭芽作战的，哈哈，不是捉到绿毛虫了吗？那就用作战吧~1只5级的绿毛差不多可以挑死两只3级的喇叭芽，HOHO~~在这里打完几个差不多可以进化成巴大蝴了吧！</p>
+<p>  11。一直战斗着来到塔顶，发现死敌和长老在争论着什么，发现你来后死敌过了说了几句话就用逃脱绳跑了。不管了，上去挑战长老，（2只7级的喇叭芽和1只10级的咕咕）战斗胜利不但拿到闪光技能还得到长老一翻赞美<!-- raw HTML omitted -->在边上取得逃脱绳后闪人。</p>
+<p>  12。到精灵中心恢复完体力，想必以现在的实力应该可以挑战会馆了吧！那就去吧~~馆长用的精灵是7级的波波和9级BB鸟，胜利得徽章和技能31，而且现在能用闪光技能了，教给喇叭芽学习吧，出道馆，博士告诉你他的助手在精灵中心等你，回精灵中心从博士助手手中得到波克比的蛋。回31号道路，用闪光技能进入洞穴，这里可以捉到吸血蝠和土龙弟弟哟</p>
+<p>  13。来到36号路，发现这里有棵怪树档住了去路过不去，没办法只好往下走，来到安侬遗迹，但遗迹中什么多没有，那就在一个洞穴内拼图吧（HOHO~~简简单单几下就拼好，发现拼好的图是化石盔，哈哈，掉入遗迹现在可以捉到安侬，捉到任意三个不同后、出来发现门口有个博士，搭话后给你的图鉴升级为全国版。）</p>
+<p>插曲化石盔拼法（细心的人会发现整张图虽然被打得零零碎碎，但总有2张是相对称的，那行就把2张相对称的图相对而放，还有有几张图片的周围相对来说有些空隙，其实这些是放在4个角上和边上的图，呵呵，先把周围的放好，这样化石盔的轮廓差不多就出来了，然后还是和上面方法一样选择相对称的图相对而放，慢慢调整，注意下面两只图的位置，拼出的图如<a href="http://blog.sina.co"><!-- raw HTML omitted --></a>）</p>
+<p>   14。从遗迹的东面出来到３２号路，对了打到这差不多也到晚上了，那么就回喇叭芽塔里捉鬼斯吧！哈哈，这种精灵的好处就不用多说了吧！回３２号路，从第一个人的手中得到提升草系技能威力的功芭～（这里现在的精灵有小呆碟，姑姑，喇叭芽，和小拉达，当然蝙蝠，鬼斯也有）打败一个女孩子以后别忘了跟他要电话号码（方便以后约会）继续向下走打败一个用小呆碟的小男孩后往上来到桥上，从第一个渔夫要来电话号码（他会告诉你什么时候能钓到＊＊）打完所有的鱼夫向下走来到精灵中心，这时有个胖子拦住你，说有好东东卖你要１００Ｗ，（明摆着坑你，就算是用金手指调也调不到１００Ｗ）从胖子边上的小道上可以捡到隐藏的吉尔球，无限捡，捡得越多越好（[<!-- raw HTML omitted -->][2]）</p>
+<p>１５．来到精灵中心，从渔夫手中得到竹杆，但不好用，钓到的全是鲤鱼王．向下走打败一个拿鸟的家伙来到＂前连着的山洞＂（这里说一下，在这个别山洞里每个星期五的晚上可捉到乘龙，但要学会冲浪，推岩等技能才行）哈哈，因为我是选水系的所以能轻松搞定这里所有的家伙，在山洞中可捡到技能３９高速星星，出来后来到３３号路，也就是到第三个城镇（哈威城了）打败一个胖子，从他那要来电话号码，他会打电话告诉你什么时候能在山洞里捉到呆呆兽．</p>
+<p>１６．来到哈威城后，在一个山洞里发现火箭队，但进不去也无法和守卫战斗，不管了先逛逛再说；在钢铁大师家里和他说完几句话他就跑了，回刚才的洞，发现现在能进去了，进去后发现钢铁大师也在，原来他进来后受伤了，那么就接受他的使命吧！搞定里面反有的火箭队，为钢铁大师夺回呆呆兽回到家中，和他搭话得到呆呆球，在从房子后面的果树上取得凡票交给大师做球，但要一天后从能来取．</p>
+<p>１７．打败这里的虫系会馆，馆长用的精灵为１４级的铁甲蛹，１４级的铁昆，和１６级的飞天螳螂，轻松搞定后往左走来到雪拉比的森林，但在进来前死敌会和你作战，他的三只精灵分别为１４级的鬼斯，１６级的月桂叶，和１４级的蝙蝠，哈哈，因为本人有巴大蝴的原故，所以劲敌又如何，１０几秒后搞定．</p>
+<p>１８．来到森林后搞定不听话的大葱鸭后从砍树的主人手中得到密技０１砍机,（这里晚上的精灵有走路草，姑姑，可达鸭，毛球），拿到密技后就教给喇叭芽学吧！学会后就砍掉那棵挡住去路的树．发现这里有传说中雪拉比的小庙，但什么多没有，继续赶路，在一棵大树边上的男孩那得到技能２摇树，在这里波克比已经出生了吧，那就交教给他学吧！ＨＯＨＯ，从树上可以摇下睡着的姑姑，松果兽等等精灵，，在离开森林的房子里从一个蝴蝶边上的女人那得到技能１２引诱．三者</p>
+<p>１９．从森林出来来到第３４号路，这里出现的精灵还算可以，就不一一例举了，反正多要收集的，这里有百变怪哟，向上走，来到第４个城镇．黄金城，这里现在可以养育精灵了，把一只公的一只母的分别交给俩位老人可能会生蛋哟，这点当然也要精灵彼此间的亲密度吧，并不是每种精灵多能配种的～在这里有个小女孩的电话号码一定要要来，她不但会给你升级糖果还会给你草之石．．．够好的一个女孩</p>
+<p>２０．来到黄金城后整个地形就先熟悉下吧，到广播塔那回答问师拿收音机吧（答案是:是，是，不是，是，不是．答对后她就会送你收音机了，但具体的用法好像只有到关东地区捉卡比兽用过一回吧！在这个繁华的城市里有最大的精灵超市，ＨＯＨＯ～那就上去抢吧，如果你的主力宠选择是水系的话，那么就上精灵超市５层买个技能３２冷冻拳吧，交给你的精灵，这样就可以不怕草系的了，一出手就是冷冻拳，效果好的话还可以冰冻．很实用的技能．还有在５层每个星期的星期天会有个女孩子过来教技能，第一个星期天教的是为报恩技能吧！第二个我忘了．．．在整个城市逛过一圈后你会发现收获不少，不但得到自行车还能在游戏中玩游戏，当然在地下通道里想毕去过的人多知道．里面可以捡到硬币盒子吧，而且还可以为精灵进行美发服务，不要小看美发哟，他可是会增加你和精灵之间的亲密度的哟，像伊布进化成月精灵，光精灵，还有吉得蛋进化成快乐蛋，大嘴蝠进化成叉子蝠，在这里发挥了太大的作用了.</p>
+<p>２１．在一个房间里从一个小孩子手中得到一个叫雅木家伙的电话号码，呵呵，他是做电脑保存精灵用的盒子的，在打完道馆后可从他手中得到伊布．．从城镇一直往上走，在与公园的交接处从守卫员口中得知要你帮他送信，那就答应下来吧，不要忘了身上的精灵最好带５只．有６只的话就去精灵中心存一只吧，这样就可以拿到带信封的列雀了.在往回赶的同时来到３２号路，砍掉拦住的小树，从上面的男人那得到技能05吼叫．</p>
+<p>２２．从３２号路一直向上来到归桥镇，在精灵中心的上面有棵小树挡住了，砍掉，走上去，可以捡到隐藏的银丹（[<!-- raw HTML omitted -->][3]）从归桥镇来到３１号路，把带信的精灵交给在大树边瞌睡的胖子,得到技能５０梦．有条件了话就教给超能系学习吧，但前提条件一定要有催眠技能．．巴大蝴是个不错的选择，因为催睡的成功率高得惊人．</p>
+<p>２３．完成后再次回到黄金城，先向守卫员要来奖赏，得到比秋后一直向上走，在解决了若干训练员后来到公园.这里每个星期的２．４．６可以举行捉虫比赛，我到这里刚好是星期四．哈哈，但是输了，一般捉到飞天螳螂赢的机会很大，而我只捉到了只１５级的大针蜂，那个<!-- raw HTML omitted -->,对了在公园的休息处可以从坐在凳子上面一个女孩子的手中得到灼灼灼，但好像没什么用．不管了进公园去被别人挑战吧．打败所有人后，在右上面一个小男孩边上进入栅栏外，[<!-- raw HTML omitted -->][4]捡</p>
+<p>到技能２８挖洞,在另一边捡到解痹，出公园后来到３6号路,打败俩个学生后在其中一个口中得到电话号码，他会告诉你一些你不知道的东东，向下走来到３５号路．用砍机砍掉小树，打败小女孩从她口中得到电话号码，她会告诉你什么时候阳阳玛出现．</p>
+<p>２４．来到会馆挑战馆长吧！有点难打，那只２０级的牛奶罐一个劲的加血，而且防还很高，但没事，用巴大蝴催睡后直接换精灵睡杀<!-- raw HTML omitted -->，但没想到打败小女孩后不但不给徽章还哭了起来．没办法只好离开，但她的姐姐拦住了你，你再回头跟她要就能要来了．还能得到技能４５滚动功击.</p>
+<p>２５．来到３６号路在胡说树的边上发现一个小女孩，说过几句话就跑了，原来是黄金城会馆边上的房子养花姐姐的妹妹，那就回去问她吧，回去以后和她搭话得到金钱露，哈哈，现在可以收服胡说树了，再次回到３６号路，对胡说树用了金钱露后触发战斗，那么就收服吧，可不要打死了，只有一只啊！</p>
+<p>２６．哈哈，收服胡说树后道路终于通了，在３６号路上的胖子那得到技能０８碎石机，最后是教给胡说树．原因是胡说树能练的技能丰富，到时有如砍树，推岩石，碎石，飞等等教给胡说树一个就够了，可以说他的技能达到了多元化．在收服胡说树处向上走来到３７号路．在三棵果树上收集到不同颜色的凡票，以后可给钢铁大师做球用．</p>
+<p>２７．打败双胞胎，继续向上走，在这里可以收服迷幻魔鹿，在一块牌子的边上可以无限捡起隐蔽蛎井道具，主要是恢复技能用．（[<!-- raw HTML omitted -->][5]）向上走，来到第５个城镇隗树市，终于能和传说中的三圣兽见面了HOHO~~</p>
+<p>２８．一进精灵中心，你的死敌就莫名奇妙地出现在你的面前，跟你莫名奇妙地说了一些关于＂时间胶囊＂后主动消失，免得又战一场．在精灵中心休完后，就去一个老头站在那转来转去的房间内挑战樱花姐妹吧！总共有５人，分别是伊布的特殊进化型．不是很难打，毕意她们精灵的级不高．打完以后下来跟那个好色的男人手中得到密技０３冲浪技能，我一拿到手就教给我的大力凶鄂了．ＨＯＨＯ～～</p>
+<p>２９．在会馆边上的房子内从一个小男孩手中得到宝贝探索器，然后就去烧毁的铃铃塔里去赶神兽吧．一进塔就被一个莫生人拦住，说了些废话后上去发现你的死敌也在，在门口稍微上去的一点地方，可以无限捡起由利球，（[<!-- raw HTML omitted -->][6]）．</p>
+<p>３０．在中间打败你的劝敌，你就会突然间掉下地洞，向走一点点就可以看到三只神兽了,他们在睡觉，一见你来他们便惊慌而逃，(呵呵，跑什么跑，迟早还不是被我收服)，耐心点在地洞里碰吧，可能会有鸭嘴火龙，比较珍贵的．</p>
+<p>３１．赶跑神兽后你发现那个莫名奇妙的男子也来了,上前搭话后又跑了，不管了先出来再说，出来后就到38号路碰炎蒂和雷皇吧！为什么要在３８号路这里碰我也说不清楚，但是玩口袋游戏这么久实践证明这里碰出神兽的机率是最高的．．．哈哈，要想碰到神兽，赖皮一定是要的，一般我多是在３８号路这里碰个两分钟存下档，然后关机再开机，再碰，再存再关再开，很快神兽就会出现，其实我也在别的路上试过，不过一次多没成功过．可悲，貌似这条路每次多能碰出神兽．．．对了再碰神兽的同时碰到别的神奇宝贝只许捉不能杀，要不就跑，一杀的话本来神兽在这路上的．他也就会补系统刷到别的路上了</p>
+<p>m.cn/main/html/showpic.html#url=http://s9.album.sina.com.cn/pic/4a7b474d02000h48
+[2]: <a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s9.album.sina.com.cn/pic/4a7b474d02000hd8">http://blog.sina.com.cn/main/html/showpic.html#url=http://s9.album.sina.com.cn/pic/4a7b474d02000hd8</a>
+[3]: <a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s1.album.sina.com.cn/pic/4a7b474d02000hdc">http://blog.sina.com.cn/main/html/showpic.html#url=http://s1.album.sina.com.cn/pic/4a7b474d02000hdc</a>
+[4]: <a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s2.album.sina.com.cn/pic/4a7b474d02000hdd">http://blog.sina.com.cn/main/html/showpic.html#url=http://s2.album.sina.com.cn/pic/4a7b474d02000hdd</a>
+[5]: <a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s3.album.sina.com.cn/pic/4a7b474d02000hde">http://blog.sina.com.cn/main/html/showpic.html#url=http://s3.album.sina.com.cn/pic/4a7b474d02000hde</a>
+[6]: <a href="http://blog.sina.com.cn/main/html/showpic.html#url=http://s4.album.sina.com.cn/pic/4a7b474d02000hdf">http://blog.sina.com.cn/main/html/showpic.html#url=http://s4.album.sina.com.cn/pic/4a7b474d02000hdf</a></p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;"></p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://blog.lsvking.com/48/">
+			<br>口袋水晶绝密攻略（２）
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://blog.lsvking.com/46/">
+			<br>女生短裤最恶劣的十种穿法
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+ <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a>  <a href="https://amazingrise.net">Rise</a>
+<br>
+ <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2016 龙舍·嬴皇志 - 透过我的双眼看世界
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="/js/journal.js"></script>
+
+    </body>
+</html>

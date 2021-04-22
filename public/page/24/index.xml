@@ -1,0 +1,124 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>DedeCMS模板制作使用实例教程（四）【Type 标记使用实例】</title>
+        <link>https://blog.lsvking.com/130/</link>
+        <pubDate>Sat, 22 Mar 2008 18:28:03 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/130/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/130/ -&lt;p&gt;【Type 标记】表示指定的单个栏目的链接，用法非常简单。&lt;br&gt;
+说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmstype-102f8clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+使用思路、步骤：&lt;br&gt;
+一、明确使用范围&lt;br&gt;
+我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Type 标记】的使用范围是：&lt;br&gt;
+封面模板、列表模板、文档模板。&lt;br&gt;
+通过调试了解其使用方法&lt;br&gt;
+我调试的方法是：&lt;br&gt;
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Type 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。&lt;br&gt;
+我调试【Channel 标记】的具体代码如下：&lt;br&gt;
+{dede:type typeid=’96’}{/dede:type}&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{dede:channel  typeid=’96’}&lt;br&gt;
+&amp;lt;a href=&#39;[field:typelink /]’&amp;gt;[field:typename/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{/dede:channel}&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmstype-102f8clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+通过以上两行代码的对比，相信你的认识会更深刻。前者是生成单一的数据，后者通过数组生成一组的数据。&lt;/p&gt;
+- https://blog.lsvking.com/130/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>DedeCMS模板制作使用实例教程（三）【Channel 标记使用实例】</title>
+        <link>https://blog.lsvking.com/125/</link>
+        <pubDate>Sat, 22 Mar 2008 18:03:48 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/125/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/125/ -&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分“type = top,sun/son,self ”的所调用的对象就行了。&lt;br&gt;
+说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+使用思路、步骤：&lt;br&gt;
+一、明确使用范围&lt;br&gt;
+我们在使用任何标记的过程中，都必须明确其使用的范围，否则可能无法正常调用该标签，【Channel 标记】的使用范围是：&lt;br&gt;
+封面模板、列表模板、文档模板。&lt;br&gt;
+二、通过调试了解其使用方法&lt;br&gt;
+我调试的方法是：&lt;br&gt;
+将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Channel 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。&lt;br&gt;
+调用方法一：&lt;br&gt;
+我调试【Channel 标记】的具体代码如下：&lt;br&gt;
+{dede:channel row=’3′ type=’top’}&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;[field:typename/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{/dede:channel}&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+调用方法二：&lt;br&gt;
+我调试【imglist标记】的具体代码如下：&lt;br&gt;
+{dede:channel row=’3′ type=’sun’ typeid=’96’}&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;[field:typename/]&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+{/dede:channel}&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+- https://blog.lsvking.com/125/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>DedeCMS模板制作使用实例教程（二）【Field 标记使用实例】</title>
+        <link>https://blog.lsvking.com/118/</link>
+        <pubDate>Sat, 22 Mar 2008 17:54:06 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/118/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/118/ -&lt;p&gt;【Field 标记】在封面模板、列表模板、文档模板的使用频率很高，实用。主要用来获得到系统变量的值或者路径，用法很灵活。可以直接展示数据，如调用 position，得到栏目一 &amp;gt; 栏目二” 这样形式的链接；或者，调用templeturl得到/templets这样路径。&lt;br&gt;
+使用思路、步骤：&lt;br&gt;
+一、明确使用范围&lt;br&gt;
+我们在使用【Field 标记】的过程中，必须明确其使用的范围，否则可能无法正常调用该标签，其使用范围是：&lt;br&gt;
+封面模板（如index_article.htm）、列表模板（如list_article.htm）、文档模板（如article_article.htm）。&lt;br&gt;
+  index_article.htm、list_article.htm、article_article.htm等类似的模板文档都在templets\default\文件夹中。&lt;br&gt;
+注意：&lt;br&gt;
+  1、封面模板与列表模板是有区别的，但调用【Field 标记】可以相同；&lt;br&gt;
+  2、封面模板有不同的类型，我们最常用的是文章模板（index_article.htm），其它的还有图片模板（index_image.htm），简 介模板（index_info.htm），软件模板（index_soft.htm）等等，这些模板调用【Field 标记】的道理都是一样的。&lt;br&gt;
+二、通过调试了解其使用方法&lt;br&gt;
+我调试的方法是：&lt;br&gt;
+将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Field 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新栏目HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。&lt;br&gt;
+用法一：&lt;br&gt;
+这种用法，主要是从数据库获取相关的数据，特别是系统变量的数据。&lt;br&gt;
+我调试【Arclist 标记】的具体代码如下：&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;调用position标记,得到:栏目一 &amp;gt; 栏目二” 这样形式的链接：&lt;!-- raw HTML omitted --&gt;{dede:field name=’position’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;插件路径：&lt;!-- raw HTML omitted --&gt;{dede:field name=’phpurl’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;模板路径：&lt;!-- raw HTML omitted --&gt;{dede:field name=’templeturl’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;版权信息：&lt;!-- raw HTML omitted --&gt;{dede:field name=’powerby’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;主页路径：&lt;!-- raw HTML omitted --&gt;{dede:field name=’indexurl’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;主页名称：&lt;!-- raw HTML omitted --&gt;{dede:field name=’indexname’/}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
+请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。&lt;br&gt;
+用法二：&lt;br&gt;
+这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，&lt;br&gt;
+我调试【Arclist 标记】的具体代码如下：&lt;br&gt;
+  &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+注意：本页面的文字和链接都是经过dede.css处理的&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;织梦论坛&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
+得到如下返回数据：&lt;br&gt;
+&lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+- https://blog.lsvking.com/118/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

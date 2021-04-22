@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/posts/</link>
+    <description>Recent content in Posts on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate><atom:link href="https://blog.lsvking.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MongoDB用mongoimport 导入大文件报错解决方案</title>
+      <link>https://blog.lsvking.com/1152/</link>
+      <pubDate>Mon, 05 Sep 2016 15:41:13 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/1152/</guid>
+      <description>用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的</description>
+    </item>
+    
+    <item>
+      <title>话糙理不糙的名言</title>
+      <link>https://blog.lsvking.com/1140/</link>
+      <pubDate>Thu, 24 Sep 2015 07:20:47 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/1140/</guid>
+      <description>生活就像强奸，既然无法去反抗不如懂得去享受 工作就像轮奸，如果您不行了就换别人上 社会就像自慰，所有的都要靠自己的双手来解决​ 好朋友就象内裤，就</description>
+    </item>
+    
+    <item>
+      <title>vagrant 打包box时候提示 “VM not created. Moving on…”</title>
+      <link>https://blog.lsvking.com/1134/</link>
+      <pubDate>Thu, 13 Nov 2014 09:48:10 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/1134/</guid>
+      <description>在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。 名称要完全一样，大小写也要一样</description>
+    </item>
+    
+    <item>
+      <title>VirtualBox OS X Mavericks 分辨率修改</title>
+      <link>https://blog.lsvking.com/951/</link>
+      <pubDate>Wed, 30 Jul 2014 10:16:11 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/951/</guid>
+      <description>需要开启EFI模式 然后在命令行下 VirtualBox目录 输入一下命令： VBoxManage setextradata &amp;quot;虚拟机名称&amp;quot; VBoxInternal2/EfiGopMode N 其中 N 可以是 0,1,2,3,4,5 其中一个，分别</description>
+    </item>
+    
+    <item>
+      <title>Golang strings 包中的函数和方法</title>
+      <link>https://blog.lsvking.com/945/</link>
+      <pubDate>Wed, 09 Apr 2014 07:25:00 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/945/</guid>
+      <description>------------------------------------------------------------ // Count 计算字符串 sep 在 s 中的非重叠个数 // 如果 sep 为空字符串，则返回 s 中的字符(非字节)个数 + 1 // 使用 Rabin-Karp 算法实现 func Count(s, sep string) int func main() { s := &amp;#34;He</description>
+    </item>
+    
+    <item>
+      <title>利用cloudHQ在网盘间快速拷贝和同步文件</title>
+      <link>https://blog.lsvking.com/944/</link>
+      <pubDate>Wed, 12 Mar 2014 17:11:16 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/944/</guid>
+      <description>幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务： 1、网盘综合管理，你可以将常</description>
+    </item>
+    
+    <item>
+      <title>awk切割字符串后赋值给shell变量的方法</title>
+      <link>https://blog.lsvking.com/939/</link>
+      <pubDate>Mon, 16 Dec 2013 15:18:00 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/939/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Win8下编译Go go.exe 崩溃</title>
+      <link>https://blog.lsvking.com/935/</link>
+      <pubDate>Tue, 30 Jul 2013 13:03:45 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/935/</guid>
+      <description>在windows8 下 编译啊运行啊什么的 就会报崩溃 一直困惑不已,所以一直在Linux下学习Golang。此事一直让我觉得可能是我起床的方式不对</description>
+    </item>
+    
+    <item>
+      <title>Linux压缩Tar命令介绍</title>
+      <link>https://blog.lsvking.com/932/</link>
+      <pubDate>Thu, 13 Oct 2011 03:18:00 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/932/</guid>
+      <description>tar命令</description>
+    </item>
+    
+    <item>
+      <title>G&#43;邀请数枚,需要的请留言。。。</title>
+      <link>https://blog.lsvking.com/927/</link>
+      <pubDate>Tue, 09 Aug 2011 02:42:09 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/927/</guid>
+      <description>Google+邀请数枚，请留言。</description>
+    </item>
+    
+    <item>
+      <title>True Launch Bar 5.2 正版授权 (可当作破解版)</title>
+      <link>https://blog.lsvking.com/922/</link>
+      <pubDate>Tue, 15 Mar 2011 13:57:00 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/922/</guid>
+      <description>True Launch Bar是一款功能强悍的快速启动栏工具栏软件，完全可以取代Windows传统的“快速启动”工具栏。它和普通的“快速启动”工具栏采用相同的工</description>
+    </item>
+    
+    <item>
+      <title>【转发】关于MySQL表设计应该注意的问题</title>
+      <link>https://blog.lsvking.com/921/</link>
+      <pubDate>Wed, 09 Mar 2011 06:39:56 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/921/</guid>
+      <description>如有错误欢迎大家指出。这段时间在家里，做了点修正。 1、慎重选择表名。 有两种选择： 按照多数开发语言的命名规则。比如（myCustomer）。 按</description>
+    </item>
+    
+    <item>
+      <title>转:《我的丈夫是个程序员》</title>
+      <link>https://blog.lsvking.com/920/</link>
+      <pubDate>Tue, 15 Feb 2011 08:00:24 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/920/</guid>
+      <description>我在11年前认识了的我丈夫。当时是南缅因州大学新生入校的日子，我带着吉他去宿舍。他饶有兴趣的盯着我的吉他。之后他敲响了我的房门，自我介绍道：</description>
+    </item>
+    
+    <item>
+      <title>用CI的 AR类进行 跨库关联查操作</title>
+      <link>https://blog.lsvking.com/917/</link>
+      <pubDate>Tue, 26 Oct 2010 05:15:49 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/917/</guid>
+      <description>比较早写的东西了,发现博客很急没更新了发过来充数。。。 最近在写套系统，上来就遇到麻烦了，具体情况就不说了，大概就是 A 库里有张表 写了一些用户信</description>
+    </item>
+    
+    <item>
+      <title>迅雷7 非会员体验补丁。。。</title>
+      <link>https://blog.lsvking.com/914/</link>
+      <pubDate>Sat, 14 Aug 2010 10:11:34 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/914/</guid>
+      <description>&lt;p&gt;迅雷7发布了，目前却只为迅雷高级会员和迅雷VIP付费会员开启“迅雷7”的试用体验。安装官方迅雷，运行迅雷7体验补丁，点体验，退出补丁运行迅雷，登陆任意帐号，会一直处于登陆状态，您可以尽情的体验迅雷7了~&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>灌口一则 蜈蚣百足，行不及蛇,灵鸡有翼，飞不如鸦</title>
+      <link>https://blog.lsvking.com/912/</link>
+      <pubDate>Thu, 15 Jul 2010 01:58:05 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/912/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>68KB Knowledge Base 中文语言文件</title>
+      <link>https://blog.lsvking.com/905/</link>
+      <pubDate>Wed, 28 Apr 2010 08:38:41 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/905/</guid>
+      <description>68KB Knowledge Base 是一款类似于FAQ等知识库类的PHP开源程序，基于Codeigniter开源框架编写的，我制作了个中文版的语言文件，有些地方难免有些生</description>
+    </item>
+    
+    <item>
+      <title>IE6的葬礼。。。。 多图</title>
+      <link>https://blog.lsvking.com/899/</link>
+      <pubDate>Wed, 17 Mar 2010 09:16:08 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/899/</guid>
+      <description>&lt;p&gt;都说死者为大吧，虽然这个人曾令我咬牙切齿，彻夜无法眠，而且他其实也并没有死，在我这里他还活得好好的，比谁都滋润(老不死的,该死不死的&lt;a href=&#34;http://lsvking.com/wp-content/uploads/2010/03/clip_image001.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;);&lt;/p&gt;
+&lt;p&gt;话说回来了，它能有这么顽强的生命力还是有一定的原因的,垄断捆绑,加上GHOST XP 肆虐,使他的装机量完完全全的成了绝对统治级别的,现在还有这么多人在用XP,包括我公司的电脑还有家里有一台以前的老电脑都是,有XP基本上就必然有IE6,闲话不扯了 没必要做说IE6的缺点了,下面上图啦: &lt;strong&gt;IE6****葬礼现场&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;好蓝，好蓝&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>已收到 Sina App Engine邀请，试用中。。。。</title>
+      <link>https://blog.lsvking.com/806/</link>
+      <pubDate>Wed, 03 Feb 2010 05:38:23 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/806/</guid>
+      <description>呵呵，昨天下午3点多申请的，晚上睡觉前突然发现有新邮件，一看标题我就激动了。 赶紧的就激活去了，建立了第一个应用，第二个，第三个 ，如果你想把它</description>
+    </item>
+    
+    <item>
+      <title>转：评论,缺乏道德感的百度不会真正幸福</title>
+      <link>https://blog.lsvking.com/799/</link>
+      <pubDate>Mon, 18 Jan 2010 14:13:39 +0000</pubDate>
+      
+      <guid>https://blog.lsvking.com/799/</guid>
+      <description>“幸福来得太快。”在谷歌尚未明确是否就此退出中国市场之际，百度员工已经赤祼祼地趁火打劫：如今百度负责广告销售的员工一早来到公司后的第一件事，</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,108 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <link>https://blog.lsvking.com/</link>
+    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>CSS技巧补遗二十四则</title>
+        <link>https://blog.lsvking.com/308/</link>
+        <pubDate>Thu, 31 Jul 2008 12:36:45 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/308/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/308/ -&lt;p&gt;在CSS网页布局开发中，会有很多小技巧，新手朋友往往对此很不熟悉。在某一两个小问题上，或许纠缠很长时间才能搞明白，虽然在52CSS.com的文档 中，多次提及过这方面的内容，但依然有很多朋友在这些问题上犯错。我们今天看看这些CSS技巧，认真读一读，或许您并不能完全理解，您可以在 52CSS.com进行搜索，扩展您所想要得到的知识，相信您会有很多收获！&lt;/p&gt;
+&lt;p&gt;一、ul标签在Mozilla中默认是有padding值的，而在IE中只有margin有值。&lt;/p&gt;
+&lt;p&gt;二、同一个的class选择符可以在一个文档中重复出现，而id选择符却只能出现一次。对一个标签同时使用class和id进行CSS定义，如果定义有重复，id选择符做的定义有效，是因为id的权重要比class大。&lt;/p&gt;
+&lt;p&gt;三、一个兼容性调整(IE和Mozilla)的笨办法：&lt;/p&gt;
+&lt;p&gt;初学可能会碰到这样一个情况：同样一个标签的属性在IE设置成A显示是正常的，而在Mozilla里必须要设成B才能正常显示，或者两个倒过来。&lt;/p&gt;
+&lt;p&gt;临时解决方法：选择符{属性名:B !important;属性名:A} 或许有时候并没有效果。你可以在52CSS.com搜索更多的BUG解决方法。&lt;/p&gt;
+&lt;p&gt;四、如果一组要嵌套的标签之间需要些间距的话，那就留给位于里面的标签的margin属性吧，而不要去定义位于外面的标签的padding&lt;/p&gt;
+&lt;p&gt;五、li标签前面的图标推荐使用background-image，而不是list-style-image。&lt;/p&gt;
+&lt;p&gt;六、IE分不清继承关系和父子关系的差别，全部都是继承关系。&lt;/p&gt;
+&lt;p&gt;七、在给你的标签疯狂加选择符的时候，别忘了在CSS里给选择符加上注释。等你以后修改你的CSS的时候就知道为什么要这么做了。另外提醒您，不要太疯狂了。&lt;/p&gt;
+&lt;p&gt;八、如果你给一个标签设置了一个深色调的背景图片和亮色调的文字效果。建议这个时候给你的标签再设置一个深色调的背景颜色。因为图片丢失了，也可以保持文字的可读性。&lt;/p&gt;
+&lt;p&gt;九、定义链接的四种状态要注意先后顺序: Link Visited Hover Active&lt;/p&gt;
+&lt;p&gt;十、与内容无关的图片请使用background。时刻记住表现与内容分离。&lt;/p&gt;
+&lt;p&gt;十一、定义颜色可以缩写#8899FF=#89F&lt;/p&gt;
+&lt;p&gt;十二、table在某些方面还是有用武之地的，在遇到内容为数据表格时，不要对它产生憎恨的心理。&lt;/p&gt;
+&lt;p&gt;十三、&lt;!-- raw HTML omitted --&gt;没有language这个属性，应该写成这样:&amp;lt;script type=”text/javascript”&amp;gt;&lt;/p&gt;
+&lt;p&gt;十四、完美的单象素外框线表格（在IE5、IE6、IE7及FF1.0.4以上中均可通过测试）&lt;/p&gt;
+&lt;p&gt;table{ border-collapse:collapse; }&lt;/p&gt;
+&lt;p&gt;td{ border:#000 solid 1px; }&lt;/p&gt;
+&lt;p&gt;您也可以参考：&lt;/p&gt;
+&lt;p&gt;与表格边框有关的CSS语法&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=394&#34;&gt;http://www.52css.com/article.asp?id=394&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;CSS去除表格td默认间距及制作1px细线表格&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=593&#34;&gt;http://www.52css.com/article.asp?id=593&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;实现符合Web标准的细线表格&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=676&#34;&gt;http://www.52css.com/article.asp?id=676&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;十五、margin取负值可以在标签使用绝对定位的时候起到相对定位的作用，在页面居中显示时，使用绝对定位的层不适合使用left:XXpx这个属性。把这个层放到一个要相对定位的标签旁，然后使用margin的负值是个好方法。&lt;/p&gt;
+&lt;p&gt;十六、绝对定位时使用margin值定位可以达到相对于本身所在位置的定，这与top，left等属性相对与窗口边缘的定位不同。绝对定位的优势在于可以让其它元素忽略它的存在。&lt;/p&gt;
+&lt;p&gt;十七、如果文字过长,则将过长的部分变成省略号显示：IE5,FF无效，但可以隐藏，IE6有效&lt;/p&gt;
+&lt;p&gt;&amp;lt;DIV STYLE=”width:120px;height:50px;border:1px solid blue;overflow:hidden;text-overflow:ellipsis”&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;就是比如有一行文字，很长，表格内一行显示不下.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;十八、在IE中可能由于注释带来的文字重复问题时可以把注释改为：&lt;/p&gt;
+&lt;p&gt;&amp;lt;!–[if !IE]&amp;gt;Put your commentary in here…&amp;lt;![endif]–&amp;gt;&lt;/p&gt;
+&lt;p&gt;十九、如何用CSS调用外部字体&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;p&gt;@font-face{font-family:name;src:url(url);sRules}&lt;/p&gt;
+&lt;p&gt;取值：&lt;/p&gt;
+&lt;p&gt;name：字体名称。任何可能的 font-family 属性的值&lt;/p&gt;
+&lt;p&gt;url(url)：使用绝对或相对 url 地址指定OpenType字体文件&lt;/p&gt;
+&lt;p&gt;sRules：样式表定义&lt;/p&gt;
+&lt;p&gt;二十、如何让一个表单中的文本框中的文字垂直居中？&lt;/p&gt;
+&lt;p&gt;如果用行高与高度的组在FF中是没有效果的，办法就是定义上下补白就可以实现想想的效果了。&lt;/p&gt;
+&lt;p&gt;二十一、定义A标签要注意的小问题：&lt;/p&gt;
+&lt;p&gt;当我们定义a{color:red;}时，它代表了A的四种状态的样式，如果此时要定义一个鼠标放上的状态只要定义a:hover就可以了，其它三种状态就是A中所定义的样式。只定义了一个a:link时，一定要记得把其它三种状态定义出来！&lt;/p&gt;
+&lt;p&gt;二十二、并不是所有样式都要简写：&lt;/p&gt;
+&lt;p&gt;当样式表前定义了如p{padding:1px 2px 3px 4px}时，在后续工程中又增加了一个样式上补白5px，下补白6px。我们并不 一定要写成p.style1{padding:5px 6px 3px 4px}。可以写成p.style1{padding- top:5px;padding-right:6px;},你可能会感觉这样写还不如原来那样好，但你想没想过，你的那种写法重复定义了样式，另外你可以 不必去找原来的下补白与左补白的值是多少！如果以后前一个样式P变了话，你定义的p.style1的样式也要变。&lt;/p&gt;
+&lt;p&gt;二十三、网站越大，CSS样式越多，开始做前，请做好充分的准备和策划，包括命名规则。页面区块划分，内部样式分类等。&lt;/p&gt;
+&lt;p&gt;二十四、固定宽度汉字截断：overflow:hidden;text-overflow:ellipsis;white-space:nowrap;(不过只能处理文字在一行上的截断，不能处理多行。)（IE5以上）FF不能，它只隐藏。&lt;/p&gt;
+&lt;p&gt;如果您有很多不明白的，没关系，记录下这些技巧，常来52CSS.com看看，您一定有所收获。您也可以在左侧的搜索框输入你感兴趣的内容进行搜索。欢迎您发表评论，补充CSS技巧。&lt;/p&gt;
+- https://blog.lsvking.com/308/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>XP SP3和打上补丁953230（KB951748）后TCP/IP连接数修改工具</title>
+        <link>https://blog.lsvking.com/305/</link>
+        <pubDate>Thu, 31 Jul 2008 12:28:12 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/305/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/305/ -&lt;p&gt;Microsoft 安全公告 MS08-037 – 重要&lt;/p&gt;
+&lt;p&gt;DNS 中的漏洞可允许欺骗 (953230)&lt;/p&gt;
+&lt;p&gt;发布日期： 七月 8, 2008&lt;/p&gt;
+&lt;p&gt;版本： 1.0&lt;/p&gt;
+&lt;p&gt;一般信息&lt;/p&gt;
+&lt;p&gt;摘要&lt;/p&gt;
+&lt;p&gt;此安全更新可解决 Windows 域名系统 (DNS) 中两个秘密报告的漏洞，这些漏洞可允许欺骗。 DNS 客户端和 DNS 服务器中均存在这些漏洞，这些漏洞可能会允许远程攻击者将 Internet 上针对系统的网络通信重定向至攻击者自己的系统。&lt;/p&gt;
+&lt;p&gt;打上这个补丁953230（KB951748）后TCP/IP连接数会恢复到原来的限制10 ，原来的关于破解TCP/IP的都失效了。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+- https://blog.lsvking.com/305/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>SourceForge解封了。。</title>
+        <link>https://blog.lsvking.com/297/</link>
+        <pubDate>Mon, 28 Jul 2008 15:45:57 +0000</pubDate>
+        
+        <guid>https://blog.lsvking.com/297/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://blog.lsvking.com/297/ -&lt;p&gt;&lt;!-- raw HTML omitted --&gt;SourceForge&lt;!-- raw HTML omitted --&gt; 俗称SF，大家经常去的地方，有很多的软件项目都托管在这个网站，不过我一直记不住这个域名，你也记不住，没关系 &lt;!-- raw HTML omitted --&gt;SF.Net&lt;!-- raw HTML omitted --&gt; 你总记住了吧。&lt;/p&gt;
+&lt;p&gt;前些日子被封了，造成不少麻烦，今天玩玩PHPBB3，偶然点了一个链接，居然打开了，再看自己也没挂代理，让别人看了下，也开了，HOHo 解封了。&lt;/p&gt;
+- https://blog.lsvking.com/297/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 
