@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>go on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
-    <link>http://example.org/tags/go/</link>
+    <link>https://lsvking.github.io/tags/go/</link>
     <description>Recent content in go on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Wed, 09 Apr 2014 07:25:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Apr 2014 07:25:00 +0000</lastBuildDate><atom:link href="https://lsvking.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang strings 包中的函数和方法</title>
-      <link>http://example.org/945/</link>
+      <link>https://lsvking.github.io/945/</link>
       <pubDate>Wed, 09 Apr 2014 07:25:00 +0000</pubDate>
       
-      <guid>http://example.org/945/</guid>
+      <guid>https://lsvking.github.io/945/</guid>
       <description>------------------------------------------------------------ // Count 计算字符串 sep 在 s 中的非重叠个数 // 如果 sep 为空字符串，则返回 s 中的字符(非字节)个数 + 1 // 使用 Rabin-Karp 算法实现 func Count(s, sep string) int func main() { s := &amp;#34;Hello,世界!!!!!&amp;#34; n := strings.Count(s, &amp;#34;!&amp;#34;) fmt.Println(n) // 5 	n = strings.Count(s, &amp;#34;!!&amp;#34;) fmt.Println(n) // 2 } ------------------------------------------------------------ // Contains 判断字符串 s 中是否包含子串 substr // 如果 substr 为空，则返回 true func Contains(s, substr string) bool func main() { s := &amp;#34;Hello,世界!!!!!&amp;#34; b := strings.</description>
     </item>
     

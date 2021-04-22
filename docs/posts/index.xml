@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
-    <link>http://example.org/posts/</link>
+    <link>https://lsvking.github.io/posts/</link>
     <description>Recent content in Posts on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate><atom:link href="https://lsvking.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MongoDB用mongoimport 导入大文件报错解决方案</title>
-      <link>http://example.org/1152/</link>
+      <link>https://lsvking.github.io/1152/</link>
       <pubDate>Mon, 05 Sep 2016 15:41:13 +0000</pubDate>
       
-      <guid>http://example.org/1152/</guid>
+      <guid>https://lsvking.github.io/1152/</guid>
       <description>用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的文件，大的数据迁移都是用的restore导入的。这次遇到一次数据迁移导出的json 文件大概有4.7G左右,再倒入的时候出现了问题
 mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat
 却出现了如下的错误提示
@@ -25,10 +25,10 @@ mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat --batchSize 1
     
     <item>
       <title>话糙理不糙的名言</title>
-      <link>http://example.org/1140/</link>
+      <link>https://lsvking.github.io/1140/</link>
       <pubDate>Thu, 24 Sep 2015 07:20:47 +0000</pubDate>
       
-      <guid>http://example.org/1140/</guid>
+      <guid>https://lsvking.github.io/1140/</guid>
       <description>生活就像强奸，既然无法去反抗不如懂得去享受
 工作就像轮奸，如果您不行了就换别人上
 社会就像自慰，所有的都要靠自己的双手来解决​
@@ -56,10 +56,10 @@ mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat --batchSize 1
     
     <item>
       <title>vagrant 打包box时候提示 “VM not created. Moving on…”</title>
-      <link>http://example.org/1134/</link>
+      <link>https://lsvking.github.io/1134/</link>
       <pubDate>Thu, 13 Nov 2014 09:48:10 +0000</pubDate>
       
-      <guid>http://example.org/1134/</guid>
+      <guid>https://lsvking.github.io/1134/</guid>
       <description>在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。
 
 名称要完全一样，大小写也要一样哦。折腾了半天，也是醉了。。</description>
@@ -67,10 +67,10 @@ mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat --batchSize 1
     
     <item>
       <title>VirtualBox OS X Mavericks 分辨率修改</title>
-      <link>http://example.org/951/</link>
+      <link>https://lsvking.github.io/951/</link>
       <pubDate>Wed, 30 Jul 2014 10:16:11 +0000</pubDate>
       
-      <guid>http://example.org/951/</guid>
+      <guid>https://lsvking.github.io/951/</guid>
       <description>需要开启EFI模式 然后在命令行下 VirtualBox目录 输入一下命令：
 VBoxManage setextradata &amp;quot;虚拟机名称&amp;quot; VBoxInternal2/EfiGopMode N
 其中 N 可以是 0,1,2,3,4,5 其中一个，分别代表 640×480, 800×600, 1024×768, 1280×1024, 1440×900, 1920×1200 几种分辨率</description>
@@ -78,19 +78,19 @@ VBoxManage setextradata &amp;quot;虚拟机名称&amp;quot; VBoxInternal2/EfiGop
     
     <item>
       <title>Golang strings 包中的函数和方法</title>
-      <link>http://example.org/945/</link>
+      <link>https://lsvking.github.io/945/</link>
       <pubDate>Wed, 09 Apr 2014 07:25:00 +0000</pubDate>
       
-      <guid>http://example.org/945/</guid>
+      <guid>https://lsvking.github.io/945/</guid>
       <description>------------------------------------------------------------ // Count 计算字符串 sep 在 s 中的非重叠个数 // 如果 sep 为空字符串，则返回 s 中的字符(非字节)个数 + 1 // 使用 Rabin-Karp 算法实现 func Count(s, sep string) int func main() { s := &amp;#34;Hello,世界!!!!!&amp;#34; n := strings.Count(s, &amp;#34;!&amp;#34;) fmt.Println(n) // 5 	n = strings.Count(s, &amp;#34;!!&amp;#34;) fmt.Println(n) // 2 } ------------------------------------------------------------ // Contains 判断字符串 s 中是否包含子串 substr // 如果 substr 为空，则返回 true func Contains(s, substr string) bool func main() { s := &amp;#34;Hello,世界!!!!!&amp;#34; b := strings.</description>
     </item>
     
     <item>
       <title>利用cloudHQ在网盘间快速拷贝和同步文件</title>
-      <link>http://example.org/944/</link>
+      <link>https://lsvking.github.io/944/</link>
       <pubDate>Wed, 12 Mar 2014 17:11:16 +0000</pubDate>
       
-      <guid>http://example.org/944/</guid>
+      <guid>https://lsvking.github.io/944/</guid>
       <description>幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务：
 1、网盘综合管理，你可以将常用的网盘添加到cloudHQ，通过cloudHQ管理所有网盘的文件；
 2、网盘间文件拷贝/移动；
@@ -103,19 +103,19 @@ cloudHQ的同步速度还是不错的，我从Dropbox同步了7G的数据共6000
     
     <item>
       <title>awk切割字符串后赋值给shell变量的方法</title>
-      <link>http://example.org/939/</link>
+      <link>https://lsvking.github.io/939/</link>
       <pubDate>Mon, 16 Dec 2013 15:18:00 +0000</pubDate>
       
-      <guid>http://example.org/939/</guid>
+      <guid>https://lsvking.github.io/939/</guid>
       <description>  </description>
     </item>
     
     <item>
       <title>Win8下编译Go go.exe 崩溃</title>
-      <link>http://example.org/935/</link>
+      <link>https://lsvking.github.io/935/</link>
       <pubDate>Tue, 30 Jul 2013 13:03:45 +0000</pubDate>
       
-      <guid>http://example.org/935/</guid>
+      <guid>https://lsvking.github.io/935/</guid>
       <description>在windows8 下 编译啊运行啊什么的 就会报崩溃
 
 
@@ -125,28 +125,28 @@ cloudHQ的同步速度还是不错的，我从Dropbox同步了7G的数据共6000
     
     <item>
       <title>Linux压缩Tar命令介绍</title>
-      <link>http://example.org/932/</link>
+      <link>https://lsvking.github.io/932/</link>
       <pubDate>Thu, 13 Oct 2011 03:18:00 +0000</pubDate>
       
-      <guid>http://example.org/932/</guid>
+      <guid>https://lsvking.github.io/932/</guid>
       <description>tar命令 </description>
     </item>
     
     <item>
       <title>G&#43;邀请数枚,需要的请留言。。。</title>
-      <link>http://example.org/927/</link>
+      <link>https://lsvking.github.io/927/</link>
       <pubDate>Tue, 09 Aug 2011 02:42:09 +0000</pubDate>
       
-      <guid>http://example.org/927/</guid>
+      <guid>https://lsvking.github.io/927/</guid>
       <description>Google+邀请数枚，请留言。</description>
     </item>
     
     <item>
       <title>True Launch Bar 5.2 正版授权 (可当作破解版)</title>
-      <link>http://example.org/922/</link>
+      <link>https://lsvking.github.io/922/</link>
       <pubDate>Tue, 15 Mar 2011 13:57:00 +0000</pubDate>
       
-      <guid>http://example.org/922/</guid>
+      <guid>https://lsvking.github.io/922/</guid>
       <description>True Launch Bar是一款功能强悍的快速启动栏工具栏软件，完全可以取代Windows传统的“快速启动”工具栏。它和普通的“快速启动”工具栏采用相同的工作原理，启动迅速；不同之处在于，True Launch Bar可以对大量快捷图标进行分组，鼠标滑过图标时弹出下级快捷图标，支持拖放操作；快捷方式可自由更换ico/png图标，可显示大/小图标，隐藏标题文字等等。使用True Launch Bar，图标调用大为方便，电脑也更为活泼美观
    下载地址：Skydiver
 PS：此版本为 Giveawayoftheday赠送正版授权版,请安装时将系统时间调整到2.9号安装.</description>
@@ -154,10 +154,10 @@ PS：此版本为 Giveawayoftheday赠送正版授权版,请安装时将系统时
     
     <item>
       <title>【转发】关于MySQL表设计应该注意的问题</title>
-      <link>http://example.org/921/</link>
+      <link>https://lsvking.github.io/921/</link>
       <pubDate>Wed, 09 Mar 2011 06:39:56 +0000</pubDate>
       
-      <guid>http://example.org/921/</guid>
+      <guid>https://lsvking.github.io/921/</guid>
       <description>如有错误欢迎大家指出。这段时间在家里，做了点修正。
 1、慎重选择表名。
 有两种选择：
@@ -197,10 +197,10 @@ I. 关于ZEROFILL。非常好用的前置填补0的存储，而不是用用对�
     
     <item>
       <title>转:《我的丈夫是个程序员》</title>
-      <link>http://example.org/920/</link>
+      <link>https://lsvking.github.io/920/</link>
       <pubDate>Tue, 15 Feb 2011 08:00:24 +0000</pubDate>
       
-      <guid>http://example.org/920/</guid>
+      <guid>https://lsvking.github.io/920/</guid>
       <description>我在11年前认识了的我丈夫。当时是南缅因州大学新生入校的日子，我带着吉他去宿舍。他饶有兴趣的盯着我的吉他。之后他敲响了我的房门，自我介绍道：“嗨，我叫Adam，我就住在走廊的对面。我是个计算机程序员！”
 他做了一很勇敢的决定。 10年前当程序员并不像今天这么“火”，这个行业并不被社会重视，他似乎也根本不在意这些。不管怎样，我们相爱了。我当时并不懂编程，但却被他那义无反顾 的精神和毫不在意被人当作怪人的态度打动。是发现了他也弹吉他使我们走到了一起。如果仅是他住在走廊我的对面，命运也不会做出这样的安排。
 在随后的一周周，一月月，一年年，他慢慢的吸引了我的注意力，他会对着他的游戏机的硬件清单大发雷霆，他能在虚拟世界里的游戏竞赛中为我独尊，他在ColdFusion平台上制作了他的毕业论文项目，他会用长篇大论来解释他的编程理论。我会安静的坐着，惊奇的看他把一台PC机拆成零碎。我听他讲编程上的问题，看他开发网站。与此同时，我还只是朦胧的感觉到我未来的职业应该是跟科技和英语有关，但我着实对Adam的生活发生了兴趣。
@@ -217,10 +217,10 @@ I. 关于ZEROFILL。非常好用的前置填补0的存储，而不是用用对�
     
     <item>
       <title>用CI的 AR类进行 跨库关联查操作</title>
-      <link>http://example.org/917/</link>
+      <link>https://lsvking.github.io/917/</link>
       <pubDate>Tue, 26 Oct 2010 05:15:49 +0000</pubDate>
       
-      <guid>http://example.org/917/</guid>
+      <guid>https://lsvking.github.io/917/</guid>
       <description>比较早写的东西了,发现博客很急没更新了发过来充数。。。
 最近在写套系统，上来就遇到麻烦了，具体情况就不说了，大概就是 A 库里有张表 写了一些用户信息，B 库是另外一个库，里边有张表记录了一些充值信息， 然后A 表里的用户有个字段是B表里没有的，但却是查询条件，所以要用到表关联。这个逻辑大家都清楚，主要是这两个表分布在了不同的数据库中，需要用到跨库表关联，这个在MYSQL里边是可以实现的，现在需要用CI 的AR类来实现，好下边给出解决方法，期间我走的弯路就不说了，希望能够帮助大家，让大家少走弯路。
 &amp;lt;br /&amp;gt; //多表信息查询//&amp;lt;br /&amp;gt; function cps_pay_in_dede(){
@@ -231,38 +231,38 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
     
     <item>
       <title>迅雷7 非会员体验补丁。。。</title>
-      <link>http://example.org/914/</link>
+      <link>https://lsvking.github.io/914/</link>
       <pubDate>Sat, 14 Aug 2010 10:11:34 +0000</pubDate>
       
-      <guid>http://example.org/914/</guid>
+      <guid>https://lsvking.github.io/914/</guid>
       <description>&lt;p&gt;迅雷7发布了，目前却只为迅雷高级会员和迅雷VIP付费会员开启“迅雷7”的试用体验。安装官方迅雷，运行迅雷7体验补丁，点体验，退出补丁运行迅雷，登陆任意帐号，会一直处于登陆状态，您可以尽情的体验迅雷7了~&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>灌口一则 蜈蚣百足，行不及蛇,灵鸡有翼，飞不如鸦</title>
-      <link>http://example.org/912/</link>
+      <link>https://lsvking.github.io/912/</link>
       <pubDate>Thu, 15 Jul 2010 01:58:05 +0000</pubDate>
       
-      <guid>http://example.org/912/</guid>
+      <guid>https://lsvking.github.io/912/</guid>
       <description></description>
     </item>
     
     <item>
       <title>68KB Knowledge Base 中文语言文件</title>
-      <link>http://example.org/905/</link>
+      <link>https://lsvking.github.io/905/</link>
       <pubDate>Wed, 28 Apr 2010 08:38:41 +0000</pubDate>
       
-      <guid>http://example.org/905/</guid>
+      <guid>https://lsvking.github.io/905/</guid>
       <description>68KB Knowledge Base 是一款类似于FAQ等知识库类的PHP开源程序，基于Codeigniter开源框架编写的，我制作了个中文版的语言文件，有些地方难免有些生硬，请指出。</description>
     </item>
     
     <item>
       <title>IE6的葬礼。。。。 多图</title>
-      <link>http://example.org/899/</link>
+      <link>https://lsvking.github.io/899/</link>
       <pubDate>Wed, 17 Mar 2010 09:16:08 +0000</pubDate>
       
-      <guid>http://example.org/899/</guid>
+      <guid>https://lsvking.github.io/899/</guid>
       <description>&lt;p&gt;都说死者为大吧，虽然这个人曾令我咬牙切齿，彻夜无法眠，而且他其实也并没有死，在我这里他还活得好好的，比谁都滋润(老不死的,该死不死的&lt;a href=&#34;http://lsvking.com/wp-content/uploads/2010/03/clip_image001.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;);&lt;/p&gt;
 &lt;p&gt;话说回来了，它能有这么顽强的生命力还是有一定的原因的,垄断捆绑,加上GHOST XP 肆虐,使他的装机量完完全全的成了绝对统治级别的,现在还有这么多人在用XP,包括我公司的电脑还有家里有一台以前的老电脑都是,有XP基本上就必然有IE6,闲话不扯了 没必要做说IE6的缺点了,下面上图啦: &lt;strong&gt;IE6****葬礼现场&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
@@ -271,20 +271,20 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
     
     <item>
       <title>已收到 Sina App Engine邀请，试用中。。。。</title>
-      <link>http://example.org/806/</link>
+      <link>https://lsvking.github.io/806/</link>
       <pubDate>Wed, 03 Feb 2010 05:38:23 +0000</pubDate>
       
-      <guid>http://example.org/806/</guid>
+      <guid>https://lsvking.github.io/806/</guid>
       <description>呵呵，昨天下午3点多申请的，晚上睡觉前突然发现有新邮件，一看标题我就激动了。
 赶紧的就激活去了，建立了第一个应用，第二个，第三个 ，如果你想把它当作一个免费的虚拟主机来用的话，恐怕你要失望了，它限制了不少的函数，以至于很多的开源代码都无法使用，需要自己修改，比如wordpress 我的第三个应用就是用的for SAE版本的，2.8.5，很多功能也都无法使用，目前还在探索中，详细的就不写了，已经有很多人写过了，大家申请邀请码吧，Good Luck！</description>
     </item>
     
     <item>
       <title>转：评论,缺乏道德感的百度不会真正幸福</title>
-      <link>http://example.org/799/</link>
+      <link>https://lsvking.github.io/799/</link>
       <pubDate>Mon, 18 Jan 2010 14:13:39 +0000</pubDate>
       
-      <guid>http://example.org/799/</guid>
+      <guid>https://lsvking.github.io/799/</guid>
       <description>“幸福来得太快。”在谷歌尚未明确是否就此退出中国市场之际，百度员工已经赤祼祼地趁火打劫：如今百度负责广告销售的员工一早来到公司后的第一件事，就是列出谷歌的广告客户名单，开始逐个联系，百度人得意的说，“我们内部调侃这是捡钱计划。”
 差不多同时，百度首席产品设计师孙云丰在博客上公开撰文辱骂：（关于谷歌退出中国）“整个事情给我的唯一感受，就是恶心”、“证明google是个市侩分子。”姑且不论孙云丰的观点是非对错，如果孙云丰代表百度骂谷歌，那他就严重地缺乏职业道德，辱骂竞争对手显然不是一家公众上市公司高管之所为能事；如果孙云丰代表自己骂谷歌公司，那么就有义务接受谷歌用户的回应和批评。可惜的是孙云丰一方面宣称自己观点毫无错误，另一方面，他又赶紧删掉了自己的文章并且四处要求删贴。也有人说删贴未必是他自己的意愿。那么，作为宣称“有道德感”的百度员工，孙云丰不应该屈从别人的意见删掉自己认为正确的东西。作为百度高管，孙云丰更不应该允许百度公关去打电话要求别人删贴。
 新浪微博上有网友评论说，“单从商业价值和经济利益方面考量，都可以看出Google的不作恶，并不是作秀的口号。对于一个靠信息有序化赚钱的公司，必须要不作恶才行。百度正好相反，必须要作恶才行。”这句话说到点子上，谷歌退就退吧，百度未必就能继续一股独大。即使暂时抢下更大份额，如果不改变或者提升哪怕是一个世侩也该有的道德底气，百度终有一天遭世人唾弃。
@@ -296,10 +296,10 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
     
     <item>
       <title>谈谈HMVC。。。。</title>
-      <link>http://example.org/794/</link>
+      <link>https://lsvking.github.io/794/</link>
       <pubDate>Mon, 21 Dec 2009 05:32:52 +0000</pubDate>
       
-      <guid>http://example.org/794/</guid>
+      <guid>https://lsvking.github.io/794/</guid>
       <description>&lt;p&gt;最近在写东西，看到有些HMVC的教程，于是就花了些时间去了解了一下，下边就来谈一谈。&lt;/p&gt;
 &lt;p&gt;HMVC(Hierarchical-Model-View-Controller)，故名思意，就是按等级划分的MVC模式，MVC我想不必多解释了，至于什么叫做按等级划分的，我们来看几张图就明白了。&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
@@ -307,66 +307,66 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
     
     <item>
       <title>Google Wava 进行时</title>
-      <link>http://example.org/786/</link>
+      <link>https://lsvking.github.io/786/</link>
       <pubDate>Sun, 25 Oct 2009 03:29:02 +0000</pubDate>
       
-      <guid>http://example.org/786/</guid>
+      <guid>https://lsvking.github.io/786/</guid>
       <description>最近用过康爷提出的中文Google Wave邀请接力活动http://googlewave.luck.appspot.com/，得到了好心人的提名。目前已经收到了邀请了，看样子还没有和GMAIL整合 至少联系人还都没有过来，只有原来好友里边有Wava的人才有，可怜的我，目前只有三个人，呵呵。。 目前手里还有几个提名机会，需要的朋友给我发邮件啊，能找到我邮件地址的就发给我吧。</description>
     </item>
     
     <item>
       <title>国产动漫崛起-喜羊羊大战日本动漫</title>
-      <link>http://example.org/776/</link>
+      <link>https://lsvking.github.io/776/</link>
       <pubDate>Fri, 21 Aug 2009 19:41:58 +0000</pubDate>
       
-      <guid>http://example.org/776/</guid>
+      <guid>https://lsvking.github.io/776/</guid>
       <description>&lt;p&gt;最近发现了这个不错的四格&lt;!-- raw HTML omitted --&gt;动漫&lt;!-- raw HTML omitted --&gt;，给大家分享下。。。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://img1.qq.com/comic/pics/17437/17437104.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>我艹，Google也被墙？</title>
-      <link>http://example.org/774/</link>
+      <link>https://lsvking.github.io/774/</link>
       <pubDate>Tue, 18 Aug 2009 21:04:02 +0000</pubDate>
       
-      <guid>http://example.org/774/</guid>
+      <guid>https://lsvking.github.io/774/</guid>
       <description>我艹TMD，这几天Google都打不开了，Google reader也打不了，连CI官方都打不开。 号称是电缆坏了，可是，可是我用XX门翻墙过去就变能访问了，难道XX门有链接电缆的功能？MD 狗RI的 😈 。。。。。 愚弄谁呢？
 离不开Google了，这几天实在是有点难受 : 😥 。。。。。</description>
     </item>
     
     <item>
       <title>博客恢复访问了。</title>
-      <link>http://example.org/770/</link>
+      <link>https://lsvking.github.io/770/</link>
       <pubDate>Fri, 07 Aug 2009 17:53:23 +0000</pubDate>
       
-      <guid>http://example.org/770/</guid>
+      <guid>https://lsvking.github.io/770/</guid>
       <description>前两天博客为了加快访问速度，博客搬家到了华夏名网，专用的Linux主机，对php的支持是非常不错的，PATH_INFO,伪静态都支持，绑定子目录， 还送cdn加速，主机也不算太贵，感觉挺不错。唯一麻烦的东西就是要bei an，前两天就是没备案被停了，这下备好了，大家好好看吧。</description>
     </item>
     
     <item>
       <title>1000部高清电影Rayfile下载</title>
-      <link>http://example.org/765/</link>
+      <link>https://lsvking.github.io/765/</link>
       <pubDate>Sun, 02 Aug 2009 14:54:08 +0000</pubDate>
       
-      <guid>http://example.org/765/</guid>
+      <guid>https://lsvking.github.io/765/</guid>
       <description></description>
     </item>
     
     <item>
       <title>更新了所有的口袋攻略的图片。</title>
-      <link>http://example.org/756/</link>
+      <link>https://lsvking.github.io/756/</link>
       <pubDate>Thu, 30 Jul 2009 17:25:46 +0000</pubDate>
       
-      <guid>http://example.org/756/</guid>
+      <guid>https://lsvking.github.io/756/</guid>
       <description>最近发现有不少人看我的口袋攻略，由于原图片是来自新浪的，他不让盗链，这次把图片都放到本地了，方便大家观看。</description>
     </item>
     
     <item>
       <title>Yahoo最终还是让微软搞定了。</title>
-      <link>http://example.org/618/</link>
+      <link>https://lsvking.github.io/618/</link>
       <pubDate>Thu, 30 Jul 2009 12:46:45 +0000</pubDate>
       
-      <guid>http://example.org/618/</guid>
+      <guid>https://lsvking.github.io/618/</guid>
       <description>先上图，这图做的很不错，就是感觉Google鱼稍微丑了点。
   之前的微软收购雅虎未遂的事件恐怕就是杨致远的个人情结在起作用，经营了这么多年的帝国，雅虎也是个帝国，怎么能说收购就收购。可董事们不干了，人家看重的只是利益，精神层面的东西人家不管。
  至于雅虎的搜索，确实是很少有用过，不过之前看国外的电影不少的镜头都是出现了Yahoo的画面（不排除是广告），但根据一些资料，Yahoo当初还是很横的，只不过现在已经是自然死了，微软和雅虎的合并必然剑指Google，这一下肯定有作用，而且作用不小，但是能不能对Google产生实际性的影响。那就要看微软功力如何了。
@@ -376,29 +376,29 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
     
     <item>
       <title>2009China Joy最全Show Girl图集[图片]</title>
-      <link>http://example.org/587/</link>
+      <link>https://lsvking.github.io/587/</link>
       <pubDate>Sun, 26 Jul 2009 00:00:10 +0000</pubDate>
       
-      <guid>http://example.org/587/</guid>
+      <guid>https://lsvking.github.io/587/</guid>
       <description>&lt;p&gt;&lt;strong&gt;图片是小的，那是wlw搞的，大家自己点击开来看吧。 &lt;img src=&#34;http://www.zu14.cn/coolemotion/emotions/tang_14.png&#34; alt=&#34;&#34;&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://lsvking.cn/587&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>观测日偏食也很精彩，中国各城市可见日食时间表!!!!!!</title>
-      <link>http://example.org/420/</link>
+      <link>https://lsvking.github.io/420/</link>
       <pubDate>Tue, 21 Jul 2009 00:25:37 +0000</pubDate>
       
-      <guid>http://example.org/420/</guid>
+      <guid>https://lsvking.github.io/420/</guid>
       <description></description>
     </item>
     
     <item>
       <title>中国简史!!</title>
-      <link>http://example.org/337/</link>
+      <link>https://lsvking.github.io/337/</link>
       <pubDate>Fri, 01 May 2009 22:03:10 +0000</pubDate>
       
-      <guid>http://example.org/337/</guid>
+      <guid>https://lsvking.github.io/337/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;pre&gt;&lt;code&gt;    &amp;lt;p&amp;gt;
       黄帝说：我们做什么；&amp;lt;br /&amp;gt; 尧说：我让；&amp;lt;br /&amp;gt; 舜说：我也让；&amp;lt;br /&amp;gt; 禹说：咱爷们怎么办？&amp;lt;br /&amp;gt; 启说：让他们球！
@@ -410,10 +410,10 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
     
     <item>
       <title>EVEREST KEY 序列号</title>
-      <link>http://example.org/332/</link>
+      <link>https://lsvking.github.io/332/</link>
       <pubDate>Thu, 29 Jan 2009 15:32:40 +0000</pubDate>
       
-      <guid>http://example.org/332/</guid>
+      <guid>https://lsvking.github.io/332/</guid>
       <description>C4J1I-PHG47-A9FC6-8RFPF-LAR6L
 CDBVF-7E347-SRFC2-CRI7F-JNRFN
 FQN6H-DFJ47-8WFWB-YI1ZF-TVUKD
@@ -426,10 +426,10 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D
     
     <item>
       <title>落地请开手机-结局的理解</title>
-      <link>http://example.org/328/</link>
+      <link>https://lsvking.github.io/328/</link>
       <pubDate>Fri, 14 Nov 2008 23:24:38 +0000</pubDate>
       
-      <guid>http://example.org/328/</guid>
+      <guid>https://lsvking.github.io/328/</guid>
       <description>最近用了几天的时间把由孙红雷主演的《落地，请开手机》看了一遍，期间还是比较上瘾的，不过说实话，编剧确实搞得不怎么样，那个编剧就叫沈亢，这样做由两种可能，要不就是这个事是根据他改编的，他参与编剧了；要不就是为了出名，把自己名字掺和进去了，要不是孙红雷，和众多主角的出色表演，单纯从编剧的角度来看，此剧充满着硬伤和BUG，可以说算是部烂剧，尤其是结尾的部分，很有问题，就像是虎头蛇尾，留下要解决的东西太多了，结果一看时间不够了，一下子就塞了好多，最不明白的就是那个SB何群那用钢笔捅的一下，搞得屏幕又是黑了，沈亢又在连连的说爱小晚，然后一下就两年后了，出来就听小晚说了句：“回来了”。就没了，当然，大家都知道这个是为了伏笔，不过电视剧是不能这样搞伏笔的，留点悬念可以，但你不能莫名其妙啊，捅了一下，然后不知道又怎么又出现了。
 我从网上搜了一下，关于这个结局有看法的人很多，大家也觉得何群那一刀很莫名其妙，然后网上有这样两种猜测:
 1)沈亢死了，那个接小晚的是改过自新的王浩，跟国安合作了
@@ -439,10 +439,10 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D
     
     <item>
       <title>彻底优化让Firefox不再卡</title>
-      <link>http://example.org/327/</link>
+      <link>https://lsvking.github.io/327/</link>
       <pubDate>Fri, 14 Nov 2008 14:45:06 +0000</pubDate>
       
-      <guid>http://example.org/327/</guid>
+      <guid>https://lsvking.github.io/327/</guid>
       <description>&lt;p&gt;Firefox是Linux用户首选的浏览器，对其不作过多的介绍。只要看看LDCN的访客留言就知道他的流行程度了。&lt;/p&gt;
 &lt;p&gt;Firefox虽然是一款优秀的浏览器，但是不免还有些不足。对我而言，最大的不足就是其性能，简单的说，刚开始用很流畅，用久了，会越用越卡。&lt;/p&gt;
 &lt;p&gt;今天琢磨了一下Firefox，分析下Firefox卡的原因，并通过设定相关参数解决了这个问题。从此上网变得更加畅快！&lt;/p&gt;
@@ -460,10 +460,10 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D
     
     <item>
       <title>08最新周星驰监制《少林少女》DVD中字</title>
-      <link>http://example.org/326/</link>
+      <link>https://lsvking.github.io/326/</link>
       <pubDate>Fri, 14 Nov 2008 12:25:17 +0000</pubDate>
       
-      <guid>http://example.org/326/</guid>
+      <guid>https://lsvking.github.io/326/</guid>
       <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;◎译　　名　少林少女&lt;/p&gt;
 &lt;p&gt;◎片　　名　Shaolin Girl&lt;/p&gt;
@@ -490,29 +490,29 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D
     
     <item>
       <title>郭德刚相生大全</title>
-      <link>http://example.org/320/</link>
+      <link>https://lsvking.github.io/320/</link>
       <pubDate>Mon, 10 Nov 2008 12:50:03 +0000</pubDate>
       
-      <guid>http://example.org/320/</guid>
+      <guid>https://lsvking.github.io/320/</guid>
       <description>日本邦子.MP3 5223 KB师傅经.mp3 2237 KB寿比南山.mp3 3.3MB.mp3 3348 KB水泊梁山-巧入江州城.mp3 8467 KB太平歌词《秦琼观阵》(郭德纲).mp3 1850 KB托妻献子.mp3 4254 KB托妻献子1.mp3 8048 KB王月波 郭德纲 批捉放.mp3 580 KB王月波 郭德纲 做推车.mp3 424 KB</description>
     </item>
     
     <item>
       <title>外国纸币上惊现中国汽车？！</title>
-      <link>http://example.org/315/</link>
+      <link>https://lsvking.github.io/315/</link>
       <pubDate>Sat, 25 Oct 2008 23:40:53 +0000</pubDate>
       
-      <guid>http://example.org/315/</guid>
+      <guid>https://lsvking.github.io/315/</guid>
       <description>在网易看到这篇帖子转一下。
 在古巴出差，一个偶然的机会，居然发现古巴发行的国库券上，出现了长城皮卡的身影？！看来长城的皮卡在当地很有知名度啊。我询问了当地政府的有关官员，他们说长城在古巴一直很有市场，前一段时间古巴政府还采购了长城4500台皮卡，成为两国间最大的一笔汽车采购，这也属于社会主义国家之间的惺惺相惜吧。还有，我们熟悉的卡斯特罗老先生的专用车也是长城生产的加长车——哈弗派。在国外看到了中国的产品这么有知名度，高兴啊！！</description>
     </item>
     
     <item>
       <title>刘翔是否真的受伤！</title>
-      <link>http://example.org/313/</link>
+      <link>https://lsvking.github.io/313/</link>
       <pubDate>Mon, 18 Aug 2008 23:20:08 +0000</pubDate>
       
-      <guid>http://example.org/313/</guid>
+      <guid>https://lsvking.github.io/313/</guid>
       <description>刘翔是否真的受伤！
 刘翔下场不比了，看到这个场景恐怕是谁都想不到的。震惊后的第一感觉是什么呢？不吐不快。
 首先本人不是阴谋论者，也不愿意把人和事往坏处想，更不想通过歪曲言辞搞语不惊人誓不休。
@@ -534,19 +534,19 @@ A</description>
     
     <item>
       <title>10个你闻所未闻的奇趣网站</title>
-      <link>http://example.org/311/</link>
+      <link>https://lsvking.github.io/311/</link>
       <pubDate>Sat, 09 Aug 2008 22:14:33 +0000</pubDate>
       
-      <guid>http://example.org/311/</guid>
+      <guid>https://lsvking.github.io/311/</guid>
       <description>1、Google推出的3维聊天空间，可以设计自己的形象和房间</description>
     </item>
     
     <item>
       <title>CSS技巧补遗二十四则</title>
-      <link>http://example.org/308/</link>
+      <link>https://lsvking.github.io/308/</link>
       <pubDate>Thu, 31 Jul 2008 12:36:45 +0000</pubDate>
       
-      <guid>http://example.org/308/</guid>
+      <guid>https://lsvking.github.io/308/</guid>
       <description>在CSS网页布局开发中，会有很多小技巧，新手朋友往往对此很不熟悉。在某一两个小问题上，或许纠缠很长时间才能搞明白，虽然在52CSS.com的文档 中，多次提及过这方面的内容，但依然有很多朋友在这些问题上犯错。我们今天看看这些CSS技巧，认真读一读，或许您并不能完全理解，您可以在 52CSS.com进行搜索，扩展您所想要得到的知识，相信您会有很多收获！
 一、ul标签在Mozilla中默认是有padding值的，而在IE中只有margin有值。
 二、同一个的class选择符可以在一个文档中重复出现，而id选择符却只能出现一次。对一个标签同时使用class和id进行CSS定义，如果定义有重复，id选择符做的定义有效，是因为id的权重要比class大。
@@ -593,10 +593,10 @@ sRules：样式表定义
     
     <item>
       <title>XP SP3和打上补丁953230（KB951748）后TCP/IP连接数修改工具</title>
-      <link>http://example.org/305/</link>
+      <link>https://lsvking.github.io/305/</link>
       <pubDate>Thu, 31 Jul 2008 12:28:12 +0000</pubDate>
       
-      <guid>http://example.org/305/</guid>
+      <guid>https://lsvking.github.io/305/</guid>
       <description>Microsoft 安全公告 MS08-037 – 重要
 DNS 中的漏洞可允许欺骗 (953230)
 发布日期： 七月 8, 2008
@@ -609,76 +609,76 @@ DNS 中的漏洞可允许欺骗 (953230)
     
     <item>
       <title>SourceForge解封了。。</title>
-      <link>http://example.org/297/</link>
+      <link>https://lsvking.github.io/297/</link>
       <pubDate>Mon, 28 Jul 2008 15:45:57 +0000</pubDate>
       
-      <guid>http://example.org/297/</guid>
+      <guid>https://lsvking.github.io/297/</guid>
       <description>SourceForge俗称SF，大家经常去的地方，有很多的软件项目都托管在这个网站，不过我一直记不住这个域名，你也记不住，没关系 SF.Net你总记住了吧。
 前些日子被封了，造成不少麻烦，今天玩玩PHPBB3，偶然点了一个链接，居然打开了，再看自己也没挂代理，让别人看了下，也开了，HOHo 解封了。</description>
     </item>
     
     <item>
       <title>翻译: 编写具有良好结构的CSS文件</title>
-      <link>http://example.org/300/</link>
+      <link>https://lsvking.github.io/300/</link>
       <pubDate>Mon, 28 Jul 2008 14:02:21 +0000</pubDate>
       
-      <guid>http://example.org/300/</guid>
+      <guid>https://lsvking.github.io/300/</guid>
       <description>&amp;lt;div id=&amp;quot;logo&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;navbar&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;welcome-section&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- Main Content --&amp;gt; &amp;lt;div id=&amp;quot;column_left&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;sidebar&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- Footer --&amp;gt; &amp;lt;div id=&amp;quot;footer&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;  </description>
     </item>
     
     <item>
       <title>《蚕》耗资300W的MV，号称中国之最，遭多家封杀，不过我挺喜欢的。</title>
-      <link>http://example.org/291/</link>
+      <link>https://lsvking.github.io/291/</link>
       <pubDate>Tue, 22 Jul 2008 16:51:50 +0000</pubDate>
       
-      <guid>http://example.org/291/</guid>
+      <guid>https://lsvking.github.io/291/</guid>
       <description>《蚕》</description>
     </item>
     
     <item>
       <title>《红楼梦》选秀中的一位超级变态(视频) – 真嘎。。</title>
-      <link>http://example.org/287/</link>
+      <link>https://lsvking.github.io/287/</link>
       <pubDate>Tue, 22 Jul 2008 14:14:56 +0000</pubDate>
       
-      <guid>http://example.org/287/</guid>
+      <guid>https://lsvking.github.io/287/</guid>
       <description>世间还真有这等人物。。。</description>
     </item>
     
     <item>
       <title>为simple-tags添加多彩标签云</title>
-      <link>http://example.org/283/</link>
+      <link>https://lsvking.github.io/283/</link>
       <pubDate>Tue, 22 Jul 2008 13:00:18 +0000</pubDate>
       
-      <guid>http://example.org/283/</guid>
+      <guid>https://lsvking.github.io/283/</guid>
       <description></description>
     </item>
     
     <item>
       <title>给博客加上每日一句学英语功能！</title>
-      <link>http://example.org/262/</link>
+      <link>https://lsvking.github.io/262/</link>
       <pubDate>Sun, 20 Jul 2008 00:26:23 +0000</pubDate>
       
-      <guid>http://example.org/262/</guid>
+      <guid>https://lsvking.github.io/262/</guid>
       <description>在本博客右边栏最上边的那个每日一句，当鼠标划过小喇叭还会真人发音，这个其实是用了dict.cn提供的一个小工具，应用起来很简单，将
 这段代码放到Widgets，文本块里就行了！</description>
     </item>
     
     <item>
       <title>《龟虽寿》-竖文插件。</title>
-      <link>http://example.org/237/</link>
+      <link>https://lsvking.github.io/237/</link>
       <pubDate>Fri, 18 Jul 2008 15:08:13 +0000</pubDate>
       
-      <guid>http://example.org/237/</guid>
+      <guid>https://lsvking.github.io/237/</guid>
       <description>[shuwen10]神龟虽寿，猷有竟时。腾蛇乘雾，终为土灰。老骥伏枥，志在千里；烈士暮年，壮心不已。盈缩之期，不但在天；养怡之福，可得永年。幸甚至哉！歌以咏志。[/shuwen]
 这个有意思么？哈哈这个是用了轶姐的竖文插件的效果，用的时候有个小插曲，php4的用不来，呵呵！</description>
     </item>
     
     <item>
       <title>WordPress自动升级插件 wordpress automatic upgrade</title>
-      <link>http://example.org/229/</link>
+      <link>https://lsvking.github.io/229/</link>
       <pubDate>Fri, 18 Jul 2008 13:44:56 +0000</pubDate>
       
-      <guid>http://example.org/229/</guid>
+      <guid>https://lsvking.github.io/229/</guid>
       <description>今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。
  将下载的文件传到插件目录下，启动插件，一直Next就差不多了，第一步他会备份数据库的，会给出个下载地址，大家最好下载到本地。我升级完后却怎么也登录不上后台了，想了一下清除了下Cookie就OK了。
 他是从官方下载的版本安装的，大家安装完后，自己在去下中文包吧。
@@ -690,10 +690,10 @@ DNS 中的漏洞可允许欺骗 (953230)
     
     <item>
       <title>批量下载picasa相册中的图片</title>
-      <link>http://example.org/224/</link>
+      <link>https://lsvking.github.io/224/</link>
       <pubDate>Fri, 18 Jul 2008 13:14:27 +0000</pubDate>
       
-      <guid>http://example.org/224/</guid>
+      <guid>https://lsvking.github.io/224/</guid>
       <description>今天想把Picasa相册中的图片备份下来，但一个一个下还不累死，于是Google了一下，找到了这个方法。
 一直想把picasa网络相册上的图片下载回来,一张一张的下不是咱们的风格,刚开始想用asp解析相册的rss,然后输出真实地址用迅雷批量下载,然而 真正的图片地址保存在名字空间当中,搜索了很长时间也没找到读取名字空间里的数据的办法,最后放弃了,后来偶尔听人说英文版的picasaweb曾经有过 批量下载功能,后来可能是因为占资源太大取消了,我抱着试试看的想法查看了一下源代码结果真的有批量下载的链接,只不过所在的层被隐藏了,说 了这么多没用的,下边是具体方法:
 1.首先下载软件版的picasa,因为批量下载的地址是picasa的专用地址~~
@@ -706,10 +706,10 @@ DNS 中的漏洞可允许欺骗 (953230)
     
     <item>
       <title>Fs2you下载小帮手</title>
-      <link>http://example.org/220/</link>
+      <link>https://lsvking.github.io/220/</link>
       <pubDate>Thu, 17 Jul 2008 14:15:58 +0000</pubDate>
       
-      <guid>http://example.org/220/</guid>
+      <guid>https://lsvking.github.io/220/</guid>
       <description>一款用于分析Fs2you网络硬盘真实下载地址的工具，Fs2you网络硬盘的用户越来越多，因为它的速度快和不限制文件大小得到了网友们的青睐，但是人气高了，文件动不动就要安装他们自己的下载工具才能下载，很郁闷。
 于是写了这款简单的工具，原理非常简单源码分析而已，希望对大家有用。
 下载地址：</description>
@@ -717,10 +717,10 @@ DNS 中的漏洞可允许欺骗 (953230)
     
     <item>
       <title>WordPress 2.6 正式版及中文版发布</title>
-      <link>http://example.org/219/</link>
+      <link>https://lsvking.github.io/219/</link>
       <pubDate>Thu, 17 Jul 2008 14:13:51 +0000</pubDate>
       
-      <guid>http://example.org/219/</guid>
+      <guid>https://lsvking.github.io/219/</guid>
       <description>对于 WordPress 的爱好者而言，今天又是一个值得庆贺的日子。WordPress 团队刚刚发布了令人期待的 WordPress 2.6 正式版。这是 WordPress 又一个重要的版本。根据此版本，我们 WordPress 中文站制作了相应的 WordPress 2.6 中文版，与 WordPress 中文社区的爱好者来及时分享这一版本。
 WordPress 2.6 中文版下载地址：http://wpchina.org/downloads/
 您也可以从以下地址直接下载：
@@ -739,29 +739,29 @@ http://wordpresschina.googlecode.com/files/wordpress.26.chs.languages.only.tar.g
     
     <item>
       <title>我又回来写博客了。</title>
-      <link>http://example.org/211/</link>
+      <link>https://lsvking.github.io/211/</link>
       <pubDate>Tue, 08 Jul 2008 19:18:53 +0000</pubDate>
       
-      <guid>http://example.org/211/</guid>
+      <guid>https://lsvking.github.io/211/</guid>
       <description>前些日子因为Godaddy的空间没有用独立IP，而访问不了了，一直没有写博客，不过最近购置了独立IP博客又回来了，继续更新博客。
  我的Google AdSense帐号被停了，原因很很简单，我的收入达到100美元了，Google这个即是球员又是裁判的人判我犯规了。只能认了，希望帐号还在的朋友们自重吧。</description>
     </item>
     
     <item>
       <title>用上了菊子曰 测试下试试！</title>
-      <link>http://example.org/209/</link>
+      <link>https://lsvking.github.io/209/</link>
       <pubDate>Sun, 01 Jun 2008 19:35:26 +0000</pubDate>
       
-      <guid>http://example.org/209/</guid>
+      <guid>https://lsvking.github.io/209/</guid>
       <description></description>
     </item>
     
     <item>
       <title>测试wp-t-wap插件</title>
-      <link>http://example.org/207/</link>
+      <link>https://lsvking.github.io/207/</link>
       <pubDate>Tue, 22 Apr 2008 15:30:21 +0000</pubDate>
       
-      <guid>http://example.org/207/</guid>
+      <guid>https://lsvking.github.io/207/</guid>
       <description>为了给博客增加个wap功能给博客装了个wp-wap在搜索相关信息时无意间出现了一款叫做wp-t-wap得插件，这也是一款使wp实现wap功能得插件，是有wp-wap 修改而来改善了对中文的支持，本文就是用手机发布的，感觉很不错，希望有这方面需求的朋友安装个试试看。
 最信1.6版下载地址
 http://www.tanggaowei.com/2008/01/04/7.html
@@ -771,10 +771,10 @@ e9fbc5f7</description>
     
     <item>
       <title>FireFox左键无法使用迅雷？</title>
-      <link>http://example.org/205/</link>
+      <link>https://lsvking.github.io/205/</link>
       <pubDate>Sat, 12 Apr 2008 15:03:06 +0000</pubDate>
       
-      <guid>http://example.org/205/</guid>
+      <guid>https://lsvking.github.io/205/</guid>
       <description>一直喜欢用迅雷下东西，虽然他有点“流氓”不过正是他的流氓才给我们带来了高速度的下载。
  FireFox也支持迅雷，不过下东西时左键点击下载地址时，默认情况下会弹出，
 
@@ -789,10 +789,10 @@ e9fbc5f7</description>
     
     <item>
       <title>什么是？MIU Hdpc?</title>
-      <link>http://example.org/202/</link>
+      <link>https://lsvking.github.io/202/</link>
       <pubDate>Sun, 06 Apr 2008 16:29:23 +0000</pubDate>
       
-      <guid>http://example.org/202/</guid>
+      <guid>https://lsvking.github.io/202/</guid>
       <description>赞！！！全功能威盛芯怪兽机MIU “HDPC”
 “HDPC”是Hybrid Dual Portable Computer的所写，简单翻译就是“多功能便携电脑”。韩国公司总是能抓住大家最为敏感的神经，这采用威盛处理器的MIU HDPC就是韩国公司呕心沥血做出的怪兽级别的超强便携设备，而海外媒体报道中的报价低的惊人，据说为4000000-500000韩元，也就是2800–3513元人民币，而这款设备却能变身成为卫星导航仪、游戏机、UMPC、电子数、手机、数码相机、MP3、电视机等设备。这家名叫MIU的韩国公司是一家ODM厂商，他设计出一些完备的概念产品，再由其他的OEM厂商生产，其网址是：www.miubit.com。
 
@@ -823,10 +823,10 @@ DDR2, 最大4GB物理内存
     
     <item>
       <title>免费WEB2.0统计服务及PR图标酷站</title>
-      <link>http://example.org/195/</link>
+      <link>https://lsvking.github.io/195/</link>
       <pubDate>Fri, 28 Mar 2008 16:46:14 +0000</pubDate>
       
-      <guid>http://example.org/195/</guid>
+      <guid>https://lsvking.github.io/195/</guid>
       <description># 本文来自网生代(http://www.weborn.org)，作者为LiGht。
 Google PR 是衡量一个网站质量的因素之一，如果你想在你的网站显示自己的PR值，NextCool这里为大家收集了一些漂亮的PR免费图标，供大家使用。使用方法非常简单，只需要拷贝下面网站提供的代码到你的网站即可。
 1.goingup
@@ -864,19 +864,19 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
     
     <item>
       <title>男性专用视力测试表</title>
-      <link>http://example.org/170/</link>
+      <link>https://lsvking.github.io/170/</link>
       <pubDate>Sat, 22 Mar 2008 21:26:15 +0000</pubDate>
       
-      <guid>http://example.org/170/</guid>
+      <guid>https://lsvking.github.io/170/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十五）【Pagetitle 标记使用实例】</title>
-      <link>http://example.org/165/</link>
+      <link>https://lsvking.github.io/165/</link>
       <pubDate>Sat, 22 Mar 2008 21:13:29 +0000</pubDate>
       
-      <guid>http://example.org/165/</guid>
+      <guid>https://lsvking.github.io/165/</guid>
       <description>【Pagetitle 标记】
 功能说明：表示获取文档的分页标题
 适用范围：仅文档模板。
@@ -893,10 +893,10 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十四）【Prenext 标记 标记使用实例】</title>
-      <link>http://example.org/160/</link>
+      <link>https://lsvking.github.io/160/</link>
       <pubDate>Sat, 22 Mar 2008 21:08:15 +0000</pubDate>
       
-      <guid>http://example.org/160/</guid>
+      <guid>https://lsvking.github.io/160/</guid>
       <description>【Prenext 标记】表示获取文档“上一篇／下一篇”的链接列表。
 适用范围：仅文档模板。
 通过调试了解其使用方法
@@ -908,10 +908,10 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十三）【Pagebreak 标记使用实例】</title>
-      <link>http://example.org/157/</link>
+      <link>https://lsvking.github.io/157/</link>
       <pubDate>Sat, 22 Mar 2008 20:49:16 +0000</pubDate>
       
-      <guid>http://example.org/157/</guid>
+      <guid>https://lsvking.github.io/157/</guid>
       <description>【Pagebreak 标记】表示文档的分页链接列表。
 适用范围：仅文档模板。
 通过调试了解其使用方法
@@ -926,10 +926,10 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十二）【Pagelist 标记使用实例】</title>
-      <link>http://example.org/154/</link>
+      <link>https://lsvking.github.io/154/</link>
       <pubDate>Sat, 22 Mar 2008 20:44:49 +0000</pubDate>
       
-      <guid>http://example.org/154/</guid>
+      <guid>https://lsvking.github.io/154/</guid>
       <description>【Pagelist 标记】表示分页页码列表
 适用范围：列表模板
 通过调试了解其使用方法
@@ -940,10 +940,10 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十）【Channelartlist 标记 使用实例】</title>
-      <link>http://example.org/151/</link>
+      <link>https://lsvking.github.io/151/</link>
       <pubDate>Sat, 22 Mar 2008 20:38:28 +0000</pubDate>
       
-      <guid>http://example.org/151/</guid>
+      <guid>https://lsvking.github.io/151/</guid>
       <description>【Channelartlist 标记】用于获取当前频道的下级栏目的内容列表。该标记在封面模板（包括主页）中的经常被用到，具体用法见下面实例。
 除了宏标记外，channelArtlist 是唯一一个可以直接嵌套其它标记的标记，不过仅限于嵌套 {dede:type}{/dede:type} 和 {dede:arclist}{/dede:arclist} 两个标记。
 通过调试了解其使用方法
@@ -956,10 +956,10 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
     
     <item>
       <title>DedeCMS模板制作使用实例教程（九）【Mynews 标记 使用实例】</title>
-      <link>http://example.org/145/</link>
+      <link>https://lsvking.github.io/145/</link>
       <pubDate>Sat, 22 Mar 2008 20:06:15 +0000</pubDate>
       
-      <guid>http://example.org/145/</guid>
+      <guid>https://lsvking.github.io/145/</guid>
       <description>【Mynews 标记】用于获取站内新闻。
 站内新闻有利于站长及时与会员沟通。
 使用思路、步骤：
@@ -976,10 +976,10 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
     
     <item>
       <title>DedeCMS模板制作使用实例教程（八）【Flink 标记使用实例】</title>
-      <link>http://example.org/142/</link>
+      <link>https://lsvking.github.io/142/</link>
       <pubDate>Sat, 22 Mar 2008 20:04:25 +0000</pubDate>
       
-      <guid>http://example.org/142/</guid>
+      <guid>https://lsvking.github.io/142/</guid>
       <description>【Flink 标记】用于获取友情链接。
 调用该标记后可以得到四种友情链接的形式。
 使用思路、步骤：
@@ -997,10 +997,10 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
     
     <item>
       <title>DedeCMS模板制作使用实例教程（七）【Vote 标记使用实例】</title>
-      <link>http://example.org/137/</link>
+      <link>https://lsvking.github.io/137/</link>
       <pubDate>Sat, 22 Mar 2008 19:29:03 +0000</pubDate>
       
-      <guid>http://example.org/137/</guid>
+      <guid>https://lsvking.github.io/137/</guid>
       <description>【Vote 标记】用于获取一组投票表单。
 其使用范围限于：封面模板。
 可先进入后台，按下面操作方法填写好调查内容：
@@ -1018,10 +1018,10 @@ titlebackground=” tablebgcolor=’#FFFFFF’}
     
     <item>
       <title>DedeCMS模板制作使用实例教程（六）【Mytag 标记使用实例】</title>
-      <link>http://example.org/134/</link>
+      <link>https://lsvking.github.io/134/</link>
       <pubDate>Sat, 22 Mar 2008 19:20:13 +0000</pubDate>
       
-      <guid>http://example.org/134/</guid>
+      <guid>https://lsvking.github.io/134/</guid>
       <description>自定义宏标记【Mytag 标记】的作用：
 可以将模板中多次出现的相同元素用一个自定义标记表示出来，从而达到，一次更改，全局更换的效果。辅助插件的广告管理也有相似的效果。
 今天天涯来介绍下自定义宏标记的应用，大家可以进入后台，在“模板管理”-》“自定义宏标记”中查看到该选项。
@@ -1050,10 +1050,10 @@ titlebackground=” tablebgcolor=’#FFFFFF’}
     
     <item>
       <title>DedeCMS模板制作使用实例教程（五）【Autochannel 标记使用实例】</title>
-      <link>http://example.org/131/</link>
+      <link>https://lsvking.github.io/131/</link>
       <pubDate>Sat, 22 Mar 2008 19:16:50 +0000</pubDate>
       
-      <guid>http://example.org/131/</guid>
+      <guid>https://lsvking.github.io/131/</guid>
       <description>{dede:autochannel partsort=’1’/}
 {dede:channel typeid=’1′} [field:typename/] {/dede:channel}
 {dede:autolist row=12 titlelen=38 orderby=pubdate partsort=’1′}
@@ -1063,10 +1063,10 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
     
     <item>
       <title>DedeCMS模板制作使用实例教程（四）【Type 标记使用实例】</title>
-      <link>http://example.org/130/</link>
+      <link>https://lsvking.github.io/130/</link>
       <pubDate>Sat, 22 Mar 2008 18:28:03 +0000</pubDate>
       
-      <guid>http://example.org/130/</guid>
+      <guid>https://lsvking.github.io/130/</guid>
       <description>【Type 标记】表示指定的单个栏目的链接，用法非常简单。
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：
 
@@ -1088,10 +1088,10 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
     
     <item>
       <title>DedeCMS模板制作使用实例教程（三）【Channel 标记使用实例】</title>
-      <link>http://example.org/125/</link>
+      <link>https://lsvking.github.io/125/</link>
       <pubDate>Sat, 22 Mar 2008 18:03:48 +0000</pubDate>
       
-      <guid>http://example.org/125/</guid>
+      <guid>https://lsvking.github.io/125/</guid>
       <description>【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分“type = top,sun/son,self ”的所调用的对象就行了。
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：
 
@@ -1117,10 +1117,10 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
     
     <item>
       <title>DedeCMS模板制作使用实例教程（二）【Field 标记使用实例】</title>
-      <link>http://example.org/118/</link>
+      <link>https://lsvking.github.io/118/</link>
       <pubDate>Sat, 22 Mar 2008 17:54:06 +0000</pubDate>
       
-      <guid>http://example.org/118/</guid>
+      <guid>https://lsvking.github.io/118/</guid>
       <description>【Field 标记】在封面模板、列表模板、文档模板的使用频率很高，实用。主要用来获得到系统变量的值或者路径，用法很灵活。可以直接展示数据，如调用 position，得到栏目一 &amp;gt; 栏目二” 这样形式的链接；或者，调用templeturl得到/templets这样路径。
 使用思路、步骤：
 一、明确使用范围
@@ -1147,10 +1147,10 @@ index_article.htm、list_article.htm、article_article.htm等类似的模板文�
     
     <item>
       <title>DedeCMS模板制作使用实例教程（一）【Arclist 标记使用实例】</title>
-      <link>http://example.org/109/</link>
+      <link>https://lsvking.github.io/109/</link>
       <pubDate>Sat, 22 Mar 2008 17:36:00 +0000</pubDate>
       
-      <guid>http://example.org/109/</guid>
+      <guid>https://lsvking.github.io/109/</guid>
       <description>从本文开始，我将根据我的学习心得写一系列的实例教程。通过实例说明DedeCMS标记的使用方法。本实例教程使用的版本是DedeCms 2007 V5.0版，在本地架设的php+mysql （APMServ）环境中测试。安装、架设等相关方法参阅寂寞天涯的整理：http://bbs.dedecms.com/read.php?tid=33332。以后一系列教程都是在这个环境中使用，不再重复。因测试需要数据，我已事先在数据库录入，就不理啰嗦，马上进入正题。
 现在先讲【Arclist 标记】。【Arclist 标记】是使用率很高，相当实用，所以我们使用都必须熟练掌握。它的详细使用说明在官方Dedecms文档中已经有严密的解释，见：http://www.dedecms.com/archives/templethelp/help/index.htm，我们在使用过程中可以随时查阅。
 使用思路、步骤：
@@ -1183,10 +1183,10 @@ imgwidth=’100′ imgheight=’80’}
     
     <item>
       <title>DedeCMS模板制作使用实例教程  序</title>
-      <link>http://example.org/108/</link>
+      <link>https://lsvking.github.io/108/</link>
       <pubDate>Sat, 22 Mar 2008 17:21:34 +0000</pubDate>
       
-      <guid>http://example.org/108/</guid>
+      <guid>https://lsvking.github.io/108/</guid>
       <description>1、怎样调用数据？
 DedeCMS是大型的动态网站程序，其数据主要在存储在数据库中的，做模板就必须知道，数据是如何从数据库读取并展示在大家面前的。官方写了很多程序，将数据的提取过程变得相当简单。大家只要懂得调用适当的&amp;quot;DedeCMS标记&amp;quot;就可以调取相应的数据。调用&amp;quot;DedeCMS标记&amp;quot;的三种代码样式：
 A、{dede:标记名称 属性=’值’/}
@@ -1240,10 +1240,10 @@ DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合�
     
     <item>
       <title>常用CSS命名参考</title>
-      <link>http://example.org/107/</link>
+      <link>https://lsvking.github.io/107/</link>
       <pubDate>Sat, 22 Mar 2008 00:31:38 +0000</pubDate>
       
-      <guid>http://example.org/107/</guid>
+      <guid>https://lsvking.github.io/107/</guid>
       <description>在XHTML中定义ID时都用得上，主要是方便CSS定义样式时能一眼看穿。所以，CSS命名仅作参考。
 (1)页面结构类
 容器: container
@@ -1294,10 +1294,10 @@ DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合�
     
     <item>
       <title>HTML5的结构和语义——内嵌媒体（五）</title>
-      <link>http://example.org/106/</link>
+      <link>https://lsvking.github.io/106/</link>
       <pubDate>Sun, 09 Mar 2008 14:09:35 +0000</pubDate>
       
-      <guid>http://example.org/106/</guid>
+      <guid>https://lsvking.github.io/106/</guid>
       <description>视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用 Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影 “a Sora in Prospect Park”：
  对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
  autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的 John F. Kennedy 的就职演说。</description>
@@ -1305,10 +1305,10 @@ DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合�
     
     <item>
       <title>HTML5的结构和语义——语义性的内联元素（四）</title>
-      <link>http://example.org/105/</link>
+      <link>https://lsvking.github.io/105/</link>
       <pubDate>Sun, 09 Mar 2008 14:04:39 +0000</pubDate>
       
-      <guid>http://example.org/105/</guid>
+      <guid>https://lsvking.github.io/105/</guid>
       <description>HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HTML 5 提供了几个新的内联元素来满足非技术作者的需求。  m
 m 元素表示文本被 “加上标志”，但是不一定要强调。可以把它想像成书中突出显示的一节。Google 的缓存页面就是典型的用例。如果链接到一个缓存的副本，搜索词就被加上标志。例如，如果搜索 “Egret”，那么缓存的 Google 页面可能像下面这样：
 &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; American &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Egret&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;) is a large white wading bird found worldwide.</description>
@@ -1316,20 +1316,20 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
     
     <item>
       <title>HTML5的结构和语义——语义性的块级元素（三）</title>
-      <link>http://example.org/104/</link>
+      <link>https://lsvking.github.io/104/</link>
       <pubDate>Sun, 09 Mar 2008 13:59:11 +0000</pubDate>
       
-      <guid>http://example.org/104/</guid>
+      <guid>https://lsvking.github.io/104/</guid>
       <description>HTML 5 还增加了一些纯语义性的块级元素： aside figure dialog 我在文章和书中一直使用前两个元素。第三个元素我不经常用，它主要用于书面文本。 aside aside 元素代表说明、提示、边栏、引用、附加注释等，也就是叙述主线之外的内容。例如，在 developerWorks 文章中，常常会看到用表格形式编写的边栏，见代码3 用 HTML 4 编写的 developerWorks 边栏。
 &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;10&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;img&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;alt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;src&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;//www.</description>
     </item>
     
     <item>
       <title>HTML5的结构和语义——结构</title>
-      <link>http://example.org/103/</link>
+      <link>https://lsvking.github.io/103/</link>
       <pubDate>Sun, 09 Mar 2008 13:53:25 +0000</pubDate>
       
-      <guid>http://example.org/103/</guid>
+      <guid>https://lsvking.github.io/103/</guid>
       <description>转载 52CSS
  由于缺少结构，即使是形式良好的 HTML 页面也比较难以处理。必须分析标题的级别，才能看出各个部分的划分方式。边栏、页脚、页眉、导航条、主内容区和各篇文章都由通用的 div 元素来表示。HTML 5 添加了一些新元素，专门用来标识这些常见的结构： · section：这可以是书中的一章或一节，实际上可以是在 HTML 4 中有自己的标题的任何东西 · header：页面上显示的页眉；与 head 元素不一样 · footer：页脚；可以显示电子邮件中的签名 · nav：指向其他页面的一组链接 · article：blog、杂志、文章汇编等中的一篇文章 我们来考虑一个典型的 blog 主页，它的顶部有页眉，底部有页脚，还有几篇文章、一个导航区和一个边栏，见代码
  1 典型的 blog 页面
@@ -1338,37 +1338,37 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
     
     <item>
       <title>LanQQ – 飞鸽传输增加版</title>
-      <link>http://example.org/100/</link>
+      <link>https://lsvking.github.io/100/</link>
       <pubDate>Thu, 06 Mar 2008 20:28:33 +0000</pubDate>
       
-      <guid>http://example.org/100/</guid>
+      <guid>https://lsvking.github.io/100/</guid>
       <description>LanQQ 修改自十分著名的飞鸽传输，在原传输功能基础上，增加了添加好友，聊天室等功能。俨然一个局域网版本的 QQ 聊天加文件传输工具。</description>
     </item>
     
     <item>
       <title>iPod音乐震动棒 – OhMiBod-女用自慰棒！</title>
-      <link>http://example.org/99/</link>
+      <link>https://lsvking.github.io/99/</link>
       <pubDate>Thu, 06 Mar 2008 20:07:15 +0000</pubDate>
       
-      <guid>http://example.org/99/</guid>
+      <guid>https://lsvking.github.io/99/</guid>
       <description>_OhMiBod_是一款新颖的女用自慰震动棒，它可以随着iPod播放的音乐而有节奏震动，可以想象如果播放的是摇滚乐，一定会爽歪歪。现在出来一个更强悍的点子：Guitar + Vox + OhMiBod，让OhMiBod随着电吉他的弹奏而震动，比较适合情侣对战。</description>
     </item>
     
     <item>
       <title>童趣</title>
-      <link>http://example.org/98/</link>
+      <link>https://lsvking.github.io/98/</link>
       <pubDate>Mon, 03 Mar 2008 20:28:47 +0000</pubDate>
       
-      <guid>http://example.org/98/</guid>
+      <guid>https://lsvking.github.io/98/</guid>
       <description></description>
     </item>
     
     <item>
       <title>日本江户时代的妖怪们</title>
-      <link>http://example.org/97/</link>
+      <link>https://lsvking.github.io/97/</link>
       <pubDate>Fri, 29 Feb 2008 17:53:44 +0000</pubDate>
       
-      <guid>http://example.org/97/</guid>
+      <guid>https://lsvking.github.io/97/</guid>
       <description>在诡异而流行的江户时代的文化里，引起人们最多关注的就是日本体系复杂的传统妖怪。而这些妖怪时而让人恐惧，时而充满了幽默感。这些令人兴趣十足的日本民间创造为大量的艺术家和文学作品提供了素材。而其中的一部作品名为《百怪图卷》，是由佐脇嵩之在1737年所创造的一副画卷，这位并不太为人所熟知的画家师从于画师英一蝶（1702-1772）门下。佐脇嵩之的彩画作品包括了日本历史上最臭名昭著的妖怪，也为后人留下了极富创见的妖怪艺术。以下是画卷中的部分作品：
 1.牛鬼牛鬼是一种恶毒的海怪，它的头是牛的形状，而身子则仿佛巨型的蜘蛛或螃蟹。常可以在日本西边沿海遇见，在岛根县尤其常见。当地渔民都十分害怕这种妖怪的恶意袭击。牛鬼通常和另外一种类型相似的妖怪一起被提到，它的名字叫做湿妇女。
 2.湿妇女
@@ -1399,10 +1399,10 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
     
     <item>
       <title>HTML 5.0 新一代的HTML标准~</title>
-      <link>http://example.org/95/</link>
+      <link>https://lsvking.github.io/95/</link>
       <pubDate>Mon, 25 Feb 2008 21:27:04 +0000</pubDate>
       
-      <guid>http://example.org/95/</guid>
+      <guid>https://lsvking.github.io/95/</guid>
       <description>新千年以来，超文本标记语言（HTML）5 第一次向 HTML 中引入新的元素。新的结构元素包括 aside、figure 和section。新的内联元素包括time、meter和progress。新的内嵌元素有 video 和 audio。新的交互元素有 details、datagrid 和command
 超文本标记语言（HTML）的开发到 1999 年 HTML 4 就停止了。万维网联盟（W3C）把重点转向将 HTML 的底层语法从标准通用标记语言（SGML）改为可扩展标记语言（XML），以及可缩放向量图型（SVG）、XForms 和 MathML 这些全新的标记语言。浏览器厂商则把精力放到选项卡和富站点摘要（RSS）阅读器这类浏览器特性上。Web 设计人员开始学习使用异步 JavaScript + XML（Ajax），在现有的框架下通过层叠样式表（CSS）和 JavaScript™ 语言建立自己的应用程序。但是在接下来的八年中，HTML 本身没有任何变化。
  最近，它又复活了。三家重要的浏览器厂商 — Apple、Opera 和 Mozilla Foundation — 成立了 Web Hypertext Application Technology Working Group（WhatWG）来开发传统 HTML 的新版本。最近，W3C 也注意到了这些活动，也启动了自己的新一代 HTML 项目，双方的成员有很多是相同的。这两个项目最终很可能合并。虽然很多细节还在争论之中，但下一版本 HTML 的大体轮廓已经清楚了。
@@ -1411,19 +1411,19 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
     
     <item>
       <title>Gmail Art 一段关于Gmail的DIY视频～</title>
-      <link>http://example.org/94/</link>
+      <link>https://lsvking.github.io/94/</link>
       <pubDate>Mon, 25 Feb 2008 20:40:35 +0000</pubDate>
       
-      <guid>http://example.org/94/</guid>
+      <guid>https://lsvking.github.io/94/</guid>
       <description></description>
     </item>
     
     <item>
       <title>一些有关网站分析方面的术语，缩写</title>
-      <link>http://example.org/93/</link>
+      <link>https://lsvking.github.io/93/</link>
       <pubDate>Sun, 24 Feb 2008 17:21:27 +0000</pubDate>
       
-      <guid>http://example.org/93/</guid>
+      <guid>https://lsvking.github.io/93/</guid>
       <description>这里首先做一申明，通常用英文比较准确，我的中文翻译常常有词不达意的地方。所以呢，术语还是用英文好了。
 After-click tracking（ACT）
 也称为path analysis，clickstream，或者navigational analysis，简单的说，就是用户在你的网站上通过的路径，从一开始的referring page，进入你的landing page，然后经过一系列的页面，最后从exit page离开。
@@ -1447,29 +1447,29 @@ Visit duration
     
     <item>
       <title>号称万键之王的Optimus Maximus安装配置使用过程！太炫了！</title>
-      <link>http://example.org/92/</link>
+      <link>https://lsvking.github.io/92/</link>
       <pubDate>Sat, 23 Feb 2008 23:46:06 +0000</pubDate>
       
-      <guid>http://example.org/92/</guid>
+      <guid>https://lsvking.github.io/92/</guid>
       <description>这东西太炫了，价格肯定不菲，不过我相信，这东西一旦流行开，国内的厂商肯定会积极仿制的，到时候价格的就好说了！
 不多说了，进视频！</description>
     </item>
     
     <item>
       <title>Ubuntu的真实3D桌面，很炫啊～</title>
-      <link>http://example.org/89/</link>
+      <link>https://lsvking.github.io/89/</link>
       <pubDate>Sat, 23 Feb 2008 15:50:47 +0000</pubDate>
       
-      <guid>http://example.org/89/</guid>
+      <guid>https://lsvking.github.io/89/</guid>
       <description>开发者们正在研制在 linux 的 Compiz Fusion 下的相关软件。根据这些研究人员的想象，可能性总是无穷无尽的。如果这种东西真的实现了，用户就可以让电脑来追踪自己的脑袋，鼠标甚至是手指了</description>
     </item>
     
     <item>
       <title>CSS Hacks 和 问题解决</title>
-      <link>http://example.org/88/</link>
+      <link>https://lsvking.github.io/88/</link>
       <pubDate>Sat, 23 Feb 2008 13:41:13 +0000</pubDate>
       
-      <guid>http://example.org/88/</guid>
+      <guid>https://lsvking.github.io/88/</guid>
       <description>———————————————————————————————————————————–
 目录  介绍 针对浏览器的选择器 让IE6支持PNG透明 移除超链接的虚线 给行内元素定义宽度 让固定宽度的页面居中 图片替换技术 最小宽度 隐藏水平滚动条  ———————————————————————————————————————————–
 一. 介绍 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.
@@ -1500,73 +1500,73 @@ width: 250px;
     
     <item>
       <title>12个制作视频教程的屏幕录像工具</title>
-      <link>http://example.org/87/</link>
+      <link>https://lsvking.github.io/87/</link>
       <pubDate>Sat, 23 Feb 2008 12:54:56 +0000</pubDate>
       
-      <guid>http://example.org/87/</guid>
+      <guid>https://lsvking.github.io/87/</guid>
       <description></description>
     </item>
     
     <item>
       <title>比尔·盖茨上班的最后一天～～～ 搞笑啊～</title>
-      <link>http://example.org/86/</link>
+      <link>https://lsvking.github.io/86/</link>
       <pubDate>Sat, 23 Feb 2008 00:46:20 +0000</pubDate>
       
-      <guid>http://example.org/86/</guid>
+      <guid>https://lsvking.github.io/86/</guid>
       <description></description>
     </item>
     
     <item>
       <title>不通电用手能将灯泡点亮？来看看这个吧！</title>
-      <link>http://example.org/85/</link>
+      <link>https://lsvking.github.io/85/</link>
       <pubDate>Fri, 22 Feb 2008 02:46:30 +0000</pubDate>
       
-      <guid>http://example.org/85/</guid>
+      <guid>https://lsvking.github.io/85/</guid>
       <description>这个创意挺好玩的，也不怎么难，有兴趣的朋友可以试试～</description>
     </item>
     
     <item>
       <title>教你如何撬锁～</title>
-      <link>http://example.org/84/</link>
+      <link>https://lsvking.github.io/84/</link>
       <pubDate>Fri, 22 Feb 2008 02:39:48 +0000</pubDate>
       
-      <guid>http://example.org/84/</guid>
+      <guid>https://lsvking.github.io/84/</guid>
       <description>一上来我一直看不明白是什么。只道最后才知道，是撬锁。。。。。 不过说真的，那把锁不错啊～</description>
     </item>
     
     <item>
       <title>想要个世界时钟么？免费的，自己DIY的～ 很简单～</title>
-      <link>http://example.org/83/</link>
+      <link>https://lsvking.github.io/83/</link>
       <pubDate>Fri, 22 Feb 2008 01:39:20 +0000</pubDate>
       
-      <guid>http://example.org/83/</guid>
+      <guid>https://lsvking.github.io/83/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IPhone乐队 IPhone&#43;NDS</title>
-      <link>http://example.org/82/</link>
+      <link>https://lsvking.github.io/82/</link>
       <pubDate>Fri, 22 Feb 2008 01:31:05 +0000</pubDate>
       
-      <guid>http://example.org/82/</guid>
+      <guid>https://lsvking.github.io/82/</guid>
       <description></description>
     </item>
     
     <item>
       <title>用winxp和win98中的系统声音合成的音乐，感觉不错！</title>
-      <link>http://example.org/81/</link>
+      <link>https://lsvking.github.io/81/</link>
       <pubDate>Fri, 22 Feb 2008 01:25:19 +0000</pubDate>
       
-      <guid>http://example.org/81/</guid>
+      <guid>https://lsvking.github.io/81/</guid>
       <description>是小日本干的，不过听起来确实不错！～</description>
     </item>
     
     <item>
       <title>强！少林铁裆功！ 牛X 实在牛X！！！</title>
-      <link>http://example.org/78/</link>
+      <link>https://lsvking.github.io/78/</link>
       <pubDate>Wed, 20 Feb 2008 21:33:12 +0000</pubDate>
       
-      <guid>http://example.org/78/</guid>
+      <guid>https://lsvking.github.io/78/</guid>
       <description>强到喷血～
  此片为限制级的，U18的朋友可要回避了。
  </description>
@@ -1574,10 +1574,10 @@ width: 250px;
     
     <item>
       <title>技巧：动动鼠标 Windows XP提速十倍</title>
-      <link>http://example.org/77/</link>
+      <link>https://lsvking.github.io/77/</link>
       <pubDate>Sun, 17 Feb 2008 16:48:22 +0000</pubDate>
       
-      <guid>http://example.org/77/</guid>
+      <guid>https://lsvking.github.io/77/</guid>
       <description>1.加快系统启动速度
 　Windows XP的启动速度比Windows 2000要快30%左右，但相对于Windows 98仍然要慢了不少，不过，我们可以通过优化设置，来大大提高Windows XP的启动速度。加快系统启动速度主要有以下方法：尽量减少系统在启动时加载的程序与服务；对磁盘及CPU等硬件进行优化设置；修改默认设置，减少启动等待时间等。这些方法大部分既可减少系统启动的时间，又可以节省系统资源，加快电脑运行速度。
 　(1)Msconfig
@@ -1604,10 +1604,10 @@ Windows XP提供的所有服务有36个默认是自动启动的，实际上，�
     
     <item>
       <title>XP中自带的免费教程和一些有用的小东西</title>
-      <link>http://example.org/76/</link>
+      <link>https://lsvking.github.io/76/</link>
       <pubDate>Sun, 17 Feb 2008 16:44:40 +0000</pubDate>
       
-      <guid>http://example.org/76/</guid>
+      <guid>https://lsvking.github.io/76/</guid>
       <description>以下所有有用的小东西都在system32文件夹里边
 　1.免费的系统教程
 　安装完WindowsXP后很想马上学习并体验一下它的魅力吗？我们无需再东奔西走去找烦人的文字教材。只要选择“开始”→“漫游WindowsXP”，就会出现界面，它将引导我们游历WindowsXP的新功能。
@@ -1637,10 +1637,10 @@ Windows XP提供的所有服务有36个默认是自动启动的，实际上，�
     
     <item>
       <title>我做的一款清爽英文模板，适合做GGAD~</title>
-      <link>http://example.org/74/</link>
+      <link>https://lsvking.github.io/74/</link>
       <pubDate>Fri, 15 Feb 2008 16:20:50 +0000</pubDate>
       
-      <guid>http://example.org/74/</guid>
+      <guid>https://lsvking.github.io/74/</guid>
       <description>这个是用来出售的模板，但看起来太简单了，估计没人会买，我就共享出来吧！
 这个是列表页
 
@@ -1655,39 +1655,39 @@ index_files放到根目录
     
     <item>
       <title>2008年春节Logo大全</title>
-      <link>http://example.org/72/</link>
+      <link>https://lsvking.github.io/72/</link>
       <pubDate>Wed, 13 Feb 2008 00:16:30 +0000</pubDate>
       
-      <guid>http://example.org/72/</guid>
+      <guid>https://lsvking.github.io/72/</guid>
       <description> 依照惯例，众多网站都推出了春节节庆Logo，同样依照惯例，与G共舞·IT博客收集了一些Logo展示。</description>
     </item>
     
     <item>
       <title>100个优秀的免费 WordPress 主题</title>
-      <link>http://example.org/71/</link>
+      <link>https://lsvking.github.io/71/</link>
       <pubDate>Mon, 28 Jan 2008 16:10:21 +0000</pubDate>
       
-      <guid>http://example.org/71/</guid>
+      <guid>https://lsvking.github.io/71/</guid>
       <description>&lt;p&gt;   今天来转一篇伟大的文章，虽然我每一次转的文章都很伟大，这一篇写的确实让我佩服，收集这么多东西在一起是件十分费神的体力活，我这种懒人自然只会转啦，不说废话了，这100个主题都是英文的，我看了下里边也有咱们中国的，但不知道为什么做的都是英文的。&lt;/p&gt;
 &lt;p&gt;我是从&lt;a href=&#34;http://jandan.net&#34;&gt;煎蛋&lt;/a&gt;先生那里看到的&lt;a href=&#34;http://jandan.net/2008/01/09/100-excellent-free-wordpress-themes.html&#34;&gt;这篇文章&lt;/a&gt;，他说原作者是&lt;a href=&#34;http://www.smashingmagazine.com/2008/01/08/100-excellent-free-high-quality-wordpress-themes/&#34;&gt;SmashingMagazine&lt;/a&gt;，我也不太认识这位先生，在这里就都谢过啦～&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>WordPress 2.4? 不，是 WordPress 2.5</title>
-      <link>http://example.org/68/</link>
+      <link>https://lsvking.github.io/68/</link>
       <pubDate>Sun, 06 Jan 2008 07:51:03 +0000</pubDate>
       
-      <guid>http://example.org/68/</guid>
+      <guid>https://lsvking.github.io/68/</guid>
       <description>下面是 Matt Mullenweg 在 WordPress Hackers 邮件列表中给出的信息。
 In light of the big changes happening in the codebase and admin section, we’re going to push back the next release to be aimed for early March. This is the timeframe when 2.5 was originally schedule for, so we’re treating the originally planned 2.4 in December as a skipped release, as a result of both the holidays and the large changes which we weren’t able to start on until late October.</description>
     </item>
     
     <item>
       <title>免费使用Gtalk拨打电话</title>
-      <link>http://example.org/66/</link>
+      <link>https://lsvking.github.io/66/</link>
       <pubDate>Sat, 05 Jan 2008 02:34:11 +0000</pubDate>
       
-      <guid>http://example.org/66/</guid>
+      <guid>https://lsvking.github.io/66/</guid>
       <description>方法如下：
 1.去http://mail.google.com注册gmail信箱帐户
 2.下载Gtalk，点击此处下载
@@ -1705,10 +1705,10 @@ In light of the big changes happening in the codebase and admin section, we’re
     
     <item>
       <title>16个扩大博客影响力的有效方法</title>
-      <link>http://example.org/65/</link>
+      <link>https://lsvking.github.io/65/</link>
       <pubDate>Fri, 04 Jan 2008 18:10:59 +0000</pubDate>
       
-      <guid>http://example.org/65/</guid>
+      <guid>https://lsvking.github.io/65/</guid>
       <description>你是否期待着你的博客蒸蒸日上，你是否热衷于建立一个大型的读者社区，甚至成为一个全职的职业博客作家，这些都需要博客有更大的影响力和更大的声誉，这里就总结了一些有效的方法，通过这些方法可以逐步扩大你博客的影响力，使其逐渐成为一个专业的媒体或内容平台。
 　虽然“内容建设”依然是博客成功的关键因素，但是还有一些技巧可以增加博客的影响力，比如用户产生内容、互动资源等等。建立一个博客网络也可以扩大博客的品牌和声誉，这需要和其它的博客建立一些相关项目进行改善。以下是16个扩大你的博客影响力的方法，请注意，内容始终应该是一个博客最关键的地方，其次才是一些额外的技巧。
 　1、建立多个频道
@@ -1748,19 +1748,19 @@ In light of the big changes happening in the codebase and admin section, we’re
     
     <item>
       <title>AV天后穗花出演!AV中的禁烟公益广告!</title>
-      <link>http://example.org/63/</link>
+      <link>https://lsvking.github.io/63/</link>
       <pubDate>Tue, 01 Jan 2008 19:36:14 +0000</pubDate>
       
-      <guid>http://example.org/63/</guid>
+      <guid>https://lsvking.github.io/63/</guid>
       <description>恶搞～～～～！！！18X！！！！【ZT】 </description>
     </item>
     
     <item>
       <title>2007年度游戏产业总结：“痛并快乐着”</title>
-      <link>http://example.org/62/</link>
+      <link>https://lsvking.github.io/62/</link>
       <pubDate>Mon, 31 Dec 2007 09:41:20 +0000</pubDate>
       
-      <guid>http://example.org/62/</guid>
+      <guid>https://lsvking.github.io/62/</guid>
       <description>2007年，游戏行业继续保持高速的增长态势。在资本并购重组的主旋律下，各游戏企业或演绎着撤资关闭的落寞，或谱写出上市的辉煌。　各家推出的网游新品，亦是一家欢喜一家愁。而最大的惊喜，则是经历了数年韩游的涤荡，中国本土原创网游在2007年以强硬姿态将韩国产品的市场占有率压到了20%以下。
 　国产网游，路虽仍漫长，却让我们有了更多的期望。
 　第三届游戏产业年会在成都举办
@@ -1795,10 +1795,10 @@ In light of the big changes happening in the codebase and admin section, we’re
     
     <item>
       <title>MSCD ESET NOD32 Antivirus BUSINESS EDITION 3.0.621.0 简体中文版</title>
-      <link>http://example.org/61/</link>
+      <link>https://lsvking.github.io/61/</link>
       <pubDate>Sun, 30 Dec 2007 21:06:31 +0000</pubDate>
       
-      <guid>http://example.org/61/</guid>
+      <guid>https://lsvking.github.io/61/</guid>
       <description>NOD32杀软被国外很权威的防病毒软件评测机构给了很高的分数。在全球共获得超过40多个奖项,包括Virus Bulletin, PC Magazine, ICSA认证, Checkmark认证等, 更加是全球唯一通过26次VB100%测试的防毒软件,高据众产品之榜首！产品线很长，从DOS/Win9x/Me/WinNT/XP/2000/vista，到Novell Netware Server、Linux、BSD等，都有提供。可以对邮件进行实时监测，占用内存资源较少，清除病毒的速度效果都令人满意。1、采用nod3.0.621.0核心汉化。
 2、安装包分两个：一个nod32_3.0.621.0_nt32_cn.exe为手动安装版，一个nod32_3.0.621.0_auto_nt32_cn.exe为ghost xp自动安装版（自动安装参数为大写的S）。
 3、重新编译了nod3.0安装包，两个版本的安装包大小都为14.6MB。
@@ -1810,28 +1810,28 @@ In light of the big changes happening in the codebase and admin section, we’re
     
     <item>
       <title>27招释放C盘空间</title>
-      <link>http://example.org/60/</link>
+      <link>https://lsvking.github.io/60/</link>
       <pubDate>Sun, 30 Dec 2007 20:42:59 +0000</pubDate>
       
-      <guid>http://example.org/60/</guid>
+      <guid>https://lsvking.github.io/60/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Adobe Photoshop CS3 Extended 完美者特别优化版</title>
-      <link>http://example.org/59/</link>
+      <link>https://lsvking.github.io/59/</link>
       <pubDate>Fri, 21 Dec 2007 18:38:04 +0000</pubDate>
       
-      <guid>http://example.org/59/</guid>
+      <guid>https://lsvking.github.io/59/</guid>
       <description>使用官方简体中文正式版制作，免序列号免激活！</description>
     </item>
     
     <item>
       <title>Microsoft Office 2007 With Service Pack 1 中英文企业版-完美破解</title>
-      <link>http://example.org/58/</link>
+      <link>https://lsvking.github.io/58/</link>
       <pubDate>Fri, 14 Dec 2007 19:47:11 +0000</pubDate>
       
-      <guid>http://example.org/58/</guid>
+      <guid>https://lsvking.github.io/58/</guid>
       <description>Microsoft Office 2007 DVD 完全组件版本-完美者
 原版制作，免序列号，免激活，可在线升级。
 包含中文和英文 语言文件。
@@ -1848,19 +1848,19 @@ Office Visio 2007 SP1
     
     <item>
       <title>女孩截去四肢仍弹琴跳舞 令人动容。。。。</title>
-      <link>http://example.org/57/</link>
+      <link>https://lsvking.github.io/57/</link>
       <pubDate>Mon, 03 Dec 2007 06:08:52 +0000</pubDate>
       
-      <guid>http://example.org/57/</guid>
+      <guid>https://lsvking.github.io/57/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shift键的十一个妙用</title>
-      <link>http://example.org/56/</link>
+      <link>https://lsvking.github.io/56/</link>
       <pubDate>Sat, 01 Dec 2007 03:42:35 +0000</pubDate>
       
-      <guid>http://example.org/56/</guid>
+      <guid>https://lsvking.github.io/56/</guid>
       <description>一 当你用QQ和别人聊天时，是不是有时信息发送的特别慢呀，不要紧，只要你发信息时按shift 键信息就会很快的发送出去的！
 二 当你面对一大堆窗口，却要一个一个把它们关掉时。是不是很烦啊。只要你按shift 键在单击关闭按扭，所有的与之相关的父窗口就都会被关掉
 三 在输入大小写字母时，按shift 键，就可以改变其大小写！
@@ -1876,10 +1876,10 @@ Office Visio 2007 SP1
     
     <item>
       <title>30秒清除你电脑中的垃圾（使你电脑急速如飞）(高手已测）</title>
-      <link>http://example.org/55/</link>
+      <link>https://lsvking.github.io/55/</link>
       <pubDate>Sat, 01 Dec 2007 03:24:47 +0000</pubDate>
       
-      <guid>http://example.org/55/</guid>
+      <guid>https://lsvking.github.io/55/</guid>
       <description>要轻松流畅上网你是否注意到你的电脑系统磁盘的可用空间正在一天天在减少呢？是不是像老去的猴王一样动作一天比一天迟缓呢？
 　没错！在Windows在安装和使用过程中都会产生相当多的垃圾文件，包括临时文件（如：*.tmp、*._mp）日志文件（*.log）、临时帮助文件（*.gid）、磁盘检查文件（*.chk）、临时备份文件（如：*.old、*.bak）以及其他临时文件。特别是如果一段时间不清理IE的临时文件夹“Temporary Internet Files”，其中的缓存文件有时会占用上百MB的磁盘空间。这些LJ文件不仅仅浪费了宝贵的磁盘空间，严重时还会使系统运行慢如蜗牛。这点相信你肯定忍受不了吧！所以应及时清理系统的LJ文件的淤塞，保持系统的“苗条”身材，轻松流畅上网！朋友来吧，现在就让我们一起来快速清除系统垃圾吧！！下面是步骤很简单就两步！
 　在电脑屏幕的左下角按“开始→程序→附件→记事本”，把下面的文字复制进去（黑色部分），点“另存为”，路径选“桌面”，保存类型为“所有文件”，文件名为“清除系统LJ.bat”，就完成了。记住后缀名一定要是.bat，ok！你的垃圾清除器就这样制作成功了！
@@ -1903,10 +1903,10 @@ del /f /q %userprofile%\recent*.</description>
     
     <item>
       <title>电脑操作最忌讳的18个小动作，你有几个？</title>
-      <link>http://example.org/54/</link>
+      <link>https://lsvking.github.io/54/</link>
       <pubDate>Sat, 01 Dec 2007 03:21:27 +0000</pubDate>
       
-      <guid>http://example.org/54/</guid>
+      <guid>https://lsvking.github.io/54/</guid>
       <description>1、大力敲击回车键
 　这个恐怕是人所共有的通病了，因为回车键通常是我们完成一件事情时，最后要敲击的一个键，大概是出于一种胜利的兴奋感，每个人在输入这个回车键时总是那么大力而爽快地敲击。本人的多个键盘就是这样报废的，最先不看见字的是AWSD（呵呵，心知肚明），最先不能使用的按键却是Enter。 　解决办法：解决方法有两个，第一是控制好你的情绪，第二是准备好你的钱包。我选的第二个，有时候好心情是钱买不来的，你呢？
 　2、在键盘上面吃零食，喝饮料
@@ -1945,10 +1945,10 @@ del /f /q %userprofile%\recent*.</description>
     
     <item>
       <title>口袋水晶攻略（7）</title>
-      <link>http://example.org/53/</link>
+      <link>https://lsvking.github.io/53/</link>
       <pubDate>Sun, 28 Oct 2007 20:35:30 +0000</pubDate>
       
-      <guid>http://example.org/53/</guid>
+      <guid>https://lsvking.github.io/53/</guid>
       <description>115.继续向上走，来到花田市．到会馆去发现里面没人．一直向上走，发现有个小男孩在左边，上前搭话他跟你说河的对面有历害的精灵，（天，他居然有探测精灵能力的机器）．还向上走，在最左边上用冲浪技能，在这里捡到关隐（装备在精灵身上，功击爆发力大大提高．但会引起混乱，像极了龙系的逆鳞）
 116.向上前进，在右边有６个训练员，打败他们，在第７个对话后触发战斗，胜利后得到露吉.向右突进，这个房子里有个老人．给他看完要看的精灵后分别可得（大舌头：不变石．走路草：草之石．水之石 .六尾鹿 火之石 . 风神犬 :火之石. 小皮秋 :雷之石)
 116.在花田市向右走,来到9号路,打败路上的训练员来到了水边,在江边上用冲浪技能下河来到发电厂,门口有块草坪能捉到{(烈雀，大嘴雀，顽皮蛋，小拉达，巨达，电击兽（出现机率较低），和嘎拉嘎拉的进化型（叫什么来着……)}，进发电厂得知发电厂的零件被偷无法运转，(在发电厂可从一男子手中用三地鼠换得尼多利诺．)跟发电厂的厂长对话后你出门，但守卫告诉你花田出现了小偷，你应邀帮忙．
@@ -1958,10 +1958,10 @@ del /f /q %userprofile%\recent*.</description>
     
     <item>
       <title>口袋水晶攻略(6)关东地区</title>
-      <link>http://example.org/52/</link>
+      <link>https://lsvking.github.io/52/</link>
       <pubDate>Sun, 28 Oct 2007 20:34:43 +0000</pubDate>
       
-      <guid>http://example.org/52/</guid>
+      <guid>https://lsvking.github.io/52/</guid>
       <description>104.深入塔里,三层到四层的走法有点难，走法如下:
 ．
 ．左突右进之后来到顶层，终于找到凤王啦！(凤王60级）能力很强！105.在烧掉的精灵塔里的二层用推岩技能后可得技能20忍耐．
@@ -1979,10 +1979,10 @@ del /f /q %userprofile%\recent*.</description>
     
     <item>
       <title>口袋水晶功略(5)</title>
-      <link>http://example.org/51/</link>
+      <link>https://lsvking.github.io/51/</link>
       <pubDate>Sun, 28 Oct 2007 20:33:59 +0000</pubDate>
       
-      <guid>http://example.org/51/</guid>
+      <guid>https://lsvking.github.io/51/</guid>
       <description>88.用飞天回到富士城，向下走有个山洞进去，从一个眼镜男人手中得到黑色眼镜美尾（提高恶系招数的威力）在这个山洞能捉到果然翁．山洞门口是４５号路，在这里有小小象，蝎子蝠等．．89.在吉野市用冲浪向左从一个胖子手中得到神滴（提高水系招数威力）
 90．带上会登攀的精灵，身上只放５个精灵．从４２号路的山洞进去（拿巴露基）进去以后不要走梯子下去，向左或右用冲浪来到瀑布面前，登上．左拐右弯后从这里捡到隐藏的恢复药经过努力，你终于找到了在关东地区某个格斗道馆前来修行的馆主，对话，触发战斗（情况：沙瓦郞，艾比郞，能力在３３级）打败后为了证明你的能力，他会赠于你巴露基（当巴露基的功大于防时进化成艾比郞，防大于功时进化成沙瓦郞，特防高的话又进化成另一种精灵，还叫不来名字～～～）
 91.回第一个城市，向右用冲浪来到２７号路，上岸后一个胖子就会跟你说到了关东地区．进山洞，用冲浪下水，从左边得到月石，这里用瀑布，登上又滑下来到一个房子边上，打败边上的ＭＭ．在房子里的婆婆手中得到技能３７诅咒．
@@ -2003,10 +2003,10 @@ del /f /q %userprofile%\recent*.</description>
     
     <item>
       <title>口袋水晶绝密攻略(4)</title>
-      <link>http://example.org/50/</link>
+      <link>https://lsvking.github.io/50/</link>
       <pubDate>Sun, 28 Oct 2007 20:33:08 +0000</pubDate>
       
-      <guid>http://example.org/50/</guid>
+      <guid>https://lsvking.github.io/50/</guid>
       <description>76.回哈威城.在那个火箭队抢夺雅东（呆呆兽）尾巴的山洞里，用推岩技能推掉那个挡住去路的巨石，再用总冲浪技能从一个戴眼镜的男人手中得到王者之印．77.出来后往右走来到前连山洞，向上走来到从楼梯下去，在中间用冲浪技能过去．向上左走，可出山洞，这里又是另一个安侬遗迹，在洞口的草坪上可以捉到预言鸟．和图图犬（图图犬的草图技能说法上和模仿技能一个样，是记录对手的技能予以自用，而不同的是被草图记录的技能是长久保留在精灵身上的．草图技能只能用一次，成功后每升５到１０级领悟一个草图技能）进入遗迹开始拼图，这次拼的是凤王，拼出如图所示成功后就会掉了下去．下去后赶紧出来，再次去前连山洞，方法和上面的一样，冲浪过后向下左进发，推掉巨石后出了山洞向左跳下来到第４个安侬遗迹入口，进入里面拼图，这次拼的是刺菊兽，拼出如图所示..呵呵，你现在已经把所有的图像拼好了，那么就收服２４个不同的安侬吧！！！
 78.飞到丁字镇向上走过个关卡，在第二个关卡从守卫手中得到技能36泥浆炸弹．
 79．回到丁字镇向右走．来到４４号路，在河面中间有一块草坪，是圣兽常出现地之一，我在这里就遇到了炎帝，呵呵.
@@ -2024,10 +2024,10 @@ del /f /q %userprofile%\recent*.</description>
     
     <item>
       <title>口袋水晶绝密攻略（三）</title>
-      <link>http://example.org/49/</link>
+      <link>https://lsvking.github.io/49/</link>
       <pubDate>Sun, 28 Oct 2007 20:28:32 +0000</pubDate>
       
-      <guid>http://example.org/49/</guid>
+      <guid>https://lsvking.github.io/49/</guid>
       <description>65.你一出道馆，博士就打电话给你．告诉你在黄金市的广播有话题，好像扯到了火箭队，博士让你前往去看下．
 ６６．用飞天飞到黄金市，发现这个城市已被火箭队占用了．赶到广播塔你又发现这里全是火箭队，看来这里已成为了火箭队的基地了．（这里就是解救广播塔的剧情任务，任务涉及的范围比较大，并且有点复杂，还关乎到凤王和三圣兽，是水晶里面最难做的任务．这里指的是地图．地下室一个自动开关就很难打开．．．．）
 ６７．你从第一层一直打到第５层，发现了一个很像火箭队老板梧桐一样的家伙，打败他得到地下秘室的钥匙．
@@ -2043,10 +2043,10 @@ del /f /q %userprofile%\recent*.</description>
     
     <item>
       <title>口袋水晶绝密攻略（２）</title>
-      <link>http://example.org/48/</link>
+      <link>https://lsvking.github.io/48/</link>
       <pubDate>Sun, 28 Oct 2007 20:27:32 +0000</pubDate>
       
-      <guid>http://example.org/48/</guid>
+      <guid>https://lsvking.github.io/48/</guid>
       <description>32.回到槐树市，来到会馆，比较难走，这里设置了看不见的玻璃，如果走错就会重新回到门口．具体走法()这个会馆多是幽灵系的，哈哈，那就用大力鄂虐待吧！水拳对付超能系和幽灵系可不是吃素的，在这里你一却多能轻松搞定．打败会馆得到徽章和技能３０影子球（比较实用的技能），这时能也允许在不战斗的时候使用冲浪，终于可以下海玩啦！＾＿＾
 ３３．回到３８号路，一路狂奔，这个时候如果你手上有６个血果的话就可以去触发毛毛牧场剧情啦！搞定所有路障后来到浅木市，刚到会馆边上，你的死敌就从会馆里跑了出来，告诉你会馆的主人不在．．．．．不管了，先逛逛在说；
 ３４．这是一个靠近海边的城市，一圈下来后收获不少，不但得到了海杆，也从海之子手上得到了密技０５（推岩）与口袋金不同的是这里多出了一所不知名的建筑，到底有什么用我也不知道．这里海边上有岩石，用敲碎技能打破其中一个，可从中捡到隐匿的银丹．有时还能从中跑出大钳蟹，哈哈，收服吧，正好这个城市有个渔夫要换，那就和他换吧，反正多的要死．．．．．（用大钳蟹换来顽皮蛋）
@@ -2062,10 +2062,10 @@ del /f /q %userprofile%\recent*.</description>
     
     <item>
       <title>口袋水晶(绝密功略)</title>
-      <link>http://example.org/47/</link>
+      <link>https://lsvking.github.io/47/</link>
       <pubDate>Sun, 28 Oct 2007 20:25:00 +0000</pubDate>
       
-      <guid>http://example.org/47/</guid>
+      <guid>https://lsvking.github.io/47/</guid>
       <description>看过了所有网站上关于水晶的攻略,而大部份的却不是很详细,对于那些刚接触就想深入的玩家来说，那种攻略还不如自己在游戏里慢慢钻研，我写这个功略只是写下一些自己在游戏中的心得吧！！也算是为自己步入成年以后理下深情的一笔回忆！ 1。冒险开始，所先让你选择主角的性别，然后是时间，这里以游戏给你的时间为准（晚10点0分）在奥凯博士一段废话以后进入选择自己的名字，如果不喜欢游戏中给你的名字，当然也可以自己取，只不过多是一些数字罢了。。
  2。名字取好后发现你正在自己的阁楼上，下楼妈妈告诉你宇津木博士有事找你，让你去下研究所，在走这前妈妈会给你个精灵装置，在用之前输入星期几，这里就以星期天吧！给你的精灵装置上妈妈的电话号码已经存在。
  3。出门后向上走，来到研究所，发现你未来的死敌在窥视研究所，上前打招呼被扁了下来，不管了，进去后发现原来博士要你当跑腿，答应下来他就会让你在桌上选择精灵，（火球鼠，小巨鄂，和桔草叶）当然在选的时候最好存下档，因为有时候拿到的是精灵未必是自己想要的性别（精灵也分了公和母，公的功击力相对高些，母的防御会好些，自己看着办吧）呵呵，这里推荐大家选水系，原因下面慢慢叙说：
@@ -2104,10 +2104,10 @@ m.cn/main/html/showpic.html#url=http://s9.album.sina.com.cn/pic/4a7b474d02000h48
     
     <item>
       <title>女生短裤最恶劣的十种穿法</title>
-      <link>http://example.org/46/</link>
+      <link>https://lsvking.github.io/46/</link>
       <pubDate>Sat, 27 Oct 2007 22:17:19 +0000</pubDate>
       
-      <guid>http://example.org/46/</guid>
+      <guid>https://lsvking.github.io/46/</guid>
       <description>评论：此种穿法也许自认为会很性感，其实这种回头率又比没有的要好
 　评论：此种穿法类似上边这种，其实他的内裤还不是可以露在外边那种，确实能够更新引人的注意力。
 　恶心指数：☆☆
@@ -2126,10 +2126,10 @@ m.cn/main/html/showpic.html#url=http://s9.album.sina.com.cn/pic/4a7b474d02000h48
     
     <item>
       <title>国内这些号称开源的程序真的是开源了吗？</title>
-      <link>http://example.org/45/</link>
+      <link>https://lsvking.github.io/45/</link>
       <pubDate>Fri, 26 Oct 2007 08:00:10 +0000</pubDate>
       
-      <guid>http://example.org/45/</guid>
+      <guid>https://lsvking.github.io/45/</guid>
       <description>自从2005年底discuz 4.0宣布开源以来，国内很多程序都陆续宣布开源，个个都把开源当作一把大旗来鼓吹自己，但它们真的是开源了吗？我今天不谈其他软件，只谈谈我所熟悉的几个php代码。
 据我所知，开源软件应该遵守Open Source Initiative(OSI)批准的协议。而经过OSI组织通过批准的开源协议目前有58种。我们在常见的开源协议如BSD, GPL, LGPL,MIT等都是OSI批准的协议。 而国内所谓的开源程序都没有标明遵守哪个开源协议。难道免费了就是开源？难道代码不加密就是开源？BSD协议别人可以随意修改代码，可以将修改后的代码作为自己的软件再发布，可以用于商业用途。国内这些估计都不愿意用BSD协议。 国外很多程序你可以免费使用，源代码也全部公开，但都不是开源的，比如我汉化的EE core。
 dedecms是国内用户最多的CMS，自己搞了个协议：http://bbs.dedecms.com/read.php?tid=14893，这些条款和discuz的差不多，不知道是谁抄谁的，最让人关注的是这句“未获商业授权之前，不得将本软件用于商业用途（包括但不限于企业网站、经营性网站、以营利为目的或实现盈利的网站）”我们做网站谁不是以营利为目的？看来我们免费用dedecms和discuz都是违反人家规定的。
@@ -2145,19 +2145,19 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>美丽的自然器官(太神奇了!!!)</title>
-      <link>http://example.org/44/</link>
+      <link>https://lsvking.github.io/44/</link>
       <pubDate>Sat, 13 Oct 2007 00:07:26 +0000</pubDate>
       
-      <guid>http://example.org/44/</guid>
+      <guid>https://lsvking.github.io/44/</guid>
       <description>美丽的自然器官(太神奇了!!!)</description>
     </item>
     
     <item>
       <title>韩国一个比日本更无耻的国家(或者说是中国的一个附属番邦)</title>
-      <link>http://example.org/42/</link>
+      <link>https://lsvking.github.io/42/</link>
       <pubDate>Fri, 17 Aug 2007 23:28:39 +0000</pubDate>
       
-      <guid>http://example.org/42/</guid>
+      <guid>https://lsvking.github.io/42/</guid>
       <description>网上看到的曰本人对韩国棒子丧心病狂掠夺盗窃中国历史文化的反应，感觉有趣就贴到自己这里来。今年北京举办了所谓“韩国庙会”，一票韩国明星带着大量韩国 商品来北京倾销，许多不要脸的中国人都跑去买东西看明星，他们大概不知道，一帮韩国人刚在中国驻汉城大使馆前面烧了中国国旗，原因是韩国人想冒称产生于中 国东北的古代高句丽和渤海国是韩国历史，但是中国和联合国教科文组织都认定那两个国家的历史和韩国无关，如此一来棒子文明史就只有两千年不到了。不光如 此，棒子很还在鼓动1千万人联合签名，要求中国政府道歉——尽管他们不断的寄生在中国身上，不断的盗窃，我们什么都没说过。
 下面是转贴的，曰本人对韩国无耻剽窃中国文化申报世界文化遗产的反应：
 以下为曰本网民的反应：
@@ -2223,10 +2223,10 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>打开电视CCTV就是这样教育俺的</title>
-      <link>http://example.org/41/</link>
+      <link>https://lsvking.github.io/41/</link>
       <pubDate>Fri, 17 Aug 2007 18:26:38 +0000</pubDate>
       
-      <guid>http://example.org/41/</guid>
+      <guid>https://lsvking.github.io/41/</guid>
       <description>打开电视CCTV就是这样教育俺的 各位观众，这里是“法治纵横”节目。近期，XX警方成功地破获了一起重大地下**\**案件，抓获犯罪嫌疑人5名。警方提醒大家，任何形式的****都是违法的，非法赌博者最终都将为之付出代价……
 （半个小时后）
 各位观众，“我爱世界杯”节目又跟您见面了，欢迎拨打我们的声讯热线电话、或发送短信参加我们的有奖竞猜活动，这里有万元大奖等你拿！
@@ -2257,20 +2257,20 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>Google 流量统计 Google analytics 被封了！</title>
-      <link>http://example.org/43/</link>
+      <link>https://lsvking.github.io/43/</link>
       <pubDate>Fri, 17 Aug 2007 15:47:33 +0000</pubDate>
       
-      <guid>http://example.org/43/</guid>
+      <guid>https://lsvking.github.io/43/</guid>
       <description>Google Analytics（Google 流量统计）想必有不少朋友试用过吧，功能之强大，内容之丰富是国内的那些统计网站无法比拟的，但是，“伟大”的GFW又把它做掉了，具体是何年何月下的黑手也无从考究了，也不必考究了，智能说句，希望仁慈的GFW能尽早放他一条生路！
  目前也只好用51.LA啊 CNZZ啊 等诸如此类的来顶一下了，51.la听说有被挂马？不知道是真是假，CNZZ就好像蜗牛爬，我这种性格的人是在是有点抓狂。。。。</description>
     </item>
     
     <item>
       <title>文天祥</title>
-      <link>http://example.org/40/</link>
+      <link>https://lsvking.github.io/40/</link>
       <pubDate>Fri, 06 Jul 2007 17:56:23 +0000</pubDate>
       
-      <guid>http://example.org/40/</guid>
+      <guid>https://lsvking.github.io/40/</guid>
       <description>&amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/1/11469647232755353_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;**文天祥**（1236—1283），男，吉州庐陵（今江西吉安）人，原名云孙，字履善,又字宋瑞,自号文山，民族英雄。  文天祥文天祥家世考：
 “富田文氏”是西汉蜀郡太守文翁的后裔，五代后唐时期文天祥先祖文时迁徙至今江西吉州，开吉州庐陵淳化乡富田文氏一脉。
 文天祥在《先君子革斋先生事实》一文中是这样说的：“先君子尝考次谱系，文氏系成都徙吉，五世（七世—编者）祖炳然居永和镇，高祖正中由永和徙富田。” 《宋少保右丞相兼枢密使信国公文山先生纪年录》（后面称《纪年录》亦云：“庐陵文氏来自成都，公六世（七世—编者）祖炳然居永和镇，五世（八世—编者）祖 正中徙富田。”所以现在有人把文天祥认作是客家人，是不确实的。
@@ -2319,10 +2319,10 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>岳飞</title>
-      <link>http://example.org/39/</link>
+      <link>https://lsvking.github.io/39/</link>
       <pubDate>Fri, 06 Jul 2007 17:54:36 +0000</pubDate>
       
-      <guid>http://example.org/39/</guid>
+      <guid>https://lsvking.github.io/39/</guid>
       <description>&amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/1/11800036454864458_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;（1103年3月24日—1142年1月27日）  中国南宋爱国军事家，抗金英雄。字鹏举。河北（宋时指黄河以北，而非今河南河北之省界，下同）相州汤阴（今河南安阳市汤阴县）永和乡孝悌里人。靖康元年(1126年)投军抗金，因作战勇敢升秉义郎。建炎三年(1129年)，金将完颜宗弼渡江南进，岳飞时任江淮宣抚使司右军统制，率部转战广德(今属安徽)、宜兴(今属江苏)地区 ，袭扰金军 ，多次获胜 ，并收复建康 ，升任通泰镇抚使。绍兴三年(1133年)，金扶植的刘豫政权派军攻占襄阳（今属湖北）等郡。次年四月，岳飞自江州（今江西九江）挥师北上，大败刘豫军，收复六郡，因功授清远军节度使。五年夏，奉宋廷之命镇压洞庭湖地区的杨幺农 民起义军。六年，任湖北京西路宣抚副使 ，举兵奇袭刘豫军 ，以部分兵力东向蔡州（今河南汝南）诱其来攻，主力自襄阳出击伊阳（今河南嵩县），收复今豫西、陕南大片失地。七年，岳飞乘金朝废除刘豫之机 ，提 出举兵收复中原的主张 ， 后多次上书反对与金议和，均遭高宗和宰相秦桧拒 绝。十年，完颜宗弼毁约南进。岳飞按照其连结河朔进军中原的方略，遣将联络北方义军，袭扰金军后方，自率主力北上，在郾城、颍昌之战中大破金军精骑，击败 金军主力。正当岳飞行将渡河时，高宗 、秦桧却向金乞和，诏令各路宋军回师，致使岳飞恢复中原的计划功败垂成。次年，回临安，被解除兵权，改授枢密副使。十二月二十九日，被高宗、秦桧以“莫须有”的罪名杀害 。其子岳云和部将张宪也惨遭杀害 。宋孝宗继位后为岳飞平反昭雪 。淳熙五年（1178年），谥武穆。宋宁宗嘉泰四年（1204年）追封鄂王。宋理宗宝庆元年(1225年)，改谥忠武。
 【早年】
 岳飞少年时丧父，由母亲养育成人。传说其母透过在他的背上刺“尽忠报国”四个字，让他铭记国仇家恨。曾经拜周侗为师学习武艺。且喜欢看《左氏春秋》、《孙子兵法》。
@@ -2351,10 +2351,10 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>宗泽</title>
-      <link>http://example.org/38/</link>
+      <link>https://lsvking.github.io/38/</link>
       <pubDate>Fri, 06 Jul 2007 17:53:08 +0000</pubDate>
       
-      <guid>http://example.org/38/</guid>
+      <guid>https://lsvking.github.io/38/</guid>
       <description>&amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/6/11459297403540390_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;**宗泽（1060～1128）**  中国宋代抗金大臣。字汝霖。浙江义乌人，民族英雄。世代务农，家境贫寒。北宋元佑六年（1091）应进士试，对策陈时弊，考官恶其直言，抑为：同进士出身“录取。自此历任何并馆陶县尉，浙江龙游、山东胶水及登州掖县县令，勤政爱民，治绩卓著，名声远扬，但得不到朝廷的赏识。宣和元年（1119），反对朝廷连结女真征契丹，被贬提举鸿庆宫，于是上表引退，拟在东阳山谷中结庐，以读书著述终老。
 然而事与愿为，因在登州任上得罪过某些权贵，以莫须有的罪名，将其撤职并软禁在镇江，不得自由。两年后先后被委任为理教郎监理润州都酒税和巴州通判。靖康元年（1126）任磁州知州。时金兵入侵，太原失守，真定危急，赴磁州的一些官员以种种借口不肯前去，只有宗泽率随从几十个人赴任。
 到磁州后，积有极修复城墙，整治兵器，招募义兵，广集粮饷，防止敌人进拢。不久，受到任河北义兵都总管，率军救真定。宗泽先以神臂弓挫敌凶焰，后纵兵进击，破金兵30余寨，斩敌数百，所获羊马金帛全部赏将士。些时康王赵构赴金议和至磁州，宗泽叩马劝止，乃留相州。是年冬，宋钦宗任康王为兵马大元帅，宗泽为副师。泽率军趋李固渡，途中遇敌，大破之。
@@ -2365,10 +2365,10 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>林则徐</title>
-      <link>http://example.org/37/</link>
+      <link>https://lsvking.github.io/37/</link>
       <pubDate>Fri, 06 Jul 2007 17:43:50 +0000</pubDate>
       
-      <guid>http://example.org/37/</guid>
+      <guid>https://lsvking.github.io/37/</guid>
       <description>&amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/1/11658586877132508_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;林则徐，福建侯官人。早年家境贫寒，受过良好的教育。嘉庆十六年赐进士。在为官40年中，他“经世自励”，廉洁奉公；又重视水利事业，救灾赈民。他最大的功绩是领导了中国历史上轰轰烈烈的禁烟运动——虎门销烟，指挥了抗英斗争，维护了国家主权和民族的尊严，成为中国近代史上第一位民族英雄和爱国者。同时，他编译《四洲志》等外文书籍、资料，开创了中国近代学习和研究西方的风气，是中国近代维新思想的先驱。  【生平】
 青少年
 林则徐(1785—1850年)，字元抚，又字少穆、石磷，溢号文忠。乾隆五十年七月二十六日(1785年8月30日)出生在福建侯官(今福州市)一个下层封建知识分子的家庭里。父亲林宾日，以教读、讲学为生。仅靠父亲教私塾的微薄收无法维持生活，于是，母亲用手工劳动来分担家庭的困窘。
@@ -2395,10 +2395,10 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>关天培</title>
-      <link>http://example.org/36/</link>
+      <link>https://lsvking.github.io/36/</link>
       <pubDate>Sun, 01 Jul 2007 17:34:26 +0000</pubDate>
       
-      <guid>http://example.org/36/</guid>
+      <guid>https://lsvking.github.io/36/</guid>
       <description>关天培(1781-1841)，字仲因，号滋圃，江南淮安府山阳县(今江苏淮安县)人，行伍出身。嘉庆八年(1803年)二十三岁时考取武庠生，历任把总、千总、守备、游击、参将、副将等军职。道光六年(1826年)任太湖营水师副将，同年以督押海运漕米船自吴淞到天津，途中虽遇惊涛骇浪，仍能安全抵达，因之受到特别嘉奖。次年提升为江南苏松镇总兵。道光十三年(1833年)署江南提督，十四年授广东水师提督。
 　关天培调任广东水师提督的这年，正是英国商务监督律劳卑率兵船蛮横闯入广东省河之后，为了加强海防，清政府调他到这个当时是全国对外交往和贸易的唯一口岸广州。关天培面临着艰巨的任务，为了专心致志搞好海防，先令妻子奉老母归里，自己带着三个家丁到广州赴任。就任后，他“亲历重洋，遍观厄塞”，根据虎门的险要形势，进行严密设防，设置了三重门户：以沙角、大角两炮台为第一重门户；南山、镇远、横档三炮台为第二重门户，并将其中的南山炮台加以改建，加筑石基，增设月台，改变炮位过高的弱点，改称为威远炮台；狮子洋口的大虎门炮台为第三重门户①。这三重门户也就是三条防线，紧紧地把守住珠江口的南大门。他一方面在第二、三防线之间，威远、镇远与横档的适当地段设置大铁链和木排，以阻拦敌闯入内洋；另方面又亲自监督铸造大炮八千斤、六千斤者四十尊，六千斤以下者数百尊，分置各炮台，以加强防守力量。与此同时，他又加紧训练水师部队，亲自驻扎在虎门督军操练，每年二月末、八月初，“分饬本标将备，率亲兵五百余名，分赴威远、镇远、横档、大浇、永安、巩固六处，练习炮准，其大角、沙角炮台等处，共兵六百四十名。每次操练可十日为度”②。他还将建设虎门要塞的经验和汇集的有关资料，编成《筹海初集》四卷并附有许多详细的地图和训练图、表等，以资参考。
 　这时鸦片烟流毒全国，英、美的鸦片趸船源源不断东来，鸦片走私贸易极为猖撅，关天培积极协助两广总督邓廷桢进行侦缉。到道光十九年(1839年)春林则徐到广东后，关天培更是尽力支持和配合禁烟运动，取得了迫使义律缴出二万余箱、袋鸦片，并在虎门全数销毁的伟大胜利。在林则徐的赞助下，他又在武山上的威远炮台和镇远炮台之间新修筑起一座大炮台，名为靖远，炮洞六十八个，配炮六十位。其建筑之坚固与火力之充沛，为虎门各炮台最。当时关天培除自铸铁炮外，还在林则徐、邓廷桢的大力支持下，从澳门等地购进洋炮二百多尊，并严格训练大批招募来的水师兵勇，改革编制，将大鹏营由营改为协，拨副将驻扎那里，与香山协相呼应，又雇用一批米船、红单船、拖风船，利用有利地形与军民在海上与陆上的紧密协作，切实做到严阵以待，以迎击来犯的敌人。林则徐对关天培这些整顿防务的努力予以很高的评价，称赞他“殚精竭虑，寝食以之”。
@@ -2412,10 +2412,10 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>10年了～真快啊，问一声《香港别来无恙》</title>
-      <link>http://example.org/35/</link>
+      <link>https://lsvking.github.io/35/</link>
       <pubDate>Sun, 01 Jul 2007 10:14:58 +0000</pubDate>
       
-      <guid>http://example.org/35/</guid>
+      <guid>https://lsvking.github.io/35/</guid>
       <description>演唱：俞静[coolplayer width=”480″ height=”380″ autoplay=”0″ loop=”0″ charset=”utf-8″ download=”1″ mediatype=””]
 香港别来无恙
 [/coolplayer]
@@ -2441,37 +2441,37 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>惊爆：女人低腰裤竟有如此穿法</title>
-      <link>http://example.org/34/</link>
+      <link>https://lsvking.github.io/34/</link>
       <pubDate>Sun, 24 Jun 2007 19:15:35 +0000</pubDate>
       
-      <guid>http://example.org/34/</guid>
+      <guid>https://lsvking.github.io/34/</guid>
       <description>&amp;lt;p&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;471&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_20067121055344427841_4.jpg&amp;quot; height=&amp;quot;687&amp;quot; style=&amp;quot;width: 471px; height: 687px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;470&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_200671210615959198_5.jpg&amp;quot; height=&amp;quot;471&amp;quot; style=&amp;quot;width: 470px; height: 471px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;468&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_2006712106821432554_6.jpg&amp;quot; height=&amp;quot;601&amp;quot; style=&amp;quot;width: 468px; height: 601px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;468&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_200671210619418949_7.jpg&amp;quot; height=&amp;quot;414&amp;quot; style=&amp;quot;width: 468px; height: 414px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_20067121063267274156_8.jpg&amp;quot; height=&amp;quot;440&amp;quot; style=&amp;quot;width: 468px; height: 440px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_20067121064650173576_10.jpg&amp;quot; height=&amp;quot;397&amp;quot; style=&amp;quot;width: 466px; height: 397px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;466&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_200671210748767153_11.jpg&amp;quot; height=&amp;quot;579&amp;quot; style=&amp;quot;width: 466px; height: 579px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;465&amp;quot; src=&amp;quot;http://bbs.</description>
     </item>
     
     <item>
       <title>无奇不有——世界上最巧合的图片</title>
-      <link>http://example.org/33/</link>
+      <link>https://lsvking.github.io/33/</link>
       <pubDate>Sun, 24 Jun 2007 19:07:12 +0000</pubDate>
       
-      <guid>http://example.org/33/</guid>
+      <guid>https://lsvking.github.io/33/</guid>
       <description>&amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 莫非这两个岛是上帝从上面的树林中被挪出来的？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782529.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 你看俺俩像不？拍个照作纪念吧！ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782531.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 不会是gay吧？警察叔叔也玩这个？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782533.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 这不是中国的地图么？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782535.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 这样的挎包也太搞了吧？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782537.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 要是真换了这俩眼睛可不太好！ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.</description>
     </item>
     
     <item>
       <title>女流氓语录(超级爆笑)</title>
-      <link>http://example.org/32/</link>
+      <link>https://lsvking.github.io/32/</link>
       <pubDate>Sun, 17 Jun 2007 10:28:29 +0000</pubDate>
       
-      <guid>http://example.org/32/</guid>
+      <guid>https://lsvking.github.io/32/</guid>
       <description>第一晚,几个人围坐打牌.其中一个女生(准美女),年纪比我们小,却偏偏卖老,开口闭口“小弟弟“,偶对家一次说了一句什么话,惹了她,只听她发狠道:“…我把你小弟弟的皮拨了!“满座皆寒!</description>
     </item>
     
     <item>
       <title>[全球首发]Google Earth中文版-上帝之眼1.1测试版Beta2</title>
-      <link>http://example.org/31/</link>
+      <link>https://lsvking.github.io/31/</link>
       <pubDate>Sat, 12 May 2007 03:04:39 +0000</pubDate>
       
-      <guid>http://example.org/31/</guid>
+      <guid>https://lsvking.github.io/31/</guid>
       <description>经过多日的努力，终于完成了Google Earth的一部分汉化工作，找到了通向Google Earth中文版的道路。但是还有许多问题需要解决，不过为了让大家能够尽早的看到中文版本的Google Earth，我还是决定把不完整的汉化版本拿出来给大家尝鲜，尽管现在的Google Earth仅仅完成了菜单的中文化，更加深入的地方还没有完善。不过未来数日会将他们作为工作重点。让完整的Google Earth中文版本得以早日与大家见面。
 　而这次的测试版本提早发布出来是希望广大的试用会员能够给多一些的建议：比如文字，字体等一系列的问题，以便日后正式发布能够有一个近乎完美的作品呈现在大家眼前。既然Google中国想无为而制，那就只能通过广大Google Earth FANS的力量来制作属于我们自己的中文版 Google Earth 啦。
 这次的汉化工作非常的繁重，这里仍然要感谢上帝之眼论坛核心成员–远航斑竹的不懈努力！由于Google公司对她的Google Earth进行了加密，无法从内核动手。不过最终找到了另一条路，直接对Google Earth的语言文件下手，具体的过程不多说了，下面详细来说明关于Google Earth中文测试版的进度。
@@ -2483,10 +2483,10 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>中国近代史上的“黄金时代”</title>
-      <link>http://example.org/29/</link>
+      <link>https://lsvking.github.io/29/</link>
       <pubDate>Wed, 09 May 2007 20:28:00 +0000</pubDate>
       
-      <guid>http://example.org/29/</guid>
+      <guid>https://lsvking.github.io/29/</guid>
       <description>前些天是五四，几乎没有人怀念这个节日，今天翻看了一下牛博网，发现杨支柱写了一篇纪念文章《想起“五四”不能不怀念北洋军阀政府》。这篇文章提出了一个惊人的观点“北洋军阀政府是中国历史上最好的政府之一”。　杨支柱主要讨论的是政治方面的论据来说明这个结论的，其实从经济上讲也是有一些根据的，在我大学的历史教材中称1912年之后的十年为中国民族工业的“黄金时代”，我当年第一次看到这个观点也非常惊讶，因为我在接触这本教材前，从中学和小学里根本就不知道这个时代的经济发展竟然会是这么惊人，说到的都是社会无比黑暗，农民的破产造成萧条等等。而大学的教材却将以前的教材里说的话都推翻了，这使得我明白了一个道理：如果说教科书可以骗人的话，大学教材中骗人最少，小学教材则最多。不过虽然大学骗人少，但骗人却最有欺骗性，小学教材的骗人却可以一眼就识破。
 　在这本《中国革命史教程》中的“中国资本主义经济的新发展和新文化运动的兴起”一节中，绘声绘色地描述了这段时间中国经济发展的惊人速度，这里我摘录一些数据：“据统计，1912年到1919年，建成厂矿470余个，加上原有企业的扩建，新增资本达1.3亿元以上，8年的增长额相当于以前的50年……1913年全国面粉53家，资本862万元，1919年增至123家，资本1500万元，1918年中国免费由入超变为出超…煤产量1913年为1337万吨，1919年则达到2005万吨，增长49%，钨矿的开采居世界第二。”
 　在这些描述中，我看到了一个怎样的中国啊，那时的中国的确很穷，但确是一个充满了希望和未来的新兴国家，一切都有可能，一切都是全新的。而当时的统治者北洋军阀，也许并不是以前媒体妖魔化的那样独裁和腐败，至少那时候个人居然可以创办和发行杂志甚至组建政党，工人可以罢工，学生可以游行，这些都是现代人做梦也做不到的事情，因此北洋军阀不应该算最坏的政府。
@@ -2497,10 +2497,10 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>家用游戏机主机的发展历史</title>
-      <link>http://example.org/30/</link>
+      <link>https://lsvking.github.io/30/</link>
       <pubDate>Wed, 09 May 2007 12:36:16 +0000</pubDate>
       
-      <guid>http://example.org/30/</guid>
+      <guid>https://lsvking.github.io/30/</guid>
       <description>家用视频游戏（Video Game）的出现至今已经有三十多年的历史了，算是比较悠久的产业了，这个产业在发展过程中，有一些颇具故事性的历史，故事中充满令人扼腕的失败、让人激动的创新和难以置信的愚蠢。以下是这些故事中的一部分，希望能唤起你对往日时光的追忆。从这些故事中，也许我们还能预测到新一代游戏机大战谁将是最终胜利者。
 一、红白机时代 　据说世界上第一台家用游戏机诞生于上世纪七十年代，只能呈现简单的方块线条，而且还是单色的，那时还不能称这是一个“产业”，改变历史的是日本任天堂（Nintendo），在上世纪八十年代，日本的任天堂开辟了一个崭新的红白机时代，这时，真正意义上的家用游戏机FC开始风靡世界，并逐步产生了一个庞大的家用游戏机产业。
  &amp;lt;td&amp;gt; 任天堂FC &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 世嘉MD &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 任天堂SFC &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 发布日期 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1983年7月15日 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1988年10月29日 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1990年11月21日 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 累计销量 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 6291万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 3075万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 4910万台 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 其中日本 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1935万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 875万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1717万台 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 其中美国 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 4256万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 2200万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 3193万台 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; CPU &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 摩托罗拉6502 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 摩托罗拉M68000 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 摩托罗拉65836 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; CPU运行频率 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1.</description>
@@ -2508,10 +2508,10 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
     
     <item>
       <title>80％的博客含有“攻击性”内容</title>
-      <link>http://example.org/28/</link>
+      <link>https://lsvking.github.io/28/</link>
       <pubDate>Fri, 04 May 2007 09:53:29 +0000</pubDate>
       
-      <guid>http://example.org/28/</guid>
+      <guid>https://lsvking.github.io/28/</guid>
       <description>博客虽然一直被看作是免费为大家提供“原创”内容的方式，但是根据ScanSafe最近提供的一份调查表明，绝大多数博客的内容都包含“攻击性”的内容，而且可能会“不受欢迎”。　ScanSafe发布的2007年3月的“全球威胁报告”指出，多达百分之八十的博客主机含有令人厌恶的内容。这些内容包括使用“成人语言”、色情图片 等等。该公司建议：企业应积极防止自己的用户获取这些信息。当然，ScanSafe希望企业能使用他们的产品来实现这个功能。
 ScanSafe还表示，他是通过对自己的合作客户的70亿个页面进行分析后发现的这个结论的。这样，他们显然了解到了所谓的“博客圈”有很多像乔治卡林的业绩：多变的，有时有趣，并带有很多“脏话”。
 除了所谓的“攻击性”的内容，3月份的报告还发现约6%的博客主机还包含恶意软件（MalWare）。“博客是一个进行自我表达和交流想法的伟大的工 具”，ScanSafe的产品策划Dan Nadir说：“员工访问这些网站可以不知不觉地泄露自己公司网络中的法律合同、病毒以及损失专利资料”。
@@ -2523,37 +2523,37 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
     
     <item>
       <title>让人拍案叫绝的公益广告</title>
-      <link>http://example.org/27/</link>
+      <link>https://lsvking.github.io/27/</link>
       <pubDate>Fri, 04 May 2007 09:42:06 +0000</pubDate>
       
-      <guid>http://example.org/27/</guid>
+      <guid>https://lsvking.github.io/27/</guid>
       <description></description>
     </item>
     
     <item>
       <title>2008北京奥运会火炬传递路线Flash</title>
-      <link>http://example.org/26/</link>
+      <link>https://lsvking.github.io/26/</link>
       <pubDate>Fri, 27 Apr 2007 11:51:37 +0000</pubDate>
       
-      <guid>http://example.org/26/</guid>
+      <guid>https://lsvking.github.io/26/</guid>
       <description>2008北京奥运会火炬传递路线于昨日发布，新浪网提供了很多精彩内容，在此在下引用2款Flash 在此对sina表示感谢！</description>
     </item>
     
     <item>
       <title>北京奥运火炬样式和传递计划路线公布 达135城市</title>
-      <link>http://example.org/25/</link>
+      <link>https://lsvking.github.io/25/</link>
       <pubDate>Fri, 27 Apr 2007 11:47:03 +0000</pubDate>
       
-      <guid>http://example.org/25/</guid>
+      <guid>https://lsvking.github.io/25/</guid>
       <description>新浪体育讯　4月26日消息，经国际奥委会批准，2008年北京奥运会组委会今天在北京世纪坛宣布第29届奥运会火炬传递计划路线和火炬样式。火炬以中国传统祥云符号和纸卷轴为创意，火炬境外传递城市19个，境内传递城市和地区116个.</description>
     </item>
     
     <item>
       <title>奥运火炬样式详解</title>
-      <link>http://example.org/24/</link>
+      <link>https://lsvking.github.io/24/</link>
       <pubDate>Fri, 27 Apr 2007 11:17:09 +0000</pubDate>
       
-      <guid>http://example.org/24/</guid>
+      <guid>https://lsvking.github.io/24/</guid>
       <description>北京奥运会火炬创意灵感来自“渊源共生，和谐共融”的“祥云”图案。祥云的文化概念在中国具有上千年的时间跨度，是具有代表性的中国文化符号。 火炬造型的设计灵感来自中国传统的纸卷轴。纸是中国四大发明之一，通过丝绸之路传到西方。人类文明随着纸的出现得以传播。源于汉代的漆红色在火炬上的运用 使之明显区别于往届奥运会火炬设计，红银对比的色彩产生醒目的视觉效果，有利于各种形式的媒体传播。火炬上下比例均匀分割，祥云图案和立体浮雕式的工艺设 计使整个火炬高雅华丽、内涵厚重。
 北京奥运会火炬在燃烧稳定性与外界环境适应性方面达到了新的技术高度，能在每小时65公里的强风和每小时50毫米的大雨情况下保持燃烧。在工艺 上采用轻薄高品质铝合金和中空塑件设计，十分轻盈。下半部喷涂高触感塑胶漆，手感舒适不易滑落。北京奥运会火炬是我国自主设计研发的产物，拥有完全的知识 产权。
 北京奥运会火炬使用燃料为丙烷，这是一种价格低廉的常用燃料。</description>
@@ -2561,10 +2561,10 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
     
     <item>
       <title>北京奥运火炬正式公布 创意灵感源于“祥云”</title>
-      <link>http://example.org/23/</link>
+      <link>https://lsvking.github.io/23/</link>
       <pubDate>Fri, 27 Apr 2007 10:31:01 +0000</pubDate>
       
-      <guid>http://example.org/23/</guid>
+      <guid>https://lsvking.github.io/23/</guid>
       <description>北京奥运会火炬长72厘米，重985克，燃烧时间15分钟，在零风速下火焰高度25至30厘米，在强光和日光情况下均可识别和拍摄。在工艺方面使用锥体曲面异型一次成型技术和铝材腐蚀、着色技术。燃料为丙烷，符合环保要求。火炬外形制作材料为可回收的环保材料。
 北京奥运会火炬艺术和技术特色
 北京奥运会火炬创意灵感来自“渊源共生，和谐共融”的“祥云”图案。祥云的文化概念在中国具有上千年的时间跨度，是具有代表性的中国文化符号。 火炬造型的设计灵感来自中国传统的纸卷轴。纸是中国四大发明之一，通过丝绸之路传到西方。人类文明随着纸的出现得以传播。源于汉代的漆红色在火炬上的运用 使之明显区别于往届奥运会火炬设计，红银对比的色彩产生醒目的视觉效果，有利于各种形式的媒体传播。火炬上下比例均匀分割，祥云图案和立体浮雕式的工艺设 计使整个火炬高雅华丽、内涵厚重。
@@ -2573,10 +2573,10 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
     
     <item>
       <title>抽签综述：中国小组出线避克星 送美国进死亡之组</title>
-      <link>http://example.org/22/</link>
+      <link>https://lsvking.github.io/22/</link>
       <pubDate>Thu, 26 Apr 2007 16:23:01 +0000</pubDate>
       
-      <guid>http://example.org/22/</guid>
+      <guid>https://lsvking.github.io/22/</guid>
       <description>新浪体育讯　抽签大幕终于结束，中国队最终的首场比赛首场比赛时间也已经确定，将在9月12日20:00在武汉体育中心体育场迎战丹麦，而揭幕战将是A1德国队在9月10日20:00在上海虹口体育场迎战阿根廷。　在整个抽签过程中，德国无疑是最大的赢家，最终与日本、阿根廷和英格兰分在一个小组，对手中最强的日本队国际足联排名也只有第9，而排名第12和第32的阿根廷实力也较弱，德国队可以称得上是分到了鱼腩之组，不仅出线没有问题，而且小组第一的可能性也相当大。
 相比较之下，B组的美国队就没有那么幸运，继2003年女足世界杯抽签不利之后，美国队再次被分在最大的死亡之组，竟然与瑞典、朝鲜和尼日利亚分在一组。排在世界第4的瑞典在3月份国际足联积分上仅仅略少于挪威而痛失种子席位，可以称得上是准种子队。
 其他几支队伍中，朝鲜排名世界第5，实力不弱，上届与美国在一组遗憾地失利，此番正要报一箭之仇，而四档的尼日利亚也是这一档次中实力最强的队伍，非洲女足在近年来迅速崛起，而尼日利亚正是典型的代表，她们强悍的身体素质以及顽强的作风令每一支队伍都心有忌惮，极有可能成为本届世界杯的最大黑马，美国队与这三支队伍分在一组也可以称得上是绝对死亡之组。
@@ -2590,20 +2590,20 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
     
     <item>
       <title>女足世界杯抽签揭晓：中国与新西兰巴西丹麦同组</title>
-      <link>http://example.org/21/</link>
+      <link>https://lsvking.github.io/21/</link>
       <pubDate>Thu, 26 Apr 2007 16:17:52 +0000</pubDate>
       
-      <guid>http://example.org/21/</guid>
+      <guid>https://lsvking.github.io/21/</guid>
       <description>本次女足世界杯决赛阶段抽签的16强被分成A、B、C、D四个小组，中国队作为四支种子队被定在D1的位置，小组的前两名出线晋级八强。根据国际足联公布的女足世界杯竞赛规程规定，小组赛如果出现两队积分相同的情况，将首先根据净胜球的多少来决定小组的晋级球队和名次，在这样的情况下偶然性与其他因素将很有可能成为小组出线的主导。
 　在抽签结果揭晓之后，2007年女足世界杯的详细对阵形势也已经出炉，根据女足世界杯赛程，中国女足9月12日在武汉体育中心体育场迎来小组赛的首场比赛，对手是丹麦，9月15日仍然在武汉体育中心迎战巴西，9月19日在天津奥林匹克体育场迎战小组赛最后一个对手新西兰。本届女足世界杯揭幕战将于9月10日在上海虹口体育场进行，由卫冕冠军德国队迎战阿根廷，最后的决赛也将于9月30日在上海虹口体育场上演。</description>
     </item>
     
     <item>
       <title>冠军杯-久违快刀绝杀 切尔西主场1-0利物浦占先机</title>
-      <link>http://example.org/20/</link>
+      <link>https://lsvking.github.io/20/</link>
       <pubDate>Thu, 26 Apr 2007 16:10:53 +0000</pubDate>
       
-      <guid>http://example.org/20/</guid>
+      <guid>https://lsvking.github.io/20/</guid>
       <description>新浪体育讯　北京时间4月26日02:45(英国当地时间25日19:45)，2006/07赛季欧洲冠军联赛半决赛首回合一场比赛在斯坦福德桥球场展开争夺，切尔西主场1比0小胜利物浦，乔-科尔打入唯一进球.
 本赛季两队3度交手，切尔西1胜2负，其中主场1比0胜出。这是双方连续第3个赛季在冠军联赛中相遇。2005年半决赛次回合，利物浦在安菲尔德有争议的进球是此前4场比赛中的唯一进球。两队历史交锋145场，利物浦66胜29平50负占据上风。其中杯赛交锋17场，利物浦取得8胜3平6负。这是穆里尼奥和贝尼特斯在英伦的第14次碰面，此前切尔西6胜4平3负，得失球14比10。
 　兰帕德成为切尔西首位出战50场欧战的球员。卡瓦略换下禁赛的埃辛，米克尔也顶替受伤的巴拉克，阿什利-科尔、乔-科尔和舍甫琴科分别替换布里奇、赖特-菲利普斯和卡劳首发出场.利物浦队中，阿格尔、杰拉德、马斯切拉诺和贝拉米分别替换海皮亚、彭南特、马克-冈萨雷斯和克劳奇首发。第89次为红军出战欧战的卡拉格追平卡拉汉保持的纪录。
@@ -2623,10 +2623,10 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
     
     <item>
       <title>Google(谷歌)所注册的所有域名一览,经典权威喽~~[推荐收藏]</title>
-      <link>http://example.org/19/</link>
+      <link>https://lsvking.github.io/19/</link>
       <pubDate>Thu, 26 Apr 2007 15:46:39 +0000</pubDate>
       
-      <guid>http://example.org/19/</guid>
+      <guid>https://lsvking.github.io/19/</guid>
       <description>日前，国外消息站点透露了Google所有注册的域名名单，这个名单记载了多达400多个域名网址。其中一些网址是我们正在使用的Google功能网站地址。域名网址的大多数都涉及 Google 的主站名和已经发布的产品，例如：Google.com、 Google.net、 Google.org、Adwords.net等。
  有一些网址似乎是防御钓鱼网站，防止对方欺骗用户重新导向，例如：Froogel.com。
  有一些网址与色情有关，但会牵扯Google，败坏Google形象，例如：porngoogle.com、googleporn.com 、googlesex.com等。  还有一些，却可能与Google的未来发展有关，例如：gbrowser.com（浏览器）、googlewifi.com（WIFI，哈哈，前不久我们都听说了google这方面的信息）、gcalendar.com（日历）、gchat.com（难道除了Google Talk，他们还有别的聊天想法？）、googlebuy.com（在线购物）googlemusic.com（在线线音乐）。  有趣得是，Google 还拥有googlesucks.com 的网址。微软曾经被敌意用户注册过一个“windows-sucks” 的地址，看来Google也不想每天对着这么一个恶心自己的站点，让自己不高兴，不如自己买下来，好过被别人用来在自己头上拉屎。
@@ -2637,28 +2637,28 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
     
     <item>
       <title>新百家姓出炉 李王张仍列前三</title>
-      <link>http://example.org/18/</link>
+      <link>https://lsvking.github.io/18/</link>
       <pubDate>Wed, 25 Apr 2007 13:46:47 +0000</pubDate>
       
-      <guid>http://example.org/18/</guid>
+      <guid>https://lsvking.github.io/18/</guid>
       <description>新百家姓排行。 此次调查人口接近3亿，其中李姓人口有9000多万，全国已收集到23000多个姓氏据新华社10日电在国家自然科学基金姓氏研究项目的支持下，中国科学院遗传与发育生物学研究所与深圳市鼎昌实业有限公司，历时两年对中国人姓氏进行了一次大规模调查。调查结果显示，虽然在总人口中所占的比例有所下降，但是李、王、张继续位列姓氏三甲。三大姓氏占总人口21.4%%调查负责人、中国科学院遗传与发育生物学研究所袁义达研究员说，两年的调查涉及全国 1110个县和市，得到了2．96亿人口的数据，共获得姓氏4100个。调查结果表明，在调查的4100个姓氏中，位列前三位的李、王、张，分别占我国总 人口的7．4％、7．2％和6．8％，三大姓氏总人口均不超过1亿人。调查涉及近40％的县袁义达说：“李姓作为第一大姓，之所以比例从1987年统计的7．9％降到目前的7．4％，是因为原来样本数只有57万，而现在达到了将近3个亿。”与20年前的调查相比，这次调查的样本范围更大，涉及中国近40％的县，而且几乎都是使用汉字姓的地区。据了解，科学家还将陆续发表中国前300个姓氏的数据和分布地图，重新出版《中国姓氏大辞典》，包括至今已收集到的23000多个姓氏，以推进姓氏文化产业的发展。9000多万人姓李在新“百家姓”中，名列榜首的“李”姓，目前在我国有9000多万人口使用，比第二位的“王”姓多了200万余人。老《百家姓》来源赵钱孙李，周吴郑王，一本《百家姓》在中国几乎是家喻户晓。这个版本的《百家姓》是 北宋初年钱塘（杭州）的一个书生所编撰的蒙学读物，他将常见的姓氏编成四字一句的韵文，像一首四言诗，便于诵读和记忆，因此流传至今。老《百家姓》本来收 集了411个姓，后经增补到了504个，因宋朝皇帝姓赵，所以赵姓排在了第一位。综合李姓：李子救命李姓本来是以官职为氏的。臬陶是传说中的东夷部落首领，活动地点在今天山东曲阜市一 带。尧为炎黄夷联盟首领时，臬陶担任理官一职，掌管刑法，他的后代就因袭他的官职命族为理氏。臬陶以正直著称，舜继尧位后，继续受到重用。后人理征在商朝 为官，敢于直谏，得罪了商纣王，受罚而死。他的妻子契和氏带着儿子利贞逃往伊侯之墟，隐藏在那，靠采食木子（李树果实）得以活命。于是从利贞起，改理氏为 李氏，以此纪念使理姓保全下来的李子。王姓：以爵为氏王姓是一个源头众多、族派纷繁的姓氏。具体地说，有出自周朝姬姓之王，有出自虞舜妫姓之王，有出自商朝子姓之王，还有少数民族中的王姓及赐姓、冒姓王氏。它们的共同点在于多数是以爵为氏的。张姓：黄帝之后张姓是一个古老的姓氏，它起源于遥远的传说时代。据说张姓的始祖名“挥”，他是黄帝 的孙子，他发明了弓箭和网罟(gu)。弓箭和网罟作为当时的新的生产工具，使人们可以猎取更多的鸟兽，捕捞更多的鱼虾，又能够减少猛兽对自身的伤害。挥所 在的氏族部落世代以生产弓箭和网罟为业，于是他的后裔就以“张”作为自己的姓氏。新华社电　根据国家自然科学基金委支持的一项最新研究表明，我国新的“百家姓”顺序已经新鲜出炉。李、王、张位列姓氏前三甲。这项调查和研究是由中国科学院遗传与发育生物学研究所袁义达研究员主持完成的，历时两年。调查涉及全国１１１０个县和市，得到了２．９６亿人口的数据，共获得姓氏４１００个。调查结果表明，在调查的４１００个姓氏中，位列前三位的李、王、张，分别占我国总人口的７．４％、７．２％和６．８％，按我国总人口约１３亿计 算，李姓９６00万人；王姓９４00万人；张姓８８00万人，但三大姓氏总人口均不超过１亿人；占我国总人口１％以上的姓氏有１８个，占人口０．１％以上 的姓氏共１２９个，而这１２９个姓氏的人口约占我国总人口的８７％。袁义达在其研究成果中指出，中国李姓源远流长，从古至今，单单李姓称帝先后建立的政权就有12个。据历史考证，先秦时期，李姓的活动由河南开始。唐朝是李姓的鼎盛时期。李姓分布目前主要集中于河南、四川、山东，而河南为李姓第一大省。据悉，中国目前已收集到２３０００多个姓氏。百家姓新座次李 王 张 刘 陈 杨 黄 赵 周 吴徐 孙 朱 马 胡 郭 林 何 高 梁郑 罗 宋 谢 唐 韩 曹 许 邓 萧冯 曾 程 蔡 彭 潘 袁 于 董 余苏 叶 吕 魏 蒋 田 杜 丁 沈 姜范 江 傅 钟 卢 汪 戴 崔 任 陆廖 姚 方 金 邱 夏 谭 韦 贾 邹石 熊 孟 秦 阎 薛 侯 雷 白 龙段 郝 孔 邵 史 毛 常 万 顾 赖武 康 贺 严 尹 钱 施 牛 洪 龚十大姓氏人口数李：9６00万 王：９４00万 张：8８00万刘：6400万 陈：5400万 杨：3700万黄：2700万 赵：2600万 周：2500万吴：2400万PS:王姓排第一，哈哈自豪啊，我就姓王，我们姓王的天下第一，哈哈～</description>
     </item>
     
     <item>
       <title>美宇航局首次公布太阳三维图像(组图)</title>
-      <link>http://example.org/17/</link>
+      <link>https://lsvking.github.io/17/</link>
       <pubDate>Tue, 24 Apr 2007 17:57:21 +0000</pubDate>
       
-      <guid>http://example.org/17/</guid>
+      <guid>https://lsvking.github.io/17/</guid>
       <description>这张4月23日由美国国家航空和航天局(NASA)公布的拼合照片显示的是太阳的三维图像。当日，美国国家航空和航天局首次公布太阳三维图像，可能有助于科学家更好地预报太阳耀斑爆发现象。&amp;lt;center&amp;gt; &amp;lt;img src=&amp;quot;http://image2.sina.com.cn/IT/images/2007-04-23/U1235P2T78D9089F3444DT20070424104801.jpg&amp;quot; alt=&amp;quot;美宇航局首次公布太阳三维图像(组图)(2)&amp;quot; style=&amp;quot;border: 1px solid #000000&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/center&amp;gt; &amp;lt;font style=&amp;quot;font-size: 12px&amp;quot;&amp;gt; &amp;lt;center&amp;gt; 太阳的二维图像(左)和三维图像。(来源：NASA网站) &amp;lt;/center&amp;gt; &amp;lt;center&amp;gt; &amp;lt;/center&amp;gt;　美国国家航空和航天局(NASA)23日首次公布太阳三维图像，可能有助于科学家更好地预报太阳耀斑爆发现象。&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; NASA去年10月发射两台太阳观测仪，围绕太阳运行。一台位于地球围绕太阳运行轨道前面，另一台位于轨道后面。恰似人的两只眼睛，两台仪器可深度感知太阳情况，拍摄三维图像。NASA把这项计划称为“日地关联天文台”行动。 &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; &amp;lt;/font&amp;gt; 转载自：&amp;lt;a href=&amp;quot;http://tech.sina.com.cn/d/2007-04-24/08261479830.shtml&amp;quot;&amp;gt;新浪&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt; </description>
     </item>
     
     <item>
       <title>俄罗斯前总统叶利钦逝世享年76岁</title>
-      <link>http://example.org/16/</link>
+      <link>https://lsvking.github.io/16/</link>
       <pubDate>Tue, 24 Apr 2007 17:39:47 +0000</pubDate>
       
-      <guid>http://example.org/16/</guid>
+      <guid>https://lsvking.github.io/16/</guid>
       <description>人民网4月23日讯 美联社援引俄罗斯媒体的报道称，当地时间23日下午3点45分(北京时间23日晚上8点45分)俄罗斯前总统叶利钦逝世，享年76岁。
 目前克里姆林宫只是证实了叶利钦去世的消息，并没有透露其他细节(比如确切去世原因)。不过，媒体援引消息人士的话说，叶利钦因为心脏衰竭而去世。
 叶利钦在担任总统期间曾患过严重心脏病，他于1999年底宣布辞职，由现任总统普京接任其职务，并且在第二年春天正式当选并担任总统至今
@@ -2672,10 +2672,10 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
     
     <item>
       <title>女同事_竟然是男儿身 盗窃被抓现原型</title>
-      <link>http://example.org/15/</link>
+      <link>https://lsvking.github.io/15/</link>
       <pubDate>Tue, 24 Apr 2007 17:19:14 +0000</pubDate>
       
-      <guid>http://example.org/15/</guid>
+      <guid>https://lsvking.github.io/15/</guid>
       <description>哈哈，一变态～
 [coolplayer width=”480″ height=”380″ autoplay=”0″ loop=”0″ charset=”utf-8″ download=”1″ mediatype=””]
 http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
@@ -2684,10 +2684,10 @@ http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
     
     <item>
       <title>在线代理网站列表</title>
-      <link>http://example.org/14/</link>
+      <link>https://lsvking.github.io/14/</link>
       <pubDate>Tue, 24 Apr 2007 15:45:44 +0000</pubDate>
       
-      <guid>http://example.org/14/</guid>
+      <guid>https://lsvking.github.io/14/</guid>
       <description>1.Inblogs:用来访问blogspot的在线代理网站，并且也可以用http://www.inblogs.net/blogname来访问你的blogspot。另一个以前用来访问Blogspot的在线代理网站pkblogs好像已经不能使用了。
 2.Anonymouse:速度一般，不过一直比较稳定，一直都能使用。
 3.WebProxy:免费在线代理，不过有时会出现乱码的现象。
@@ -2703,10 +2703,10 @@ http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
     
     <item>
       <title>Google Adsense的本地化</title>
-      <link>http://example.org/13/</link>
+      <link>https://lsvking.github.io/13/</link>
       <pubDate>Tue, 24 Apr 2007 14:15:13 +0000</pubDate>
       
-      <guid>http://example.org/13/</guid>
+      <guid>https://lsvking.github.io/13/</guid>
       <description>今天看到一则消息，据网易报道，“Google大中华区在线销售及运营经理周文彪表示，Google Adsense今年内将在国内完全本地化。Google Adsense会与中国国内银行合作，通过中国的银行直接向站长转账支付广告费分成。” 对于Adsense的本地化，我个人深不以为然，Google也曾经发布过这样的调查， 虽然得到很多天真用户的支持，但还是有理性的用户感到一些疑问，其中有个用户的反馈中是，“AdSense的本地化必然导致国内的相关监管部门介入，发布 商的资料将不再是google的秘密了。支付的本地化的同时将带来比较重的税费，这样发布者的收益将会呈现下降趋势。”
 我很赞成这个用户的意见，特别是监管部门介入的问题，目前国内有信产部的备案问题，还有很多其他杂七杂八的备案和罚款，很多用户为了省麻烦就使用国外的虚拟主机，这样就不用泄露自己的真实用户资料了。如果Google Adsense本地化了，那么网站管理员的用户隐私是否也会“本地化”呢？是否也会像谷歌拼音输入法的“使用条款”中“用户贡献及隐私”一样，是以下的内容：
 “Google 可以向业务合作伙伴或其他第三方透露有关您的汇总信息（不会识别您个人身份的信息）。不过，除非为了遵守有效的法定程序（例如搜查证、传票、法令或法庭命 令）或者在需要或适当的情况下应对非法或有害的活动，Google 不会有意将识别您个人身份的信息透露给第三方。”
@@ -2721,10 +2721,10 @@ http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
     
     <item>
       <title>互联网协会：给个人站长创业的三大建议</title>
-      <link>http://example.org/12/</link>
+      <link>https://lsvking.github.io/12/</link>
       <pubDate>Sun, 22 Apr 2007 10:27:36 +0000</pubDate>
       
-      <guid>http://example.org/12/</guid>
+      <guid>https://lsvking.github.io/12/</guid>
       <description>计世网消息 中国互联网协会常务副理事长高新民在厦门站长大会上向个人站长提出三个建议:第一，创业。其实站长们都是利用互联网进行创业的开拓者或者说是利用创业的一些先锋，利用互联网的技术在网站上开拓进取，成为我们互联网产业当中一个非常活跃的组成部分，应该把网站的服务内容和产品做专、做精，服务的定位更加准确，能够形成适合各个网站自身定位的一种服务模式和盈利模式，持之以恒、持续创业，我想必有成功之日。
 第二，创新。互联网本身是创新的一个成果，同时互联网到今天仍然是创新的一个最广阔的平台。一方面互联网的技术还没有完全成熟，创新的空间和机会还非常之多。比如现在互联网地址资源的扩展，互联网的高效互动的技术，基于互联网的视频服务，无线移动的服务，安全信任环境的建立，智能搜索的工具，网上资源，包括计算资源、存储资源、贷款资源以至于各种应用和内容的资源的共享等等，这些技术的发展空间还非常大，实际上现在互联网要想解决的问题，就是要解决互联网使人们能用得起、能用得好、能用的上，要达到这个目标，从技术角度讲还有很多问题需要解决。
 创新的另外一层含义就是利用互联网现在已经成熟的技术，或者正在成熟的技术，或者将来即将要发展的技术来形成一种满足社会和市场需求的各种商业模式的创新。这也是我们在座的站长朋友们非常重要的任务。只有技术创新和商业模式创新的结合，在满足目标客户需求的前提下，就走上了成功之路。
@@ -2733,47 +2733,47 @@ http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
     
     <item>
       <title>邯郸金库大盗任晓峰：四千三百万元全买彩票了</title>
-      <link>http://example.org/11/</link>
+      <link>https://lsvking.github.io/11/</link>
       <pubDate>Sun, 22 Apr 2007 10:03:23 +0000</pubDate>
       
-      <guid>http://example.org/11/</guid>
+      <guid>https://lsvking.github.io/11/</guid>
       <description>核心提示：邯郸农行5100万失窃案疑犯任晓峰交待，他与马向景所盗的4300万元赃款全部买了彩票，却几乎没有中过奖。但河北省公安厅召开新闻发布会宣称，随着任晓峰的落网，已经追回赃款4600万元，与此案有关的6名犯罪嫌疑人全部缉拿归案。</description>
     </item>
     
     <item>
       <title>河北邯郸农行5千万被盗案疑犯任晓峰痴迷彩票</title>
-      <link>http://example.org/10/</link>
+      <link>https://lsvking.github.io/10/</link>
       <pubDate>Sun, 22 Apr 2007 10:01:39 +0000</pubDate>
       
-      <guid>http://example.org/10/</guid>
+      <guid>https://lsvking.github.io/10/</guid>
       <description>核心提示：盗取河北邯郸农行5100万元巨款的疑犯任晓峰，看起来是一脸福气，不像个逃亡嫌犯。从待人接物上看，他还是个素质很高的人。然而他痴迷在彩票上却疯狂得让人无法相信，逃亡时常常饭都顾不上吃，但无时不在想着彩票。
  </description>
     </item>
     
     <item>
       <title>Vista 正版碟在中国只卖出244份</title>
-      <link>http://example.org/9/</link>
+      <link>https://lsvking.github.io/9/</link>
       <pubDate>Thu, 19 Apr 2007 17:13:59 +0000</pubDate>
       
-      <guid>http://example.org/9/</guid>
+      <guid>https://lsvking.github.io/9/</guid>
       <description>在421米高上海外滩金茂大厦上，微软公司耗资百万(美金)为下一代操作系统 windows vista 打的巨幅广告，事实上已成为中国盗版商的产品代言。自微软在中国正式发售 vista 2周以来(2月2日至19日)，总共只卖出244份拷贝。软件版权在这个国家被肆意侵范，在街上随处可见的盗版 vista 碟仅售 1 美元。以上数据来自北京的主要代理商。</description>
     </item>
     
     <item>
       <title>Google 谷歌拼音真的不错！</title>
-      <link>http://example.org/8/</link>
+      <link>https://lsvking.github.io/8/</link>
       <pubDate>Thu, 19 Apr 2007 09:07:23 +0000</pubDate>
       
-      <guid>http://example.org/8/</guid>
+      <guid>https://lsvking.github.io/8/</guid>
       <description>不管大家怎么评论我反正一只在用谷歌拼音，一直在支持它!</description>
     </item>
     
     <item>
       <title>FLASH：铁路第六次大提速地图</title>
-      <link>http://example.org/7/</link>
+      <link>https://lsvking.github.io/7/</link>
       <pubDate>Wed, 18 Apr 2007 21:02:07 +0000</pubDate>
       
-      <guid>http://example.org/7/</guid>
+      <guid>https://lsvking.github.io/7/</guid>
       <description>FLASH：铁路第六次大提速地图
 　我国第六次铁路大提速将在4月18日正式展开。第六次铁路大提速将在京哈、京沪、京广、京九、陇海、浙赣、兰新、广深、胶济等干线展开，列车运行时速达200公里，其中京哈、京广、京沪、胶济线部分区段时速将达到250公里。
 　此次提速将在以北京、天津为中心的环渤海，以上海为中心的长三角，以广州、深圳为中心的珠三角这三大城市群以及以郑州、武汉为中心的中原城市群，以沈阳、长春和哈尔滨为中心的东北城市群，以西安为中心的西北城市群，大量组织开行高密度的416列城际快速客车。全国主要中心城市间的“D”字头快速客车将新开86列。据悉，通过此次提速，我国铁路客货运输能力将分别增长18%和12%。
@@ -2782,10 +2782,10 @@ http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
     
     <item>
       <title>第六次铁路大提速今日零时起正式开始</title>
-      <link>http://example.org/6/</link>
+      <link>https://lsvking.github.io/6/</link>
       <pubDate>Wed, 18 Apr 2007 18:59:40 +0000</pubDate>
       
-      <guid>http://example.org/6/</guid>
+      <guid>https://lsvking.github.io/6/</guid>
       <description>中新网4月18日电 今天零时起，中国铁路第六次大面积提速调图正式付诸实施，主要干线开始“时速200公里”的高速运行，中国铁路开启“追风时代”。
 这次大面积提速调图所取得的成果是全方位的，概括起来主要有六大方面的显著变化:一是提速调图规模之大前所未有。二是具有世界先进水平的动车组大量开行。三是客运产品更加丰富多样。四是旅客列车运行时间进一步压缩。五是货运产品更加贴近市场。六是提速安全保障体系更加严密。
 这次大面积提速调图，无论是广泛性，还是技术的先进性，都是以往历次提速所不能比拟的。特别是在主要干线上，将开行时速200公里及以上的动车组，还将大面积地开行5000吨级的货物列车。此外，还有一大批先进的技术装备要投入运用，这些都标志着中国铁路既有线提速水平已经跻身世界先进行列。
@@ -2795,10 +2795,10 @@ http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
     
     <item>
       <title>中消协吃皇粮，别的NGO呢？</title>
-      <link>http://example.org/5/</link>
+      <link>https://lsvking.github.io/5/</link>
       <pubDate>Wed, 18 Apr 2007 00:13:33 +0000</pubDate>
       
-      <guid>http://example.org/5/</guid>
+      <guid>https://lsvking.github.io/5/</guid>
       <description>从2007财政年度开始，中消协全年所有的运营费用，将全部从中央财政拨付的750万元资金中支取。因此当中国内地众多的协会组织尚在因“社会筹资”而倍感艰难与困惑的时候，中消协却已吃上了“皇粮”。
 　750万元不多，但意义不仅在于纳税人又多养了一拨人，而是养了这些人能产生什么效果。由于没有良好的资助渠道，许多社团组织NGO要么暗地里以营利为目的，要么囊中羞涩无法体面生存。眼下中消协走出一条新路，解决了吃饭问题。可吃人嘴软，拿人手短，我们担心的是，税钱花出去了，享受全额拨款的中消协，还能不能保证NGO的独立人格，监督政府作为呢？另外，消费者协会能够被收编，那么环保、教育、就业以及各地方消协组织，会不会也受到启发，开始运作“皇粮”工程？
 　报道中，中消协吃皇粮也很无奈，原来的生存手段如“3·15认证”也因为欧典等事件曝光无法继续，又不能从消费者或企业身上收费。话题自然又说到国人没有公益心，不谙善举等。我觉得NGO们不该这样想。多数人不捐款和不愿意报税的理由差不多，是因为不确定钱有没有花在需要的地方。北京晚报有个《慈善专刊》，每登完一个悲惨故事，都能接到很多电话要求捐助。因此，广大NGO如果自己先把账目公开，表明自身对社会的意义和需求，肯定不至于得不到捐助，更不至于依靠出售各类“认证”获得生存。收费的“认证”以及评比，都是对NGO公信力的亵渎。欧典是迟早之事。不反对政府资助任何NGO，但资助和全额拨款有质的区别。从社会意义上，中消协吃皇粮不值得其他NGO效仿。</description>

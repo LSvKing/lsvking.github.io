@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端 on 龙舍·嬴皇志 - 透过我的双眼看世界</title>
-    <link>http://example.org/categories/%E5%89%8D%E7%AB%AF/</link>
+    <link>https://lsvking.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Mon, 28 Jul 2008 14:02:21 +0000</lastBuildDate><atom:link href="http://example.org/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Jul 2008 14:02:21 +0000</lastBuildDate><atom:link href="https://lsvking.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>翻译: 编写具有良好结构的CSS文件</title>
-      <link>http://example.org/300/</link>
+      <link>https://lsvking.github.io/300/</link>
       <pubDate>Mon, 28 Jul 2008 14:02:21 +0000</pubDate>
       
-      <guid>http://example.org/300/</guid>
+      <guid>https://lsvking.github.io/300/</guid>
       <description>&amp;lt;div id=&amp;quot;logo&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;navbar&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;welcome-section&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- Main Content --&amp;gt; &amp;lt;div id=&amp;quot;column_left&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;sidebar&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- Footer --&amp;gt; &amp;lt;div id=&amp;quot;footer&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;  </description>
     </item>
     
     <item>
       <title>常用CSS命名参考</title>
-      <link>http://example.org/107/</link>
+      <link>https://lsvking.github.io/107/</link>
       <pubDate>Sat, 22 Mar 2008 00:31:38 +0000</pubDate>
       
-      <guid>http://example.org/107/</guid>
+      <guid>https://lsvking.github.io/107/</guid>
       <description>在XHTML中定义ID时都用得上，主要是方便CSS定义样式时能一眼看穿。所以，CSS命名仅作参考。
 (1)页面结构类
 容器: container
@@ -73,10 +73,10 @@
     
     <item>
       <title>HTML5的结构和语义——内嵌媒体（五）</title>
-      <link>http://example.org/106/</link>
+      <link>https://lsvking.github.io/106/</link>
       <pubDate>Sun, 09 Mar 2008 14:09:35 +0000</pubDate>
       
-      <guid>http://example.org/106/</guid>
+      <guid>https://lsvking.github.io/106/</guid>
       <description>视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用 Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影 “a Sora in Prospect Park”：
  对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
  autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的 John F. Kennedy 的就职演说。</description>
@@ -84,10 +84,10 @@
     
     <item>
       <title>HTML5的结构和语义——语义性的内联元素（四）</title>
-      <link>http://example.org/105/</link>
+      <link>https://lsvking.github.io/105/</link>
       <pubDate>Sun, 09 Mar 2008 14:04:39 +0000</pubDate>
       
-      <guid>http://example.org/105/</guid>
+      <guid>https://lsvking.github.io/105/</guid>
       <description>HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HTML 5 提供了几个新的内联元素来满足非技术作者的需求。  m
 m 元素表示文本被 “加上标志”，但是不一定要强调。可以把它想像成书中突出显示的一节。Google 的缓存页面就是典型的用例。如果链接到一个缓存的副本，搜索词就被加上标志。例如，如果搜索 “Egret”，那么缓存的 Google 页面可能像下面这样：
 &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; American &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Egret&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;) is a large white wading bird found worldwide.</description>
@@ -95,20 +95,20 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
     
     <item>
       <title>HTML5的结构和语义——语义性的块级元素（三）</title>
-      <link>http://example.org/104/</link>
+      <link>https://lsvking.github.io/104/</link>
       <pubDate>Sun, 09 Mar 2008 13:59:11 +0000</pubDate>
       
-      <guid>http://example.org/104/</guid>
+      <guid>https://lsvking.github.io/104/</guid>
       <description>HTML 5 还增加了一些纯语义性的块级元素： aside figure dialog 我在文章和书中一直使用前两个元素。第三个元素我不经常用，它主要用于书面文本。 aside aside 元素代表说明、提示、边栏、引用、附加注释等，也就是叙述主线之外的内容。例如，在 developerWorks 文章中，常常会看到用表格形式编写的边栏，见代码3 用 HTML 4 编写的 developerWorks 边栏。
 &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;10&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;img&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;alt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;src&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;//www.</description>
     </item>
     
     <item>
       <title>HTML5的结构和语义——结构</title>
-      <link>http://example.org/103/</link>
+      <link>https://lsvking.github.io/103/</link>
       <pubDate>Sun, 09 Mar 2008 13:53:25 +0000</pubDate>
       
-      <guid>http://example.org/103/</guid>
+      <guid>https://lsvking.github.io/103/</guid>
       <description>转载 52CSS
  由于缺少结构，即使是形式良好的 HTML 页面也比较难以处理。必须分析标题的级别，才能看出各个部分的划分方式。边栏、页脚、页眉、导航条、主内容区和各篇文章都由通用的 div 元素来表示。HTML 5 添加了一些新元素，专门用来标识这些常见的结构： · section：这可以是书中的一章或一节，实际上可以是在 HTML 4 中有自己的标题的任何东西 · header：页面上显示的页眉；与 head 元素不一样 · footer：页脚；可以显示电子邮件中的签名 · nav：指向其他页面的一组链接 · article：blog、杂志、文章汇编等中的一篇文章 我们来考虑一个典型的 blog 主页，它的顶部有页眉，底部有页脚，还有几篇文章、一个导航区和一个边栏，见代码
  1 典型的 blog 页面
@@ -117,10 +117,10 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
     
     <item>
       <title>HTML 5.0 新一代的HTML标准~</title>
-      <link>http://example.org/95/</link>
+      <link>https://lsvking.github.io/95/</link>
       <pubDate>Mon, 25 Feb 2008 21:27:04 +0000</pubDate>
       
-      <guid>http://example.org/95/</guid>
+      <guid>https://lsvking.github.io/95/</guid>
       <description>新千年以来，超文本标记语言（HTML）5 第一次向 HTML 中引入新的元素。新的结构元素包括 aside、figure 和section。新的内联元素包括time、meter和progress。新的内嵌元素有 video 和 audio。新的交互元素有 details、datagrid 和command
 超文本标记语言（HTML）的开发到 1999 年 HTML 4 就停止了。万维网联盟（W3C）把重点转向将 HTML 的底层语法从标准通用标记语言（SGML）改为可扩展标记语言（XML），以及可缩放向量图型（SVG）、XForms 和 MathML 这些全新的标记语言。浏览器厂商则把精力放到选项卡和富站点摘要（RSS）阅读器这类浏览器特性上。Web 设计人员开始学习使用异步 JavaScript + XML（Ajax），在现有的框架下通过层叠样式表（CSS）和 JavaScript™ 语言建立自己的应用程序。但是在接下来的八年中，HTML 本身没有任何变化。
  最近，它又复活了。三家重要的浏览器厂商 — Apple、Opera 和 Mozilla Foundation — 成立了 Web Hypertext Application Technology Working Group（WhatWG）来开发传统 HTML 的新版本。最近，W3C 也注意到了这些活动，也启动了自己的新一代 HTML 项目，双方的成员有很多是相同的。这两个项目最终很可能合并。虽然很多细节还在争论之中，但下一版本 HTML 的大体轮廓已经清楚了。
@@ -129,10 +129,10 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
     
     <item>
       <title>CSS Hacks 和 问题解决</title>
-      <link>http://example.org/88/</link>
+      <link>https://lsvking.github.io/88/</link>
       <pubDate>Sat, 23 Feb 2008 13:41:13 +0000</pubDate>
       
-      <guid>http://example.org/88/</guid>
+      <guid>https://lsvking.github.io/88/</guid>
       <description>———————————————————————————————————————————–
 目录  介绍 针对浏览器的选择器 让IE6支持PNG透明 移除超链接的虚线 给行内元素定义宽度 让固定宽度的页面居中 图片替换技术 最小宽度 隐藏水平滚动条  ———————————————————————————————————————————–
 一. 介绍 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.

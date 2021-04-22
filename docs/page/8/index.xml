@@ -1,24 +1,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
-    <link>http://example.org/</link>
+    <link>https://lsvking.github.io/</link>
     <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
     
-        <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lsvking.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（三）【Channel 标记使用实例】</title>
-        <link>http://example.org/125/</link>
+        <link>https://lsvking.github.io/125/</link>
         <pubDate>Sat, 22 Mar 2008 18:03:48 +0000</pubDate>
         
-        <guid>http://example.org/125/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/125/ -&lt;!-- raw HTML omitted --&gt;
+        <guid>https://lsvking.github.io/125/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/125/ -&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分“type = top,sun/son,self ”的所调用的对象就行了。&lt;br&gt;
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
@@ -43,18 +43,18 @@
 {/dede:channel}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image003-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
-- http://example.org/125/ - This is a customized copyright.</description>
+- https://lsvking.github.io/125/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（二）【Field 标记使用实例】</title>
-        <link>http://example.org/118/</link>
+        <link>https://lsvking.github.io/118/</link>
         <pubDate>Sat, 22 Mar 2008 17:54:06 +0000</pubDate>
         
-        <guid>http://example.org/118/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/118/ -&lt;p&gt;【Field 标记】在封面模板、列表模板、文档模板的使用频率很高，实用。主要用来获得到系统变量的值或者路径，用法很灵活。可以直接展示数据，如调用 position，得到栏目一 &amp;gt; 栏目二” 这样形式的链接；或者，调用templeturl得到/templets这样路径。&lt;br&gt;
+        <guid>https://lsvking.github.io/118/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/118/ -&lt;p&gt;【Field 标记】在封面模板、列表模板、文档模板的使用频率很高，实用。主要用来获得到系统变量的值或者路径，用法很灵活。可以直接展示数据，如调用 position，得到栏目一 &amp;gt; 栏目二” 这样形式的链接；或者，调用templeturl得到/templets这样路径。&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
 我们在使用【Field 标记】的过程中，必须明确其使用的范围，否则可能无法正常调用该标签，其使用范围是：&lt;br&gt;
@@ -86,18 +86,18 @@
 &lt;!-- raw HTML omitted --&gt;织梦论坛&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
-- http://example.org/118/ - This is a customized copyright.</description>
+- https://lsvking.github.io/118/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（一）【Arclist 标记使用实例】</title>
-        <link>http://example.org/109/</link>
+        <link>https://lsvking.github.io/109/</link>
         <pubDate>Sat, 22 Mar 2008 17:36:00 +0000</pubDate>
         
-        <guid>http://example.org/109/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/109/ -&lt;p&gt;从本文开始，我将根据我的学习心得写一系列的实例教程。通过实例说明DedeCMS标记的使用方法。本实例教程使用的版本是DedeCms 2007 V5.0版，在本地架设的php+mysql （APMServ）环境中测试。安装、架设等相关方法参阅寂寞天涯的整理：&lt;a href=&#34;http://bbs.dedecms.com/read.php?tid=33332&#34;&gt;http://bbs.dedecms.com/read.php?tid=33332&lt;/a&gt;。以后一系列教程都是在这个环境中使用，不再重复。因测试需要数据，我已事先在数据库录入，就不理啰嗦，马上进入正题。&lt;br&gt;
+        <guid>https://lsvking.github.io/109/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/109/ -&lt;p&gt;从本文开始，我将根据我的学习心得写一系列的实例教程。通过实例说明DedeCMS标记的使用方法。本实例教程使用的版本是DedeCms 2007 V5.0版，在本地架设的php+mysql （APMServ）环境中测试。安装、架设等相关方法参阅寂寞天涯的整理：&lt;a href=&#34;http://bbs.dedecms.com/read.php?tid=33332&#34;&gt;http://bbs.dedecms.com/read.php?tid=33332&lt;/a&gt;。以后一系列教程都是在这个环境中使用，不再重复。因测试需要数据，我已事先在数据库录入，就不理啰嗦，马上进入正题。&lt;br&gt;
 现在先讲【Arclist 标记】。【Arclist 标记】是使用率很高，相当实用，所以我们使用都必须熟练掌握。它的详细使用说明在官方Dedecms文档中已经有严密的解释，见：&lt;a href=&#34;http://www.dedecms.com/archives/templethelp/help/index.htm&#34;&gt;http://www.dedecms.com/archives/templethelp/help/index.htm&lt;/a&gt;，我们在使用过程中可以随时查阅。&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
@@ -137,18 +137,18 @@ imgwidth=’100′ imgheight=’80’}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 如上例，其它的别名标记，朋友们可以举一反三，融会贯通！&lt;/p&gt;
-- http://example.org/109/ - This is a customized copyright.</description>
+- https://lsvking.github.io/109/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程  序</title>
-        <link>http://example.org/108/</link>
+        <link>https://lsvking.github.io/108/</link>
         <pubDate>Sat, 22 Mar 2008 17:21:34 +0000</pubDate>
         
-        <guid>http://example.org/108/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/108/ -&lt;p&gt;1、怎样调用数据？&lt;br&gt;
+        <guid>https://lsvking.github.io/108/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/108/ -&lt;p&gt;1、怎样调用数据？&lt;br&gt;
     DedeCMS是大型的动态网站程序，其数据主要在存储在数据库中的，做模板就必须知道，数据是如何从数据库读取并展示在大家面前的。官方写了很多程序，将数据的提取过程变得相当简单。大家只要懂得调用适当的&amp;quot;DedeCMS标记&amp;quot;就可以调取相应的数据。调用&amp;quot;DedeCMS标记&amp;quot;的三种代码样式：&lt;br&gt;
     A、{dede:标记名称 属性=’值’/}&lt;br&gt;
     B、{dede:标记名称 属性=’值’}{/dede:标记名称}&lt;br&gt;
@@ -198,18 +198,18 @@ imgwidth=’100′ imgheight=’80’}&lt;br&gt;
   本教程适合超级菜鸟，高手飘过！&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;原作者&lt;a href=&#34;http://bbs.dedecms.com/profile.php?action=show&amp;amp;uid=26029&#34;&gt;wwwlikespcn&lt;/a&gt;&lt;/p&gt;
-- http://example.org/108/ - This is a customized copyright.</description>
+- https://lsvking.github.io/108/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>常用CSS命名参考</title>
-        <link>http://example.org/107/</link>
+        <link>https://lsvking.github.io/107/</link>
         <pubDate>Sat, 22 Mar 2008 00:31:38 +0000</pubDate>
         
-        <guid>http://example.org/107/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/107/ -&lt;p&gt;在XHTML中定义ID时都用得上，主要是方便CSS定义样式时能一眼看穿。所以，CSS命名仅作参考。&lt;/p&gt;
+        <guid>https://lsvking.github.io/107/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/107/ -&lt;p&gt;在XHTML中定义ID时都用得上，主要是方便CSS定义样式时能一眼看穿。所以，CSS命名仅作参考。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(1)页面结构类&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;容器: container&lt;/p&gt;
 &lt;p&gt;页头：header&lt;/p&gt;
@@ -268,18 +268,18 @@ imgwidth=’100′ imgheight=’80’}&lt;br&gt;
 &lt;p&gt;合作伙伴： partner&lt;/p&gt;
 &lt;p&gt;投票： vote&lt;/p&gt;
 &lt;p&gt;tag:css\web标准&lt;/p&gt;
-- http://example.org/107/ - This is a customized copyright.</description>
+- https://lsvking.github.io/107/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>HTML5的结构和语义——内嵌媒体（五）</title>
-        <link>http://example.org/106/</link>
+        <link>https://lsvking.github.io/106/</link>
         <pubDate>Sun, 09 Mar 2008 14:09:35 +0000</pubDate>
         
-        <guid>http://example.org/106/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/106/ -&lt;p&gt;  视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用  Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影  “a Sora in Prospect Park”：&lt;/p&gt;
+        <guid>https://lsvking.github.io/106/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/106/ -&lt;p&gt;  视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用  Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影  “a Sora in Prospect Park”：&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;    对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和  MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了  BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。  &lt;br&gt;
 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：&lt;/p&gt;
@@ -347,18 +347,18 @@ imgwidth=’100′ imgheight=’80’}&lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;转载自:&lt;a href=&#34;http://52CSS.com&#34;&gt;52CSS&lt;/a&gt;&lt;/p&gt;
-- http://example.org/106/ - This is a customized copyright.</description>
+- https://lsvking.github.io/106/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>HTML5的结构和语义——语义性的内联元素（四）</title>
-        <link>http://example.org/105/</link>
+        <link>https://lsvking.github.io/105/</link>
         <pubDate>Sun, 09 Mar 2008 14:04:39 +0000</pubDate>
         
-        <guid>http://example.org/105/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/105/ -&lt;p&gt;HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HTML 5 提供了几个新的内联元素来满足非技术作者的需求。 &lt;br&gt;
+        <guid>https://lsvking.github.io/105/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/105/ -&lt;p&gt;HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HTML 5 提供了几个新的内联元素来满足非技术作者的需求。 &lt;br&gt;
 &lt;strong&gt;   m&lt;/strong&gt;&lt;br&gt;
 m 元素表示文本被 “加上标志”，但是不一定要强调。可以把它想像成书中突出显示的一节。Google 的缓存页面就是典型的用例。如果链接到一个缓存的副本，搜索词就被加上标志。例如，如果搜索 “Egret”，那么缓存的 Google 页面可能像下面这样：&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -423,18 +423,18 @@ optimum &lt;br&gt;
 忽略 max 属性，就可以显示无限的进度。 &lt;br&gt;
 在操作进行时，应该使用 JavaScript 语言动态地更新进度条。在静态情况下，这个元素没什么意义。&lt;/p&gt;
 &lt;p&gt;转载自:&lt;a href=&#34;http://52CSS.com&#34;&gt;52CSS&lt;/a&gt;&lt;/p&gt;
-- http://example.org/105/ - This is a customized copyright.</description>
+- https://lsvking.github.io/105/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>HTML5的结构和语义——语义性的块级元素（三）</title>
-        <link>http://example.org/104/</link>
+        <link>https://lsvking.github.io/104/</link>
         <pubDate>Sun, 09 Mar 2008 13:59:11 +0000</pubDate>
         
-        <guid>http://example.org/104/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/104/ -&lt;p&gt;     HTML 5 还增加了一些纯语义性的块级元素： &lt;br&gt;
+        <guid>https://lsvking.github.io/104/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/104/ -&lt;p&gt;     HTML 5 还增加了一些纯语义性的块级元素： &lt;br&gt;
 &lt;strong&gt;aside figure  dialog&lt;/strong&gt; &lt;br&gt;
 我在文章和书中一直使用前两个元素。第三个元素我不经常用，它主要用于书面文本。 &lt;br&gt;
 &lt;strong&gt;aside&lt;/strong&gt; &lt;br&gt;
@@ -647,18 +647,18 @@ aside 元素代表说明、提示、边栏、引用、附加注释等，也就�
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-- http://example.org/104/ - This is a customized copyright.</description>
+- https://lsvking.github.io/104/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>HTML5的结构和语义——结构</title>
-        <link>http://example.org/103/</link>
+        <link>https://lsvking.github.io/103/</link>
         <pubDate>Sun, 09 Mar 2008 13:53:25 +0000</pubDate>
         
-        <guid>http://example.org/103/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/103/ -&lt;p&gt;转载 &lt;a href=&#34;http://www.52css.com/article.asp?id=672&#34;&gt;52CSS&lt;/a&gt;&lt;/p&gt;
+        <guid>https://lsvking.github.io/103/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/103/ -&lt;p&gt;转载 &lt;a href=&#34;http://www.52css.com/article.asp?id=672&#34;&gt;52CSS&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;    由于缺少结构，即使是形式良好的 HTML 页面也比较难以处理。必须分析标题的级别，才能看出各个部分的划分方式。边栏、页脚、页眉、导航条、主内容区和各篇文章都由通用的 div 元素来表示。HTML 5 添加了一些新元素，专门用来标识这些常见的结构：  &lt;br&gt;
 · section：这可以是书中的一章或一节，实际上可以是在 HTML 4 中有自己的标题的任何东西  &lt;br&gt;
 · header：页面上显示的页眉；与 head 元素不一样  &lt;br&gt;
@@ -842,25 +842,25 @@ aside 元素代表说明、提示、边栏、引用、附加注释等，也就�
 &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt;  19:&amp;lt;/span&amp;gt;         the site at 7:30 A.M., progressed to Spring around 10:00&amp;lt;/pre&amp;gt;
 &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; b
 &lt;/code&gt;&lt;/pre&gt;
-- http://example.org/103/ - This is a customized copyright.</description>
+- https://lsvking.github.io/103/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>LanQQ – 飞鸽传输增加版</title>
-        <link>http://example.org/100/</link>
+        <link>https://lsvking.github.io/100/</link>
         <pubDate>Thu, 06 Mar 2008 20:28:33 +0000</pubDate>
         
-        <guid>http://example.org/100/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/100/ -&lt;p&gt;          LanQQ 修改自十分著名的飞鸽传输，在原传输功能基础上，增加了添加好友，聊天室等功能。俨然一个局域网版本的 QQ 聊天加文件传输工具。&lt;/p&gt;
+        <guid>https://lsvking.github.io/100/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/100/ -&lt;p&gt;          LanQQ 修改自十分著名的飞鸽传输，在原传输功能基础上，增加了添加好友，聊天室等功能。俨然一个局域网版本的 QQ 聊天加文件传输工具。&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-- http://example.org/100/ - This is a customized copyright.</description>
+- https://lsvking.github.io/100/ - This is a customized copyright.</description>
         </item>
     
     

@@ -1,24 +1,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
-    <link>http://example.org/</link>
+    <link>https://lsvking.github.io/</link>
     <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
     
-        <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lsvking.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（十四）【Prenext 标记 标记使用实例】</title>
-        <link>http://example.org/160/</link>
+        <link>https://lsvking.github.io/160/</link>
         <pubDate>Sat, 22 Mar 2008 21:08:15 +0000</pubDate>
         
-        <guid>http://example.org/160/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/160/ -&lt;p&gt;【Prenext 标记】表示获取文档“上一篇／下一篇”的链接列表。&lt;br&gt;
+        <guid>https://lsvking.github.io/160/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/160/ -&lt;p&gt;【Prenext 标记】表示获取文档“上一篇／下一篇”的链接列表。&lt;br&gt;
 适用范围：仅文档模板。&lt;br&gt;
 通过调试了解其使用方法&lt;br&gt;
 我调试的方法是：&lt;br&gt;
@@ -30,18 +30,18 @@
 {dede:prenext/} &lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
-- http://example.org/160/ - This is a customized copyright.</description>
+- https://lsvking.github.io/160/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（十三）【Pagebreak 标记使用实例】</title>
-        <link>http://example.org/157/</link>
+        <link>https://lsvking.github.io/157/</link>
         <pubDate>Sat, 22 Mar 2008 20:49:16 +0000</pubDate>
         
-        <guid>http://example.org/157/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/157/ -&lt;p&gt;【Pagebreak 标记】表示文档的分页链接列表。&lt;br&gt;
+        <guid>https://lsvking.github.io/157/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/157/ -&lt;p&gt;【Pagebreak 标记】表示文档的分页链接列表。&lt;br&gt;
 适用范围：仅文档模板。&lt;br&gt;
 通过调试了解其使用方法&lt;br&gt;
 我调试的方法是：&lt;br&gt;
@@ -53,36 +53,36 @@
 得到如下返回数据：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。&lt;/p&gt;
-- http://example.org/157/ - This is a customized copyright.</description>
+- https://lsvking.github.io/157/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（十二）【Pagelist 标记使用实例】</title>
-        <link>http://example.org/154/</link>
+        <link>https://lsvking.github.io/154/</link>
         <pubDate>Sat, 22 Mar 2008 20:44:49 +0000</pubDate>
         
-        <guid>http://example.org/154/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/154/ -&lt;p&gt;【Pagelist 标记】表示分页页码列表&lt;br&gt;
+        <guid>https://lsvking.github.io/154/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/154/ -&lt;p&gt;【Pagelist 标记】表示分页页码列表&lt;br&gt;
 适用范围：列表模板&lt;br&gt;
 通过调试了解其使用方法&lt;br&gt;
 我调试的方法是：&lt;br&gt;
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新栏目HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。&lt;br&gt;
 我调试【Pagelist 标记】的具体代码如下：&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-- http://example.org/154/ - This is a customized copyright.</description>
+- https://lsvking.github.io/154/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（十）【Channelartlist 标记 使用实例】</title>
-        <link>http://example.org/151/</link>
+        <link>https://lsvking.github.io/151/</link>
         <pubDate>Sat, 22 Mar 2008 20:38:28 +0000</pubDate>
         
-        <guid>http://example.org/151/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/151/ -&lt;p&gt;【Channelartlist 标记】用于获取当前频道的下级栏目的内容列表。该标记在封面模板（包括主页）中的经常被用到，具体用法见下面实例。&lt;br&gt;
+        <guid>https://lsvking.github.io/151/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/151/ -&lt;p&gt;【Channelartlist 标记】用于获取当前频道的下级栏目的内容列表。该标记在封面模板（包括主页）中的经常被用到，具体用法见下面实例。&lt;br&gt;
 除了宏标记外，channelArtlist 是唯一一个可以直接嵌套其它标记的标记，不过仅限于嵌套 {dede:type}{/dede:type} 和 {dede:arclist}{/dede:arclist} 两个标记。&lt;br&gt;
 通过调试了解其使用方法&lt;br&gt;
 我调试的方法是：&lt;br&gt;
@@ -91,18 +91,18 @@
 我调试【Channelartlist 标记】的具体代码如下：&lt;br&gt;
 {dede:channelArtlist typeid=&amp;ldquo;94&amp;rdquo; col=&amp;ldquo;1&amp;rdquo;}&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-- http://example.org/151/ - This is a customized copyright.</description>
+- https://lsvking.github.io/151/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（九）【Mynews 标记 使用实例】</title>
-        <link>http://example.org/145/</link>
+        <link>https://lsvking.github.io/145/</link>
         <pubDate>Sat, 22 Mar 2008 20:06:15 +0000</pubDate>
         
-        <guid>http://example.org/145/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/145/ -&lt;p&gt;【Mynews 标记】用于获取站内新闻。&lt;br&gt;
+        <guid>https://lsvking.github.io/145/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/145/ -&lt;p&gt;【Mynews 标记】用于获取站内新闻。&lt;br&gt;
 站内新闻有利于站长及时与会员沟通。&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
@@ -119,18 +119,18 @@
 {/dede:mynews}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsmynews-119fdclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
-- http://example.org/145/ - This is a customized copyright.</description>
+- https://lsvking.github.io/145/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（八）【Flink 标记使用实例】</title>
-        <link>http://example.org/142/</link>
+        <link>https://lsvking.github.io/142/</link>
         <pubDate>Sat, 22 Mar 2008 20:04:25 +0000</pubDate>
         
-        <guid>http://example.org/142/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/142/ -&lt;p&gt;【Flink 标记】用于获取友情链接。&lt;br&gt;
+        <guid>https://lsvking.github.io/142/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/142/ -&lt;p&gt;【Flink 标记】用于获取友情链接。&lt;br&gt;
 调用该标记后可以得到四种友情链接的形式。&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
@@ -148,18 +148,18 @@
 仅显示带Logo的链接：{dede:flink type=’image’ row=’4’  titlelen=’20’}{/dede:flink}&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsflink-11971clip-image003-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
-- http://example.org/142/ - This is a customized copyright.</description>
+- https://lsvking.github.io/142/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（七）【Vote 标记使用实例】</title>
-        <link>http://example.org/137/</link>
+        <link>https://lsvking.github.io/137/</link>
         <pubDate>Sat, 22 Mar 2008 19:29:03 +0000</pubDate>
         
-        <guid>http://example.org/137/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/137/ -&lt;p&gt;【Vote 标记】用于获取一组投票表单。&lt;br&gt;
+        <guid>https://lsvking.github.io/137/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/137/ -&lt;p&gt;【Vote 标记】用于获取一组投票表单。&lt;br&gt;
 其使用范围限于：封面模板。&lt;br&gt;
 可先进入后台，按下面操作方法填写好调查内容：&lt;br&gt;
 辅助插件–&amp;gt;投票模块–&amp;gt;增加一组投票&lt;br&gt;
@@ -173,18 +173,18 @@ titlebackground=” tablebgcolor=’#FFFFFF’}&lt;br&gt;
 {/dede:vote}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmsvote-1114fclip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
-- http://example.org/137/ - This is a customized copyright.</description>
+- https://lsvking.github.io/137/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（六）【Mytag 标记使用实例】</title>
-        <link>http://example.org/134/</link>
+        <link>https://lsvking.github.io/134/</link>
         <pubDate>Sat, 22 Mar 2008 19:20:13 +0000</pubDate>
         
-        <guid>http://example.org/134/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/134/ -&lt;p&gt;自定义宏标记【Mytag 标记】的作用：&lt;br&gt;
+        <guid>https://lsvking.github.io/134/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/134/ -&lt;p&gt;自定义宏标记【Mytag 标记】的作用：&lt;br&gt;
   可以将模板中多次出现的相同元素用一个自定义标记表示出来，从而达到，一次更改，全局更换的效果。辅助插件的广告管理也有相似的效果。&lt;/p&gt;
 &lt;p&gt;今天天涯来介绍下自定义宏标记的应用，大家可以进入后台，在“模板管理”-》“自定义宏标记”中查看到该选项。&lt;br&gt;
 自定义宏标记的作用：&lt;br&gt;
@@ -209,34 +209,34 @@ titlebackground=” tablebgcolor=’#FFFFFF’}&lt;br&gt;
 具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&amp;lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;br&gt;
 我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。&lt;br&gt;
 怎么样，自定义宏标记内容强大吧，相信他的引入会给你的模板制作带来更好的效果。&lt;/p&gt;
-- http://example.org/134/ - This is a customized copyright.</description>
+- https://lsvking.github.io/134/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（五）【Autochannel 标记使用实例】</title>
-        <link>http://example.org/131/</link>
+        <link>https://lsvking.github.io/131/</link>
         <pubDate>Sat, 22 Mar 2008 19:16:50 +0000</pubDate>
         
-        <guid>http://example.org/131/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/131/ -&lt;p&gt;{dede:autochannel partsort=’1’/}&lt;/p&gt;
+        <guid>https://lsvking.github.io/131/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/131/ -&lt;p&gt;{dede:autochannel partsort=’1’/}&lt;/p&gt;
 &lt;p&gt;{dede:channel typeid=’1′} [field:typename/] {/dede:channel}&lt;/p&gt;
 &lt;p&gt;{dede:autolist row=12 titlelen=38 orderby=pubdate partsort=’1′}&lt;/p&gt;
 &lt;p&gt;[field:textlink/] {/dede:autolist}&lt;/p&gt;
 &lt;p&gt;autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排列顺序为某位置，它是栏目排列的位置，不是ID，这样的好处是，没有某个ID，只要有足够的栏目，也会显示内容，这个标记如果加了 typeid，则变成获取特定栏目的子栏目的这个排序位置的内容了&lt;/p&gt;
-- http://example.org/131/ - This is a customized copyright.</description>
+- https://lsvking.github.io/131/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>DedeCMS模板制作使用实例教程（四）【Type 标记使用实例】</title>
-        <link>http://example.org/130/</link>
+        <link>https://lsvking.github.io/130/</link>
         <pubDate>Sat, 22 Mar 2008 18:28:03 +0000</pubDate>
         
-        <guid>http://example.org/130/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 http://example.org/130/ -&lt;p&gt;【Type 标记】表示指定的单个栏目的链接，用法非常简单。&lt;br&gt;
+        <guid>https://lsvking.github.io/130/</guid>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/130/ -&lt;p&gt;【Type 标记】表示指定的单个栏目的链接，用法非常简单。&lt;br&gt;
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmstype-102f8clip-image001-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
@@ -256,7 +256,7 @@ titlebackground=” tablebgcolor=’#FFFFFF’}&lt;br&gt;
 得到如下返回数据：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.longshe.net/wp-content/uploads/2008/03/windowslivewriterdedecmstype-102f8clip-image002-2.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
 通过以上两行代码的对比，相信你的认识会更深刻。前者是生成单一的数据，后者通过数组生成一组的数据。&lt;/p&gt;
-- http://example.org/130/ - This is a customized copyright.</description>
+- https://lsvking.github.io/130/ - This is a customized copyright.</description>
         </item>
     
     
