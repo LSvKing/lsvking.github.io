@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>技术 on 龙舍·嬴皇志</title>
-    <link>https://lsvking.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
+    <link>https://www.lsvking.com/categories/%E6%8A%80%E6%9C%AF/</link>
     <description>Recent content in 技术 on 龙舍·嬴皇志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate><atom:link href="https://lsvking.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate><atom:link href="https://www.lsvking.com/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MongoDB用mongoimport 导入大文件报错解决方案</title>
-      <link>https://lsvking.github.io/1152/</link>
+      <link>https://www.lsvking.com/1152/</link>
       <pubDate>Mon, 05 Sep 2016 15:41:13 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/1152/</guid>
+      <guid>https://www.lsvking.com/1152/</guid>
       <description>用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的文件，大的数据迁移都是用的restore导入的。这次遇到一次数据迁移导出的json 文件大概有4.7G左右,再倒入的时候出现了问题
 mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat
 却出现了如下的错误提示
@@ -25,10 +25,10 @@ mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat --batchSize 1
     
     <item>
       <title>vagrant 打包box时候提示 “VM not created. Moving on…”</title>
-      <link>https://lsvking.github.io/1134/</link>
+      <link>https://www.lsvking.com/1134/</link>
       <pubDate>Thu, 13 Nov 2014 09:48:10 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/1134/</guid>
+      <guid>https://www.lsvking.com/1134/</guid>
       <description>在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。
 vagrant package --base ubuntu --output ubuntu.box ubuntu: VM not created. Moving on...  
 名称要完全一样，大小写也要一样哦。折腾了半天，也是醉了。。</description>
@@ -36,10 +36,10 @@ vagrant package --base ubuntu --output ubuntu.box ubuntu: VM not created. Moving
     
     <item>
       <title>VirtualBox OS X Mavericks 分辨率修改</title>
-      <link>https://lsvking.github.io/951/</link>
+      <link>https://www.lsvking.com/951/</link>
       <pubDate>Wed, 30 Jul 2014 10:16:11 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/951/</guid>
+      <guid>https://www.lsvking.com/951/</guid>
       <description>需要开启EFI模式 然后在命令行下 VirtualBox目录 输入一下命令：
 VBoxManage setextradata &amp;quot;虚拟机名称&amp;quot; VBoxInternal2/EfiGopMode N
 其中 N 可以是 0,1,2,3,4,5 其中一个，分别代表 640×480, 800×600, 1024×768, 1280×1024, 1440×900, 1920×1200 几种分辨率</description>
@@ -47,10 +47,10 @@ VBoxManage setextradata &amp;quot;虚拟机名称&amp;quot; VBoxInternal2/EfiGop
     
     <item>
       <title>利用cloudHQ在网盘间快速拷贝和同步文件</title>
-      <link>https://lsvking.github.io/944/</link>
+      <link>https://www.lsvking.com/944/</link>
       <pubDate>Wed, 12 Mar 2014 17:11:16 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/944/</guid>
+      <guid>https://www.lsvking.com/944/</guid>
       <description>现在网盘服务越来越多，可能不少人都拥有多个网盘。有时需要将一个网盘的文件转移到另一个网盘，我们一般会现将源文件从网盘下载到本地，然后再上传到另一个网盘。每个文件都需要经过本地中转，如果文件数目多或体积大，加上国内网速不给力，这个操作将非常耗时。拷贝操作尚且如此麻烦，网盘间文件的同步操作就更繁琐了。 幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务：
 1、网盘综合管理，你可以将常用的网盘添加到cloudHQ，通过cloudHQ管理所有网盘的文件；
 2、网盘间文件拷贝/移动；
@@ -63,10 +63,10 @@ cloudHQ的同步速度还是不错的，我从Dropbox同步了7G的数据共6000
     
     <item>
       <title>【转发】关于MySQL表设计应该注意的问题</title>
-      <link>https://lsvking.github.io/921/</link>
+      <link>https://www.lsvking.com/921/</link>
       <pubDate>Wed, 09 Mar 2011 06:39:56 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/921/</guid>
+      <guid>https://www.lsvking.com/921/</guid>
       <description>如有错误欢迎大家指出。这段时间在家里，做了点修正。
 1、慎重选择表名。
 有两种选择：
@@ -106,10 +106,10 @@ I. 关于ZEROFILL。非常好用的前置填补0的存储，而不是用用对�
     
     <item>
       <title>用CI的 AR类进行 跨库关联查操作</title>
-      <link>https://lsvking.github.io/917/</link>
+      <link>https://www.lsvking.com/917/</link>
       <pubDate>Tue, 26 Oct 2010 05:15:49 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/917/</guid>
+      <guid>https://www.lsvking.com/917/</guid>
       <description>比较早写的东西了,发现博客很急没更新了发过来充数。。。
 最近在写套系统，上来就遇到麻烦了，具体情况就不说了，大概就是 A 库里有张表 写了一些用户信息，B 库是另外一个库，里边有张表记录了一些充值信息， 然后A 表里的用户有个字段是B表里没有的，但却是查询条件，所以要用到表关联。这个逻辑大家都清楚，主要是这两个表分布在了不同的数据库中，需要用到跨库表关联，这个在MYSQL里边是可以实现的，现在需要用CI 的AR类来实现，好下边给出解决方法，期间我走的弯路就不说了，希望能够帮助大家，让大家少走弯路。
 &amp;lt;br /&amp;gt; //多表信息查询//&amp;lt;br /&amp;gt; function cps_pay_in_dede(){
@@ -120,19 +120,19 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
     
     <item>
       <title>68KB Knowledge Base 中文语言文件</title>
-      <link>https://lsvking.github.io/905/</link>
+      <link>https://www.lsvking.com/905/</link>
       <pubDate>Wed, 28 Apr 2010 08:38:41 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/905/</guid>
+      <guid>https://www.lsvking.com/905/</guid>
       <description>68KB Knowledge Base 是一款类似于FAQ等知识库类的PHP开源程序，基于Codeigniter开源框架编写的，我制作了个中文版的语言文件，有些地方难免有些生硬，请指出。</description>
     </item>
     
     <item>
       <title>谈谈HMVC。。。。</title>
-      <link>https://lsvking.github.io/794/</link>
+      <link>https://www.lsvking.com/794/</link>
       <pubDate>Mon, 21 Dec 2009 05:32:52 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/794/</guid>
+      <guid>https://www.lsvking.com/794/</guid>
       <description>&lt;p&gt;最近在写东西，看到有些HMVC的教程，于是就花了些时间去了解了一下，下边就来谈一谈。&lt;/p&gt;
 &lt;p&gt;HMVC(Hierarchical-Model-View-Controller)，故名思意，就是按等级划分的MVC模式，MVC我想不必多解释了，至于什么叫做按等级划分的，我们来看几张图就明白了。&lt;/p&gt;
 &lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-797&#34; title=&#34;jw0721hmvc1&#34; src=&#34;http://lsvking.github.io/wp-content/uploads/2009/12/jw0721hmvc14.gif&#34; alt=&#34;jw0721hmvc1&#34; width=&#34;425&#34; height=&#34;264&#34; /&gt;&lt;/p&gt;</description>
@@ -140,10 +140,10 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
     
     <item>
       <title>彻底优化让Firefox不再卡</title>
-      <link>https://lsvking.github.io/327/</link>
+      <link>https://www.lsvking.com/327/</link>
       <pubDate>Fri, 14 Nov 2008 14:45:06 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/327/</guid>
+      <guid>https://www.lsvking.com/327/</guid>
       <description>&lt;p&gt;Firefox是Linux用户首选的浏览器，对其不作过多的介绍。只要看看LDCN的访客留言就知道他的流行程度了。&lt;/p&gt;
 &lt;p&gt;Firefox虽然是一款优秀的浏览器，但是不免还有些不足。对我而言，最大的不足就是其性能，简单的说，刚开始用很流畅，用久了，会越用越卡。&lt;/p&gt;
 &lt;p&gt;今天琢磨了一下Firefox，分析下Firefox卡的原因，并通过设定相关参数解决了这个问题。从此上网变得更加畅快！&lt;/p&gt;
@@ -161,10 +161,10 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
     
     <item>
       <title>CSS技巧补遗二十四则</title>
-      <link>https://lsvking.github.io/308/</link>
+      <link>https://www.lsvking.com/308/</link>
       <pubDate>Thu, 31 Jul 2008 12:36:45 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/308/</guid>
+      <guid>https://www.lsvking.com/308/</guid>
       <description>在CSS网页布局开发中，会有很多小技巧，新手朋友往往对此很不熟悉。在某一两个小问题上，或许纠缠很长时间才能搞明白，虽然在52CSS.com的文档 中，多次提及过这方面的内容，但依然有很多朋友在这些问题上犯错。我们今天看看这些CSS技巧，认真读一读，或许您并不能完全理解，您可以在 52CSS.com进行搜索，扩展您所想要得到的知识，相信您会有很多收获！
 一、ul标签在Mozilla中默认是有padding值的，而在IE中只有margin有值。
 二、同一个的class选择符可以在一个文档中重复出现，而id选择符却只能出现一次。对一个标签同时使用class和id进行CSS定义，如果定义有重复，id选择符做的定义有效，是因为id的权重要比class大。
@@ -212,39 +212,39 @@ sRules：样式表定义
     
     <item>
       <title>为simple-tags添加多彩标签云</title>
-      <link>https://lsvking.github.io/283/</link>
+      <link>https://www.lsvking.com/283/</link>
       <pubDate>Tue, 22 Jul 2008 13:00:18 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/283/</guid>
+      <guid>https://www.lsvking.com/283/</guid>
       <description> 此方法来自偶爱偶家。   言归正传， 首先我的修改是针对 simple tags 这个插件的， 其他的我就不说了， 你可以参照这里的方法自己研究。   1、在simple-tags.client.php文件中查找该语句  function getColorByScale($scale_color, $min_color, $max_color)  2、注释掉上述函数中的以下语句（其实不注释掉也是无所谓的）  $scale_color = $scale_color / 100; $minr = hexdec(substr($min_color, 1, 2)); $ming = hexdec(substr($min_color, 3, 2)); $minb = hexdec(substr($min_color, 5, 2)); $maxr = hexdec(substr($max_color, 1, 2)); $maxg = hexdec(substr($max_color, 3, 2)); $maxb = hexdec(substr($max_color, 5, 2)); $r = dechex(intval((($maxr - $minr) * $scale_color) + $minr)); $g = dechex(intval((($maxg - $ming) * $scale_color) + $ming)); $b = dechex(intval((($maxb - $minb) * $scale_color) + $minb));  3、 在上述被注释掉的语句后增加如下语句（如果没有注释掉就必须加在后面， 否则无效）  //mod by hongfengye start $r = dechex(rand(0,255)); $g = dechex(rand(0,196)); $b = dechex(rand(0,255)); //mod by hongfengye end  是的， 就是这么简单， 现在你应该就可以发现你的标签云(tags cloud)已经是彩色(colorful)的了。 效果图如下：     </description>
     </item>
     
     <item>
       <title>给博客加上每日一句学英语功能！</title>
-      <link>https://lsvking.github.io/262/</link>
+      <link>https://www.lsvking.com/262/</link>
       <pubDate>Sun, 20 Jul 2008 00:26:23 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/262/</guid>
+      <guid>https://www.lsvking.com/262/</guid>
       <description>在本博客右边栏最上边的那个每日一句，当鼠标划过小喇叭还会真人发音，这个其实是用了dict.cn提供的一个小工具，应用起来很简单，将
 Dict.CN 在线词典, 英语学习, 在线翻译   这段代码放到Widgets，文本块里就行了！</description>
     </item>
     
     <item>
       <title>《龟虽寿》-竖文插件。</title>
-      <link>https://lsvking.github.io/237/</link>
+      <link>https://www.lsvking.com/237/</link>
       <pubDate>Fri, 18 Jul 2008 15:08:13 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/237/</guid>
+      <guid>https://www.lsvking.com/237/</guid>
       <description>[shuwen10]神龟虽寿，猷有竟时。腾蛇乘雾，终为土灰。老骥伏枥，志在千里；烈士暮年，壮心不已。盈缩之期，不但在天；养怡之福，可得永年。幸甚至哉！歌以咏志。[/shuwen]
 这个有意思么？哈哈这个是用了轶姐的竖文插件的效果，用的时候有个小插曲，php4的用不来，呵呵！</description>
     </item>
     
     <item>
       <title>WordPress自动升级插件 wordpress automatic upgrade</title>
-      <link>https://lsvking.github.io/229/</link>
+      <link>https://www.lsvking.com/229/</link>
       <pubDate>Fri, 18 Jul 2008 13:44:56 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/229/</guid>
+      <guid>https://www.lsvking.com/229/</guid>
       <description> 今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。
  将下载的文件传到插件目录下，启动插件，一直Next就差不多了，第一步他会备份数据库的，会给出个下载地址，大家最好下载到本地。我升级完后却怎么也登录不上后台了，想了一下清除了下Cookie就OK了。
 他是从官方下载的版本安装的，大家安装完后，自己在去下中文包吧。
@@ -257,10 +257,10 @@ Dict.CN 在线词典, 英语学习, 在线翻译   这段代码放到Widgets，�
     
     <item>
       <title>WordPress 2.6 正式版及中文版发布</title>
-      <link>https://lsvking.github.io/219/</link>
+      <link>https://www.lsvking.com/219/</link>
       <pubDate>Thu, 17 Jul 2008 14:13:51 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/219/</guid>
+      <guid>https://www.lsvking.com/219/</guid>
       <description>对于 WordPress 的爱好者而言，今天又是一个值得庆贺的日子。WordPress 团队刚刚发布了令人期待的 WordPress 2.6 正式版。这是 WordPress 又一个重要的版本。根据此版本，我们 WordPress 中文站制作了相应的 WordPress 2.6 中文版，与 WordPress 中文社区的爱好者来及时分享这一版本。
 WordPress 2.6 中文版下载地址：http://wpchina.org/downloads/
 您也可以从以下地址直接下载：
@@ -279,10 +279,10 @@ http://wordpresschina.googlecode.com/files/wordpress.26.chs.languages.only.tar.g
     
     <item>
       <title>测试wp-t-wap插件</title>
-      <link>https://lsvking.github.io/207/</link>
+      <link>https://www.lsvking.com/207/</link>
       <pubDate>Tue, 22 Apr 2008 15:30:21 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/207/</guid>
+      <guid>https://www.lsvking.com/207/</guid>
       <description>为了给博客增加个wap功能给博客装了个wp-wap在搜索相关信息时无意间出现了一款叫做wp-t-wap得插件，这也是一款使wp实现wap功能得插件，是有wp-wap 修改而来改善了对中文的支持，本文就是用手机发布的，感觉很不错，希望有这方面需求的朋友安装个试试看。
 最信1.6版下载地址
 http://www.tanggaowei.com/2008/01/04/7.html
@@ -292,10 +292,10 @@ e9fbc5f7</description>
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十五）【Pagetitle 标记使用实例】</title>
-      <link>https://lsvking.github.io/165/</link>
+      <link>https://www.lsvking.com/165/</link>
       <pubDate>Sat, 22 Mar 2008 21:13:29 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/165/</guid>
+      <guid>https://www.lsvking.com/165/</guid>
       <description>【Pagetitle 标记】
 功能说明：表示获取文档的分页标题
 适用范围：仅文档模板。
@@ -315,10 +315,10 @@ e9fbc5f7</description>
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十四）【Prenext 标记 标记使用实例】</title>
-      <link>https://lsvking.github.io/160/</link>
+      <link>https://www.lsvking.com/160/</link>
       <pubDate>Sat, 22 Mar 2008 21:08:15 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/160/</guid>
+      <guid>https://www.lsvking.com/160/</guid>
       <description>【Prenext 标记】表示获取文档“上一篇／下一篇”的链接列表。
 适用范围：仅文档模板。
 通过调试了解其使用方法
@@ -333,10 +333,10 @@ e9fbc5f7</description>
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十三）【Pagebreak 标记使用实例】</title>
-      <link>https://lsvking.github.io/157/</link>
+      <link>https://www.lsvking.com/157/</link>
       <pubDate>Sat, 22 Mar 2008 20:49:16 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/157/</guid>
+      <guid>https://www.lsvking.com/157/</guid>
       <description>【Pagebreak 标记】表示文档的分页链接列表。
 适用范围：仅文档模板。
 通过调试了解其使用方法
@@ -353,10 +353,10 @@ e9fbc5f7</description>
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十二）【Pagelist 标记使用实例】</title>
-      <link>https://lsvking.github.io/154/</link>
+      <link>https://www.lsvking.com/154/</link>
       <pubDate>Sat, 22 Mar 2008 20:44:49 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/154/</guid>
+      <guid>https://www.lsvking.com/154/</guid>
       <description>【Pagelist 标记】表示分页页码列表
 适用范围：列表模板
 通过调试了解其使用方法
@@ -368,10 +368,10 @@ e9fbc5f7</description>
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十）【Channelartlist 标记 使用实例】</title>
-      <link>https://lsvking.github.io/151/</link>
+      <link>https://www.lsvking.com/151/</link>
       <pubDate>Sat, 22 Mar 2008 20:38:28 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/151/</guid>
+      <guid>https://www.lsvking.com/151/</guid>
       <description>【Channelartlist 标记】用于获取当前频道的下级栏目的内容列表。该标记在封面模板（包括主页）中的经常被用到，具体用法见下面实例。
 除了宏标记外，channelArtlist 是唯一一个可以直接嵌套其它标记的标记，不过仅限于嵌套 {dede:type}{/dede:type} 和 {dede:arclist}{/dede:arclist} 两个标记。
 通过调试了解其使用方法
@@ -385,10 +385,10 @@ e9fbc5f7</description>
     
     <item>
       <title>DedeCMS模板制作使用实例教程（九）【Mynews 标记 使用实例】</title>
-      <link>https://lsvking.github.io/145/</link>
+      <link>https://www.lsvking.com/145/</link>
       <pubDate>Sat, 22 Mar 2008 20:06:15 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/145/</guid>
+      <guid>https://www.lsvking.com/145/</guid>
       <description>【Mynews 标记】用于获取站内新闻。
 站内新闻有利于站长及时与会员沟通。
 使用思路、步骤：
@@ -405,10 +405,10 @@ e9fbc5f7</description>
     
     <item>
       <title>DedeCMS模板制作使用实例教程（八）【Flink 标记使用实例】</title>
-      <link>https://lsvking.github.io/142/</link>
+      <link>https://www.lsvking.com/142/</link>
       <pubDate>Sat, 22 Mar 2008 20:04:25 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/142/</guid>
+      <guid>https://www.lsvking.com/142/</guid>
       <description>【Flink 标记】用于获取友情链接。
 调用该标记后可以得到四种友情链接的形式。
 使用思路、步骤：
@@ -430,10 +430,10 @@ e9fbc5f7</description>
     
     <item>
       <title>DedeCMS模板制作使用实例教程（七）【Vote 标记使用实例】</title>
-      <link>https://lsvking.github.io/137/</link>
+      <link>https://www.lsvking.com/137/</link>
       <pubDate>Sat, 22 Mar 2008 19:29:03 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/137/</guid>
+      <guid>https://www.lsvking.com/137/</guid>
       <description>【Vote 标记】用于获取一组投票表单。
 其使用范围限于：封面模板。
 可先进入后台，按下面操作方法填写好调查内容：
@@ -451,10 +451,10 @@ titlebackground=” tablebgcolor=’#FFFFFF’}
     
     <item>
       <title>DedeCMS模板制作使用实例教程（六）【Mytag 标记使用实例】</title>
-      <link>https://lsvking.github.io/134/</link>
+      <link>https://www.lsvking.com/134/</link>
       <pubDate>Sat, 22 Mar 2008 19:20:13 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/134/</guid>
+      <guid>https://www.lsvking.com/134/</guid>
       <description>自定义宏标记【Mytag 标记】的作用：
 可以将模板中多次出现的相同元素用一个自定义标记表示出来，从而达到，一次更改，全局更换的效果。辅助插件的广告管理也有相似的效果。
 今天天涯来介绍下自定义宏标记的应用，大家可以进入后台，在“模板管理”-》“自定义宏标记”中查看到该选项。
@@ -484,10 +484,10 @@ titlebackground=” tablebgcolor=’#FFFFFF’}
     
     <item>
       <title>DedeCMS模板制作使用实例教程（五）【Autochannel 标记使用实例】</title>
-      <link>https://lsvking.github.io/131/</link>
+      <link>https://www.lsvking.com/131/</link>
       <pubDate>Sat, 22 Mar 2008 19:16:50 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/131/</guid>
+      <guid>https://www.lsvking.com/131/</guid>
       <description>{dede:autochannel partsort=’1’/}
 {dede:channel typeid=’1′} [field:typename/] {/dede:channel}
 {dede:autolist row=12 titlelen=38 orderby=pubdate partsort=’1′}
@@ -497,10 +497,10 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
     
     <item>
       <title>DedeCMS模板制作使用实例教程（四）【Type 标记使用实例】</title>
-      <link>https://lsvking.github.io/130/</link>
+      <link>https://www.lsvking.com/130/</link>
       <pubDate>Sat, 22 Mar 2008 18:28:03 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/130/</guid>
+      <guid>https://www.lsvking.com/130/</guid>
       <description>【Type 标记】表示指定的单个栏目的链接，用法非常简单。
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：
 
@@ -523,10 +523,10 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
     
     <item>
       <title>DedeCMS模板制作使用实例教程（三）【Channel 标记使用实例】</title>
-      <link>https://lsvking.github.io/125/</link>
+      <link>https://www.lsvking.com/125/</link>
       <pubDate>Sat, 22 Mar 2008 18:03:48 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/125/</guid>
+      <guid>https://www.lsvking.com/125/</guid>
       <description>【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分“type = top,sun/son,self ”的所调用的对象就行了。
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：
 
@@ -554,10 +554,10 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
     
     <item>
       <title>DedeCMS模板制作使用实例教程（二）【Field 标记使用实例】</title>
-      <link>https://lsvking.github.io/118/</link>
+      <link>https://www.lsvking.com/118/</link>
       <pubDate>Sat, 22 Mar 2008 17:54:06 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/118/</guid>
+      <guid>https://www.lsvking.com/118/</guid>
       <description>【Field 标记】在封面模板、列表模板、文档模板的使用频率很高，实用。主要用来获得到系统变量的值或者路径，用法很灵活。可以直接展示数据，如调用 position，得到栏目一 &amp;gt; 栏目二” 这样形式的链接；或者，调用templeturl得到/templets这样路径。
 使用思路、步骤：
 一、明确使用范围
@@ -591,10 +591,10 @@ index_article.htm、list_article.htm、article_article.htm等类似的模板文�
     
     <item>
       <title>DedeCMS模板制作使用实例教程（一）【Arclist 标记使用实例】</title>
-      <link>https://lsvking.github.io/109/</link>
+      <link>https://www.lsvking.com/109/</link>
       <pubDate>Sat, 22 Mar 2008 17:36:00 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/109/</guid>
+      <guid>https://www.lsvking.com/109/</guid>
       <description>从本文开始，我将根据我的学习心得写一系列的实例教程。通过实例说明DedeCMS标记的使用方法。本实例教程使用的版本是DedeCms 2007 V5.0版，在本地架设的php+mysql （APMServ）环境中测试。安装、架设等相关方法参阅寂寞天涯的整理：http://bbs.dedecms.com/read.php?tid=33332。以后一系列教程都是在这个环境中使用，不再重复。因测试需要数据，我已事先在数据库录入，就不理啰嗦，马上进入正题。
 现在先讲【Arclist 标记】。【Arclist 标记】是使用率很高，相当实用，所以我们使用都必须熟练掌握。它的详细使用说明在官方Dedecms文档中已经有严密的解释，见：http://www.dedecms.com/archives/templethelp/help/index.htm，我们在使用过程中可以随时查阅。
 使用思路、步骤：
@@ -628,10 +628,10 @@ imgwidth=’100′ imgheight=’80’}
     
     <item>
       <title>DedeCMS模板制作使用实例教程  序</title>
-      <link>https://lsvking.github.io/108/</link>
+      <link>https://www.lsvking.com/108/</link>
       <pubDate>Sat, 22 Mar 2008 17:21:34 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/108/</guid>
+      <guid>https://www.lsvking.com/108/</guid>
       <description>1、怎样调用数据？
 DedeCMS是大型的动态网站程序，其数据主要在存储在数据库中的，做模板就必须知道，数据是如何从数据库读取并展示在大家面前的。官方写了很多程序，将数据的提取过程变得相当简单。大家只要懂得调用适当的&amp;quot;DedeCMS标记&amp;quot;就可以调取相应的数据。调用&amp;quot;DedeCMS标记&amp;quot;的三种代码样式：
 A、{dede:标记名称 属性=’值’/}
@@ -688,10 +688,10 @@ DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合�
     
     <item>
       <title>常用CSS命名参考</title>
-      <link>https://lsvking.github.io/107/</link>
+      <link>https://www.lsvking.com/107/</link>
       <pubDate>Sat, 22 Mar 2008 00:31:38 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/107/</guid>
+      <guid>https://www.lsvking.com/107/</guid>
       <description>在XHTML中定义ID时都用得上，主要是方便CSS定义样式时能一眼看穿。所以，CSS命名仅作参考。
 (1)页面结构类
 容器: container
@@ -742,10 +742,10 @@ DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合�
     
     <item>
       <title>HTML5的结构和语义——内嵌媒体（五）</title>
-      <link>https://lsvking.github.io/106/</link>
+      <link>https://www.lsvking.com/106/</link>
       <pubDate>Sun, 09 Mar 2008 14:09:35 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/106/</guid>
+      <guid>https://www.lsvking.com/106/</guid>
       <description>视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用 Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影 “a Sora in Prospect Park”：
 1: &amp;lt;video src=&#34;http://www.cafeaulait.org/birds/sora.mov&#34; /&amp;gt;
    对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
@@ -755,10 +755,10 @@ DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合�
     
     <item>
       <title>HTML5的结构和语义——语义性的内联元素（四）</title>
-      <link>https://lsvking.github.io/105/</link>
+      <link>https://www.lsvking.com/105/</link>
       <pubDate>Sun, 09 Mar 2008 14:04:39 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/105/</guid>
+      <guid>https://www.lsvking.com/105/</guid>
       <description>HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HTML 5 提供了几个新的内联元素来满足非技术作者的需求。  m
 m 元素表示文本被 “加上标志”，但是不一定要强调。可以把它想像成书中突出显示的一节。Google 的缓存页面就是典型的用例。如果链接到一个缓存的副本，搜索词就被加上标志。例如，如果搜索 “Egret”，那么缓存的 Google 页面可能像下面这样：
 1: The Great &amp;lt;m&amp;gt;Egret&amp;lt;/m&amp;gt; (also known as the &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; American &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Egret&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;) is a large white wading bird found worldwide.</description>
@@ -766,20 +766,20 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
     
     <item>
       <title>HTML5的结构和语义——语义性的块级元素（三）</title>
-      <link>https://lsvking.github.io/104/</link>
+      <link>https://www.lsvking.com/104/</link>
       <pubDate>Sun, 09 Mar 2008 13:59:11 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/104/</guid>
+      <guid>https://www.lsvking.com/104/</guid>
       <description>HTML 5 还增加了一些纯语义性的块级元素： aside figure dialog 我在文章和书中一直使用前两个元素。第三个元素我不经常用，它主要用于书面文本。 aside aside 元素代表说明、提示、边栏、引用、附加注释等，也就是叙述主线之外的内容。例如，在 developerWorks 文章中，常常会看到用表格形式编写的边栏，见代码3 用 HTML 4 编写的 developerWorks 边栏。
 1: &amp;lt;table align=&#34;right&#34; border=&#34;0&#34; cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; width=&#34;40%&#34;&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;10&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;img&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;alt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;src&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;//www.</description>
     </item>
     
     <item>
       <title>HTML5的结构和语义——结构</title>
-      <link>https://lsvking.github.io/103/</link>
+      <link>https://www.lsvking.com/103/</link>
       <pubDate>Sun, 09 Mar 2008 13:53:25 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/103/</guid>
+      <guid>https://www.lsvking.com/103/</guid>
       <description>转载 52CSS
  由于缺少结构，即使是形式良好的 HTML 页面也比较难以处理。必须分析标题的级别，才能看出各个部分的划分方式。边栏、页脚、页眉、导航条、主内容区和各篇文章都由通用的 div 元素来表示。HTML 5 添加了一些新元素，专门用来标识这些常见的结构： · section：这可以是书中的一章或一节，实际上可以是在 HTML 4 中有自己的标题的任何东西 · header：页面上显示的页眉；与 head 元素不一样 · footer：页脚；可以显示电子邮件中的签名 · nav：指向其他页面的一组链接 · article：blog、杂志、文章汇编等中的一篇文章 我们来考虑一个典型的 blog 主页，它的顶部有页眉，底部有页脚，还有几篇文章、一个导航区和一个边栏，见代码
  1 典型的 blog 页面
@@ -788,10 +788,10 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
     
     <item>
       <title>HTML 5.0 新一代的HTML标准~</title>
-      <link>https://lsvking.github.io/95/</link>
+      <link>https://www.lsvking.com/95/</link>
       <pubDate>Mon, 25 Feb 2008 21:27:04 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/95/</guid>
+      <guid>https://www.lsvking.com/95/</guid>
       <description>新千年以来，超文本标记语言（HTML）5 第一次向 HTML 中引入新的元素。新的结构元素包括 aside、figure 和section。新的内联元素包括time、meter和progress。新的内嵌元素有 video 和 audio。新的交互元素有 details、datagrid 和command
 超文本标记语言（HTML）的开发到 1999 年 HTML 4 就停止了。万维网联盟（W3C）把重点转向将 HTML 的底层语法从标准通用标记语言（SGML）改为可扩展标记语言（XML），以及可缩放向量图型（SVG）、XForms 和 MathML 这些全新的标记语言。浏览器厂商则把精力放到选项卡和富站点摘要（RSS）阅读器这类浏览器特性上。Web 设计人员开始学习使用异步 JavaScript + XML（Ajax），在现有的框架下通过层叠样式表（CSS）和 JavaScript™ 语言建立自己的应用程序。但是在接下来的八年中，HTML 本身没有任何变化。
  最近，它又复活了。三家重要的浏览器厂商 — Apple、Opera 和 Mozilla Foundation — 成立了 Web Hypertext Application Technology Working Group（WhatWG）来开发传统 HTML 的新版本。最近，W3C 也注意到了这些活动，也启动了自己的新一代 HTML 项目，双方的成员有很多是相同的。这两个项目最终很可能合并。虽然很多细节还在争论之中，但下一版本 HTML 的大体轮廓已经清楚了。
@@ -800,10 +800,10 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
     
     <item>
       <title>CSS Hacks 和 问题解决</title>
-      <link>https://lsvking.github.io/88/</link>
+      <link>https://www.lsvking.com/88/</link>
       <pubDate>Sat, 23 Feb 2008 13:41:13 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/88/</guid>
+      <guid>https://www.lsvking.com/88/</guid>
       <description>&amp;#160; 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.  ———————————————————————————————————————————–
 目录  介绍 针对浏览器的选择器 让IE6支持PNG透明 移除超链接的虚线 给行内元素定义宽度 让固定宽度的页面居中 图片替换技术 最小宽度 隐藏水平滚动条  ———————————————————————————————————————————–
 一. 介绍 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.
@@ -834,10 +834,10 @@ width: 250px;
     
     <item>
       <title>我做的一款清爽英文模板，适合做GGAD~</title>
-      <link>https://lsvking.github.io/74/</link>
+      <link>https://www.lsvking.com/74/</link>
       <pubDate>Fri, 15 Feb 2008 16:20:50 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/74/</guid>
+      <guid>https://www.lsvking.com/74/</guid>
       <description>&amp;#160; 先看看效果图吧 这个是用来出售的模板，但看起来太简单了，估计没人会买，我就共享出来吧！
 &amp;#160; 这个是首页  这个是列表页
 
@@ -853,20 +853,20 @@ index_files放到根目录
     
     <item>
       <title>100个优秀的免费 WordPress 主题</title>
-      <link>https://lsvking.github.io/71/</link>
+      <link>https://www.lsvking.com/71/</link>
       <pubDate>Mon, 28 Jan 2008 16:10:21 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/71/</guid>
+      <guid>https://www.lsvking.com/71/</guid>
       <description>&lt;p&gt;   今天来转一篇伟大的文章，虽然我每一次转的文章都很伟大，这一篇写的确实让我佩服，收集这么多东西在一起是件十分费神的体力活，我这种懒人自然只会转啦，不说废话了，这100个主题都是英文的，我看了下里边也有咱们中国的，但不知道为什么做的都是英文的。&lt;/p&gt;
 &lt;p&gt;我是从&lt;a href=&#34;http://jandan.net&#34;&gt;煎蛋&lt;/a&gt;先生那里看到的&lt;a href=&#34;http://jandan.net/2008/01/09/100-excellent-free-wordpress-themes.html&#34;&gt;这篇文章&lt;/a&gt;，他说原作者是&lt;a href=&#34;http://www.smashingmagazine.com/2008/01/08/100-excellent-free-high-quality-wordpress-themes/&#34;&gt;SmashingMagazine&lt;/a&gt;，我也不太认识这位先生，在这里就都谢过啦～&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>WordPress 2.4? 不，是 WordPress 2.5</title>
-      <link>https://lsvking.github.io/68/</link>
+      <link>https://www.lsvking.com/68/</link>
       <pubDate>Sun, 06 Jan 2008 07:51:03 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/68/</guid>
+      <guid>https://www.lsvking.com/68/</guid>
       <description>WordPress 2.4 本来预计在 1 月 24 日发布，不过现在看来这是不可能了。Matt Mullenweg 在 WordPress Hackers 邮件列表 中指出，WordPress 2.4 将直接跳过，而下一个重要版本 WordPress 2.5 则将在 3 月 28 日发布。 下面是 Matt Mullenweg 在 WordPress Hackers 邮件列表中给出的信息。
 In light of the big changes happening in the codebase and admin section, we’re going to push back the next release to be aimed for early March. This is the timeframe when 2.5 was originally schedule for, so we’re treating the originally planned 2.</description>
     </item>

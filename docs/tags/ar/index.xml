@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ar on 龙舍·嬴皇志</title>
-    <link>https://lsvking.github.io/tags/ar/</link>
+    <link>https://www.lsvking.com/tags/ar/</link>
     <description>Recent content in ar on 龙舍·嬴皇志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Tue, 26 Oct 2010 05:15:49 +0000</lastBuildDate><atom:link href="https://lsvking.github.io/tags/ar/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Oct 2010 05:15:49 +0000</lastBuildDate><atom:link href="https://www.lsvking.com/tags/ar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>用CI的 AR类进行 跨库关联查操作</title>
-      <link>https://lsvking.github.io/917/</link>
+      <link>https://www.lsvking.com/917/</link>
       <pubDate>Tue, 26 Oct 2010 05:15:49 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/917/</guid>
+      <guid>https://www.lsvking.com/917/</guid>
       <description>比较早写的东西了,发现博客很急没更新了发过来充数。。。
 最近在写套系统，上来就遇到麻烦了，具体情况就不说了，大概就是 A 库里有张表 写了一些用户信息，B 库是另外一个库，里边有张表记录了一些充值信息， 然后A 表里的用户有个字段是B表里没有的，但却是查询条件，所以要用到表关联。这个逻辑大家都清楚，主要是这两个表分布在了不同的数据库中，需要用到跨库表关联，这个在MYSQL里边是可以实现的，现在需要用CI 的AR类来实现，好下边给出解决方法，期间我走的弯路就不说了，希望能够帮助大家，让大家少走弯路。
 &amp;lt;br /&amp;gt; //多表信息查询//&amp;lt;br /&amp;gt; function cps_pay_in_dede(){

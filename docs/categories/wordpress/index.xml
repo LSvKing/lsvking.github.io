@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WordPress on 龙舍·嬴皇志</title>
-    <link>https://lsvking.github.io/categories/wordpress/</link>
+    <link>https://www.lsvking.com/categories/wordpress/</link>
     <description>Recent content in WordPress on 龙舍·嬴皇志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Tue, 22 Jul 2008 13:00:18 +0000</lastBuildDate><atom:link href="https://lsvking.github.io/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Jul 2008 13:00:18 +0000</lastBuildDate><atom:link href="https://www.lsvking.com/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>为simple-tags添加多彩标签云</title>
-      <link>https://lsvking.github.io/283/</link>
+      <link>https://www.lsvking.com/283/</link>
       <pubDate>Tue, 22 Jul 2008 13:00:18 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/283/</guid>
+      <guid>https://www.lsvking.com/283/</guid>
       <description> 此方法来自偶爱偶家。   言归正传， 首先我的修改是针对 simple tags 这个插件的， 其他的我就不说了， 你可以参照这里的方法自己研究。   1、在simple-tags.client.php文件中查找该语句  function getColorByScale($scale_color, $min_color, $max_color)  2、注释掉上述函数中的以下语句（其实不注释掉也是无所谓的）  $scale_color = $scale_color / 100; $minr = hexdec(substr($min_color, 1, 2)); $ming = hexdec(substr($min_color, 3, 2)); $minb = hexdec(substr($min_color, 5, 2)); $maxr = hexdec(substr($max_color, 1, 2)); $maxg = hexdec(substr($max_color, 3, 2)); $maxb = hexdec(substr($max_color, 5, 2)); $r = dechex(intval((($maxr - $minr) * $scale_color) + $minr)); $g = dechex(intval((($maxg - $ming) * $scale_color) + $ming)); $b = dechex(intval((($maxb - $minb) * $scale_color) + $minb));  3、 在上述被注释掉的语句后增加如下语句（如果没有注释掉就必须加在后面， 否则无效）  //mod by hongfengye start $r = dechex(rand(0,255)); $g = dechex(rand(0,196)); $b = dechex(rand(0,255)); //mod by hongfengye end  是的， 就是这么简单， 现在你应该就可以发现你的标签云(tags cloud)已经是彩色(colorful)的了。 效果图如下：     </description>
     </item>
     
     <item>
       <title>给博客加上每日一句学英语功能！</title>
-      <link>https://lsvking.github.io/262/</link>
+      <link>https://www.lsvking.com/262/</link>
       <pubDate>Sun, 20 Jul 2008 00:26:23 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/262/</guid>
+      <guid>https://www.lsvking.com/262/</guid>
       <description>在本博客右边栏最上边的那个每日一句，当鼠标划过小喇叭还会真人发音，这个其实是用了dict.cn提供的一个小工具，应用起来很简单，将
 Dict.CN 在线词典, 英语学习, 在线翻译   这段代码放到Widgets，文本块里就行了！</description>
     </item>
     
     <item>
       <title>《龟虽寿》-竖文插件。</title>
-      <link>https://lsvking.github.io/237/</link>
+      <link>https://www.lsvking.com/237/</link>
       <pubDate>Fri, 18 Jul 2008 15:08:13 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/237/</guid>
+      <guid>https://www.lsvking.com/237/</guid>
       <description>[shuwen10]神龟虽寿，猷有竟时。腾蛇乘雾，终为土灰。老骥伏枥，志在千里；烈士暮年，壮心不已。盈缩之期，不但在天；养怡之福，可得永年。幸甚至哉！歌以咏志。[/shuwen]
 这个有意思么？哈哈这个是用了轶姐的竖文插件的效果，用的时候有个小插曲，php4的用不来，呵呵！</description>
     </item>
     
     <item>
       <title>WordPress自动升级插件 wordpress automatic upgrade</title>
-      <link>https://lsvking.github.io/229/</link>
+      <link>https://www.lsvking.com/229/</link>
       <pubDate>Fri, 18 Jul 2008 13:44:56 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/229/</guid>
+      <guid>https://www.lsvking.com/229/</guid>
       <description> 今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。
  将下载的文件传到插件目录下，启动插件，一直Next就差不多了，第一步他会备份数据库的，会给出个下载地址，大家最好下载到本地。我升级完后却怎么也登录不上后台了，想了一下清除了下Cookie就OK了。
 他是从官方下载的版本安装的，大家安装完后，自己在去下中文包吧。
@@ -55,10 +55,10 @@ Dict.CN 在线词典, 英语学习, 在线翻译   这段代码放到Widgets，�
     
     <item>
       <title>WordPress 2.6 正式版及中文版发布</title>
-      <link>https://lsvking.github.io/219/</link>
+      <link>https://www.lsvking.com/219/</link>
       <pubDate>Thu, 17 Jul 2008 14:13:51 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/219/</guid>
+      <guid>https://www.lsvking.com/219/</guid>
       <description>对于 WordPress 的爱好者而言，今天又是一个值得庆贺的日子。WordPress 团队刚刚发布了令人期待的 WordPress 2.6 正式版。这是 WordPress 又一个重要的版本。根据此版本，我们 WordPress 中文站制作了相应的 WordPress 2.6 中文版，与 WordPress 中文社区的爱好者来及时分享这一版本。
 WordPress 2.6 中文版下载地址：http://wpchina.org/downloads/
 您也可以从以下地址直接下载：
@@ -77,10 +77,10 @@ http://wordpresschina.googlecode.com/files/wordpress.26.chs.languages.only.tar.g
     
     <item>
       <title>测试wp-t-wap插件</title>
-      <link>https://lsvking.github.io/207/</link>
+      <link>https://www.lsvking.com/207/</link>
       <pubDate>Tue, 22 Apr 2008 15:30:21 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/207/</guid>
+      <guid>https://www.lsvking.com/207/</guid>
       <description>为了给博客增加个wap功能给博客装了个wp-wap在搜索相关信息时无意间出现了一款叫做wp-t-wap得插件，这也是一款使wp实现wap功能得插件，是有wp-wap 修改而来改善了对中文的支持，本文就是用手机发布的，感觉很不错，希望有这方面需求的朋友安装个试试看。
 最信1.6版下载地址
 http://www.tanggaowei.com/2008/01/04/7.html
@@ -90,20 +90,20 @@ e9fbc5f7</description>
     
     <item>
       <title>100个优秀的免费 WordPress 主题</title>
-      <link>https://lsvking.github.io/71/</link>
+      <link>https://www.lsvking.com/71/</link>
       <pubDate>Mon, 28 Jan 2008 16:10:21 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/71/</guid>
+      <guid>https://www.lsvking.com/71/</guid>
       <description>&lt;p&gt;   今天来转一篇伟大的文章，虽然我每一次转的文章都很伟大，这一篇写的确实让我佩服，收集这么多东西在一起是件十分费神的体力活，我这种懒人自然只会转啦，不说废话了，这100个主题都是英文的，我看了下里边也有咱们中国的，但不知道为什么做的都是英文的。&lt;/p&gt;
 &lt;p&gt;我是从&lt;a href=&#34;http://jandan.net&#34;&gt;煎蛋&lt;/a&gt;先生那里看到的&lt;a href=&#34;http://jandan.net/2008/01/09/100-excellent-free-wordpress-themes.html&#34;&gt;这篇文章&lt;/a&gt;，他说原作者是&lt;a href=&#34;http://www.smashingmagazine.com/2008/01/08/100-excellent-free-high-quality-wordpress-themes/&#34;&gt;SmashingMagazine&lt;/a&gt;，我也不太认识这位先生，在这里就都谢过啦～&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>WordPress 2.4? 不，是 WordPress 2.5</title>
-      <link>https://lsvking.github.io/68/</link>
+      <link>https://www.lsvking.com/68/</link>
       <pubDate>Sun, 06 Jan 2008 07:51:03 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/68/</guid>
+      <guid>https://www.lsvking.com/68/</guid>
       <description>WordPress 2.4 本来预计在 1 月 24 日发布，不过现在看来这是不可能了。Matt Mullenweg 在 WordPress Hackers 邮件列表 中指出，WordPress 2.4 将直接跳过，而下一个重要版本 WordPress 2.5 则将在 3 月 28 日发布。 下面是 Matt Mullenweg 在 WordPress Hackers 邮件列表中给出的信息。
 In light of the big changes happening in the codebase and admin section, we’re going to push back the next release to be aimed for early March. This is the timeframe when 2.5 was originally schedule for, so we’re treating the originally planned 2.</description>
     </item>

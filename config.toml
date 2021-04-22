@@ -1,4 +1,4 @@
-baseURL = "https://lsvking.github.io/"
+baseURL = "https://www.lsvking.com"
 DefaultContentLanguage = "zh" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "zh-cn"
 title = "龙舍·嬴皇志"

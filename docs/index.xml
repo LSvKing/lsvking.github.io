@@ -1,24 +1,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>龙舍·嬴皇志</title>
-    <link>https://lsvking.github.io/</link>
+    <link>https://www.lsvking.com/</link>
     <description>Recent content on 龙舍·嬴皇志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
     
-        <atom:link href="https://lsvking.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.lsvking.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>MongoDB用mongoimport 导入大文件报错解决方案</title>
-        <link>https://lsvking.github.io/1152/</link>
+        <link>https://www.lsvking.com/1152/</link>
         <pubDate>Mon, 05 Sep 2016 15:41:13 +0000</pubDate>
         
-        <guid>https://lsvking.github.io/1152/</guid>
-        <description>龙舍·嬴皇志 https://lsvking.github.io/1152/ -&lt;p&gt;用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的文件，大的数据迁移都是用的restore导入的。这次遇到一次数据迁移导出的json 文件大概有4.7G左右,再倒入的时候出现了问题&lt;/p&gt;
+        <guid>https://www.lsvking.com/1152/</guid>
+        <description>龙舍·嬴皇志 https://www.lsvking.com/1152/ -&lt;p&gt;用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的文件，大的数据迁移都是用的restore导入的。这次遇到一次数据迁移导出的json 文件大概有4.7G左右,再倒入的时候出现了问题&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;却出现了如下的错误提示&lt;/p&gt;
 &lt;pre&gt;2016-09-05T23:30:35.773+0800	connected to: 127.0.0.1
@@ -35,18 +35,18 @@
 2016-09-05T23:13:00.618+0800	d.indexs_value	151.5 MB
 &lt;/pre&gt;&lt;blockquote&gt;
 &lt;/blockquote&gt;
-- https://lsvking.github.io/1152/ - This is a customized copyright.</description>
+- https://www.lsvking.com/1152/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>话糙理不糙的名言</title>
-        <link>https://lsvking.github.io/1140/</link>
+        <link>https://www.lsvking.com/1140/</link>
         <pubDate>Thu, 24 Sep 2015 07:20:47 +0000</pubDate>
         
-        <guid>https://lsvking.github.io/1140/</guid>
-        <description>龙舍·嬴皇志 https://lsvking.github.io/1140/ -&lt;p&gt;生活就像强奸，既然无法去反抗不如懂得去享受&lt;/p&gt;
+        <guid>https://www.lsvking.com/1140/</guid>
+        <description>龙舍·嬴皇志 https://www.lsvking.com/1140/ -&lt;p&gt;生活就像强奸，既然无法去反抗不如懂得去享受&lt;/p&gt;
 &lt;p&gt;工作就像轮奸，如果您不行了就换别人上&lt;/p&gt;
 &lt;p&gt;社会就像自慰，所有的都要靠自己的双手来解决​&lt;/p&gt;
 &lt;p&gt;好朋友就象内裤，就算你大起大落他也永远包容着你&lt;/p&gt;
@@ -69,49 +69,49 @@
 &lt;p&gt;毕业就像生产,不管你认为你们在计划怀孕的时候它会多么的畸形,但再畸形它也在10个月或者4年后瓜熟蒂落.​&lt;/p&gt;
 &lt;p&gt;辅导员就像是阴毛,这不是什么问题,但有它存在的时候你总有摩擦,并且因此感到有些不爽.&lt;/p&gt;
 &lt;p&gt;后期集团也像保险套,它让你感到很不舒服,人人都希望抛弃它,但它的宣传广告上则宣称这个贵而不惠的东西会带给你多少多少的好处.​&lt;/p&gt;
-- https://lsvking.github.io/1140/ - This is a customized copyright.</description>
+- https://www.lsvking.com/1140/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>vagrant 打包box时候提示 “VM not created. Moving on…”</title>
-        <link>https://lsvking.github.io/1134/</link>
+        <link>https://www.lsvking.com/1134/</link>
         <pubDate>Thu, 13 Nov 2014 09:48:10 +0000</pubDate>
         
-        <guid>https://lsvking.github.io/1134/</guid>
-        <description>龙舍·嬴皇志 https://lsvking.github.io/1134/ -&lt;p&gt;在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。&lt;/p&gt;
+        <guid>https://www.lsvking.com/1134/</guid>
+        <description>龙舍·嬴皇志 https://www.lsvking.com/1134/ -&lt;p&gt;在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。&lt;/p&gt;
 &lt;pre&gt;vagrant package --base ubuntu --output ubuntu.box
 ubuntu: VM not created. Moving on...
 &lt;/pre&gt;
 &lt;p&gt;&lt;a href=&#34;http://bcs.duapp.com/lsvking-wp//blog/201411//QQ%E5%9B%BE%E7%89%87201411131745041.jpg&#34;&gt;&lt;img src=&#34;http://bcs.duapp.com/lsvking-wp//blog/201411//QQ图片201411131745041.jpg&#34; alt=&#34;QQ图片20141113174504&#34; width=&#34;449&#34; height=&#34;191&#34; class=&#34;alignnone size-full wp-image-1136&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;名称要完全一样，大小写也要一样哦。折腾了半天，也是醉了。。&lt;/p&gt;
-- https://lsvking.github.io/1134/ - This is a customized copyright.</description>
+- https://www.lsvking.com/1134/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>VirtualBox OS X Mavericks 分辨率修改</title>
-        <link>https://lsvking.github.io/951/</link>
+        <link>https://www.lsvking.com/951/</link>
         <pubDate>Wed, 30 Jul 2014 10:16:11 +0000</pubDate>
         
-        <guid>https://lsvking.github.io/951/</guid>
-        <description>龙舍·嬴皇志 https://lsvking.github.io/951/ -&lt;p&gt;需要开启EFI模式 然后在命令行下 VirtualBox目录 输入一下命令：&lt;/p&gt;
+        <guid>https://www.lsvking.com/951/</guid>
+        <description>龙舍·嬴皇志 https://www.lsvking.com/951/ -&lt;p&gt;需要开启EFI模式 然后在命令行下 VirtualBox目录 输入一下命令：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;VBoxManage setextradata &amp;quot;虚拟机名称&amp;quot; VBoxInternal2/EfiGopMode N&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;其中 N 可以是 0,1,2,3,4,5 其中一个，分别代表 640×480, 800×600, 1024×768, 1280×1024, 1440×900, 1920×1200 几种分辨率&lt;/p&gt;
-- https://lsvking.github.io/951/ - This is a customized copyright.</description>
+- https://www.lsvking.com/951/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>Golang strings 包中的函数和方法</title>
-        <link>https://lsvking.github.io/945/</link>
+        <link>https://www.lsvking.com/945/</link>
         <pubDate>Wed, 09 Apr 2014 07:25:00 +0000</pubDate>
         
-        <guid>https://lsvking.github.io/945/</guid>
-        <description>龙舍·嬴皇志 https://lsvking.github.io/945/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;------------------------------------------------------------
+        <guid>https://www.lsvking.com/945/</guid>
+        <description>龙舍·嬴皇志 https://www.lsvking.com/945/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;------------------------------------------------------------
 &lt;span style=&#34;color:#228b22&#34;&gt;// Count 计算字符串 sep 在 s 中的非重叠个数
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 如果 sep 为空字符串，则返回 s 中的字符(非字节)个数 + 1
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;// 使用 Rabin-Karp 算法实现
@@ -772,18 +772,18 @@ unicode.CaseRange{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&
 	srp.&lt;span style=&#34;color:#008b45&#34;&gt;WriteString&lt;/span&gt;(os.Stdout, s)
 	&lt;span style=&#34;color:#228b22&#34;&gt;// 你好 世界！你好 世界！hello world！
 &lt;/span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;&lt;/span&gt;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://lsvking.github.io/945/ - This is a customized copyright.</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://www.lsvking.com/945/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>利用cloudHQ在网盘间快速拷贝和同步文件</title>
-        <link>https://lsvking.github.io/944/</link>
+        <link>https://www.lsvking.com/944/</link>
         <pubDate>Wed, 12 Mar 2014 17:11:16 +0000</pubDate>
         
-        <guid>https://lsvking.github.io/944/</guid>
-        <description>龙舍·嬴皇志 https://lsvking.github.io/944/ -&lt;!--markdown--&gt;现在网盘服务越来越多，可能不少人都拥有多个网盘。有时需要将一个网盘的文件转移到另一个网盘，我们一般会现将源文件从网盘下载到本地，然后再上传到另一个网盘。每个文件都需要经过本地中转，如果文件数目多或体积大，加上国内网速不给力，这个操作将非常耗时。拷贝操作尚且如此麻烦，网盘间文件的同步操作就更繁琐了。
+        <guid>https://www.lsvking.com/944/</guid>
+        <description>龙舍·嬴皇志 https://www.lsvking.com/944/ -&lt;!--markdown--&gt;现在网盘服务越来越多，可能不少人都拥有多个网盘。有时需要将一个网盘的文件转移到另一个网盘，我们一般会现将源文件从网盘下载到本地，然后再上传到另一个网盘。每个文件都需要经过本地中转，如果文件数目多或体积大，加上国内网速不给力，这个操作将非常耗时。拷贝操作尚且如此麻烦，网盘间文件的同步操作就更繁琐了。
 &lt;p&gt;幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务：&lt;/p&gt;
 &lt;p&gt;1、网盘综合管理，你可以将常用的网盘添加到cloudHQ，通过cloudHQ管理所有网盘的文件；&lt;/p&gt;
 &lt;p&gt;2、网盘间文件拷贝/移动；&lt;/p&gt;
@@ -792,50 +792,50 @@ unicode.CaseRange{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&
 &lt;p&gt;注册完成后就自动转到同步向导，在这里可以添加一对同步的网盘，并可选择单向还是双向同步。&lt;/p&gt;
 &lt;p&gt;添加完成后的网盘可以在Browse标签卡下进行管理，cloudHQ的这个文件管理器非常不错，在这里可以方便地查看网盘容量以及完成对网盘的文件上传/下载/删除等管理操作。在网盘间拷贝和移动文件也是非常简单的，由于使用cloudHQ的服务器中转，速度非常不错。当然，对于网盘间大量文件的拷贝，建议使用cloudHQ的同步功能来实现。&lt;/p&gt;
 &lt;p&gt;cloudHQ的同步速度还是不错的，我从Dropbox同步了7G的数据共6000多个文件到Box.net，大概用了3个小时。cloudHQ还会自动将Box.net不支持的文件比如点开头的文件重命名，从而避免文件缺失。&lt;/p&gt;
-- https://lsvking.github.io/944/ - This is a customized copyright.</description>
+- https://www.lsvking.com/944/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>awk切割字符串后赋值给shell变量的方法</title>
-        <link>https://lsvking.github.io/939/</link>
+        <link>https://www.lsvking.com/939/</link>
         <pubDate>Mon, 16 Dec 2013 15:18:00 +0000</pubDate>
         
-        <guid>https://lsvking.github.io/939/</guid>
-        <description>龙舍·嬴皇志 https://lsvking.github.io/939/ -&lt;pre&gt;result=&#39;week(now(),-1) 49&#39;;
+        <guid>https://www.lsvking.com/939/</guid>
+        <description>龙舍·嬴皇志 https://www.lsvking.com/939/ -&lt;pre&gt;result=&#39;week(now(),-1) 49&#39;;
 var=`echo $result|awk &#39;{print substr($result,16,3)}&#39;`;
 echo $var;
 &lt;/pre&gt;&lt;blockquote&gt;
 &lt;/blockquote&gt;
-- https://lsvking.github.io/939/ - This is a customized copyright.</description>
+- https://www.lsvking.com/939/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>Win8下编译Go go.exe 崩溃</title>
-        <link>https://lsvking.github.io/935/</link>
+        <link>https://www.lsvking.com/935/</link>
         <pubDate>Tue, 30 Jul 2013 13:03:45 +0000</pubDate>
         
-        <guid>https://lsvking.github.io/935/</guid>
-        <description>龙舍·嬴皇志 https://lsvking.github.io/935/ -&lt;p&gt;在windows8 下 编译啊运行啊什么的 就会报崩溃&lt;/p&gt;
+        <guid>https://www.lsvking.com/935/</guid>
+        <description>龙舍·嬴皇志 https://www.lsvking.com/935/ -&lt;p&gt;在windows8 下 编译啊运行啊什么的 就会报崩溃&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://lsvking.com/attachment/933/&#34; title=&#34;QQ图片20130730205409.jpg&#34;&gt;&lt;img src=&#34;http://lsvking.github.io/wp-content/uploads/2013/07/1645993778.jpg&#34; alt=&#34;QQ图片20130730205409.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://lsvking.com/attachment/934/&#34; title=&#34;QQ图片20130730205412.jpg&#34;&gt;&lt;img src=&#34;http://lsvking.github.io/wp-content/uploads/2013/07/1998453011.jpg&#34; alt=&#34;QQ图片20130730205412.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;一直困惑不已,所以一直在Linux下学习Golang。此事一直让我觉得可能是我起床的方式不对。。。&lt;/p&gt;
 &lt;p&gt;直到有一天我搜到了一个同样问题的,原来是MacType 的问题。。停掉就好了&lt;/p&gt;
-- https://lsvking.github.io/935/ - This is a customized copyright.</description>
+- https://www.lsvking.com/935/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>Linux压缩Tar命令介绍</title>
-        <link>https://lsvking.github.io/932/</link>
+        <link>https://www.lsvking.com/932/</link>
         <pubDate>Thu, 13 Oct 2011 03:18:00 +0000</pubDate>
         
-        <guid>https://lsvking.github.io/932/</guid>
-        <description>龙舍·嬴皇志 https://lsvking.github.io/932/ -&lt;h3 id=&#34;a-idtar-styledirection-ltr-nametarstrong-styledirection-ltrtar命令stronga&#34;&gt;&lt;a id=&#34;tar&#34; style=&#34;direction: ltr;&#34; name=&#34;tar&#34;&gt;&lt;strong style=&#34;direction: ltr;&#34;&gt;tar命令&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
+        <guid>https://www.lsvking.com/932/</guid>
+        <description>龙舍·嬴皇志 https://www.lsvking.com/932/ -&lt;h3 id=&#34;a-idtar-styledirection-ltr-nametarstrong-styledirection-ltrtar命令stronga&#34;&gt;&lt;a id=&#34;tar&#34; style=&#34;direction: ltr;&#34; name=&#34;tar&#34;&gt;&lt;strong style=&#34;direction: ltr;&#34;&gt;tar命令&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;div&gt;
   &lt;p&gt;
     &lt;strong&gt;tar [-cxtzjvfpPN] 文件与目录 &amp;#8230;.&lt;br /&gt; 参数：&lt;br /&gt; -c ：建立一个压缩文件的参数指令(create 的意思)；&lt;br /&gt; -x ：解开一个压缩文件的参数指令！&lt;br /&gt; -t ：查看 tarfile 里面的文件！&lt;br /&gt; 特别注意，在参数的下达中， c/x/t 仅能存在一个！不可同时存在！&lt;br /&gt; 因为不可能同时压缩与解压缩。&lt;br /&gt; -z ：是否同时具有 gzip 的属性？亦即是否需要用 gzip 压缩？&lt;br /&gt; -j ：是否同时具有 bzip2 的属性？亦即是否需要用 bzip2 压缩？&lt;br /&gt; -v ：压缩的过程中显示文件！这个常用，但不建议用在背景执行过程！&lt;br /&gt; -f ：使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！&lt;br /&gt; 例如使用『 tar -zcvfP tfile sfile』就是错误的写法，要写成&lt;br /&gt; 『 tar -zcvPf tfile sfile』才对喔！&lt;br /&gt; -p ：使用原文件的原来属性（属性不会依据使用者而变）&lt;br /&gt; -P ：可以使用绝对路径来压缩！&lt;br /&gt; -N ：比后面接的日期(yyyy/mm/dd)还要新的才会被打包进新建的文件中！&lt;br /&gt; &amp;#8211;exclude FILE：在压缩的过程中，不要将 FILE 打包！&lt;br /&gt; 范例：&lt;br /&gt; 范例一：将整个 /etc 目录下的文件全部打包成为 /tmp/etc.tar&lt;br /&gt; [root@linux ~]#&lt;/strong&gt; tar -cvf /tmp/etc.tar /etc&lt;==仅打包，不压缩！&lt;br /&gt; [root@linux ~]# &lt;strong&gt;tar -zcvf /tmp/etc.tar.gz /etc&lt;/strong&gt;&lt;==打包后，以 gzip 压缩&lt;br /&gt; [root@linux ~]# &lt;strong&gt;tar -jcvf /tmp/etc.tar.bz2 /etc&lt;/strong&gt;&lt;==打包后，以 bzip2 压缩&lt;br /&gt; # 特别注意，在参数 f 之后的文件档名是自己取的，我们习惯上都用 .tar 来作为辨识。&lt;br /&gt; # 如果加 z 参数，则以 .tar.gz 或 .tgz 来代表 gzip 压缩过的 tar file ～&lt;br /&gt; # 如果加 j 参数，则以 .tar.bz2 来作为附档名啊～&lt;br /&gt; # 上述指令在执行的时候，会显示一个警告讯息：&lt;br /&gt; # 『tar: Removing leading `/&amp;#8221; from member names』那是关於绝对路径的特殊设定。
@@ -868,20 +868,20 @@ echo $var;
     &amp;nbsp;
   &lt;/p&gt;
   &lt;p&gt;
-    转自：&lt;a href=&#34;http://www.21andy.com/blog/20060820/389.html&#34;&gt;21Andy&amp;#8217;s(大婶)&lt;/a&gt;&lt;br /&gt; &lt;!--EndFragment--&gt;&lt;/div&gt;- https://lsvking.github.io/932/ - This is a customized copyright.</description>
+    转自：&lt;a href=&#34;http://www.21andy.com/blog/20060820/389.html&#34;&gt;21Andy&amp;#8217;s(大婶)&lt;/a&gt;&lt;br /&gt; &lt;!--EndFragment--&gt;&lt;/div&gt;- https://www.lsvking.com/932/ - This is a customized copyright.</description>
         </item>
     
     
     
         <item>
         <title>G&#43;邀请数枚,需要的请留言。。。</title>
-        <link>https://lsvking.github.io/927/</link>
+        <link>https://www.lsvking.com/927/</link>
         <pubDate>Tue, 09 Aug 2011 02:42:09 +0000</pubDate>
         
-        <guid>https://lsvking.github.io/927/</guid>
-        <description>龙舍·嬴皇志 https://lsvking.github.io/927/ -&lt;p&gt;Google+邀请数枚，请留言。&lt;/p&gt;
+        <guid>https://www.lsvking.com/927/</guid>
+        <description>龙舍·嬴皇志 https://www.lsvking.com/927/ -&lt;p&gt;Google+邀请数枚，请留言。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://bcs.duapp.com/lsvking-wp//blog/201410//131939415.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-1131&#34; src=&#34;http://bcs.duapp.com/lsvking-wp//blog/201410//131939415.jpg&#34; alt=&#34;131939415&#34; width=&#34;300&#34; height=&#34;297&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-- https://lsvking.github.io/927/ - This is a customized copyright.</description>
+- https://www.lsvking.com/927/ - This is a customized copyright.</description>
         </item>
     
     

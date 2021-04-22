@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mysql on 龙舍·嬴皇志</title>
-    <link>https://lsvking.github.io/categories/mysql/</link>
+    <link>https://www.lsvking.com/categories/mysql/</link>
     <description>Recent content in Mysql on 龙舍·嬴皇志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Wed, 09 Mar 2011 06:39:56 +0000</lastBuildDate><atom:link href="https://lsvking.github.io/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Mar 2011 06:39:56 +0000</lastBuildDate><atom:link href="https://www.lsvking.com/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【转发】关于MySQL表设计应该注意的问题</title>
-      <link>https://lsvking.github.io/921/</link>
+      <link>https://www.lsvking.com/921/</link>
       <pubDate>Wed, 09 Mar 2011 06:39:56 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/921/</guid>
+      <guid>https://www.lsvking.com/921/</guid>
       <description>如有错误欢迎大家指出。这段时间在家里，做了点修正。
 1、慎重选择表名。
 有两种选择：

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>模版 on 龙舍·嬴皇志</title>
-    <link>https://lsvking.github.io/tags/%E6%A8%A1%E7%89%88/</link>
+    <link>https://www.lsvking.com/tags/%E6%A8%A1%E7%89%88/</link>
     <description>Recent content in 模版 on 龙舍·嬴皇志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Sat, 22 Mar 2008 21:13:29 +0000</lastBuildDate><atom:link href="https://lsvking.github.io/tags/%E6%A8%A1%E7%89%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Mar 2008 21:13:29 +0000</lastBuildDate><atom:link href="https://www.lsvking.com/tags/%E6%A8%A1%E7%89%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DedeCMS模板制作使用实例教程（十五）【Pagetitle 标记使用实例】</title>
-      <link>https://lsvking.github.io/165/</link>
+      <link>https://www.lsvking.com/165/</link>
       <pubDate>Sat, 22 Mar 2008 21:13:29 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/165/</guid>
+      <guid>https://www.lsvking.com/165/</guid>
       <description>【Pagetitle 标记】
 功能说明：表示获取文档的分页标题
 适用范围：仅文档模板。
@@ -33,10 +33,10 @@
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十四）【Prenext 标记 标记使用实例】</title>
-      <link>https://lsvking.github.io/160/</link>
+      <link>https://www.lsvking.com/160/</link>
       <pubDate>Sat, 22 Mar 2008 21:08:15 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/160/</guid>
+      <guid>https://www.lsvking.com/160/</guid>
       <description>【Prenext 标记】表示获取文档“上一篇／下一篇”的链接列表。
 适用范围：仅文档模板。
 通过调试了解其使用方法
@@ -51,10 +51,10 @@
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十三）【Pagebreak 标记使用实例】</title>
-      <link>https://lsvking.github.io/157/</link>
+      <link>https://www.lsvking.com/157/</link>
       <pubDate>Sat, 22 Mar 2008 20:49:16 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/157/</guid>
+      <guid>https://www.lsvking.com/157/</guid>
       <description>【Pagebreak 标记】表示文档的分页链接列表。
 适用范围：仅文档模板。
 通过调试了解其使用方法
@@ -71,10 +71,10 @@
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十二）【Pagelist 标记使用实例】</title>
-      <link>https://lsvking.github.io/154/</link>
+      <link>https://www.lsvking.com/154/</link>
       <pubDate>Sat, 22 Mar 2008 20:44:49 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/154/</guid>
+      <guid>https://www.lsvking.com/154/</guid>
       <description>【Pagelist 标记】表示分页页码列表
 适用范围：列表模板
 通过调试了解其使用方法
@@ -86,10 +86,10 @@
     
     <item>
       <title>DedeCMS模板制作使用实例教程（十）【Channelartlist 标记 使用实例】</title>
-      <link>https://lsvking.github.io/151/</link>
+      <link>https://www.lsvking.com/151/</link>
       <pubDate>Sat, 22 Mar 2008 20:38:28 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/151/</guid>
+      <guid>https://www.lsvking.com/151/</guid>
       <description>【Channelartlist 标记】用于获取当前频道的下级栏目的内容列表。该标记在封面模板（包括主页）中的经常被用到，具体用法见下面实例。
 除了宏标记外，channelArtlist 是唯一一个可以直接嵌套其它标记的标记，不过仅限于嵌套 {dede:type}{/dede:type} 和 {dede:arclist}{/dede:arclist} 两个标记。
 通过调试了解其使用方法
@@ -103,10 +103,10 @@
     
     <item>
       <title>DedeCMS模板制作使用实例教程（九）【Mynews 标记 使用实例】</title>
-      <link>https://lsvking.github.io/145/</link>
+      <link>https://www.lsvking.com/145/</link>
       <pubDate>Sat, 22 Mar 2008 20:06:15 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/145/</guid>
+      <guid>https://www.lsvking.com/145/</guid>
       <description>【Mynews 标记】用于获取站内新闻。
 站内新闻有利于站长及时与会员沟通。
 使用思路、步骤：
@@ -123,10 +123,10 @@
     
     <item>
       <title>DedeCMS模板制作使用实例教程（八）【Flink 标记使用实例】</title>
-      <link>https://lsvking.github.io/142/</link>
+      <link>https://www.lsvking.com/142/</link>
       <pubDate>Sat, 22 Mar 2008 20:04:25 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/142/</guid>
+      <guid>https://www.lsvking.com/142/</guid>
       <description>【Flink 标记】用于获取友情链接。
 调用该标记后可以得到四种友情链接的形式。
 使用思路、步骤：
@@ -148,10 +148,10 @@
     
     <item>
       <title>DedeCMS模板制作使用实例教程（七）【Vote 标记使用实例】</title>
-      <link>https://lsvking.github.io/137/</link>
+      <link>https://www.lsvking.com/137/</link>
       <pubDate>Sat, 22 Mar 2008 19:29:03 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/137/</guid>
+      <guid>https://www.lsvking.com/137/</guid>
       <description>【Vote 标记】用于获取一组投票表单。
 其使用范围限于：封面模板。
 可先进入后台，按下面操作方法填写好调查内容：
@@ -169,10 +169,10 @@ titlebackground=” tablebgcolor=’#FFFFFF’}
     
     <item>
       <title>DedeCMS模板制作使用实例教程（六）【Mytag 标记使用实例】</title>
-      <link>https://lsvking.github.io/134/</link>
+      <link>https://www.lsvking.com/134/</link>
       <pubDate>Sat, 22 Mar 2008 19:20:13 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/134/</guid>
+      <guid>https://www.lsvking.com/134/</guid>
       <description>自定义宏标记【Mytag 标记】的作用：
 可以将模板中多次出现的相同元素用一个自定义标记表示出来，从而达到，一次更改，全局更换的效果。辅助插件的广告管理也有相似的效果。
 今天天涯来介绍下自定义宏标记的应用，大家可以进入后台，在“模板管理”-》“自定义宏标记”中查看到该选项。
@@ -202,10 +202,10 @@ titlebackground=” tablebgcolor=’#FFFFFF’}
     
     <item>
       <title>DedeCMS模板制作使用实例教程（五）【Autochannel 标记使用实例】</title>
-      <link>https://lsvking.github.io/131/</link>
+      <link>https://www.lsvking.com/131/</link>
       <pubDate>Sat, 22 Mar 2008 19:16:50 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/131/</guid>
+      <guid>https://www.lsvking.com/131/</guid>
       <description>{dede:autochannel partsort=’1’/}
 {dede:channel typeid=’1′} [field:typename/] {/dede:channel}
 {dede:autolist row=12 titlelen=38 orderby=pubdate partsort=’1′}
@@ -215,10 +215,10 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
     
     <item>
       <title>DedeCMS模板制作使用实例教程（四）【Type 标记使用实例】</title>
-      <link>https://lsvking.github.io/130/</link>
+      <link>https://www.lsvking.com/130/</link>
       <pubDate>Sat, 22 Mar 2008 18:28:03 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/130/</guid>
+      <guid>https://www.lsvking.com/130/</guid>
       <description>【Type 标记】表示指定的单个栏目的链接，用法非常简单。
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：
 
@@ -241,10 +241,10 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
     
     <item>
       <title>DedeCMS模板制作使用实例教程（三）【Channel 标记使用实例】</title>
-      <link>https://lsvking.github.io/125/</link>
+      <link>https://www.lsvking.com/125/</link>
       <pubDate>Sat, 22 Mar 2008 18:03:48 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/125/</guid>
+      <guid>https://www.lsvking.com/125/</guid>
       <description>【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分“type = top,sun/son,self ”的所调用的对象就行了。
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：
 
@@ -272,10 +272,10 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
     
     <item>
       <title>DedeCMS模板制作使用实例教程（二）【Field 标记使用实例】</title>
-      <link>https://lsvking.github.io/118/</link>
+      <link>https://www.lsvking.com/118/</link>
       <pubDate>Sat, 22 Mar 2008 17:54:06 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/118/</guid>
+      <guid>https://www.lsvking.com/118/</guid>
       <description>【Field 标记】在封面模板、列表模板、文档模板的使用频率很高，实用。主要用来获得到系统变量的值或者路径，用法很灵活。可以直接展示数据，如调用 position，得到栏目一 &amp;gt; 栏目二” 这样形式的链接；或者，调用templeturl得到/templets这样路径。
 使用思路、步骤：
 一、明确使用范围
@@ -309,10 +309,10 @@ index_article.htm、list_article.htm、article_article.htm等类似的模板文�
     
     <item>
       <title>DedeCMS模板制作使用实例教程（一）【Arclist 标记使用实例】</title>
-      <link>https://lsvking.github.io/109/</link>
+      <link>https://www.lsvking.com/109/</link>
       <pubDate>Sat, 22 Mar 2008 17:36:00 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/109/</guid>
+      <guid>https://www.lsvking.com/109/</guid>
       <description>从本文开始，我将根据我的学习心得写一系列的实例教程。通过实例说明DedeCMS标记的使用方法。本实例教程使用的版本是DedeCms 2007 V5.0版，在本地架设的php+mysql （APMServ）环境中测试。安装、架设等相关方法参阅寂寞天涯的整理：http://bbs.dedecms.com/read.php?tid=33332。以后一系列教程都是在这个环境中使用，不再重复。因测试需要数据，我已事先在数据库录入，就不理啰嗦，马上进入正题。
 现在先讲【Arclist 标记】。【Arclist 标记】是使用率很高，相当实用，所以我们使用都必须熟练掌握。它的详细使用说明在官方Dedecms文档中已经有严密的解释，见：http://www.dedecms.com/archives/templethelp/help/index.htm，我们在使用过程中可以随时查阅。
 使用思路、步骤：
@@ -346,10 +346,10 @@ imgwidth=’100′ imgheight=’80’}
     
     <item>
       <title>DedeCMS模板制作使用实例教程  序</title>
-      <link>https://lsvking.github.io/108/</link>
+      <link>https://www.lsvking.com/108/</link>
       <pubDate>Sat, 22 Mar 2008 17:21:34 +0000</pubDate>
       
-      <guid>https://lsvking.github.io/108/</guid>
+      <guid>https://www.lsvking.com/108/</guid>
       <description>1、怎样调用数据？
 DedeCMS是大型的动态网站程序，其数据主要在存储在数据库中的，做模板就必须知道，数据是如何从数据库读取并展示在大家面前的。官方写了很多程序，将数据的提取过程变得相当简单。大家只要懂得调用适当的&amp;quot;DedeCMS标记&amp;quot;就可以调取相应的数据。调用&amp;quot;DedeCMS标记&amp;quot;的三种代码样式：
 A、{dede:标记名称 属性=’值’/}
