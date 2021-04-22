@@ -17,7 +17,7 @@
 
 
 <meta property="og:title" content="CSS Hacks 和 问题解决" />
-<meta property="og:description" content="———————————————————————————————————————————–
+<meta property="og:description" content="&#160; 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.  ———————————————————————————————————————————–
 目录  介绍 针对浏览器的选择器 让IE6支持PNG透明 移除超链接的虚线 给行内元素定义宽度 让固定宽度的页面居中 图片替换技术 最小宽度 隐藏水平滚动条  ———————————————————————————————————————————–
 一. 介绍 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.
 二. 针对浏览器的选择器 这些选择器在你需要针对某款浏览器进行css设计时将非常有用.
@@ -55,7 +55,7 @@ width: 250px;
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="CSS Hacks 和 问题解决"/>
-<meta name="twitter:description" content="———————————————————————————————————————————–
+<meta name="twitter:description" content="&#160; 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.  ———————————————————————————————————————————–
 目录  介绍 针对浏览器的选择器 让IE6支持PNG透明 移除超链接的虚线 给行内元素定义宽度 让固定宽度的页面居中 图片替换技术 最小宽度 隐藏水平滚动条  ———————————————————————————————————————————–
 一. 介绍 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.
 二. 针对浏览器的选择器 这些选择器在你需要针对某款浏览器进行css设计时将非常有用.
@@ -399,6 +399,36 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%3ch1%3e%3cspan%3eMain%20heading%20one%3c%2fspan%3e%3c%2fh1%3e" onclick="onNavClick(`#&lt;h1&gt;&lt;span&gt;Main heading one&lt;/span&gt;&lt;/h1&gt;-nav`)" id="&lt;h1&gt;&lt;span&gt;Main heading one&lt;/span&gt;&lt;/h1&gt;-nav">
+									Main heading one
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+								<ul class="collapse" data-toggle="collapse">
+							
 						
 						
 							<li>
@@ -672,6 +702,36 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%3ch1%3e%3cspan%3eMain%20heading%20one%3c%2fspan%3e%3c%2fh1%3e" onclick="onNavClick(`#&lt;h1&gt;&lt;span&gt;Main heading one&lt;/span&gt;&lt;/h1&gt;-nav`)" id="&lt;h1&gt;&lt;span&gt;Main heading one&lt;/span&gt;&lt;/h1&gt;-nav">
+									Main heading one
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+								<ul class="collapse" data-toggle="collapse">
+							
 						
 						
 							<li>
@@ -784,8 +844,12 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 <div class="post-body" v-pre>
                 
-                    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+                    <p class="bold">
+  &#160;
+</p>
+<p class="inner">
+  这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.
+</p>
 <p> </p>
 <p>———————————————————————————————————————————–</p>
 <h2 id="目录"><strong>目录</strong></h2>
@@ -846,7 +910,7 @@ ename.png&rdquo;, sizingMethod=&ldquo;scale&rdquo;);<br>
 outline: none;<br>
 }</p>
 <h3 id="五-给行内元素定义宽度"><strong>五. 给行内元素定义宽度</strong></h3>
-<p>如果你给一个行内元素定义宽度,那么它只是在IE6下有效. 所有的HTML元素要么是行内元素要么就好是块元素. 行内元素包括: <!-- raw HTML omitted -->, <!-- raw HTML omitted -->, <!-- raw HTML omitted --> 和 <!-- raw HTML omitted -->. 块元素包括<!-- raw HTML omitted -->, <!-- raw HTML omitted -->, <!-- raw HTML omitted -->, <!-- raw HTML omitted -->和<!-- raw HTML omitted --> . 你不能定义行内元素的宽度, 为了解决这个问题你可以将行内元素转变为块元素.</p>
+<p>如果你给一个行内元素定义宽度,那么它只是在IE6下有效. 所有的HTML元素要么是行内元素要么就好是块元素. 行内元素包括: <span>, <a>, <strong> 和 <em>. 块元素包括<div>, <p>, <h1>, <form>和<li> . 你不能定义行内元素的宽度, 为了解决这个问题你可以将行内元素转变为块元素.</p>
 <p>span { width: 150px; display: block }</p>
 <h3 id="六-让固定宽度的页面居中"><strong>六. 让固定宽度的页面居中</strong></h3>
 <p>为了让页面在浏览器居中显示, 需要相对定位外层div, 然后把margin设置为auto.</p>
@@ -857,14 +921,14 @@ position: relative;<br>
 <h3 id="七-图片替换技术"><strong>七. 图片替换技术</strong></h3>
 <p>用文字总比用图片做标题好一些. 文字对屏幕阅读机和SEO都是非常友好的.</p>
 <p>HTML:</p>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->CSS<!-- raw HTML omitted --><!-- raw HTML omitted -->:</p>
+<h1><span>Main heading one</span></h1>
+<p><a class="bodytag" href="http://www.yeeyan.com/articles/tag/CSS" target="_blank"><font color="#335533">CSS</font></a>:</p>
 <p>h1 { background: url(heading-image.gif) no-repeat; }<br>
 h1 span {<br>
 position:absolute;<br>
 text-indent: -5000px;<br>
 }<br>
-你可以看到我们对标题使用了标准的<!-- raw HTML omitted -->作为标签并且用css来将文本替换为图片. text-indent属性将文字推到了浏览器左边5000px处, 这样对于浏览者来说就看不见了.</p>
+你可以看到我们对标题使用了标准的<h1>作为标签并且用css来将文本替换为图片. text-indent属性将文字推到了浏览器左边5000px处, 这样对于浏览者来说就看不见了.</p>
 <p>关掉css,然后看看头部会是什么样子的.</p>
 <h3 id="八-最小宽度"><strong>八. 最小宽度</strong></h3>
 <p>IE6另外一个bug就是它不支持 min-width 属性. min-width又是相当有用的, 特别是对于弹性模板来说, 它们有一个100%的宽度,min-width 可以告诉浏览器何时就不要再压缩宽度了.</p>
@@ -873,12 +937,14 @@ text-indent: -5000px;<br>
 min-width:300px;<br>
 }</p>
 <p>为了让他在IE6下工作, 我们需要一些额外的工作. 开始的时候我们需要创建两个div, 一个包含另一个:</p>
-<!-- raw HTML omitted -->
+<div class="container">   
+<div class="holder">Content</div>   
+</div>
 <p>然后你需要定义外层div的min-width属性</p>
 <p>.container {<br>
 min-width:300px;<br>
 }</p>
-<p>这时该是IE <!-- raw HTML omitted --><!-- raw HTML omitted -->hack<!-- raw HTML omitted --><!-- raw HTML omitted -->大显身手的时候了. 你需要包含如下的代码:</p>
+<p>这时该是IE <a class="bodytag" href="http://www.yeeyan.com/articles/tag/hack" target="_blank"><font color="#335533">hack</font></a>大显身手的时候了. 你需要包含如下的代码:</p>
 <ul>
 <li>html .container {<br>
 border-right: 300px solid #FFF;<br>
@@ -895,7 +961,7 @@ margin-right: -300px;<br>
 <p>body { overflow-x: hidden; }</p>
 <p>当你决定使用一个比浏览器窗口大的图片或者flash时, 这个技巧将非常有用.</p>
 <p>———————————————————————————————————————————–</p>
-<p>原作者: Chris Thomas <!-- raw HTML omitted --><!-- raw HTML omitted --> 原文<!-- raw HTML omitted --><!-- raw HTML omitted -->  <img src="http://www.yeeyan.com/img/div.gif" alt="">  译者: <a href="http://www.yeeyan.com/space/show/10947"><!-- raw HTML omitted -->Rlog<!-- raw HTML omitted --></a>  <img src="http://www.yeeyan.com/img/div.gif" alt=""></p>
+<p>原作者: Chris Thomas <a href="http://www.solidstategroup.com/page/1592" target="_blank"><font color="#2e6ab1"> 原文</font></a>  <img src="http://www.yeeyan.com/img/div.gif" alt="">  译者: <a href="http://www.yeeyan.com/space/show/10947"><font color="#2e6ab1">Rlog</font></a>  <img src="http://www.yeeyan.com/img/div.gif" alt=""></p>
 
                     
                     <HR width="100%" id="EOF">

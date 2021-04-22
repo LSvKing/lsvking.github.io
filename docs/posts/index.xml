@@ -17,10 +17,10 @@
       <description>用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的文件，大的数据迁移都是用的restore导入的。这次遇到一次数据迁移导出的json 文件大概有4.7G左右,再倒入的时候出现了问题
 mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat
 却出现了如下的错误提示
-Mongo的错误提示也是醉了，这也忒不友好了, 完全是再猜,不过通过万能的大G还是搜到了解决方案,原来是因为Mongo对单次处理好像有大小限制（16m）好像是，所以大文件会出问题,这应该是个Bug mongoimport 默认会10000条 为一个批量导入数据，但实际上我的单条数据太大了,每51条数据就达到了16m 所以10000条导入一次肯定是不行的。幸好他有个参数 &amp;ndash;batchSize 可以指定每次批量导入的条数 设置小一些就OK了。
+2016-09-05T23:30:35.773+0800	connected to: 127.0.0.1 2016-09-05T23:30:37.653+0800	Failed: lost connection to server 2016-09-05T23:30:37.653+0800	imported 0 documents  Mongo的错误提示也是醉了，这也忒不友好了, 完全是再猜,不过通过万能的大G还是搜到了解决方案,原来是因为Mongo对单次处理好像有大小限制（16m）好像是，所以大文件会出问题,这应该是个Bug mongoimport 默认会10000条 为一个批量导入数据，但实际上我的单条数据太大了,每51条数据就达到了16m 所以10000条导入一次肯定是不行的。幸好他有个参数 &amp;ndash;batchSize 可以指定每次批量导入的条数 设置小一些就OK了。
 mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat --batchSize 1
 这样你会看到他会分开执行导入任务
-  </description>
+2016-09-05T23:12:48.622+0800	connected to: 127.0.0.1 2016-09-05T23:12:51.632+0800	d.indexs_value	42.6 MB 2016-09-05T23:12:54.626+0800	d.indexs_value	79.4 MB 2016-09-05T23:12:57.607+0800	d.indexs_value	115.9 MB 2016-09-05T23:13:00.618+0800	d.indexs_value	151.5 MB   </description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@ mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat --batchSize 1
       
       <guid>https://lsvking.github.io/1134/</guid>
       <description>在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。
-
+vagrant package --base ubuntu --output ubuntu.box ubuntu: VM not created. Moving on...  
 名称要完全一样，大小写也要一样哦。折腾了半天，也是醉了。。</description>
     </item>
     
@@ -91,7 +91,7 @@ VBoxManage setextradata &amp;quot;虚拟机名称&amp;quot; VBoxInternal2/EfiGop
       <pubDate>Wed, 12 Mar 2014 17:11:16 +0000</pubDate>
       
       <guid>https://lsvking.github.io/944/</guid>
-      <description>幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务：
+      <description>现在网盘服务越来越多，可能不少人都拥有多个网盘。有时需要将一个网盘的文件转移到另一个网盘，我们一般会现将源文件从网盘下载到本地，然后再上传到另一个网盘。每个文件都需要经过本地中转，如果文件数目多或体积大，加上国内网速不给力，这个操作将非常耗时。拷贝操作尚且如此麻烦，网盘间文件的同步操作就更繁琐了。 幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务：
 1、网盘综合管理，你可以将常用的网盘添加到cloudHQ，通过cloudHQ管理所有网盘的文件；
 2、网盘间文件拷贝/移动；
 3、网盘间文件的同步(这是cloudHQ的主打功能)。
@@ -107,7 +107,7 @@ cloudHQ的同步速度还是不错的，我从Dropbox同步了7G的数据共6000
       <pubDate>Mon, 16 Dec 2013 15:18:00 +0000</pubDate>
       
       <guid>https://lsvking.github.io/939/</guid>
-      <description>  </description>
+      <description>result=&#39;week(now(),-1) 49&#39;; var=`echo $result|awk &#39;{print substr($result,16,3)}&#39;`; echo $var;   </description>
     </item>
     
     <item>
@@ -129,7 +129,26 @@ cloudHQ的同步速度还是不错的，我从Dropbox同步了7G的数据共6000
       <pubDate>Thu, 13 Oct 2011 03:18:00 +0000</pubDate>
       
       <guid>https://lsvking.github.io/932/</guid>
-      <description>tar命令 </description>
+      <description>tar命令   tar [-cxtzjvfpPN] 文件与目录 &amp;#8230;.
+参数：
+-c ：建立一个压缩文件的参数指令(create 的意思)；
+-x ：解开一个压缩文件的参数指令！
+-t ：查看 tarfile 里面的文件！
+特别注意，在参数的下达中， c/x/t 仅能存在一个！不可同时存在！
+因为不可能同时压缩与解压缩。
+-z ：是否同时具有 gzip 的属性？亦即是否需要用 gzip 压缩？
+-j ：是否同时具有 bzip2 的属性？亦即是否需要用 bzip2 压缩？
+-v ：压缩的过程中显示文件！这个常用，但不建议用在背景执行过程！
+-f ：使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！
+例如使用『 tar -zcvfP tfile sfile』就是错误的写法，要写成
+『 tar -zcvPf tfile sfile』才对喔！
+-p ：使用原文件的原来属性（属性不会依据使用者而变）
+-P ：可以使用绝对路径来压缩！
+-N ：比后面接的日期(yyyy/mm/dd)还要新的才会被打包进新建的文件中！
+&amp;#8211;exclude FILE：在压缩的过程中，不要将 FILE 打包！
+范例：
+范例一：将整个 /etc 目录下的文件全部打包成为 /tmp/etc.tar
+[root@linux ~]# tar -cvf /tmp/etc.tar /etctar -zcvf /tmp/etc.</description>
     </item>
     
     <item>
@@ -236,7 +255,7 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
       
       <guid>https://lsvking.github.io/914/</guid>
       <description>&lt;p&gt;迅雷7发布了，目前却只为迅雷高级会员和迅雷VIP付费会员开启“迅雷7”的试用体验。安装官方迅雷，运行迅雷7体验补丁，点体验，退出补丁运行迅雷，登陆任意帐号，会一直处于登陆状态，您可以尽情的体验迅雷7了~&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img id=&#34;aimg_644158&#34; src=&#34;http://bbs.shudoo.com/attachments/month_1008/1008131623da99327e0cd71a08.jpg&#34; alt=&#34;9d959c809c7bfbfc6c8119d7.jpg&#34; width=&#34;346&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -245,7 +264,7 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
       <pubDate>Thu, 15 Jul 2010 01:58:05 +0000</pubDate>
       
       <guid>https://lsvking.github.io/912/</guid>
-      <description></description>
+      <description>蜈蚣百足，行不及蛇,灵鸡有翼，飞不如鸦。马有千里之程，无人不能自往；人有凌云之志，非运不能腾达。文章盖世，孔子困于陈蔡；武略超群，太公垂钓于渭水。盗跖年幼，不是善良之辈；颜回命短，实非凶恶之徒。尧舜至圣，反生不肖之子；瞽叟顽呆，却生大圣之儿。张良原是布衣，萧何称谓县吏。晏子身无五尺，能做齐国首相；孔明居卧草庐，作了蜀汉军师。韩信手无缚鸡之力，封了汉朝大将；冯唐有安邦之志，到老半官无封；楚王虽雄，难免乌江自刎；汉王虽弱，却有万里江山。满腹经纶，白发不第；才疏学浅，少年登科。有先贫而后富，有先富而后贫。蛟龙未遇，潜身于鱼虾之间；君子失时，拱手于小人之下。天不得时，日月无光；地不得时，草木不长；水不得时，风浪不止；人不得时，利运不通。盖人生在世，富贵不能移，贫贱不能欺。此乃天地循环，终而复始者也。 </description>
     </item>
     
     <item>
@@ -263,9 +282,9 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
       <pubDate>Wed, 17 Mar 2010 09:16:08 +0000</pubDate>
       
       <guid>https://lsvking.github.io/899/</guid>
-      <description>&lt;p&gt;都说死者为大吧，虽然这个人曾令我咬牙切齿，彻夜无法眠，而且他其实也并没有死，在我这里他还活得好好的，比谁都滋润(老不死的,该死不死的&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2010/03/clip_image001.gif&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;);&lt;/p&gt;
+      <description>&lt;p&gt;都说死者为大吧，虽然这个人曾令我咬牙切齿，彻夜无法眠，而且他其实也并没有死，在我这里他还活得好好的，比谁都滋润(老不死的,该死不死的&lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2010/03/clip_image001.gif&#34;&gt;&lt;img title=&#34;clip_image001&#34; style=&#34;display: inline&#34; height=&#34;20&#34; alt=&#34;clip_image001&#34; src=&#34;http://lsvking.github.io/wp-content/uploads/2010/03/clip_image001_thumb.gif&#34; width=&#34;20&#34; /&gt;&lt;/a&gt;);&lt;/p&gt;
 &lt;p&gt;话说回来了，它能有这么顽强的生命力还是有一定的原因的,垄断捆绑,加上GHOST XP 肆虐,使他的装机量完完全全的成了绝对统治级别的,现在还有这么多人在用XP,包括我公司的电脑还有家里有一台以前的老电脑都是,有XP基本上就必然有IE6,闲话不扯了 没必要做说IE6的缺点了,下面上图啦: &lt;strong&gt;IE6****葬礼现场&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;file:///C:%5CDocuments%20and%20Settings%5CLSvKing%5CLocal%20Settings%5CTemp%5CWindowsLiveWriter-429641856%5Csupfiles1835067%5Cimage3.png&#34;&gt;&lt;img title=&#34;clip_image003&#34; style=&#34;border-top-width: 0px; display: block; border-left-width: 0px; float: none; border-bottom-width: 0px; margin-left: auto; margin-right: auto; border-right-width: 0px&#34; height=&#34;345&#34; alt=&#34;clip_image003&#34; src=&#34;http://lsvking.github.io/wp-content/uploads/2010/03/clip_image003.gif&#34; width=&#34;512&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;好蓝，好蓝&lt;/p&gt;</description>
     </item>
     
@@ -291,7 +310,8 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
 当然，曾经我也经常使用百度，享受其便利搜索的同时也关注其成长。我曾一直很期待百度能成为一家负有责任感的道德公司，就像他们新编《壹百度》里所鼓吹的那样。遗憾的是，从百度高管到员工，似乎都没和这家公司一样完成这种道德上的转变。不要武断地以为我是在挟公器而泄私愤。以我跑IT线的最近两年跟百度人打交道的直观感受就是，百度严重地缺乏公关沟通原则并且势利：为了掩盖其负面新闻，百度公关可以不惜千里飞来又是许诺又是找高层拉关系；一旦目的达到或者遭拒，其公关团队转瞬就变得傲慢十足。
 从最近频频曝出网友投诉百度上充斥恶意诽谤攻击他人名誉的网页链接可见一斑。百度不仅没有履行道德公司所必须的制止不良信息散播责任，却是为了暖味眼球和暴利空间，选择最大限度地纵容和助长这类恶意传播扩大化，给被侵权人带来更大的伤害。可悲的是，百度不以为耻反以为荣，似有将此恶习死扛到底的趋势。
 “百度搜索引擎的核心价值就在于在网络空间里自由地抓取信息，靠信息有序化进行商业运作。”百度公关高管们不止一次地辩称，技术上无法屏蔽掉恶意诽谤信息。但如果以此逃避散播诽谤网贴的责任，那么，累积起百度巨大财富将李彦宏推上首富的百度竞价排名又作何解？那些活跃在百度线上线下，以收钱删贴的公司又是如何的生存？更近的例子是，如今百度上搜索孙云丰骂谷歌的贴子，缘何毫无例外地全部显示“页面无法访问”？百度何必如此掩耳盗铃。
-百度原本可以更幸福的，他完全可以把商业价值建立在一个正确的价值观之上。谷歌的退出，无疑让百度迎来商业搜索史上可遇不可求的机遇，很不幸，百度根本不愿这么做。</description>
+百度原本可以更幸福的，他完全可以把商业价值建立在一个正确的价值观之上。谷歌的退出，无疑让百度迎来商业搜索史上可遇不可求的机遇，很不幸，百度根本不愿这么做。
+转自：戴远程的BLOG </description>
     </item>
     
     <item>
@@ -302,7 +322,7 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
       <guid>https://lsvking.github.io/794/</guid>
       <description>&lt;p&gt;最近在写东西，看到有些HMVC的教程，于是就花了些时间去了解了一下，下边就来谈一谈。&lt;/p&gt;
 &lt;p&gt;HMVC(Hierarchical-Model-View-Controller)，故名思意，就是按等级划分的MVC模式，MVC我想不必多解释了，至于什么叫做按等级划分的，我们来看几张图就明白了。&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-797&#34; title=&#34;jw0721hmvc1&#34; src=&#34;http://lsvking.github.io/wp-content/uploads/2009/12/jw0721hmvc14.gif&#34; alt=&#34;jw0721hmvc1&#34; width=&#34;425&#34; height=&#34;264&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -320,7 +340,7 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
       <pubDate>Fri, 21 Aug 2009 19:41:58 +0000</pubDate>
       
       <guid>https://lsvking.github.io/776/</guid>
-      <description>&lt;p&gt;最近发现了这个不错的四格&lt;!-- raw HTML omitted --&gt;动漫&lt;!-- raw HTML omitted --&gt;，给大家分享下。。。&lt;/p&gt;
+      <description>&lt;p&gt;最近发现了这个不错的四格&lt;a title=&#34;动漫&#34; href=&#34;http://www.holaba.com.cn/noah/pda-electronic-dictionary-pda/noah-dong-man-dan-ci-wang-618&#34; target=&#34;_blank&#34;&gt;动漫&lt;/a&gt;，给大家分享下。。。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://img1.qq.com/comic/pics/17437/17437104.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
@@ -381,7 +401,7 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
       
       <guid>https://lsvking.github.io/587/</guid>
       <description>&lt;p&gt;&lt;strong&gt;图片是小的，那是wlw搞的，大家自己点击开来看吧。 &lt;img src=&#34;http://www.zu14.cn/coolemotion/emotions/tang_14.png&#34; alt=&#34;&#34;&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://lsvking.cn/587&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;http://lsvking.cn/587&#34;&gt;&lt;img style=&#34;border-right: 0px; border-top: 0px; display: inline; border-left: 0px; border-bottom: 0px&#34; title=&#34;clip_image027&#34; src=&#34;http://lsvking.github.io/wp-content/uploads/2009/07/clip_image027_thumb1.jpg&#34; border=&#34;0&#34; alt=&#34;clip_image027&#34; width=&#34;403&#34; height=&#34;504&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -390,7 +410,7 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
       <pubDate>Tue, 21 Jul 2009 00:25:37 +0000</pubDate>
       
       <guid>https://lsvking.github.io/420/</guid>
-      <description></description>
+      <description>22日我国将出现精彩绝伦的日全食奇观,这次日全食发生在我国人口十分密集的长江流域,届时,3亿人在家门口就可共同观测天象奇观,而其他地区的人只能欣赏到日偏食。天文专家表示,22日观测日偏食也很精彩,因为像今年这一次食分较大,是很难得的。据了解,所谓食分是指月亮影子挡住太阳最多时,太阳直径被挡部分的百分比。 这里是具体观察时间。 http://news.xinhuanet.com/tech/2009-07/13/content_11700306.htm </description>
     </item>
     
     <item>
@@ -399,7 +419,13 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
       <pubDate>Fri, 01 May 2009 22:03:10 +0000</pubDate>
       
       <guid>https://lsvking.github.io/337/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;div class=&#34;entry-body&#34;&gt;
+  &lt;div&gt;
+    &lt;div class=&#34;item-body&#34;&gt;
+      &lt;div&gt;
+        &lt;p&gt;
+          盘古说：我开；&lt;br /&gt; 女娲说：我补；&lt;br /&gt; 共工说：我撞；&lt;br /&gt; 神农说：我尝；&lt;br /&gt; 精卫说：我填；&lt;br /&gt; 夸父说：我追；&lt;br /&gt; 后羿说：我射；&lt;br /&gt; 嫦娥说：没射着！
+        &lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    &amp;lt;p&amp;gt;
       黄帝说：我们做什么；&amp;lt;br /&amp;gt; 尧说：我让；&amp;lt;br /&amp;gt; 舜说：我也让；&amp;lt;br /&amp;gt; 禹说：咱爷们怎么办？&amp;lt;br /&amp;gt; 启说：让他们球！
     &amp;lt;/p&amp;gt;
@@ -464,7 +490,7 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D
       <pubDate>Fri, 14 Nov 2008 12:25:17 +0000</pubDate>
       
       <guid>https://lsvking.github.io/326/</guid>
-      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;http://www.walkerplus.com/phtml/all/movie/image/flyer/mo5825_f1.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;◎译　　名　少林少女&lt;/p&gt;
 &lt;p&gt;◎片　　名　Shaolin Girl&lt;/p&gt;
 &lt;p&gt;◎年　　代　2008&lt;/p&gt;
@@ -529,7 +555,9 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D
 如果我有统计投票系统我会列出如下选择：
 问题：刘翔不能比赛的原因
 单选题：
-A</description>
+A
+ 刘翔确实有伤，伤势使他退出比赛
+B 刘翔状态不好,以某种特殊方式退出比赛 </description>
     </item>
     
     <item>
@@ -538,7 +566,26 @@ A</description>
       <pubDate>Sat, 09 Aug 2008 22:14:33 +0000</pubDate>
       
       <guid>https://lsvking.github.io/311/</guid>
-      <description>1、Google推出的3维聊天空间，可以设计自己的形象和房间</description>
+      <description>1、Google推出的3维聊天空间，可以设计自己的形象和房间
+http://www.lively.com/
+2、可以在线听和免费下载最新《读者》《科幻世界》等著名杂志有声版，不用再买杂志
+http://www.ilisten.cn/ZZ
+3、可以一键免费把自己博客印成书的网站
+http://blog.mrprint.cn
+4、可以修改每一本书内容的在线图书馆
+http://www.bookgg.com/library.asp
+5、一个比Google还强，每天看别人在搜索什么东西的搜索引擎
+http://www.bearsou.com
+6、每天可以免费买彩票，每天百万现金奖的精彩网站
+http://www.lotcome.com
+7、可以访问任何网页的Google隐藏入口
+http://www.google.com/gwt/n
+8、可以把你的网址缩短的网站
+http://tinyurl.com/
+9、爱因斯坦写汉字
+http://www.sbfun.org/einstein/index.php
+10、你可以在线做个以自己照片做硬币人物的硬币图片，好酷哦！！
+http://onlinewahn.de/generator/m-maker.htm </description>
     </item>
     
     <item>
@@ -568,13 +615,17 @@ table{ border-collapse:collapse; }
 td{ border:#000 solid 1px; }
 您也可以参考：
 与表格边框有关的CSS语法
-http://www.52css.com/article.asp?id=394CSS去除表格td默认间距及制作1px细线表格
-http://www.52css.com/article.asp?id=593实现符合Web标准的细线表格
-http://www.52css.com/article.asp?id=676十五、margin取负值可以在标签使用绝对定位的时候起到相对定位的作用，在页面居中显示时，使用绝对定位的层不适合使用left:XXpx这个属性。把这个层放到一个要相对定位的标签旁，然后使用margin的负值是个好方法。
+http://www.52css.com/article.asp?id=394
+CSS去除表格td默认间距及制作1px细线表格
+http://www.52css.com/article.asp?id=593
+实现符合Web标准的细线表格
+http://www.52css.com/article.asp?id=676
+十五、margin取负值可以在标签使用绝对定位的时候起到相对定位的作用，在页面居中显示时，使用绝对定位的层不适合使用left:XXpx这个属性。把这个层放到一个要相对定位的标签旁，然后使用margin的负值是个好方法。
 十六、绝对定位时使用margin值定位可以达到相对于本身所在位置的定，这与top，left等属性相对与窗口边缘的定位不同。绝对定位的优势在于可以让其它元素忽略它的存在。
 十七、如果文字过长,则将过长的部分变成省略号显示：IE5,FF无效，但可以隐藏，IE6有效
 &amp;lt;DIV STYLE=”width:120px;height:50px;border:1px solid blue;overflow:hidden;text-overflow:ellipsis”&amp;gt;
-就是比如有一行文字，很长，表格内一行显示不下.十八、在IE中可能由于注释带来的文字重复问题时可以把注释改为：
+就是比如有一行文字，很长，表格内一行显示不下.
+十八、在IE中可能由于注释带来的文字重复问题时可以把注释改为：
 &amp;lt;!–[if !IE]&amp;gt;Put your commentary in here…&amp;lt;![endif]–&amp;gt;
 十九、如何用CSS调用外部字体
 语法：
@@ -585,10 +636,7 @@ url(url)：使用绝对或相对 url 地址指定OpenType字体文件
 sRules：样式表定义
 二十、如何让一个表单中的文本框中的文字垂直居中？
 如果用行高与高度的组在FF中是没有效果的，办法就是定义上下补白就可以实现想想的效果了。
-二十一、定义A标签要注意的小问题：
-当我们定义a{color:red;}时，它代表了A的四种状态的样式，如果此时要定义一个鼠标放上的状态只要定义a:hover就可以了，其它三种状态就是A中所定义的样式。只定义了一个a:link时，一定要记得把其它三种状态定义出来！
-二十二、并不是所有样式都要简写：
-当样式表前定义了如p{padding:1px 2px 3px 4px}时，在后续工程中又增加了一个样式上补白5px，下补白6px。我们并不 一定要写成p.</description>
+二十一、定义A标签要注意的小问题：</description>
     </item>
     
     <item>
@@ -604,7 +652,8 @@ DNS 中的漏洞可允许欺骗 (953230)
 一般信息
 摘要
 此安全更新可解决 Windows 域名系统 (DNS) 中两个秘密报告的漏洞，这些漏洞可允许欺骗。 DNS 客户端和 DNS 服务器中均存在这些漏洞，这些漏洞可能会允许远程攻击者将 Internet 上针对系统的网络通信重定向至攻击者自己的系统。
-打上这个补丁953230（KB951748）后TCP/IP连接数会恢复到原来的限制10 ，原来的关于破解TCP/IP的都失效了。</description>
+打上这个补丁953230（KB951748）后TCP/IP连接数会恢复到原来的限制10 ，原来的关于破解TCP/IP的都失效了。
+这里下载：SP3 TCPIP并发连接数修改 文件: SP3 TCPIP并发连接数修改.exe 大小: 326656 字节 MD5: CD096C24DC2AA10CC004022C4FD04E82 SHA1: EEB6B8558771CBECAE9B615FCE9B3F1CD3969D97 CRC32: 6A8FF18C </description>
     </item>
     
     <item>
@@ -613,7 +662,7 @@ DNS 中的漏洞可允许欺骗 (953230)
       <pubDate>Mon, 28 Jul 2008 15:45:57 +0000</pubDate>
       
       <guid>https://lsvking.github.io/297/</guid>
-      <description>SourceForge俗称SF，大家经常去的地方，有很多的软件项目都托管在这个网站，不过我一直记不住这个域名，你也记不住，没关系 SF.Net你总记住了吧。
+      <description>SourceForge 俗称SF，大家经常去的地方，有很多的软件项目都托管在这个网站，不过我一直记不住这个域名，你也记不住，没关系 SF.Net 你总记住了吧。
 前些日子被封了，造成不少麻烦，今天玩玩PHPBB3，偶然点了一个链接，居然打开了，再看自己也没挂代理，让别人看了下，也开了，HOHo 解封了。</description>
     </item>
     
@@ -623,7 +672,13 @@ DNS 中的漏洞可允许欺骗 (953230)
       <pubDate>Mon, 28 Jul 2008 14:02:21 +0000</pubDate>
       
       <guid>https://lsvking.github.io/300/</guid>
-      <description>&amp;lt;div id=&amp;quot;logo&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;navbar&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;welcome-section&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- Main Content --&amp;gt; &amp;lt;div id=&amp;quot;column_left&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;sidebar&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- Footer --&amp;gt; &amp;lt;div id=&amp;quot;footer&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;  </description>
+      <description>原文：Write a well structured CSS file without becoming crazy   译文：编写具有良好结构的CSS文件  这是一篇关于如何编写具有良好结构的CSS文件的帖子。我已经讲过 CSS文件的代码可读性，但在讨论之后，一些更具体的要求被提出（主要是关于一些读者在管理具有大量布局元素CSS文件时的困难之处），所以我决定在这些案例中说明我自己的开发流程。
+ 以我的经验，项目流程中如果缺乏&amp;#8221;顺序&amp;#8221;或一个关于项目的清晰视图是非常不利的而且你还得冒风险去添加，更改，删除class及其属性，如此在你的最终产品中得到的将只有混乱的代码和大量未使用的元素。  我建议在你直接编写CSS代码之前，先把你的网站的所有区块都在草稿里画出来。然后依照下面的简单规制优化你的工作：  1：简洁的  2：以&amp;#8221;优雅的代码&amp;#8221;为导向  3：有条理的  简洁的
+避免使用任何非必需的元素。两个层就可以达到目的那就不要用六个。如果你觉得得用很复杂的CSS才能完成一个特定的设计结构，那你可能在某些地方犯了错误。请尝试用其他的方式来实现它。通常情况下事情都是很简单的，复杂的是我们自己。  以&amp;#8221;优雅的代码&amp;#8221;为导向
+缩进你的代码以强调依赖关系的CSS元素，使用空白和注释分割不同逻辑的代码块。使用如下所示的简洁的，行内的注释：  不用写一本&amp;#8221;书&amp;#8221;来说明一个div ID为何叫#column-left。只要你选对名字，就足够清晰的说明了。（译注：此处取名为#column-leftqian欠妥，用#content-column会更好些，如此就不必担心因布局的变动而产生歧义，比如把当需要把#column-left 列移到右边时）  有条理的
+在所有项目中均用同样的名字标示相同的区块（#logo, #navbar, #left-column, #footer&amp;#8230;）。给不同类型的类分组并按字母循序排列CSS属性可以提高代码的可读性。一旦你在项目中发现正确的方法，就应该在所有的新项目中重复使用。这样，代码会变得越来越熟悉，越来越容易管理，而你也会写得越来越快。  在开始编码之前问问你自己：我要做什么？
+在打开你最喜欢的编辑软件之前你必须先想想这个好问题。现在你只需要做的就是用铅笔和橡皮在纸上画出整个网站的主要区块：  在这一流程，你不需要在你的手写&amp;#8221;草稿&amp;#8221;上增加太多的细节：每个标签的大小（width，以pixel或percentage的形式）,内边距, 边框和外边距就足够了。  让我们开始吧，但请先重新设置CSS的浏览器默认样式
+这个操作将重新设置HTML标准标签(h1, p, ul, li&amp;#8230;)的浏览器默认样式。最近我读了很多关于这个主题的有趣的帖子。我不知道你如何。。。但在我的项目中一般需要重新设置的是：  body, h1, h2, h3, p, ul, li, form  没有其他的了。表格标签(,  and )很少用到。在任何情况下，你可以通过下面的链接了解完整的CSS重设技术：  &amp;#8211; Yahoo!</description>
     </item>
     
     <item>
@@ -650,7 +705,7 @@ DNS 中的漏洞可允许欺骗 (953230)
       <pubDate>Tue, 22 Jul 2008 13:00:18 +0000</pubDate>
       
       <guid>https://lsvking.github.io/283/</guid>
-      <description></description>
+      <description> 此方法来自偶爱偶家。   言归正传， 首先我的修改是针对 simple tags 这个插件的， 其他的我就不说了， 你可以参照这里的方法自己研究。   1、在simple-tags.client.php文件中查找该语句  function getColorByScale($scale_color, $min_color, $max_color)  2、注释掉上述函数中的以下语句（其实不注释掉也是无所谓的）  $scale_color = $scale_color / 100; $minr = hexdec(substr($min_color, 1, 2)); $ming = hexdec(substr($min_color, 3, 2)); $minb = hexdec(substr($min_color, 5, 2)); $maxr = hexdec(substr($max_color, 1, 2)); $maxg = hexdec(substr($max_color, 3, 2)); $maxb = hexdec(substr($max_color, 5, 2)); $r = dechex(intval((($maxr - $minr) * $scale_color) + $minr)); $g = dechex(intval((($maxg - $ming) * $scale_color) + $ming)); $b = dechex(intval((($maxb - $minb) * $scale_color) + $minb));  3、 在上述被注释掉的语句后增加如下语句（如果没有注释掉就必须加在后面， 否则无效）  //mod by hongfengye start $r = dechex(rand(0,255)); $g = dechex(rand(0,196)); $b = dechex(rand(0,255)); //mod by hongfengye end  是的， 就是这么简单， 现在你应该就可以发现你的标签云(tags cloud)已经是彩色(colorful)的了。 效果图如下：     </description>
     </item>
     
     <item>
@@ -660,7 +715,7 @@ DNS 中的漏洞可允许欺骗 (953230)
       
       <guid>https://lsvking.github.io/262/</guid>
       <description>在本博客右边栏最上边的那个每日一句，当鼠标划过小喇叭还会真人发音，这个其实是用了dict.cn提供的一个小工具，应用起来很简单，将
-这段代码放到Widgets，文本块里就行了！</description>
+Dict.CN 在线词典, 英语学习, 在线翻译   这段代码放到Widgets，文本块里就行了！</description>
     </item>
     
     <item>
@@ -679,13 +734,14 @@ DNS 中的漏洞可允许欺骗 (953230)
       <pubDate>Fri, 18 Jul 2008 13:44:56 +0000</pubDate>
       
       <guid>https://lsvking.github.io/229/</guid>
-      <description>今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。
+      <description> 今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。
  将下载的文件传到插件目录下，启动插件，一直Next就差不多了，第一步他会备份数据库的，会给出个下载地址，大家最好下载到本地。我升级完后却怎么也登录不上后台了，想了一下清除了下Cookie就OK了。
 他是从官方下载的版本安装的，大家安装完后，自己在去下中文包吧。
 此插件是经过了如下几个步骤
  1.备份数据库和文件到本地。 2.从 http://wordpress.org/latest.zip 下载最新的补丁并解压。 3.将你的站点设置为维护状态，主页被提示更新页暂时替换。 4.锁定所有插件。 5.后台更新 WordPress。 6.在新窗口中显示更新后主页 7.自动激活所有插件(按照 Keith 所说这一步应该可以实现，但是在我的 BLOG 上并没有完成，所有插件最后还是由我手动激活)  个人角度来看，这款插件在很大程度上解决了因为 WordPress 版本更新的问题，而且最大限度的避免了数据和文件的丢失(其备份的过程和 WordPress Database Backup 插件基本类似)。由于使用 FTP 来进行更新操作，所以更新完成的速度也是很快的(我的BLOG更新大约前后用了不到一分钟)，基本不会因为更新而导致你的站点无法访问。
 下载地址:http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/
-本站下载:</description>
+本站下载:
+  wordpress-automatic-upgrade.1.2.0.2.zip   </description>
     </item>
     
     <item>
@@ -712,7 +768,8 @@ DNS 中的漏洞可允许欺骗 (953230)
       <guid>https://lsvking.github.io/220/</guid>
       <description>一款用于分析Fs2you网络硬盘真实下载地址的工具，Fs2you网络硬盘的用户越来越多，因为它的速度快和不限制文件大小得到了网友们的青睐，但是人气高了，文件动不动就要安装他们自己的下载工具才能下载，很郁闷。
 于是写了这款简单的工具，原理非常简单源码分析而已，希望对大家有用。
-下载地址：</description>
+下载地址：
+ Fs2you下载小帮手.exe  </description>
     </item>
     
     <item>
@@ -753,7 +810,7 @@ http://wordpresschina.googlecode.com/files/wordpress.26.chs.languages.only.tar.g
       <pubDate>Sun, 01 Jun 2008 19:35:26 +0000</pubDate>
       
       <guid>https://lsvking.github.io/209/</guid>
-      <description></description>
+      <description> 用上了菊子曰 测试下试试！  </description>
     </item>
     
     <item>
@@ -800,7 +857,7 @@ e9fbc5f7</description>
 这款设备完美的诠释了威盛电子提出了“‘UMD”概念，也就是Ultra Mobile Device的所写，是“超便携设备”的意思，突破了传统的掌上电脑或者智能手机的概念，是真正意义上的全功能便携设备。
 
 据海外媒体消息，这款设备将在今年的7月正式上市。下面是这个视频的演示视频：
-以下为这款设备基本的配置，但是我们对其手机制式等参数还不了解，如果我得到最新消息，必将第一时间和你分享：
+ 以下为这款设备基本的配置，但是我们对其手机制式等参数还不了解，如果我得到最新消息，必将第一时间和你分享：
 配件 ****
 参数
 中央处理器 ****
@@ -884,7 +941,10 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
 我调试的方法是：
 将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Pagetitle 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagetitle 标记】的具体代码如下：
-文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagetitle style=’select’/}{dede:prenext/} 得到如下返回数据：
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}
+文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}
+{dede:pagetitle style=’select’/}
+{dede:prenext/} 得到如下返回数据：
 
 注意：
 想要使用【Pagetitle 标记】的前提条件是，文章存在分页，而且要手动在需分的地方加上#p#副标题#e#，实现分页的。
@@ -903,7 +963,10 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
 我调试的方法是：
 将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Prenext 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagelist 标记】的具体代码如下：
-文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagebreak/}{dede:prenext/} 得到如下返回数据：</description>
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}
+文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}
+{dede:pagebreak/}
+{dede:prenext/} 得到如下返回数据：</description>
     </item>
     
     <item>
@@ -918,7 +981,9 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
 我调试的方法是：
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagelist 标记】的具体代码如下：
-文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagebreak/}
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}
+文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}
+{dede:pagebreak/}
 得到如下返回数据：
 
 注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。</description>
@@ -935,7 +1000,8 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
 通过调试了解其使用方法
 我调试的方法是：
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新栏目HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。
-我调试【Pagelist 标记】的具体代码如下：</description>
+我调试【Pagelist 标记】的具体代码如下：
+ {dede:list col=&amp;#8217;1&amp;#8242; row=&amp;#8217;3&amp;#8242; titlelen=&amp;#8217;20&amp;#8217; infolen=&amp;#8217;100&amp;#8242; imgwidth=&amp;#8217;120&amp;#8242; imgheight=&amp;#8217;80&amp;#8217; pagesize=&amp;#8217;3&amp;#8242; typeid=&amp;#8217;95&amp;#8217;} \[field:imglink/\] \[field:textlink/\] [field:info/] {/dede:list}  {dede:pagelist listsize=&amp;#8217;3&amp;#8242; listitem=&amp;#8217;index pre pageno next end option&amp;#8217;/} 得到如下返回数据： [][1] </description>
     </item>
     
     <item>
@@ -951,7 +1017,8 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
 将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Channelartlist 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。
 例1
 我调试【Channelartlist 标记】的具体代码如下：
-{dede:channelArtlist typeid=&amp;ldquo;94&amp;rdquo; col=&amp;ldquo;1&amp;rdquo;}</description>
+{dede:channelArtlist typeid=&amp;ldquo;94&amp;rdquo; col=&amp;ldquo;1&amp;rdquo;}
+{dede:type} [field:typename/] {/dede:type}   {dede:arclist row=&#34;5&#34;} [field:textlink/] {/dede:arclist}    {/dede:channelArtlist} 得到如下返回数据： [][1] 注意：细心的朋友会发现，使用【Channelartlist 标记】时，需要你对div + css或者table的控制能力较强，否则在页面中很难控制它。请大家他细看下面例2，例1与例2代码上相差很小，但得到的布局却相差很大。仔细对比一下吧！ 例2 我调试【Channelartlist 标记】的具体代码如下： {dede:channelArtlist typeid=&#34;94&#34; col=&#34;1&#34;} {dede:type} [field:typename/] {/dede:type}   {dede:arclist row=&#34;5&#34;} [field:textlink/] {/dede:arclist}    {/dede:channelArtlist} 得到如下返回数据： [][2] </description>
     </item>
     
     <item>
@@ -992,7 +1059,11 @@ NextCool 现正在使用的PR图标，提供了四种漂亮的PR图标，有点w
 补充：
 
 我调试【Flink 标记】的具体代码如下：
-全部用文字显示：{dede:flink type=’textall’ row=’4’ titlelen=’20’}{/dede:flink}文字和图文混合排列：{dede:flink type=’textimage’ row=’4’ titlelen=’20’}{/dede:flink}仅显示不带Logo的链接：{dede:flink type=’text’ row=’4’ titlelen=’20’}{/dede:flink}仅显示带Logo的链接：{dede:flink type=’image’ row=’4’ titlelen=’20’}{/dede:flink}得到如下返回数据：</description>
+全部用文字显示：{dede:flink type=’textall’ row=’4’ titlelen=’20’}{/dede:flink}
+文字和图文混合排列：{dede:flink type=’textimage’ row=’4’ titlelen=’20’}{/dede:flink}
+仅显示不带Logo的链接：{dede:flink type=’text’ row=’4’ titlelen=’20’}{/dede:flink}
+仅显示带Logo的链接：{dede:flink type=’image’ row=’4’ titlelen=’20’}{/dede:flink}
+得到如下返回数据：</description>
     </item>
     
     <item>
@@ -1044,7 +1115,8 @@ titlebackground=” tablebgcolor=’#FFFFFF’}
 当然，自定义宏标记里面也可以加入dedecms的标记内容，适合当前栏目的显示内容，不过需要在调用代码中将ismake设为yes才可以，也可以通过设置typeid使自定义宏标记在特定栏目中显示。
 有人会问，我已经生成了很多页面了，现在想更改了一下自定义宏标记的内容，那岂不是要更改后重新再生成一遍，那样就不方便了。
 其实柏拉图早就考虑到这点，在自定义宏标记中可以使用javascript调用，这样以来，只要改变一次就可以实现全局改变的效果。
-具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&amp;lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&amp;gt;我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
+具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&amp;lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&amp;gt;
+我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
 怎么样，自定义宏标记内容强大吧，相信他的引入会给你的模板制作带来更好的效果。</description>
     </item>
     
@@ -1080,7 +1152,8 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
 我调试【Channel 标记】的具体代码如下：
 {dede:type typeid=’96’}{/dede:type}
 {dede:channel typeid=’96’}
-&amp;lt;a href=&#39;[field:typelink /]’&amp;gt;[field:typename/]{/dede:channel}
+&amp;lt;a href=&#39;[field:typelink /]’&amp;gt;[field:typename/]
+{/dede:channel}
 得到如下返回数据：
 
 通过以上两行代码的对比，相信你的认识会更深刻。前者是生成单一的数据，后者通过数组生成一组的数据。</description>
@@ -1105,13 +1178,15 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
 调用方法一：
 我调试【Channel 标记】的具体代码如下：
 {dede:channel row=’3′ type=’top’}
-[field:typename/]{/dede:channel}
+[field:typename/]
+{/dede:channel}
 得到如下返回数据：
 
 调用方法二：
 我调试【imglist标记】的具体代码如下：
 {dede:channel row=’3′ type=’sun’ typeid=’96’}
-[field:typename/]{/dede:channel}
+[field:typename/]
+{/dede:channel}
 得到如下返回数据：</description>
     </item>
     
@@ -1136,13 +1211,20 @@ index_article.htm、list_article.htm、article_article.htm等类似的模板文�
 用法一：
 这种用法，主要是从数据库获取相关的数据，特别是系统变量的数据。
 我调试【Arclist 标记】的具体代码如下：
-调用position标记,得到:栏目一 &amp;gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}插件路径：{dede:field name=’phpurl’/}模板路径：{dede:field name=’templeturl’/}版权信息：{dede:field name=’powerby’/}主页路径：{dede:field name=’indexurl’/}主页名称：{dede:field name=’indexname’/}得到如下返回数据：
+调用position标记,得到:栏目一 &amp;gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}
+插件路径：{dede:field name=’phpurl’/}
+模板路径：{dede:field name=’templeturl’/}
+版权信息：{dede:field name=’powerby’/}
+主页路径：{dede:field name=’indexurl’/}
+主页名称：{dede:field name=’indexname’/}
+得到如下返回数据：
 
 请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。
 用法二：
 这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，
 我调试【Arclist 标记】的具体代码如下：
-注意：本页面的文字和链接都是经过dede.css处理的织梦论坛得到如下返回数据：</description>
+注意：本页面的文字和链接都是经过dede.css处理的
+织梦论坛 得到如下返回数据：</description>
     </item>
     
     <item>
@@ -1175,7 +1257,8 @@ imgwidth=’100′ imgheight=’80’}
 我调试【imglist标记】的具体代码如下：
 {dede:imglist typeid=” row=’2′ col=’1’ titlelen=’20’ infolen=”
 imgwidth=’100′ imgheight=’80’}
-[field:imglink/] [field:textlink/]{/dede:imglist}
+[field:imglink/] [field:textlink/]
+{/dede:imglist}
 得到如下返回数据：
 
 如上例，其它的别名标记，朋友们可以举一反三，融会贯通！</description>
@@ -1198,8 +1281,11 @@ C、{dede:标记名称 属性=’值’}自定义样式模板(InnerText){/dede:�
 将templets\default\文件夹下的index.html文件代码，全部掏空。放入自己想要调试的标签，再在IE中访问网站主页index.php，就可以得到返回的数据。
 比如：
 a、放入标签{dede:global name=&amp;ldquo;cfg_webname&amp;rdquo; /}就得到了“网站名称”
-b、放入标签{dede:artlist typeid=” row=5}[field:title/]{/dede:artlist}就返回5篇文章的标题。
-c、放入标签{dede:arclist infolen=’100′ row=5}[field:textlink/][field:info/]{/dede:arclist}就返回5篇文章的标题和相应的内容简介
+b、放入标签{dede:artlist typeid=” row=5}[field:title/]
+{/dede:artlist}就返回5篇文章的标题。
+c、放入标签{dede:arclist infolen=’100′ row=5}[field:textlink/]
+[field:info/]
+{/dede:arclist}就返回5篇文章的标题和相应的内容简介
 注意：abc实例是与上面ABC三种形式相对应的。大家可以按照官方的文档，逐个测试，举一反三。
 至于DedeCMS程序是怎样实现的，我不懂PHP，搞不清楚，我觉得也没必要全都弄懂，搞模板的就专心搞模板，程序的归由技术人员去处理。
 搞清楚上面内容，基本上就会调用数据库中自己需要的数据了。
@@ -1299,8 +1385,10 @@ DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合�
       
       <guid>https://lsvking.github.io/106/</guid>
       <description>视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用 Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影 “a Sora in Prospect Park”：
- 对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
- autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的 John F. Kennedy 的就职演说。</description>
+1: &amp;lt;video src=&#34;http://www.cafeaulait.org/birds/sora.mov&#34; /&amp;gt;
+   对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
+1: &amp;lt;audio src=&#34;spacemusic.mp3&#34; autoplay=&#34;autoplay&#34; loop=&#34;20000&#34; /&amp;gt;
+   autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的 John F.</description>
     </item>
     
     <item>
@@ -1311,7 +1399,7 @@ DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合�
       <guid>https://lsvking.github.io/105/</guid>
       <description>HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HTML 5 提供了几个新的内联元素来满足非技术作者的需求。  m
 m 元素表示文本被 “加上标志”，但是不一定要强调。可以把它想像成书中突出显示的一节。Google 的缓存页面就是典型的用例。如果链接到一个缓存的副本，搜索词就被加上标志。例如，如果搜索 “Egret”，那么缓存的 Google 页面可能像下面这样：
-&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; American &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Egret&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;) is a large white wading bird found worldwide.</description>
+1: The Great &amp;lt;m&amp;gt;Egret&amp;lt;/m&amp;gt; (also known as the &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; American &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Egret&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;) is a large white wading bird found worldwide.</description>
     </item>
     
     <item>
@@ -1321,7 +1409,7 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
       
       <guid>https://lsvking.github.io/104/</guid>
       <description>HTML 5 还增加了一些纯语义性的块级元素： aside figure dialog 我在文章和书中一直使用前两个元素。第三个元素我不经常用，它主要用于书面文本。 aside aside 元素代表说明、提示、边栏、引用、附加注释等，也就是叙述主线之外的内容。例如，在 developerWorks 文章中，常常会看到用表格形式编写的边栏，见代码3 用 HTML 4 编写的 developerWorks 边栏。
-&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;10&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;img&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;alt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;src&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;//www.</description>
+1: &amp;lt;table align=&#34;right&#34; border=&#34;0&#34; cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; width=&#34;40%&#34;&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;10&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;img&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;alt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;src&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;//www.</description>
     </item>
     
     <item>
@@ -1333,7 +1421,7 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
       <description>转载 52CSS
  由于缺少结构，即使是形式良好的 HTML 页面也比较难以处理。必须分析标题的级别，才能看出各个部分的划分方式。边栏、页脚、页眉、导航条、主内容区和各篇文章都由通用的 div 元素来表示。HTML 5 添加了一些新元素，专门用来标识这些常见的结构： · section：这可以是书中的一章或一节，实际上可以是在 HTML 4 中有自己的标题的任何东西 · header：页面上显示的页眉；与 head 元素不一样 · footer：页脚；可以显示电子邮件中的签名 · nav：指向其他页面的一组链接 · article：blog、杂志、文章汇编等中的一篇文章 我们来考虑一个典型的 blog 主页，它的顶部有页眉，底部有页脚，还有几篇文章、一个导航区和一个边栏，见代码
  1 典型的 blog 页面
-&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Mokka mit Schlag &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 4:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 5:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;body&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 6:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;page&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 7:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;header&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 8:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h1&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;href&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;http://www.</description>
+1: &amp;lt;html&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Mokka mit Schlag &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 4:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 5:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;body&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 6:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;page&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 7:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;header&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 8:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h1&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;href&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;http://www.</description>
     </item>
     
     <item>
@@ -1342,7 +1430,8 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
       <pubDate>Thu, 06 Mar 2008 20:28:33 +0000</pubDate>
       
       <guid>https://lsvking.github.io/100/</guid>
-      <description>LanQQ 修改自十分著名的飞鸽传输，在原传输功能基础上，增加了添加好友，聊天室等功能。俨然一个局域网版本的 QQ 聊天加文件传输工具。</description>
+      <description> LanQQ 修改自十分著名的飞鸽传输，在原传输功能基础上，增加了添加好友，聊天室等功能。俨然一个局域网版本的 QQ 聊天加文件传输工具。
+   LanQQ 兼容原版本飞鸽传输，可以与原本同时工作，同时强调了聊天功能，总之，又是一个办公室杀手。  飞鸽传输 本身的局域网高速文件传输是十分受欢迎的。最近进入的实验室电脑中，均必备。  下载(335KB): easy-share | divshare | mediafire | 纳米 </description>
     </item>
     
     <item>
@@ -1351,7 +1440,9 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
       <pubDate>Thu, 06 Mar 2008 20:07:15 +0000</pubDate>
       
       <guid>https://lsvking.github.io/99/</guid>
-      <description>_OhMiBod_是一款新颖的女用自慰震动棒，它可以随着iPod播放的音乐而有节奏震动，可以想象如果播放的是摇滚乐，一定会爽歪歪。现在出来一个更强悍的点子：Guitar + Vox + OhMiBod，让OhMiBod随着电吉他的弹奏而震动，比较适合情侣对战。</description>
+      <description>  _OhMiBod_是一款新颖的女用自慰震动棒，它可以随着iPod播放的音乐而有节奏震动，可以想象如果播放的是摇滚乐，一定会爽歪歪。现在出来一个更强悍的点子：Guitar + Vox + OhMiBod，让OhMiBod随着电吉他的弹奏而震动，比较适合情侣对战。
+
+       [youtube SIRuon4TLFM]  </description>
     </item>
     
     <item>
@@ -1360,7 +1451,7 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
       <pubDate>Mon, 03 Mar 2008 20:28:47 +0000</pubDate>
       
       <guid>https://lsvking.github.io/98/</guid>
-      <description></description>
+      <description>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; </description>
     </item>
     
     <item>
@@ -1370,28 +1461,29 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
       
       <guid>https://lsvking.github.io/97/</guid>
       <description>在诡异而流行的江户时代的文化里，引起人们最多关注的就是日本体系复杂的传统妖怪。而这些妖怪时而让人恐惧，时而充满了幽默感。这些令人兴趣十足的日本民间创造为大量的艺术家和文学作品提供了素材。而其中的一部作品名为《百怪图卷》，是由佐脇嵩之在1737年所创造的一副画卷，这位并不太为人所熟知的画家师从于画师英一蝶（1702-1772）门下。佐脇嵩之的彩画作品包括了日本历史上最臭名昭著的妖怪，也为后人留下了极富创见的妖怪艺术。以下是画卷中的部分作品：
-1.牛鬼牛鬼是一种恶毒的海怪，它的头是牛的形状，而身子则仿佛巨型的蜘蛛或螃蟹。常可以在日本西边沿海遇见，在岛根县尤其常见。当地渔民都十分害怕这种妖怪的恶意袭击。牛鬼通常和另外一种类型相似的妖怪一起被提到，它的名字叫做湿妇女。
+1.牛鬼
+ 牛鬼是一种恶毒的海怪，它的头是牛的形状，而身子则仿佛巨型的蜘蛛或螃蟹。常可以在日本西边沿海遇见，在岛根县尤其常见。当地渔民都十分害怕这种妖怪的恶意袭击。牛鬼通常和另外一种类型相似的妖怪一起被提到，它的名字叫做湿妇女。
 2.湿妇女
-湿妇女是一种游动非常迅速的两栖妖怪，头部为人类女性，身子则是一只巨大的蛇。不同的故事中对它外貌的描述各有不同，但通常，它被形容为如同蛇一般的眼睛和长而尖利的爪子和牙齿。通常在河岸边能见到湿妇女在梳洗它长且柔顺的头发。在某些故事中，它还会带着一个小孩，并用来吸引那些潜在的受害者。当好心人想要去帮湿妇女抱住那个小孩时，那个小孩就把自己和受害者连在一起，并且变得越来越重，使得那个人无法逃脱。在某些故事里，湿妇女用它长而有力的舌头吸干受害人身体里的血液。
+ 湿妇女是一种游动非常迅速的两栖妖怪，头部为人类女性，身子则是一只巨大的蛇。不同的故事中对它外貌的描述各有不同，但通常，它被形容为如同蛇一般的眼睛和长而尖利的爪子和牙齿。通常在河岸边能见到湿妇女在梳洗它长且柔顺的头发。在某些故事中，它还会带着一个小孩，并用来吸引那些潜在的受害者。当好心人想要去帮湿妇女抱住那个小孩时，那个小孩就把自己和受害者连在一起，并且变得越来越重，使得那个人无法逃脱。在某些故事里，湿妇女用它长而有力的舌头吸干受害人身体里的血液。
 3.哇鬼
-在古青森县的传说里，哇鬼是无实体的，它只是一种声音栖息于古老废弃的庙和房子里。当有人进入这些鬼屋的时候，这个无实体的幽灵就会发出刺耳的“哇”声。这个声音只会被身处鬼屋的人听到，而建筑之外则听不见任何声音。哇鬼只是由声音组成的，因此对人没有肉体上的伤害。
+ 在古青森县的传说里，哇鬼是无实体的，它只是一种声音栖息于古老废弃的庙和房子里。当有人进入这些鬼屋的时候，这个无实体的幽灵就会发出刺耳的“哇”声。这个声音只会被身处鬼屋的人听到，而建筑之外则听不见任何声音。哇鬼只是由声音组成的，因此对人没有肉体上的伤害。
 古老的日本传说，充满了像哇鬼这样无实体的妖怪，它们仅仅是由一些如声音，光或其它的自然元素构成的，到了江户时代，艺术家们则在他们的作品中为这些怪物加上了身体。
 4.滑头鬼和目一坊
-另外一个妖怪在江户时代改变了形象，它的名字叫做滑头鬼。如左上图所示，滑头鬼看起来是一个衣冠整洁，细长脖子，光头的老者形象。但在古冈山县传说中，滑头鬼是一种海生的妖怪，出没于濑户内海，经常可以看见它在海面上来回摆动，如同一只巨大的水母或章鱼。当人们想近前调查时，它就会一头扎进海里。
+ 另外一个妖怪在江户时代改变了形象，它的名字叫做滑头鬼。如左上图所示，滑头鬼看起来是一个衣冠整洁，细长脖子，光头的老者形象。但在古冈山县传说中，滑头鬼是一种海生的妖怪，出没于濑户内海，经常可以看见它在海面上来回摆动，如同一只巨大的水母或章鱼。当人们想近前调查时，它就会一头扎进海里。
 在江户时代，滑头鬼则是一个谜一般的老者，他悄无声息的潜入房中并接管这个房子。当房子真正的主人遇见他正坐着喝茶，他们也无法将其丢出房子，反而是如同对待主人一般。传说，在妖怪届滑头鬼拥有很高的声誉。
 目一坊，如右上图所示，是一个只有一只巨大的眼睛的和尚，在日本民间传说中，他是一个有多种形态变化的和尚。
 5.见越入道
-另外一个怪物和尚名叫见越入道，是一个有一双巨大的交叉眼的乞丐，通常会在山间的小道或者夜路上遇见。当你向上看他时，见越入道会变高，你看得多高，他就会变得多高。按照传说中所说，看得太远，你就会死去。但如果你说，我还可以看得更远。他就会消失。见越入道的真实身份没有人知道，但在某些地区，人们相信他是由鼬鼠，狐狸或者狸猫变成的。
+ 另外一个怪物和尚名叫见越入道，是一个有一双巨大的交叉眼的乞丐，通常会在山间的小道或者夜路上遇见。当你向上看他时，见越入道会变高，你看得多高，他就会变得多高。按照传说中所说，看得太远，你就会死去。但如果你说，我还可以看得更远。他就会消失。见越入道的真实身份没有人知道，但在某些地区，人们相信他是由鼬鼠，狐狸或者狸猫变成的。
 6.山童
-山童多发，只有一只眼睛，奄美大岛河童在冬季进入山中成为山童。这是一种只有孩童大小的妖怪。山童常常给伐木工人提供帮助，他们不断回来帮助工人，以便得到酒和米饭团的奖励。
+ 山童多发，只有一只眼睛，奄美大岛河童在冬季进入山中成为山童。这是一种只有孩童大小的妖怪。山童常常给伐木工人提供帮助，他们不断回来帮助工人，以便得到酒和米饭团的奖励。
 如同许多关于河童的传说，山童喜欢作弄人们，特别喜欢相扑摔角。它们有时会闯入民居洗个澡。同时他们对危险有很强烈的第六感。使得他们能够出人们危险的意图中逃脱出来。
 在春分时，山童回到水中成为河童。它们成群结队的旅行，从这个屋顶跳到另外一个屋顶，向河的方向前进，如果在路途中，有新房子在建造，他们就会生气，而后在墙上戳洞。传说中，谁要是在河中瞥见过山童，谁就会生病。
 7.犬神
-犬神是一种外表看起来像狗的守护神。它非常的强大且忠诚。传说中，它们他们为了主人的利益而实施报复。它们也可以独立存在，在某些情况下，它们也可能违背它们的主人。犬神也拥有控制人类的力量。
+ 犬神是一种外表看起来像狗的守护神。它非常的强大且忠诚。传说中，它们他们为了主人的利益而实施报复。它们也可以独立存在，在某些情况下，它们也可能违背它们的主人。犬神也拥有控制人类的力量。
 8.苧
-苧是一种山巫，她的嘴很大，从一边耳朵延伸到另外一边耳朵。同时长而黑的头发覆盖了她的全身。根据古新鸿县的传说，有一天，苧突然出现在一群正在把麻纺成纱的女人面前，得到了女人们的同意后，苧开始帮助她们。女人们看着她都非常惊讶，因为她不断得把麻塞进嘴里，而抽出来的都是纺好的纱。飞快地以相同的方式纺好纱后，苧走到门外，突然就消失了。传说中，她在附近的石头上留下了脚印，而且至今可见。
+ 苧是一种山巫，她的嘴很大，从一边耳朵延伸到另外一边耳朵。同时长而黑的头发覆盖了她的全身。根据古新鸿县的传说，有一天，苧突然出现在一群正在把麻纺成纱的女人面前，得到了女人们的同意后，苧开始帮助她们。女人们看着她都非常惊讶，因为她不断得把麻塞进嘴里，而抽出来的都是纺好的纱。飞快地以相同的方式纺好纱后，苧走到门外，突然就消失了。传说中，她在附近的石头上留下了脚印，而且至今可见。
 9.发切
-发切是一种偷偷溜到人的身后将人们的头发剪下来的妖怪。特别是在人们在不知情的情况下与装扮成人的模样的妖怪，灵魂或其他超自然生物通婚时，发切的袭击意在延迟或阻止这一段注定失败的异世界的婚姻。
+ 发切是一种偷偷溜到人的身后将人们的头发剪下来的妖怪。特别是在人们在不知情的情况下与装扮成人的模样的妖怪，灵魂或其他超自然生物通婚时，发切的袭击意在延迟或阻止这一段注定失败的异世界的婚姻。
 如果想了解更多有关日本江户时代的妖怪可以google鸟山石燕的《百鬼夜行图》。
 ———————————————————————————————————————————–
 本文来自煎蛋，作者为gary。</description>
@@ -1415,7 +1507,7 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
       <pubDate>Mon, 25 Feb 2008 20:40:35 +0000</pubDate>
       
       <guid>https://lsvking.github.io/94/</guid>
-      <description></description>
+      <description>[youtube WFDq95zHJIg] </description>
     </item>
     
     <item>
@@ -1452,7 +1544,8 @@ Visit duration
       
       <guid>https://lsvking.github.io/92/</guid>
       <description>这东西太炫了，价格肯定不菲，不过我相信，这东西一旦流行开，国内的厂商肯定会积极仿制的，到时候价格的就好说了！
-不多说了，进视频！</description>
+不多说了，进视频！
+[youtube GBDBRg3HJqA] </description>
     </item>
     
     <item>
@@ -1461,7 +1554,8 @@ Visit duration
       <pubDate>Sat, 23 Feb 2008 15:50:47 +0000</pubDate>
       
       <guid>https://lsvking.github.io/89/</guid>
-      <description>开发者们正在研制在 linux 的 Compiz Fusion 下的相关软件。根据这些研究人员的想象，可能性总是无穷无尽的。如果这种东西真的实现了，用户就可以让电脑来追踪自己的脑袋，鼠标甚至是手指了</description>
+      <description> 开发者们正在研制在 linux 的 Compiz Fusion 下的相关软件。根据这些研究人员的想象，可能性总是无穷无尽的。如果这种东西真的实现了，用户就可以让电脑来追踪自己的脑袋，鼠标甚至是手指了
+[youtube Jd3-eiid-Uw] [youtube 0awjPUkBXOU] </description>
     </item>
     
     <item>
@@ -1470,7 +1564,7 @@ Visit duration
       <pubDate>Sat, 23 Feb 2008 13:41:13 +0000</pubDate>
       
       <guid>https://lsvking.github.io/88/</guid>
-      <description>———————————————————————————————————————————–
+      <description>&amp;#160; 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.  ———————————————————————————————————————————–
 目录  介绍 针对浏览器的选择器 让IE6支持PNG透明 移除超链接的虚线 给行内元素定义宽度 让固定宽度的页面居中 图片替换技术 最小宽度 隐藏水平滚动条  ———————————————————————————————————————————–
 一. 介绍 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.
 二. 针对浏览器的选择器 这些选择器在你需要针对某款浏览器进行css设计时将非常有用.
@@ -1504,7 +1598,7 @@ width: 250px;
       <pubDate>Sat, 23 Feb 2008 12:54:56 +0000</pubDate>
       
       <guid>https://lsvking.github.io/87/</guid>
-      <description></description>
+      <description>是不是很奇怪有些人是怎么让你清楚地看到他们电脑上所发生的事情，比如我曾经和你们分享过的Photoshop视频教程? 这要归功于屏幕录像软件，他让任何一个人都可以做到这点。那为什么不制作自己的视频指导教程呢？尝试一下下面这12中工具中的任何一个来制作你的第一段视频吧！  免费的    AviScreen&amp;#8211;正如它的名字所指，这个软件可以将视频录制成AVI格式的文件, 当然你也可以用它来播放BMP格式的照片。不过它只适用于Windows操作系统而且不能录制音频.   CamStudio.org&amp;#8211;一个开放源码的程序，可以将你电脑屏幕上的音频和视频录制成AVI格式的文件。Windows操作系统专用，当然也是免费的。    Copernicus&amp;#8211; 一个苹果专用的免费程序，主要是用来制作小电影。它将视频存储在计算机的内存中以方便读取。不支持音频。    JingProject.com&amp;#8211; 这个软件不仅可以录制视频，还可以截取你桌面上的任何部分进行编辑，比如画上几笔，添加一句话。你可以立刻将你的视频上传到免费的空间上，然后会得到你的视频链接地址。你可以将这个链接发送给想看这段视频的任何人。这个软件在苹果和windows操作系统中都可以应用。    Screencast-O-Matic.com&amp;#8211; 一个基于Java语言的屏幕录像软件，它不需要下载而且可以将视频自动上传。它在苹果和windows下运行很好，只是在Linux下还有点问题。    Wink&amp;#8211; 一款主要用于制作带有音频和注释文本视频教程的屏幕录像软件。可以以flash,PDF,HTML,exe等格式导出。        付费的     Adobe Captivate&amp;#8211; Adobe 差不多已经成为高质量的同义词，但同时也意味着高昂的价格。这款软件价起价将近700美元。    AllCapture&amp;#8211; 一款实时录制软件，可以在录制当时和之后添加音频。可以以Flash, EXE, ASF, DVD, SVCD 和 VCD格式导出。现在有windows专用的免费试用版。    HyperCam&amp;#8211; Windows系统专用的录制屏幕动作和系统音频的软件，导出为AVI格式。有免费试用版和价值39.95美元的完整版。    iShowU&amp;#8211; 提供很多调节框，可以直接导出Quicktime，并且可以转化为NTSC 和PAL格式。同样可以随时上传发表。苹果专用。    ScreenMimic&amp;#8211; 一款提供转换和音频复制的苹果专用软件，可以输出HTML, Quicktime 和 Flash格式。可以免费下载，付费版64.</description>
     </item>
     
     <item>
@@ -1513,7 +1607,7 @@ width: 250px;
       <pubDate>Sat, 23 Feb 2008 00:46:20 +0000</pubDate>
       
       <guid>https://lsvking.github.io/86/</guid>
-      <description></description>
+      <description>即将退休的比尔·盖茨 在CES上发表了告别演说，同时还把自己恶搞了一番，虽然我看的不是很明白，英文嘛，不过看出大概了，确实不错哦～ [youtube]http://www.youtube.com/watch?v=HEWMC4usElM[/youtube] </description>
     </item>
     
     <item>
@@ -1549,7 +1643,7 @@ width: 250px;
       <pubDate>Fri, 22 Feb 2008 01:31:05 +0000</pubDate>
       
       <guid>https://lsvking.github.io/82/</guid>
-      <description></description>
+      <description>世界上出现了第一支iPhone乐队，他们叫做iband。两架iPhone中分别运行的程序是iano（钢琴模拟）和pocketguitar（吉他模拟），而NDS中运行的则是electroplankton游戏。 [youtube Mh0VX74alwk] </description>
     </item>
     
     <item>
@@ -1558,7 +1652,8 @@ width: 250px;
       <pubDate>Fri, 22 Feb 2008 01:25:19 +0000</pubDate>
       
       <guid>https://lsvking.github.io/81/</guid>
-      <description>是小日本干的，不过听起来确实不错！～</description>
+      <description>是小日本干的，不过听起来确实不错！～
+[yourube dsU3B0W3TMs] 这里有MP3格式的下载 这里 &amp;nbsp; </description>
     </item>
     
     <item>
@@ -1569,7 +1664,7 @@ width: 250px;
       <guid>https://lsvking.github.io/78/</guid>
       <description>强到喷血～
  此片为限制级的，U18的朋友可要回避了。
- </description>
+  </description>
     </item>
     
     <item>
@@ -1641,16 +1736,17 @@ Windows XP提供的所有服务有36个默认是自动启动的，实际上，�
       <pubDate>Fri, 15 Feb 2008 16:20:50 +0000</pubDate>
       
       <guid>https://lsvking.github.io/74/</guid>
-      <description>这个是用来出售的模板，但看起来太简单了，估计没人会买，我就共享出来吧！
-这个是列表页
+      <description>&amp;#160; 先看看效果图吧 这个是用来出售的模板，但看起来太简单了，估计没人会买，我就共享出来吧！
+&amp;#160; 这个是首页  这个是列表页
 
-
+这个是文章页 
 本人做了一批英文模板有兴趣的可以去看看http://shop34694996.taobao.com/
 同时本人接模板制作生意，中英文都可以，价格绝对优惠～
 我的QQ:262532051
 安装方法:把default放到templets下
 index_files放到根目录
-下载地址：</description>
+下载地址：
+ 模板包  </description>
     </item>
     
     <item>
@@ -1659,7 +1755,21 @@ index_files放到根目录
       <pubDate>Wed, 13 Feb 2008 00:16:30 +0000</pubDate>
       
       <guid>https://lsvking.github.io/72/</guid>
-      <description> 依照惯例，众多网站都推出了春节节庆Logo，同样依照惯例，与G共舞·IT博客收集了一些Logo展示。</description>
+      <description> 依照惯例，众多网站都推出了春节节庆Logo，同样依照惯例，与G共舞·IT博客收集了一些Logo展示。
+ Google谷歌中国“福到”版 Google谷歌台湾/香港  百度 
+ IT资讯站cnBeta 
+台湾门户网站HiNet PCHOME中国-IT资讯门户 
+ 中搜 台湾门户网站PChome 新浪网 台湾新浪网 新浪爱问搜索 搜狗搜索引擎 中国雅虎门户  中国雅虎搜索 雅虎香港 雅虎台湾奇摩 台湾门户蕃薯藤 有道搜索引擎 
+126邮箱 
+当当网 
+淘宝网 
+鲜果Feed在线阅读 
+抓虾Feed在线阅读 
+MSN中国 
+腾讯QQ门户 
+搜搜 
+新华网 
+人民网 大家觉得哪个最贴你的心呢？  </description>
     </item>
     
     <item>
@@ -1678,8 +1788,8 @@ index_files放到根目录
       <pubDate>Sun, 06 Jan 2008 07:51:03 +0000</pubDate>
       
       <guid>https://lsvking.github.io/68/</guid>
-      <description>下面是 Matt Mullenweg 在 WordPress Hackers 邮件列表中给出的信息。
-In light of the big changes happening in the codebase and admin section, we’re going to push back the next release to be aimed for early March. This is the timeframe when 2.5 was originally schedule for, so we’re treating the originally planned 2.4 in December as a skipped release, as a result of both the holidays and the large changes which we weren’t able to start on until late October.</description>
+      <description>WordPress 2.4 本来预计在 1 月 24 日发布，不过现在看来这是不可能了。Matt Mullenweg 在 WordPress Hackers 邮件列表 中指出，WordPress 2.4 将直接跳过，而下一个重要版本 WordPress 2.5 则将在 3 月 28 日发布。 下面是 Matt Mullenweg 在 WordPress Hackers 邮件列表中给出的信息。
+In light of the big changes happening in the codebase and admin section, we’re going to push back the next release to be aimed for early March. This is the timeframe when 2.5 was originally schedule for, so we’re treating the originally planned 2.</description>
     </item>
     
     <item>
@@ -1688,7 +1798,7 @@ In light of the big changes happening in the codebase and admin section, we’re
       <pubDate>Sat, 05 Jan 2008 02:34:11 +0000</pubDate>
       
       <guid>https://lsvking.github.io/66/</guid>
-      <description>方法如下：
+      <description>免费使用Gtalk拨打电话 消息来自低调的风，经何必测试完全可行。貌似通话有点延迟。注册一个Google帐号可以得到0.25美元的话费,可以打17分钟。 方法如下：
 1.去http://mail.google.com注册gmail信箱帐户
 2.下载Gtalk，点击此处下载
 3.下载安装后,使用gmail帐号登陆gtalk。
@@ -1752,7 +1862,16 @@ In light of the big changes happening in the codebase and admin section, we’re
       <pubDate>Tue, 01 Jan 2008 19:36:14 +0000</pubDate>
       
       <guid>https://lsvking.github.io/63/</guid>
-      <description>恶搞～～～～！！！18X！！！！【ZT】 </description>
+      <description>恶搞～～～～！！！18X！！！！【ZT】 &amp;nbsp; 有人说，像我这样，发布，传播，讨论的东西，会对社会，对未成年人，有很恶劣的影响。
+ 呵呵，先对这种观点不置可否。  本少今天，倒是真的要为社会，为社会，为未成年人，做一次贡献了！  AV天后穗花出演!AV中的禁烟公益广告!  源片：【PREMIUM】 穗花 诱惑女教师 （小狼窝中文字幕版）
+ 穗花老师发现问题学生在抽烟，极其帅气地将其制伏！
+嘿嘿，落到穗花的手里，有好戏咯 ^_^   循循善诱，要想深入他的身体，就要先深入他的思想！
+穗花不愧是老手哦！原来发现这是一颗孤寂的心～～  开始勾搭咯～～～
+靠，不识抬举！威胁他就范！  禁烟广告正式开始！  看看，多NB多有说服力的理由啊！感动~~~~
+吸烟者的下场，好惨啊！
+崩溃～～～  这傻X男还真的相信了！开始中套。穗花忽悠成功！
+高大妈走了，就让穗花和赵大忽悠搭档今年春晚吧！多NB多搞笑的组合啊！
+同意的挺一下JJ！  OH~YEAH!!! 开始“实践”穗花的戒烟理论咯～～  设计台词：“我穗花吊凯子，还不是和吃饭一样！”  吊了凯子还要立牌坊！多伟大的老师啊！再次感动～～   </description>
     </item>
     
     <item>
@@ -1799,13 +1918,17 @@ In light of the big changes happening in the codebase and admin section, we’re
       <pubDate>Sun, 30 Dec 2007 21:06:31 +0000</pubDate>
       
       <guid>https://lsvking.github.io/61/</guid>
-      <description>NOD32杀软被国外很权威的防病毒软件评测机构给了很高的分数。在全球共获得超过40多个奖项,包括Virus Bulletin, PC Magazine, ICSA认证, Checkmark认证等, 更加是全球唯一通过26次VB100%测试的防毒软件,高据众产品之榜首！产品线很长，从DOS/Win9x/Me/WinNT/XP/2000/vista，到Novell Netware Server、Linux、BSD等，都有提供。可以对邮件进行实时监测，占用内存资源较少，清除病毒的速度效果都令人满意。1、采用nod3.0.621.0核心汉化。
+      <description>NOD32杀软被国外很权威的防病毒软件评测机构给了很高的分数。在全球共获得超过40多个奖项,包括Virus Bulletin, PC Magazine, ICSA认证, Checkmark认证等, 更加是全球唯一通过26次VB100%测试的防毒软件,高据众产品之榜首！产品线很长，从DOS/Win 9x/Me/Win NT/XP/2000/vista，到Novell Netware Server、Linux、BSD等，都有提供。可以对邮件进行实时监测，占用内存资源较少，清除病毒的速度效果都令人满意。
+1、采用nod3.0.621.0核心汉化。
 2、安装包分两个：一个nod32_3.0.621.0_nt32_cn.exe为手动安装版，一个nod32_3.0.621.0_auto_nt32_cn.exe为ghost xp自动安装版（自动安装参数为大写的S）。
 3、重新编译了nod3.0安装包，两个版本的安装包大小都为14.6MB。
 4、集成了可升级到08年6月29日可升级的正版序号，建议广大龙友按我所提供的教程申请ID，以免该ID被封。
-下载地址：http://www.fs2you.com/files/332658de-b45d-11dc-84ae-00142218fc6e/(用7z解压:http://www.7-zip.org/zh-cn/7z457chs.exe)
- http://csharp.xdowns.com/qq/download.php?fname=./upload/nod32_3.0_nt32_cn.7z安装流程:
-&amp;lt;p&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; onload=&amp;quot;attachimg(this, &#39;load&#39;)&amp;quot; src=&amp;quot;http://bbs.mscode.cc/attachment.php?aid=5584925&amp;amp;noupdate=yes&amp;quot; alt=&amp;quot;b1.jpg&amp;quot; onmouseover=&amp;quot;attachimg(this, &#39;mouseover&#39;)&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt;  &amp;lt;p&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; onload=&amp;quot;attachimg(this, &#39;load&#39;)&amp;quot; src=&amp;quot;http://bbs.mscode.cc/attachment.php?aid=5584926&amp;amp;noupdate=yes&amp;quot; alt=&amp;quot;b2.jpg&amp;quot; onmouseover=&amp;quot;attachimg(this, &#39;mouseover&#39;)&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt;  &amp;lt;p&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; onload=&amp;quot;attachimg(this, &#39;load&#39;)&amp;quot; src=&amp;quot;http://bbs.mscode.cc/attachment.php?aid=5584927&amp;amp;noupdate=yes&amp;quot; alt=&amp;quot;b3.jpg&amp;quot; onmouseover=&amp;quot;attachimg(this, &#39;mouseover&#39;)&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt;  &amp;lt;p&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; onload=&amp;quot;attachimg(this, &#39;load&#39;)&amp;quot; src=&amp;quot;http://bbs.mscode.cc/attachment.php?aid=5584928&amp;amp;noupdate=yes&amp;quot; alt=&amp;quot;b4.jpg&amp;quot; onmouseover=&amp;quot;attachimg(this, &#39;mouseover&#39;)&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt;  &amp;lt;p&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; onload=&amp;quot;attachimg(this, &#39;load&#39;)&amp;quot; src=&amp;quot;http://bbs.mscode.cc/attachment.php?aid=5584929&amp;amp;noupdate=yes&amp;quot; alt=&amp;quot;b5.</description>
+下载地址：http://www.fs2you.com/files/332658de-b45d-11dc-84ae-00142218fc6e/ (用7z解压:http://www.7-zip.org/zh-cn/7z457chs.exe)
+ http://csharp.xdowns.com/qq/download.php?fname=./upload/nod32_3.0_nt32_cn.7z
+安装流程:
+ b1.jpg (39.83 KB)   07-12-27 17:05
+&amp;lt;p&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; onload=&amp;quot;attachimg(this, &#39;load&#39;)&amp;quot; src=&amp;quot;http://bbs.mscode.cc/attachment.php?aid=5584925&amp;amp;noupdate=yes&amp;quot; alt=&amp;quot;b1.jpg&amp;quot; onmouseover=&amp;quot;attachimg(this, &#39;mouseover&#39;)&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt;     b2.jpg (47.93 KB)   07-12-27 17:05
+&amp;lt;p&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; onload=&amp;quot;attachimg(this, &#39;load&#39;)&amp;quot; src=&amp;quot;http://bbs.mscode.cc/attachment.php?aid=5584926&amp;amp;noupdate=yes&amp;quot; alt=&amp;quot;b2.jpg&amp;quot; onmouseover=&amp;quot;attachimg(this, &#39;mouseover&#39;)&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt;     b3.jpg (29.02 KB)   07-12-27 17:05</description>
     </item>
     
     <item>
@@ -1814,7 +1937,38 @@ In light of the big changes happening in the codebase and admin section, we’re
       <pubDate>Sun, 30 Dec 2007 20:42:59 +0000</pubDate>
       
       <guid>https://lsvking.github.io/60/</guid>
-      <description></description>
+      <description>27招释放C盘空间 1.打开“我的电脑”－“工具”－“文件夹选项”－“查看”－在“显示所有文件和文件夹”选项前打勾－“确定”
+2.删除以下文件夹中的内容：
+x:\Documents and Settings\用户名\Cookies\下的所有文件（保留index文件）
+x:\Documents and Settings\用户名\Local Settings\Temp\下的所有文件（用户临时文件）
+x:\Documents and Settings\用户名\LocalSettings\TemporaryInternet Files\下的所有文件（页面文件）
+x:\Documents and Settings\用户名\Local Settings\History\下的所有文件（历史纪录）
+x:\Documents and Settings\用户名\Recent\下的所有文件（最近浏览文件的快捷方式）
+x:\WINDOWS\Temp\下的所有文件（临时文件）
+x:\WINDOWS\ServicePackFiles（升级sp1或sp2后的备份文件）
+x:\WINDOWS\Driver Cache\i386下的压缩文件(驱动程序的备份文件)
+x:\WINDOWS\SoftwarEDistribution\download下的所有文件
+3.如果对系统进行过windoes updade升级，则删除以下文件：
+x:\windows\下以 $u&amp;#8230; 开头的隐藏文件
+4.然后对磁盘进行碎片整理，整理过程中请退出一切正在运行的程序
+5.碎片整理后打开“开始”－“程序”－“附件”－“系统工具”－“系统还原”－“创建一个还原点”（最好以当时的日期作为还原点的名字）
+6.打开“我的电脑”－右键点系统盘－“属性”－“磁盘清理”－“其他选项”－单击系统还原一栏里的“清理”－选择“是”－ok了
+7、在各种软硬件安装妥当之后，其实XP需要更新文件的时候就很少了。删除系统备份文件吧：开始→运行→sfc.exe /purgecache近3xxM。（该命令的作用是立即清除&amp;#8221;Windows 文件保护&amp;#8221;文件高速缓存，释放出其所占据的空间）
+8、删掉\windows\system32\dllcache下dll档(减去200——300mb),这是备用的dll档， 只要你已拷贝了安装文件，完全可以这样做。
+9、XP会自动备份硬件的驱动程序，但在硬件的驱动安装正确后，一般变动硬件的可能性不大，所以也可以考虑将这个备份删除，文件位于\windows\driver cache\i386目录下，名称为driver.cab，你直接将它删除就可以了，通常这个文件是74M。
+10、删除不用的输入法：对很多网友来说，Windows XPt系统自带的输入法并不全部都合适自己的使用，比如IMJP8_1 日文输入法、IMKR6_1 韩文输入法这些输入法，如果用不着，我们可以将其删除。输入法位于\windows\ime\文件夹中，全部占用了88M的空间。
+11、升级完成发现windows\多了许多类似$NtUninstallQ311889$这些目录，都干掉吧，1x-3xM
+12、另外，保留着\windows\help目录下的东西对我来说是一种伤害，呵呵。。。都干掉！
+13、关闭系统还原：系统还原功能使用的时间一长，就会占用大量的硬盘空间。因此有必要对其进行手工设置，以减少硬盘占用量。打开&amp;#8221;系统属性&amp;#8221;对话框，选择&amp;#8221;系统还原&amp;#8221;选项，选择&amp;#8221;在所有驱动器上关闭系统还原&amp;#8221;复选框以关闭系统还原。也可仅对系统所在的磁盘或分区设置还原。先选择系统所在的分区，单击&amp;#8221;配置&amp;#8221;按钮，在弹出的对话框中取消&amp;#8221;关闭这个驱动器的系统还原&amp;#8221;选项，并可设置用于系统还原的磁盘空间大小。
+14、休眠功能会占用不少的硬盘空间，如果使用得少不妨将共关闭，关闭的方法是的：打开&amp;#8221;控制面板&amp;#8220;，双击&amp;#8221;电源选项&amp;#8221;，在弹出的&amp;#8221;电源选项属性&amp;#8221;对话框中选择&amp;#8221;休眠&amp;#8221;选项卡，取消&amp;#8221;启用休眠&amp;#8221;复选框。
+15、卸载不常用组件：XP默认给操作系统安装了一些系统组件，而这些组件有很大一部分是你根本不可能用到的，可以在&amp;#8221;添加/删除Windows组件&amp;#8221;中将它们卸载。但其中有一些组件XP默认是隐藏的，在&amp;#8221;添加/删除Windows 组件&amp;#8221;中找不到它们，这时可以这样操作：用记事本打开\windows\inf\sysoc.inf这个文件，用查找/替换功能把文件中的&amp;#8221;hide&amp;#8221;字符全部替换为空。这样，就把所有组件的隐藏属性都去掉了，存盘退出后再运行&amp;#8221;添加-删除程序&amp;#8221;，就会看见多出不少你原来看不见的选项，把其中那些你用不到的组件删掉（记住存盘的时候要保存为sysoc.inf，而不是默认的sysoc.txt），如Internat信使服务、传真服务、Windows messenger，码表等，大约可腾出近50MB的空间。
+16、清除系统临时文件：系统的临时文件一般存放在两个位置中：一个Windows安装目录下的Temp文件夹；另一个是x:\Documents and Settings\&amp;#8221;用户名&amp;#8221;\Local Settings\Temp文件夹(Y:是系统所在的分区)。这两个位置的文件均可以直接删除。
+17、清除Internet临时文件：定期删除上网时产生的大量Internet临时文件，将节省大量的硬盘空间。打开IE浏览器，从&amp;#8221;工具&amp;#8221;菜单中选择&amp;#8221;Internet选项&amp;#8221;，在弹出的对话框中选择&amp;#8221;常规&amp;#8221;选项卡，在&amp;#8221;Internet临时文件&amp;#8221;栏中单击&amp;#8221;删除文件&amp;#8221;按钮，并在弹出&amp;#8221;删除文件&amp;#8221;对话框，选中&amp;#8221;删除所有脱机内容&amp;#8221;复选框，单击&amp;#8221;确定&amp;#8221;按钮。
+18、清除预读文件：Windows XP的预读设置虽然可以提高系统速度，但是使用一段时间后，预读文件夹里的文件数量会变得相当庞大，导致系统搜索花费的时间变长。而且有些应用程序会产生死链接文件，更加重了系统搜索的负担。所以，应该定期删除这些预读文件。预计文件存放在Windows XP系统文件夹的Prefetch文件夹中，该文件夹下的所有文件均可删除。
+19、压缩NTFS驱动器、文件或文件夹：如果你的硬盘采用的是NTFS文件系统，空间实在紧张，还可以考虑启用NTFS的压缩功能。右击要压缩的驱动器－&amp;#8221;属性&amp;#8221;－&amp;#8221;常规&amp;#8221;－&amp;#8221;压缩磁盘以节省磁盘空间&amp;#8221;，然后单击&amp;#8221;确定&amp;#8221;， 在&amp;#8221;确认属性更改&amp;#8221;中选择需要的选项。这样可以节省约20% 的硬盘空间。在压缩C盘的时候，最好在安全模式下压缩，这样效果要好一些。
+20、关闭华医生Dr.Watson：要关闭Dr.Watson可打开注册表编辑器，找到&amp;#8221;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AeDebug&amp;#8221;分支，双击其下的Auto键值名称，将其&amp;#8221;数值数据&amp;#8221;改为0，最后按F5刷新使设置生效，这样就取消它的运行了。也在&amp;#8221;开始&amp;#8221;-&amp;#8221;运行&amp;#8221;中输入&amp;#8221;drwtsn32&amp;#8243;命令，或者&amp;#8221;开始&amp;#8221;-&amp;#8221;程序&amp;#8221;-&amp;#8221;附件&amp;#8221;-&amp;#8221;系统工具&amp;#8221;-&amp;#8221;系统信息&amp;#8221;-&amp;#8221;工具&amp;#8221;-&amp;#8221;Dr Watson&amp;#8221;，调出系统里的华医生Dr.Watson ，只保留&amp;#8221;转储全部线程上下文&amp;#8221;选项，否则一旦程序出错，硬盘会读很久，并占用大量空间。如以前有此情况，请查找user.dmp文件，删除后可节省几十MB空间。
+21、关闭远程桌面：&amp;#8221;我的电脑&amp;#8221;-&amp;#8221;属性&amp;#8221;-&amp;#8221;远程&amp;#8221;，&amp;#8221;远程桌面&amp;#8221;里的&amp;#8221;允许用户远程连接到这台计算机&amp;#8220;勾去掉。
+22、取消XP对ZIP支持：Windows XP在默认情况下打开了对zip文件支持，这要占用一定的系统资源，可选择&amp;#8221;开始→运行&amp;#8221;，在&amp;#8221;运行&amp;#8221;对话框中键入&amp;#8221;regsvr32 /u zipfldr.</description>
     </item>
     
     <item>
@@ -1823,7 +1977,17 @@ In light of the big changes happening in the codebase and admin section, we’re
       <pubDate>Fri, 21 Dec 2007 18:38:04 +0000</pubDate>
       
       <guid>https://lsvking.github.io/59/</guid>
-      <description>使用官方简体中文正式版制作，免序列号免激活！</description>
+      <description>使用官方简体中文正式版制作，免序列号免激活！
+部分细节调整，推荐升级！ 增强内容：
+添加Camera Raw 4.3 和 JPEG 2000 插件
+功能强大的eye candy、DCE Tools、xenofex2等滤镜
+解除打印钞票图像等的限制
+优化微软支持补丁一个。  精简内容：
+Bridge 组件  Adobe激活程序组 （已免激活）
+帮助文件和样本文件
+多语言安装支持（我们是中国人*_*）  完美者发布
+2007.12.15        下载：
+http://down.wmzhe.com/html/view-2396.htm </description>
     </item>
     
     <item>
@@ -1842,7 +2006,8 @@ Office 语言包 2007 SP1
 Office Project 2007 SP1
 Office SharePoint Designer 2007 SP1
 Office Visio 2007 SP1
-下载地址 ：HTTP://210.41.224.234/ZTSOFT/OFFICE12_SP1.ISO.rar下载后去掉.rar后缀就可以正常刻录了。
+                             下载地址 ：HTTP://210.41.224.234/ZTSOFT/OFFICE12_SP1.ISO.rar
+下载后去掉.rar后缀就可以正常刻录了。
 完美者官方下载：http://down.wmzhe.com/html/view-9448.htm</description>
     </item>
     
@@ -1852,7 +2017,7 @@ Office Visio 2007 SP1
       <pubDate>Mon, 03 Dec 2007 06:08:52 +0000</pubDate>
       
       <guid>https://lsvking.github.io/57/</guid>
-      <description></description>
+      <description>郭韦齐努力演出让生命发光发热，令不少人为之动容。  肢障者参加台北“二○○七弦月之美”公演。 &amp;nbsp; 中新网12月3日电 六年前因病被迫双手双脚截肢的郭韦齐在台湾堪称网络名人，昨晚首次公开现身。今年十四岁的郭韦齐以残缺的手肘弹奏电子琴，更以截断的双腿跳了一支舞。表演时的自信神采，现场观众在感动中响起热烈掌声。 据台湾《中国时报》报道，“二○○七弦月之美”冬季公演昨晚在台北中山纪念馆登场。这项身障者才艺表演活动中，郭韦齐年纪最轻，但她的知名度并不亚于其它演出者。五六年前，一封《还记得被迫截肢的小妹妹郭韦齐吗》的网络信让她爆红，不少网友至今仍不断转寄。 &amp;nbsp; 昨晚，郭韦齐用截肢后的双手弹奏《月亮代表我的心》、《雨夜花》两曲，前一首叙述她的心境。她是处女座，代表完美，但她四肢已被截断，身躯并不完美。“以不完美追求完美，”郭妈妈说，就像月亮有阴晴圆缺，郭韦齐总认为月亮最能代表她的心。 &amp;nbsp; 《雨夜花》是因为只听得懂闽南语歌曲的阿嬷把她从小带到四岁，她生病后，阿嬷经常与她讲电话、谈心事。她要公开弹这首歌献给阿嬷。 &amp;nbsp; 韦齐小时候就学跳舞、学弹琴，直到她因病被迫截肢，这两件事变成“梦想”，但昨晚她还是实现了这个梦想。她用截肢后的双腿踩着滑板出场，引得全场热烈掌声；再随着《虹彩妹妹》的节奏摆动身躯、转动纸伞。她就像没有翅膀的天使，在舞台上慢慢飘舞。 &amp;nbsp; 六年前的某一天，当时八岁的韦齐刚从学校考完期末考回家，就出现发烧、呕吐与拉肚子的感冒症状，接着陷入昏迷。郭妈妈与丈夫立即把孩子送到医院急救，未料隔天韦齐四肢末稍变成黑紫色，医生只得截肢以保全她的生命。韦齐昏迷十四天后苏醒，体重只剩十四公斤。 &amp;nbsp; 经过复健，郭韦齐现在能穿上假肢“走路”，还会骑自行车，也学会弹琴与画画。郭韦齐究竟什么病因导致得截肢保命，郭妈妈说，到现在仍是个谜。郭妈妈不想回顾往事，韦齐也不懂自己为何被迫截肢，母女二人与郭爸爸都把人生目标放在未来，“有明天才是最美。” &amp;nbsp; </description>
     </item>
     
     <item>
@@ -1963,7 +2128,7 @@ del /f /q %userprofile%\recent*.</description>
       
       <guid>https://lsvking.github.io/52/</guid>
       <description>104.深入塔里,三层到四层的走法有点难，走法如下:
-．
+ ．
 ．左突右进之后来到顶层，终于找到凤王啦！(凤王60级）能力很强！105.在烧掉的精灵塔里的二层用推岩技能后可得技能20忍耐．
 关东地区
 106．回到栈木市，从港口坐船．（用船票）进入船里后接收找小女孩的剧情，慢慢找吧，一个房间一个房间地进去！总会找到的！最左边的房子里配有电脑和床，可供休息(睡一觉就到关东地区啦）和换精灵！
@@ -2108,19 +2273,19 @@ m.cn/main/html/showpic.html#url=http://s9.album.sina.com.cn/pic/4a7b474d02000h48
       <pubDate>Sat, 27 Oct 2007 22:17:19 +0000</pubDate>
       
       <guid>https://lsvking.github.io/46/</guid>
-      <description>评论：此种穿法也许自认为会很性感，其实这种回头率又比没有的要好
-　评论：此种穿法类似上边这种，其实他的内裤还不是可以露在外边那种，确实能够更新引人的注意力。
+      <description>女生短裤最恶劣的十种穿法 第十名：故意露内裤 　评论：此种穿法也许自认为会很性感，其实这种回头率又比没有的要好
+恶心指数：☆ 第九名：超级低腰短裤 　评论：此种穿法类似上边这种，其实他的内裤还不是可以露在外边那种，确实能够更新引人的注意力。
 　恶心指数：☆☆
-　评论：短裤很短，让人浮想联翩
+第八名：超短的短裤 　评论：短裤很短，让人浮想联翩
 　恶心指数：☆☆☆
-　评论：短裤快掉了都不知道，确实太大意了
-　评论：这种短裤酷似内裤，尤其丰满的人穿上非常难看
+第七名：快掉了的短裤 　评论：短裤快掉了都不知道，确实太大意了
+恶心指数：☆☆☆☆ 第六名：超短超紧身的短裤 　评论：这种短裤酷似内裤，尤其丰满的人穿上非常难看
 　恶心指数：☆☆☆☆☆
-　评论：这种短裤很少见，相信很多人都接受不了
-　评论：穿如此大的泳裤，游起泳来确实很尴尬
-　评论：穿着如此贴身的短裤，让人感觉极其不舒服，更郁闷的是有人穿出来
-　评论：真没想到这样的短裤怎么会有人买！甚至还有人穿出来！
-　评论：这个不服不行了，这样就上街了，回头率100%
+第五名：三角形的牛仔短裤 　评论：这种短裤很少见，相信很多人都接受不了
+恶心指数：☆☆☆☆☆☆ 第四名：尺寸超级不合身的泳裤 　评论：穿如此大的泳裤，游起泳来确实很尴尬
+恶心指数： 第三名：超级贴身的短裤 　评论：穿着如此贴身的短裤，让人感觉极其不舒服，更郁闷的是有人穿出来
+恶心指数：☆☆☆☆☆☆☆☆ ☆☆☆☆☆☆☆ 第二名：三角形牛仔露屁股短裤 　评论：真没想到这样的短裤怎么会有人买！甚至还有人穿出来！
+恶心指数：☆☆☆☆☆☆☆☆☆ 第一名：不穿短裤 　评论：这个不服不行了，这样就上街了，回头率100%
 　恶心指数：☆☆☆☆☆☆☆☆☆☆</description>
     </item>
     
@@ -2158,7 +2323,9 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Fri, 17 Aug 2007 23:28:39 +0000</pubDate>
       
       <guid>https://lsvking.github.io/42/</guid>
-      <description>网上看到的曰本人对韩国棒子丧心病狂掠夺盗窃中国历史文化的反应，感觉有趣就贴到自己这里来。今年北京举办了所谓“韩国庙会”，一票韩国明星带着大量韩国 商品来北京倾销，许多不要脸的中国人都跑去买东西看明星，他们大概不知道，一帮韩国人刚在中国驻汉城大使馆前面烧了中国国旗，原因是韩国人想冒称产生于中 国东北的古代高句丽和渤海国是韩国历史，但是中国和联合国教科文组织都认定那两个国家的历史和韩国无关，如此一来棒子文明史就只有两千年不到了。不光如 此，棒子很还在鼓动1千万人联合签名，要求中国政府道歉——尽管他们不断的寄生在中国身上，不断的盗窃，我们什么都没说过。
+      <description>以前看过某文章,韩国无耻的说曾经霸占过大半个中国,无耻!
+韩国曾经说过华佗是他们韩国人,更无耻!
+汉城改为首尔我不想多说! 网上看到的曰本人对韩国棒子丧心病狂掠夺盗窃中国历史文化的反应，感觉有趣就贴到自己这里来。今年北京举办了所谓“韩国庙会”，一票韩国明星带着大量韩国 商品来北京倾销，许多不要脸的中国人都跑去买东西看明星，他们大概不知道，一帮韩国人刚在中国驻汉城大使馆前面烧了中国国旗，原因是韩国人想冒称产生于中 国东北的古代高句丽和渤海国是韩国历史，但是中国和联合国教科文组织都认定那两个国家的历史和韩国无关，如此一来棒子文明史就只有两千年不到了。不光如 此，棒子很还在鼓动1千万人联合签名，要求中国政府道歉——尽管他们不断的寄生在中国身上，不断的盗窃，我们什么都没说过。
 下面是转贴的，曰本人对韩国无耻剽窃中国文化申报世界文化遗产的反应：
 以下为曰本网民的反应：
 さん
@@ -2227,7 +2394,7 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Fri, 17 Aug 2007 18:26:38 +0000</pubDate>
       
       <guid>https://lsvking.github.io/41/</guid>
-      <description>打开电视CCTV就是这样教育俺的 各位观众，这里是“法治纵横”节目。近期，XX警方成功地破获了一起重大地下**\**案件，抓获犯罪嫌疑人5名。警方提醒大家，任何形式的****都是违法的，非法赌博者最终都将为之付出代价……
+      <description>打开电视CCTV就是这样教育俺的  一、 各位观众，这里是“法治纵横”节目。近期，XX警方成功地破获了一起重大地下**\**案件，抓获犯罪嫌疑人5名。警方提醒大家，任何形式的****都是违法的，非法赌博者最终都将为之付出代价……
 （半个小时后）
 各位观众，“我爱世界杯”节目又跟您见面了，欢迎拨打我们的声讯热线电话、或发送短信参加我们的有奖竞猜活动，这里有万元大奖等你拿！
 二、
@@ -2261,7 +2428,7 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Fri, 17 Aug 2007 15:47:33 +0000</pubDate>
       
       <guid>https://lsvking.github.io/43/</guid>
-      <description>Google Analytics（Google 流量统计）想必有不少朋友试用过吧，功能之强大，内容之丰富是国内的那些统计网站无法比拟的，但是，“伟大”的GFW又把它做掉了，具体是何年何月下的黑手也无从考究了，也不必考究了，智能说句，希望仁慈的GFW能尽早放他一条生路！
+      <description>Google Analytics （Google 流量统计）想必有不少朋友试用过吧，功能之强大，内容之丰富是国内的那些统计网站无法比拟的，但是，“伟大”的GFW又把它做掉了，具体是何年何月下的黑手也无从考究了，也不必考究了，智能说句，希望仁慈的GFW能尽早放他一条生路！
  目前也只好用51.LA啊 CNZZ啊 等诸如此类的来顶一下了，51.la听说有被挂马？不知道是真是假，CNZZ就好像蜗牛爬，我这种性格的人是在是有点抓狂。。。。</description>
     </item>
     
@@ -2271,7 +2438,7 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Fri, 06 Jul 2007 17:56:23 +0000</pubDate>
       
       <guid>https://lsvking.github.io/40/</guid>
-      <description>&amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/1/11469647232755353_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;**文天祥**（1236—1283），男，吉州庐陵（今江西吉安）人，原名云孙，字履善,又字宋瑞,自号文山，民族英雄。  文天祥文天祥家世考：
+      <description>文天祥  &amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/1/11469647232755353_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;**文天祥**（1236—1283），男，吉州庐陵（今江西吉安）人，原名云孙，字履善,又字宋瑞,自号文山，民族英雄。  文天祥文天祥家世考：
 “富田文氏”是西汉蜀郡太守文翁的后裔，五代后唐时期文天祥先祖文时迁徙至今江西吉州，开吉州庐陵淳化乡富田文氏一脉。
 文天祥在《先君子革斋先生事实》一文中是这样说的：“先君子尝考次谱系，文氏系成都徙吉，五世（七世—编者）祖炳然居永和镇，高祖正中由永和徙富田。” 《宋少保右丞相兼枢密使信国公文山先生纪年录》（后面称《纪年录》亦云：“庐陵文氏来自成都，公六世（七世—编者）祖炳然居永和镇，五世（八世—编者）祖 正中徙富田。”所以现在有人把文天祥认作是客家人，是不确实的。
 选中贡士后，他以天祥为名,宝佑四年（1256）中状元，历任签书宁海军节度判官厅公事、刑部郎官、江西提刑、尚书左司郎官、湖南提刑、知赣州等职。有《文山先生集》传世。
@@ -2313,8 +2480,7 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
 阴房冥鬼火，春院閟天黑。
 牛骥同一皂，鸡栖凤凰食。
 一朝蒙雾露，分作沟中瘠。
-如此再寒暑，百沴自辟易。
-哀哉沮洳场，为我安乐国。</description>
+如此再寒暑，百沴自辟易。</description>
     </item>
     
     <item>
@@ -2323,7 +2489,7 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Fri, 06 Jul 2007 17:54:36 +0000</pubDate>
       
       <guid>https://lsvking.github.io/39/</guid>
-      <description>&amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/1/11800036454864458_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;（1103年3月24日—1142年1月27日）  中国南宋爱国军事家，抗金英雄。字鹏举。河北（宋时指黄河以北，而非今河南河北之省界，下同）相州汤阴（今河南安阳市汤阴县）永和乡孝悌里人。靖康元年(1126年)投军抗金，因作战勇敢升秉义郎。建炎三年(1129年)，金将完颜宗弼渡江南进，岳飞时任江淮宣抚使司右军统制，率部转战广德(今属安徽)、宜兴(今属江苏)地区 ，袭扰金军 ，多次获胜 ，并收复建康 ，升任通泰镇抚使。绍兴三年(1133年)，金扶植的刘豫政权派军攻占襄阳（今属湖北）等郡。次年四月，岳飞自江州（今江西九江）挥师北上，大败刘豫军，收复六郡，因功授清远军节度使。五年夏，奉宋廷之命镇压洞庭湖地区的杨幺农 民起义军。六年，任湖北京西路宣抚副使 ，举兵奇袭刘豫军 ，以部分兵力东向蔡州（今河南汝南）诱其来攻，主力自襄阳出击伊阳（今河南嵩县），收复今豫西、陕南大片失地。七年，岳飞乘金朝废除刘豫之机 ，提 出举兵收复中原的主张 ， 后多次上书反对与金议和，均遭高宗和宰相秦桧拒 绝。十年，完颜宗弼毁约南进。岳飞按照其连结河朔进军中原的方略，遣将联络北方义军，袭扰金军后方，自率主力北上，在郾城、颍昌之战中大破金军精骑，击败 金军主力。正当岳飞行将渡河时，高宗 、秦桧却向金乞和，诏令各路宋军回师，致使岳飞恢复中原的计划功败垂成。次年，回临安，被解除兵权，改授枢密副使。十二月二十九日，被高宗、秦桧以“莫须有”的罪名杀害 。其子岳云和部将张宪也惨遭杀害 。宋孝宗继位后为岳飞平反昭雪 。淳熙五年（1178年），谥武穆。宋宁宗嘉泰四年（1204年）追封鄂王。宋理宗宝庆元年(1225年)，改谥忠武。
+      <description>岳飞  &amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/1/11800036454864458_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;（1103年3月24日—1142年1月27日）  中国南宋爱国军事家，抗金英雄。字鹏举。河北（宋时指黄河以北，而非今河南河北之省界，下同）相州汤阴（今河南安阳市汤阴县）永和乡孝悌里人。靖康元年(1126年)投军抗金，因作战勇敢升秉义郎。建炎三年(1129年)，金将完颜宗弼渡江南进，岳飞时任江淮宣抚使司右军统制，率部转战广德(今属安徽)、宜兴(今属江苏)地区 ，袭扰金军 ，多次获胜 ，并收复建康 ，升任通泰镇抚使。绍兴三年(1133年)，金扶植的刘豫政权派军攻占襄阳（今属湖北）等郡。次年四月，岳飞自江州（今江西九江）挥师北上，大败刘豫军，收复六郡，因功授清远军节度使。五年夏，奉宋廷之命镇压洞庭湖地区的杨幺农 民起义军。六年，任湖北京西路宣抚副使 ，举兵奇袭刘豫军 ，以部分兵力东向蔡州（今河南汝南）诱其来攻，主力自襄阳出击伊阳（今河南嵩县），收复今豫西、陕南大片失地。七年，岳飞乘金朝废除刘豫之机 ，提 出举兵收复中原的主张 ， 后多次上书反对与金议和，均遭高宗和宰相秦桧拒 绝。十年，完颜宗弼毁约南进。岳飞按照其连结河朔进军中原的方略，遣将联络北方义军，袭扰金军后方，自率主力北上，在郾城、颍昌之战中大破金军精骑，击败 金军主力。正当岳飞行将渡河时，高宗 、秦桧却向金乞和，诏令各路宋军回师，致使岳飞恢复中原的计划功败垂成。次年，回临安，被解除兵权，改授枢密副使。十二月二十九日，被高宗、秦桧以“莫须有”的罪名杀害 。其子岳云和部将张宪也惨遭杀害 。宋孝宗继位后为岳飞平反昭雪 。淳熙五年（1178年），谥武穆。宋宁宗嘉泰四年（1204年）追封鄂王。宋理宗宝庆元年(1225年)，改谥忠武。
 【早年】
 岳飞少年时丧父，由母亲养育成人。传说其母透过在他的背上刺“尽忠报国”四个字，让他铭记国仇家恨。曾经拜周侗为师学习武艺。且喜欢看《左氏春秋》、《孙子兵法》。
 【从军】
@@ -2355,7 +2521,7 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Fri, 06 Jul 2007 17:53:08 +0000</pubDate>
       
       <guid>https://lsvking.github.io/38/</guid>
-      <description>&amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/6/11459297403540390_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;**宗泽（1060～1128）**  中国宋代抗金大臣。字汝霖。浙江义乌人，民族英雄。世代务农，家境贫寒。北宋元佑六年（1091）应进士试，对策陈时弊，考官恶其直言，抑为：同进士出身“录取。自此历任何并馆陶县尉，浙江龙游、山东胶水及登州掖县县令，勤政爱民，治绩卓著，名声远扬，但得不到朝廷的赏识。宣和元年（1119），反对朝廷连结女真征契丹，被贬提举鸿庆宫，于是上表引退，拟在东阳山谷中结庐，以读书著述终老。
+      <description>宗泽  &amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/6/11459297403540390_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;**宗泽（1060～1128）**  中国宋代抗金大臣。字汝霖。浙江义乌人，民族英雄。世代务农，家境贫寒。北宋元佑六年（1091）应进士试，对策陈时弊，考官恶其直言，抑为：同进士出身“录取。自此历任何并馆陶县尉，浙江龙游、山东胶水及登州掖县县令，勤政爱民，治绩卓著，名声远扬，但得不到朝廷的赏识。宣和元年（1119），反对朝廷连结女真征契丹，被贬提举鸿庆宫，于是上表引退，拟在东阳山谷中结庐，以读书著述终老。
 然而事与愿为，因在登州任上得罪过某些权贵，以莫须有的罪名，将其撤职并软禁在镇江，不得自由。两年后先后被委任为理教郎监理润州都酒税和巴州通判。靖康元年（1126）任磁州知州。时金兵入侵，太原失守，真定危急，赴磁州的一些官员以种种借口不肯前去，只有宗泽率随从几十个人赴任。
 到磁州后，积有极修复城墙，整治兵器，招募义兵，广集粮饷，防止敌人进拢。不久，受到任河北义兵都总管，率军救真定。宗泽先以神臂弓挫敌凶焰，后纵兵进击，破金兵30余寨，斩敌数百，所获羊马金帛全部赏将士。些时康王赵构赴金议和至磁州，宗泽叩马劝止，乃留相州。是年冬，宋钦宗任康王为兵马大元帅，宗泽为副师。泽率军趋李固渡，途中遇敌，大破之。
 次年正月，率军至开德，与敌人打了13仗，仗仗获胜。建炎元年（1127）六月，泽以70高龄任东京留守，知开封府，招聚义兵近200万，分署京郊16县，与金兵隔黄河对峙。此时岳飞投奔宗泽，泽见而奇其才，给以500骑兵，要其奋勇立功。岳飞听命而行，歼灭了敌人。从此岳飞就在宗泽部下南征北战。
@@ -2369,7 +2535,7 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Fri, 06 Jul 2007 17:43:50 +0000</pubDate>
       
       <guid>https://lsvking.github.io/37/</guid>
-      <description>&amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/1/11658586877132508_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;林则徐，福建侯官人。早年家境贫寒，受过良好的教育。嘉庆十六年赐进士。在为官40年中，他“经世自励”，廉洁奉公；又重视水利事业，救灾赈民。他最大的功绩是领导了中国历史上轰轰烈烈的禁烟运动——虎门销烟，指挥了抗英斗争，维护了国家主权和民族的尊严，成为中国近代史上第一位民族英雄和爱国者。同时，他编译《四洲志》等外文书籍、资料，开创了中国近代学习和研究西方的风气，是中国近代维新思想的先驱。  【生平】
+      <description>林则徐  &amp;lt;img src=&amp;quot;http://baike.baidu.com/pic/1/11658586877132508_small.jpg&amp;quot; title=&amp;quot;点击查看大图&amp;quot; align=&amp;quot;right&amp;quot; border=&amp;quot;0&amp;quot; hspace=&amp;quot;5&amp;quot; vspace=&amp;quot;5&amp;quot; /&amp;gt;林则徐，福建侯官人。早年家境贫寒，受过良好的教育。嘉庆十六年赐进士。在为官40年中，他“经世自励”，廉洁奉公；又重视水利事业，救灾赈民。他最大的功绩是领导了中国历史上轰轰烈烈的禁烟运动——虎门销烟，指挥了抗英斗争，维护了国家主权和民族的尊严，成为中国近代史上第一位民族英雄和爱国者。同时，他编译《四洲志》等外文书籍、资料，开创了中国近代学习和研究西方的风气，是中国近代维新思想的先驱。  【生平】
 青少年
 林则徐(1785—1850年)，字元抚，又字少穆、石磷，溢号文忠。乾隆五十年七月二十六日(1785年8月30日)出生在福建侯官(今福州市)一个下层封建知识分子的家庭里。父亲林宾日，以教读、讲学为生。仅靠父亲教私塾的微薄收无法维持生活，于是，母亲用手工劳动来分担家庭的困窘。
 在科举时代，林则徐的父母指望自己的儿子能在仕宦之途发达上升。林则徐性聪颖，在4岁时便由父亲“怀之入塾，抱之膝上”，口授四书五经。 在父亲的精心培育下，较早地读了儒家经传。嘉庆三年(1798年)，他14岁中秀才后就到福建著名的鳌峰书院读书，受教于具有实学的郑光策和陈寿祺。在父 亲和亲友的影响下，开始注意经世致用之学。嘉庆九年(1804年)，20岁中举人。父亲的淳淳教导使林则徐的学业取得了惊人的成就。但此后由于家庭日难， 外出当私塾。在十一年(1806年)秋，应房永清之聘到厦门任海防同知书记。这里的鸦片烟毒引起他的注意。次年初，受新任福建巡抚张师诚的赏识招入幕府。他在张幕中获知了不少清朝的掌故和兵、刑、礼、乐等知识以及官场经验，为他日后的“入仕”准备了些必要条件。
@@ -2389,8 +2555,7 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
 3月21日下令包围商馆。
 3月22日下令查拿英国鸦片贩子颠地。
 英国驻华商务监督义律的到来，矛盾自然转移道他身上，他到达当天，林则徐下令停泊在黄浦江上的一切外国船只封舱，当天晚上封锁商馆，并且撤走一切差 役和中国雇员。但是义律是一个十足的大流氓，面对林则徐的命令，出尔反尔，采取无赖、讹诈、欺骗、撒谎的卑鄙手法交替使用。义律狡猾多端，但不是林则徐的 对手，3月28日，向林则徐呈送了《义律遵谕呈单缴烟二万零二百八十三箱禀》。
-从林则徐1839年3月10日到达广州，到义律3月28日被迫同意缴出全部鸦片，总共18天，这充分说明了林则徐收缴鸦片第一回合的胜利。
-林则徐与邓廷桢等人会商后，就收缴的地点、验收、押运、存储、看管、守卫等各个环节做了无懈可击的指令和安排。</description>
+从林则徐1839年3月10日到达广州，到义律3月28日被迫同意缴出全部鸦片，总共18天，这充分说明了林则徐收缴鸦片第一回合的胜利。</description>
     </item>
     
     <item>
@@ -2403,7 +2568,12 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
 　关天培调任广东水师提督的这年，正是英国商务监督律劳卑率兵船蛮横闯入广东省河之后，为了加强海防，清政府调他到这个当时是全国对外交往和贸易的唯一口岸广州。关天培面临着艰巨的任务，为了专心致志搞好海防，先令妻子奉老母归里，自己带着三个家丁到广州赴任。就任后，他“亲历重洋，遍观厄塞”，根据虎门的险要形势，进行严密设防，设置了三重门户：以沙角、大角两炮台为第一重门户；南山、镇远、横档三炮台为第二重门户，并将其中的南山炮台加以改建，加筑石基，增设月台，改变炮位过高的弱点，改称为威远炮台；狮子洋口的大虎门炮台为第三重门户①。这三重门户也就是三条防线，紧紧地把守住珠江口的南大门。他一方面在第二、三防线之间，威远、镇远与横档的适当地段设置大铁链和木排，以阻拦敌闯入内洋；另方面又亲自监督铸造大炮八千斤、六千斤者四十尊，六千斤以下者数百尊，分置各炮台，以加强防守力量。与此同时，他又加紧训练水师部队，亲自驻扎在虎门督军操练，每年二月末、八月初，“分饬本标将备，率亲兵五百余名，分赴威远、镇远、横档、大浇、永安、巩固六处，练习炮准，其大角、沙角炮台等处，共兵六百四十名。每次操练可十日为度”②。他还将建设虎门要塞的经验和汇集的有关资料，编成《筹海初集》四卷并附有许多详细的地图和训练图、表等，以资参考。
 　这时鸦片烟流毒全国，英、美的鸦片趸船源源不断东来，鸦片走私贸易极为猖撅，关天培积极协助两广总督邓廷桢进行侦缉。到道光十九年(1839年)春林则徐到广东后，关天培更是尽力支持和配合禁烟运动，取得了迫使义律缴出二万余箱、袋鸦片，并在虎门全数销毁的伟大胜利。在林则徐的赞助下，他又在武山上的威远炮台和镇远炮台之间新修筑起一座大炮台，名为靖远，炮洞六十八个，配炮六十位。其建筑之坚固与火力之充沛，为虎门各炮台最。当时关天培除自铸铁炮外，还在林则徐、邓廷桢的大力支持下，从澳门等地购进洋炮二百多尊，并严格训练大批招募来的水师兵勇，改革编制，将大鹏营由营改为协，拨副将驻扎那里，与香山协相呼应，又雇用一批米船、红单船、拖风船，利用有利地形与军民在海上与陆上的紧密协作，切实做到严阵以待，以迎击来犯的敌人。林则徐对关天培这些整顿防务的努力予以很高的评价，称赞他“殚精竭虑，寝食以之”。
 　由于关天培在广东沿海的严密布防，使英国侵略者在这个时期的挑衅与袭击都未能得逞。道光十九年七月二十七日(1839年9月4日)，义律率兵船二艘、货船三艘到九龙山口岸以索食为名，突发炮火，进行挑衅活动，遭到大鹏营参将赖恩爵率领的水师猛烈反击，狼狈逃跑。两个月以后，九月二十八日(11月3日)义律又阻挡英国商船具结，破坏中英正常贸易，挑起穿鼻之战，这次战斗可说是揭开了中英鸦片战争的序幕，实际上是英国发动鸦片战争的开始。在这次战斗中，关天培亲临督阵，虽手背受伤，仍奋不顾身，执刀屹立，督令弁兵，对准英舰连轰数炮，使它遭到重创，仓皇遁去。此后十天内，英舰又接连向官涌守军发动六次进攻，结果都被增城营参将陈连升等所率领的守军所击退，获得全胜。战斗结束后，关天培得到清政府的嘉奖，在道光帝的上谕里写道：“此次攻击夷船，提督关天培奋勇直前，
-　①《鸦片战争》，新知识出版社，第6册，第269-270页。
+身先士卒，可嘉之至!著赏给‘法福灵阿巴图鲁’名号”，并下令“交部从优议叙，以示奖励”③。
+鸦片战争爆发后，关天培督率水师，坚守阵地，并积极组织渔船、蟹艇，利用各种机会袭击侵略军。道光二十年十一月(1840年12月)，琦善以钦差大臣和两广总督的身份抵达广州，一反林则徐之所为，遣散兵勇，尽撤海防，将关天培数年来辛苦经营的虎门三道防线并木排铁链全数加以毁弃。关天培为此感到十分痛心，一再要求琦善采取抵抗的积极措施，都遭到拒绝。这年十二月十五日(1841年1月7日)，英军突然袭击并攻占大角、沙角炮台，副将陈连升壮烈牺牲，虎门形势十分危急。当时，关天培与总兵李廷钰各只有弱兵数百，分守靖远、威远两炮台，请琦善派兵支援，琦善仅遣兵二百进行敷衍。道光二十一年二月初六日(1841年2月26日)，英军大举进攻虎门诸炮台，而守军才几百人，关天培在孤军无援的绝境下，决心死守阵地，将自己的财物全部分赠将士，鼓励他们英勇杀敌，他与游击麦廷章等昼夜督战。敌军在占横档、永安等炮台后，集中兵力进攻靖远和威远炮台，关天培亲燃大炮自上午十时至下午七时，与敌激战达十小时之久。敌人自炮台背后进攻，关天培身被数十创，犹持刀拚杀，最后英勇牺牲，游击麦廷章及所部战士数十人也都壮烈捐躯。
+关天培的壮烈牺牲激起了爱国士大夫的沉痛哀悼，他们纷纷撰写诗文表示纪念。林则徐对关天培的死尤感悲痛，特写挽联悼念道：
+“六载固金汤，问何人忽坏长城，孤注空教躬尽瘁；双忠同坎（土+禀）(指同时战死的麦廷章)，闻异类亦钦伟节，归魂相送面如生。”④
+关天培在牺牲前特地委派家丁将他的广东水师提督官印送走。他早已作为国捐躯的准备，开战前给家人寄去一个匣子，内放几枚牙齿和几套旧衣服，表示自己必死的决心。他的尸体由家丁在乱尸中找到，身体的一半已被炮火全烧焦了。出葬的那天，“士大夫数百人缟衣迎送，旁观者或痛哭失声”⑤。
+(徐如) 　①《鸦片战争》，新知识出版社，第6册，第269-270页。
 　②《鸦片战争》，第6册，第276页。
 　③《筹办夷务始末》(道光朝)，中华书局，第1册，第244页。
 　④《鸦片战争》，新知识出版社，第6册，第273页。
@@ -2416,7 +2586,8 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Sun, 01 Jul 2007 10:14:58 +0000</pubDate>
       
       <guid>https://lsvking.github.io/35/</guid>
-      <description>演唱：俞静[coolplayer width=”480″ height=”380″ autoplay=”0″ loop=”0″ charset=”utf-8″ download=”1″ mediatype=””]
+      <description>演唱：俞静
+[coolplayer width=”480″ height=”380″ autoplay=”0″ loop=”0″ charset=”utf-8″ download=”1″ mediatype=””]
 香港别来无恙
 [/coolplayer]
 海水朝朝朝朝朝朝朝落
@@ -2445,7 +2616,13 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Sun, 24 Jun 2007 19:15:35 +0000</pubDate>
       
       <guid>https://lsvking.github.io/34/</guid>
-      <description>&amp;lt;p&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;471&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_20067121055344427841_4.jpg&amp;quot; height=&amp;quot;687&amp;quot; style=&amp;quot;width: 471px; height: 687px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;470&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_200671210615959198_5.jpg&amp;quot; height=&amp;quot;471&amp;quot; style=&amp;quot;width: 470px; height: 471px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;468&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_2006712106821432554_6.jpg&amp;quot; height=&amp;quot;601&amp;quot; style=&amp;quot;width: 468px; height: 601px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;468&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_200671210619418949_7.jpg&amp;quot; height=&amp;quot;414&amp;quot; style=&amp;quot;width: 468px; height: 414px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_20067121063267274156_8.jpg&amp;quot; height=&amp;quot;440&amp;quot; style=&amp;quot;width: 468px; height: 440px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_20067121064650173576_10.jpg&amp;quot; height=&amp;quot;397&amp;quot; style=&amp;quot;width: 466px; height: 397px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;466&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_200671210748767153_11.jpg&amp;quot; height=&amp;quot;579&amp;quot; style=&amp;quot;width: 466px; height: 579px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;465&amp;quot; src=&amp;quot;http://bbs.</description>
+      <description>惊爆：女人低腰裤竟有如此穿法       图片介绍：越低越好这是一个人人都渴望展示肚脐与小腹的季节。
+作为低腰风潮的代言品，低腰束身牛仔弥补了身材的缺陷，
+拉长了腿的视觉长度。之前有评论者抨吉低腰裤说，
+这种裤装让腿短的人无地自容。时尚的回应是，
+她并没有真正穿上过低腰裤。裤子的腰线剪裁得越低，
+越让人有一种“看见的长度完全只是腿长”的错觉。
+加上高跟鞋这个必不可少的道具，你会忽然有了想更好地呵护臀部的欲望，因为它其实很辣，只是你以前没有在意。 &amp;lt;p&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;471&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_20067121055344427841_4.jpg&amp;quot; height=&amp;quot;687&amp;quot; style=&amp;quot;width: 471px; height: 687px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;470&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_200671210615959198_5.jpg&amp;quot; height=&amp;quot;471&amp;quot; style=&amp;quot;width: 470px; height: 471px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;468&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_2006712106821432554_6.jpg&amp;quot; height=&amp;quot;601&amp;quot; style=&amp;quot;width: 468px; height: 601px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; width=&amp;quot;468&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_200671210619418949_7.jpg&amp;quot; height=&amp;quot;414&amp;quot; style=&amp;quot;width: 468px; height: 414px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;http://bbs.megajoy.com/SiteUpfile/up_file/2006/7/12/new_lion_20067121063267274156_8.jpg&amp;quot; height=&amp;quot;440&amp;quot; style=&amp;quot;width: 468px; height: 440px&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;http://bbs.</description>
     </item>
     
     <item>
@@ -2454,7 +2631,7 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Sun, 24 Jun 2007 19:07:12 +0000</pubDate>
       
       <guid>https://lsvking.github.io/33/</guid>
-      <description>&amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 莫非这两个岛是上帝从上面的树林中被挪出来的？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782529.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 你看俺俩像不？拍个照作纪念吧！ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782531.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 不会是gay吧？警察叔叔也玩这个？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782533.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 这不是中国的地图么？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782535.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 这样的挎包也太搞了吧？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782537.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 要是真换了这俩眼睛可不太好！ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.</description>
+      <description>无奇不有——世界上最巧合的图片              &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 莫非这两个岛是上帝从上面的树林中被挪出来的？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782529.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 你看俺俩像不？拍个照作纪念吧！ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782531.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 不会是gay吧？警察叔叔也玩这个？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782533.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 这不是中国的地图么？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.qq.com/book/pics/1782/1782535.jpg&amp;quot; id=&amp;quot;MM&amp;quot; /&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; 这样的挎包也太搞了吧？ &amp;lt;/p&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;img name=&amp;quot;MM&amp;quot; border=&amp;quot;0&amp;quot; src=&amp;quot;http://img1.</description>
     </item>
     
     <item>
@@ -2463,7 +2640,17 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <pubDate>Sun, 17 Jun 2007 10:28:29 +0000</pubDate>
       
       <guid>https://lsvking.github.io/32/</guid>
-      <description>第一晚,几个人围坐打牌.其中一个女生(准美女),年纪比我们小,却偏偏卖老,开口闭口“小弟弟“,偶对家一次说了一句什么话,惹了她,只听她发狠道:“…我把你小弟弟的皮拨了!“满座皆寒!</description>
+      <description>第一晚,几个人围坐打牌.其中一个女生(准美女),年纪比我们小,却偏偏卖老,开口闭口“小弟弟“,偶对家一次说了一句什么话,惹了她,只听她发狠道:“…我把你小弟弟的皮拨了!“满座皆寒!
+ 第二晚，亦在打牌中，一帅哥说话中提到他哥哥，边上一女生(美女)甚惊讶,问道:“你上面还有哥哥啊?“ 帅哥答:“是啊&amp;#8230;“女生又问:“那你下面有没有弟弟?“全场厥倒!  有一次和mm在电话里胡扯，谈到日这个字，我挺不好意思的说日是爱的意思，mm很大嗓门的说：日不是作爱，是操！操和作爱是不一样地！！！我ft!!!!!  有次和朋友的mm坐在一起聊天，她问我多大了，我说不告诉你，她说“不告诉我？嘿嘿，把你jj切开看‘年轮’”…………jj都有“年轮”？
+mm边打牌边吃零食,嚼牛肉干可能嚼到筋了,半天嚼不烂,遂云:“你买的什么牛肉干啊，嚼起来跟嚼牛鞭一样……”
+高中时偶班俩mm对骂，其中一人怒曰“********一人曰：你他妈操什么操！你他妈是属于被操的！
+某日于一网吧cs，人不多，对面坐一mm估计在语聊，声音很大。不一会儿可能mm和对方发生争执开始对骂，刚开始也无非就是国骂之类的，偶没有太注意，继续cs。。。2分钟后，mm高呼一句：“你丫再横，我一b夹死你！”。。。。网吧众人绝倒。。。
+高中，一朋友和女生吵架，那女生一字一句的说：“我……操……你……妈！”哥们忍不住说：“你拿什么操？？” 那女生说：“我用你的！”
+初中时，有两个mm吵架，其实是斗嘴玩，一个说：“我***！”偶们当时都暴寒，谁知旁边另一个女生说了一句话足以寒死全世界，她说：“应该是‘我 *** 爸’！”，众人晕倒～～～
+偶妹妹xx完了之后喜欢捏着我疲软的jj，然后一边摇一边说：呼吸啊！呼吸啊！人工呼吸！而且要求jj要一直保持疲软！寒……
+偶mm的室友经常恐吓她们的一句话就是：“再说再说，把你下面那个洞给添了。”
+高中毕业前的一个月的一天下午，我们班的向来很文静的校花一反常态的站在讲台上面向我们大声对我们说： 爱 不是想出来的！ 爱 是做出来的!~` 全班先是全倒，然后是掌声雷动&amp;#8230;&amp;#8230;这一Sample Text幕我一辈子都忘不了！`
+当初有个mm的绝骂：你老爸当初怎么没把你射到墙上啊！！！   </description>
     </item>
     
     <item>
@@ -2478,7 +2665,8 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
 之前说到Google Earth的内核部分是加密的，所以无法对Google Earth内部动任何手脚，中文版的实现也仅仅能够通过替换Google Earth的其他语言文件。结果可想而知在Google Earth 4.0.1657中的“语言选择”处无法来增添一项 “中文”，我们暂时选择替换“法文”。在安装了汉化语言文件后，选择“法文”即可显示“中文版”界面，想来这不难理解。介于这样的情况此次的Google Earth非官方中文版本也仅仅是－－Google Earth 中文版–上帝之眼专用1.1 Beta1 特征
 　一个过渡而已，真正要力求完美。仍然需要Google中国出一份力才可以，虽然对他们来说这根本不是什么难事。直到8月8日，为Google Earth中文版诞生而努力的远航同学又有了新的突破。在原有基础中增加了不少模块的汉化。
 让我们离完整的Google Earth中文版又近了一步。而这个版本就是在这次8月9日要发布的最新的测试版本Google Earth 中文版–上帝之眼专用1.1 Beta2。在这个版本中，汉化面积几乎覆盖了整个软件。仅仅有部分无关痛痒部分，由于时间问题，预计将会在 Google Earth 中文版–上帝之眼专用1.2版本中，让大家看到完美的中文版本！且这次也制作了可卸载，恢复的安装包方便大家避免在测试中遇到的麻烦。
-　2006年8月9日 上帝之眼　远航　www.godeyes.cn&amp;lt;td width=&amp;quot;26%&amp;quot;&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;a href=&amp;quot;http://download.godeyes.cn/2007/GE/b479/GoogleEarthWin.exe&amp;quot; target=&amp;quot;_blank&amp;quot; class=&amp;quot;STYLE2&amp;quot;&amp;gt;下载&amp;lt;/a&amp;gt;&amp;lt;/strong&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;/td&amp;gt;  &amp;lt;td&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;a href=&amp;quot;http://Download.godeyes.cn/2007/GE/gech/GoogleEarthCHB1.rar&amp;quot; target=&amp;quot;_blank&amp;quot; class=&amp;quot;STYLE2&amp;quot;&amp;gt;下载&amp;lt;/a&amp;gt;&amp;lt;/strong&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;/td&amp;gt;  &amp;lt;td&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;a href=&amp;quot;http://Download.</description>
+同时希望大家努力测试，多提建议 　2006年8月9日 上帝之眼　远航　www.godeyes.cn
+下载  Google Earth 4.0.1657原始版本（必须具备或以上版本）  &amp;lt;td width=&amp;quot;26%&amp;quot;&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;a href=&amp;quot;http://download.godeyes.cn/2007/GE/b479/GoogleEarthWin.exe&amp;quot; target=&amp;quot;_blank&amp;quot; class=&amp;quot;STYLE2&amp;quot;&amp;gt;下载&amp;lt;/a&amp;gt;&amp;lt;/strong&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;/td&amp;gt;     Google Earth 中文版&amp;#8211;上帝之眼专用1.1 Beta1(早前版本)  &amp;lt;td&amp;gt; &amp;lt;p align=&amp;quot;center&amp;quot;&amp;gt; &amp;lt;strong&amp;gt;&amp;lt;a href=&amp;quot;http://Download.</description>
     </item>
     
     <item>
@@ -2503,7 +2691,7 @@ cmsware也很可笑，减少了加密文件的数量，就宣称自己在“走�
       <guid>https://lsvking.github.io/30/</guid>
       <description>家用视频游戏（Video Game）的出现至今已经有三十多年的历史了，算是比较悠久的产业了，这个产业在发展过程中，有一些颇具故事性的历史，故事中充满令人扼腕的失败、让人激动的创新和难以置信的愚蠢。以下是这些故事中的一部分，希望能唤起你对往日时光的追忆。从这些故事中，也许我们还能预测到新一代游戏机大战谁将是最终胜利者。
 一、红白机时代 　据说世界上第一台家用游戏机诞生于上世纪七十年代，只能呈现简单的方块线条，而且还是单色的，那时还不能称这是一个“产业”，改变历史的是日本任天堂（Nintendo），在上世纪八十年代，日本的任天堂开辟了一个崭新的红白机时代，这时，真正意义上的家用游戏机FC开始风靡世界，并逐步产生了一个庞大的家用游戏机产业。
- &amp;lt;td&amp;gt; 任天堂FC &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 世嘉MD &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 任天堂SFC &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 发布日期 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1983年7月15日 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1988年10月29日 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1990年11月21日 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 累计销量 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 6291万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 3075万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 4910万台 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 其中日本 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1935万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 875万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1717万台 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 其中美国 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 4256万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 2200万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 3193万台 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; CPU &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 摩托罗拉6502 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 摩托罗拉M68000 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 摩托罗拉65836 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; CPU运行频率 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1.</description>
+    &amp;lt;td&amp;gt; 任天堂FC &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 世嘉MD &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 任天堂SFC &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 发布日期 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1983年7月15日 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1988年10月29日 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1990年11月21日 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 累计销量 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 6291万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 3075万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 4910万台 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 其中日本 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1935万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 875万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1717万台 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; 其中美国 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 4256万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 2200万台 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 3193万台 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; CPU &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 摩托罗拉6502 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 摩托罗拉M68000 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 摩托罗拉65836 &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt; CPU运行频率 &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; 1.</description>
     </item>
     
     <item>
@@ -2527,7 +2715,7 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
       <pubDate>Fri, 04 May 2007 09:42:06 +0000</pubDate>
       
       <guid>https://lsvking.github.io/27/</guid>
-      <description></description>
+      <description>&amp;nbsp;                &amp;nbsp;          &amp;nbsp;          &amp;nbsp;          &amp;nbsp;          &amp;nbsp;          &amp;nbsp;          &amp;nbsp;          &amp;nbsp;          &amp;nbsp;          &amp;nbsp;          &amp;nbsp;          &amp;nbsp;          &amp;nbsp;</description>
     </item>
     
     <item>
@@ -2536,7 +2724,12 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
       <pubDate>Fri, 27 Apr 2007 11:51:37 +0000</pubDate>
       
       <guid>https://lsvking.github.io/26/</guid>
-      <description>2008北京奥运会火炬传递路线于昨日发布，新浪网提供了很多精彩内容，在此在下引用2款Flash 在此对sina表示感谢！</description>
+      <description>2008北京奥运会火炬传递路线于昨日发布，新浪网提供了很多精彩内容，在此在下引用2款Flash 在此对sina表示感谢！
+[coolplayer width=&amp;#8221;480&amp;#8243; height=&amp;#8221;380&amp;#8243; autoplay=&amp;#8221;0&amp;#8243; loop=&amp;#8221;0&amp;#8243; charset=&amp;#8221;utf-8&amp;#8243; download=&amp;#8221;1&amp;#8243; mediatype=&amp;#8221;&amp;#8221;]
+2008北京奥运会火炬传递路线Flash（1）
+[/coolplayer] &amp;nbsp; [coolplayer width=&amp;#8221;480&amp;#8243; height=&amp;#8221;380&amp;#8243; autoplay=&amp;#8221;0&amp;#8243; loop=&amp;#8221;0&amp;#8243; charset=&amp;#8221;utf-8&amp;#8243; download=&amp;#8221;1&amp;#8243; mediatype=&amp;#8221;&amp;#8221;]
+2008北京奥运会火炬传递路线Flash（2）
+[/coolplayer] </description>
     </item>
     
     <item>
@@ -2545,7 +2738,9 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
       <pubDate>Fri, 27 Apr 2007 11:47:03 +0000</pubDate>
       
       <guid>https://lsvking.github.io/25/</guid>
-      <description>新浪体育讯　4月26日消息，经国际奥委会批准，2008年北京奥运会组委会今天在北京世纪坛宣布第29届奥运会火炬传递计划路线和火炬样式。火炬以中国传统祥云符号和纸卷轴为创意，火炬境外传递城市19个，境内传递城市和地区116个.</description>
+      <description>新浪体育讯　4月26日消息，经国际奥委会批准，2008年北京奥运会组委会今天在北京世纪坛宣布第29届奥运会火炬传递计划路线和火炬样式。火炬以中国传统祥云符号和纸卷轴为创意，火炬境外传递城市19个，境内传递城市和地区116个.
+看完整大图请点击[name]全球传递全景图,http://2008.sina.com.cn/08interoute/[/name]
+火炬传递分境外传递和境内传递两部分，顺序和城市为：阿拉木图(哈萨克斯坦)-伊斯坦布尔(土耳其)-圣彼得堡(俄罗斯)-伦敦(英国)-巴黎(法国)- 旧金山(美国)-布宜诺斯艾利斯(阿根廷)-达累斯萨拉姆(坦桑尼亚)-马斯喀特(阿曼)-伊斯兰堡(巴基斯坦)-孟买(印度)-曼谷(泰国)-吉隆坡 (马来西亚)-雅加达(印度尼西亚)-堪培拉(澳大利亚)-长野(日本)-首尔(韩国)-平壤(朝鲜)-胡志明市(越南)-台北-香港-澳门—海南省(三 亚、五指山、万宁、海口)—广东省(广州、深圳、惠州、汕头)—福建省(福州、泉州、厦门、龙岩)—江西省(瑞金、井冈山、南昌)—浙江省(温州、宁波、 杭州、绍兴、嘉兴)—上海市—江苏省(苏州、南通、泰州、扬州、南京)—安徽省(合肥、淮南、芜湖、绩溪、黄山)—湖北省(武汉、宜昌、荆州)—湖南省 (岳阳、长沙、韶山)—广西壮族自治区(桂林、南宁、百色)—云南省(昆明、丽江、 香格里拉)—贵州省(贵阳、凯里、遵义)—重庆市—四川省(广安、绵阳、广汉、乐山、自贡、宜宾、成都)—西藏自治区(山南地区、拉萨)—青海省(格尔 木、青海湖、西宁)—新疆维吾尔自治区(乌鲁木齐、喀什、石河子、昌吉)—甘肃省(敦煌、嘉峪关、酒泉、天水、兰州)—宁夏回族自治区(中卫、吴忠、银 川)—陕西省(延安、杨凌、咸阳、西安)—山西省(运城、平遥、太原、大同)—内蒙古自治区(呼和浩特、鄂尔多斯、包头、赤峰)—黑龙江省(齐齐哈尔、大 庆、哈尔滨)—吉林省(松原、长春、吉林、延吉)—辽宁省(沈阳、本溪、辽阳、鞍山、大连)—山东省(烟台、威海、青岛、日照、临沂、曲阜、泰安、济南) —河南省(商丘、开封、郑州、洛阳、安阳)—河北省(石家庄、秦皇岛、唐山)—天津市—北京市。 &amp;nbsp; &amp;nbsp; </description>
     </item>
     
     <item>
@@ -2554,9 +2749,12 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
       <pubDate>Fri, 27 Apr 2007 11:17:09 +0000</pubDate>
       
       <guid>https://lsvking.github.io/24/</guid>
-      <description>北京奥运会火炬创意灵感来自“渊源共生，和谐共融”的“祥云”图案。祥云的文化概念在中国具有上千年的时间跨度，是具有代表性的中国文化符号。 火炬造型的设计灵感来自中国传统的纸卷轴。纸是中国四大发明之一，通过丝绸之路传到西方。人类文明随着纸的出现得以传播。源于汉代的漆红色在火炬上的运用 使之明显区别于往届奥运会火炬设计，红银对比的色彩产生醒目的视觉效果，有利于各种形式的媒体传播。火炬上下比例均匀分割，祥云图案和立体浮雕式的工艺设 计使整个火炬高雅华丽、内涵厚重。
+      <description>北京奥运会火炬艺术和技术特色 　北京奥运会火炬创意灵感来自“渊源共生，和谐共融”的“祥云”图案。祥云的文化概念在中国具有上千年的时间跨度，是具有代表性的中国文化符号。 火炬造型的设计灵感来自中国传统的纸卷轴。纸是中国四大发明之一，通过丝绸之路传到西方。人类文明随着纸的出现得以传播。源于汉代的漆红色在火炬上的运用 使之明显区别于往届奥运会火炬设计，红银对比的色彩产生醒目的视觉效果，有利于各种形式的媒体传播。火炬上下比例均匀分割，祥云图案和立体浮雕式的工艺设 计使整个火炬高雅华丽、内涵厚重。
 北京奥运会火炬在燃烧稳定性与外界环境适应性方面达到了新的技术高度，能在每小时65公里的强风和每小时50毫米的大雨情况下保持燃烧。在工艺 上采用轻薄高品质铝合金和中空塑件设计，十分轻盈。下半部喷涂高触感塑胶漆，手感舒适不易滑落。北京奥运会火炬是我国自主设计研发的产物，拥有完全的知识 产权。
-北京奥运会火炬使用燃料为丙烷，这是一种价格低廉的常用燃料。</description>
+北京奥运会火炬使用燃料为丙烷，这是一种价格低廉的常用燃料。
+[coolplayer width=&amp;#8221;480&amp;#8243; height=&amp;#8221;380&amp;#8243; autoplay=&amp;#8221;0&amp;#8243; loop=&amp;#8221;0&amp;#8243; charset=&amp;#8221;utf-8&amp;#8243; download=&amp;#8221;1&amp;#8243; mediatype=&amp;#8221;&amp;#8221;]
+北京2008年火炬三维图
+[/coolplayer] &amp;nbsp; 北京奥运会火炬长72厘米，重985克，燃烧时间15分钟，在零风速下火焰高度25至30厘米，在强光和日光情况下均可识别和拍摄。在工艺方面使用锥体曲 面异型一次成型技术和铝材腐蚀、着色技术。燃料为丙烷，符合环保要求。火炬外形制作材料为可回收的环保材料。图为火炬各部细节图解。 &amp;nbsp; 北京奥运会火炬长72厘米，重985克，燃烧时间15分钟，在零风速下火焰高度25至30厘米，在强光和日光情况下均可识别和拍摄。在工艺方面使用锥体曲面异型一次成型技术和铝材腐蚀、着色技术。燃料为丙烷，符合环保要求。火炬外形制作材料为可回收的环保材料。 </description>
     </item>
     
     <item>
@@ -2565,10 +2763,10 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
       <pubDate>Fri, 27 Apr 2007 10:31:01 +0000</pubDate>
       
       <guid>https://lsvking.github.io/23/</guid>
-      <description>北京奥运会火炬长72厘米，重985克，燃烧时间15分钟，在零风速下火焰高度25至30厘米，在强光和日光情况下均可识别和拍摄。在工艺方面使用锥体曲面异型一次成型技术和铝材腐蚀、着色技术。燃料为丙烷，符合环保要求。火炬外形制作材料为可回收的环保材料。
+      <description>奥林匹克火炬是经国际奥委会批准的、用于奥林匹克圣火燃烧的、可手持的火炬。奥林匹克火炬是奥林匹克圣火的载体。从1936年的第11届奥运会开始，每届奥运会都诞生一支体现主办国家文化特色并符合高科技要求的火炬并成为奥林匹克运动的重要遗产。 北京奥运会火炬长72厘米，重985克，燃烧时间15分钟，在零风速下火焰高度25至30厘米，在强光和日光情况下均可识别和拍摄。在工艺方面使用锥体曲面异型一次成型技术和铝材腐蚀、着色技术。燃料为丙烷，符合环保要求。火炬外形制作材料为可回收的环保材料。
 北京奥运会火炬艺术和技术特色
 北京奥运会火炬创意灵感来自“渊源共生，和谐共融”的“祥云”图案。祥云的文化概念在中国具有上千年的时间跨度，是具有代表性的中国文化符号。 火炬造型的设计灵感来自中国传统的纸卷轴。纸是中国四大发明之一，通过丝绸之路传到西方。人类文明随着纸的出现得以传播。源于汉代的漆红色在火炬上的运用 使之明显区别于往届奥运会火炬设计，红银对比的色彩产生醒目的视觉效果，有利于各种形式的媒体传播。火炬上下比例均匀分割，祥云图案和立体浮雕式的工艺设 计使整个火炬高雅华丽、内涵厚重。
-北京奥运会火炬在燃烧稳定性与外界环境适应性方面达到了新的技术高度，能在每小时65公里的强风和每小时50毫米的大雨情况下保持燃烧。在工艺 上采用轻薄高品质铝合金和中空塑件设计，十分轻盈。下半部喷涂高触感塑胶漆，手感舒适不易滑落。北京奥运会火炬是我国自主设计研发的产物，拥有完全的</description>
+北京奥运会火炬在燃烧稳定性与外界环境适应性方面达到了新的技术高度，能在每小时65公里的强风和每小时50毫米的大雨情况下保持燃烧。在工艺 上采用轻薄高品质铝合金和中空塑件设计，十分轻盈。下半部喷涂高触感塑胶漆，手感舒适不易滑落。北京奥运会火炬是我国自主设计研发的产物，拥有完全的 知识产权。  北京奥运会火炬使用燃料为丙烷，这是一种价格低廉的常用燃料。其主要成分是碳和氢，燃烧后只有二氧化碳和水，没有其他物质，不会对环境造成污染。  北京奥运会火炬设计研发过程  北京奥运会火炬设计研究规划工作从2005年8月开始。结合北京奥运会举办理念，通过对往届奥运会火炬设计经验的分析，确定了火炬设计理念、设 计要求和创作方式。根据火炬工业设计的特点，为使设计方案达到艺术与技术完美结合，经北京奥组委办公会批准，确定了火炬设计方案以艺术造型为主导，燃烧技 术与工业设计同时征集、公开征集和定向委托创作相结合的创作方式。  2005年12月6日，北京奥组委召开新闻发布会，发出公开征集火炬设计的邀请。截至2006年2月28日，北京奥组委共收到海内外设计机构和设计师提交的应征参赛作品847件，其中有效应征作品388件。  经过北京奥运会火炬设计征集活动初评评审委员会对应征作品初评和复评，按照评审程序的规定，选出3件作品提交北京奥组委执委会审议。2006年 6月至8月，根据选择最好艺术设计和技术设计方案的原则，北京奥组委执委会审议确定由联想(北京)有限公司创新设计中心设计的火炬外形《祥云》为北京 2008年奥运会火炬艺术设计方案，由航天科工集团设计研发的火炬内部燃烧系统为北京2008年奥运会火炬技术方案，并确定由航天科工集团在联想(北京) 有限公司协助下完成火炬外形与燃烧系统结合的火炬样品制作工作，形成北京2008年奥运会火炬的完整设计，并于2007年1月经国际奥委会批准。 </description>
     </item>
     
     <item>
@@ -2594,7 +2792,7 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
       <pubDate>Thu, 26 Apr 2007 16:17:52 +0000</pubDate>
       
       <guid>https://lsvking.github.io/21/</guid>
-      <description>本次女足世界杯决赛阶段抽签的16强被分成A、B、C、D四个小组，中国队作为四支种子队被定在D1的位置，小组的前两名出线晋级八强。根据国际足联公布的女足世界杯竞赛规程规定，小组赛如果出现两队积分相同的情况，将首先根据净胜球的多少来决定小组的晋级球队和名次，在这样的情况下偶然性与其他因素将很有可能成为小组出线的主导。
+      <description>女足世界杯16强对阵形势　新浪体育讯　北京时间4月22日晚19点，2007年女足世界杯决赛阶段比赛的分组抽签仪式在武汉光谷科技会展中心进行。根据国际足联公布的有关女足世界杯抽签原则，东道主中国队作为四支种子队之一早早被定在了D组D1的位置，在经过半个多小时紧张刺激的抽签之后，最终与中国女足同分在D组的其他三支球队分别是新西兰、巴西、丹麦，而美国队则与朝鲜、瑞典、尼日利亚组成了名副其实的死亡之组。以下为女足世界杯决赛阶段分组抽签详细情况：    A组：德国、日本、英格兰、阿根廷 B组：尼日利亚、美国、朝鲜、瑞典 C组：挪威、加纳、澳大利亚、加拿大 D组：中国、新西兰、巴西、丹麦 　本次女足世界杯决赛阶段抽签的16强被分成A、B、C、D四个小组，中国队作为四支种子队被定在D1的位置，小组的前两名出线晋级八强。根据国际足联公布的女足世界杯竞赛规程规定，小组赛如果出现两队积分相同的情况，将首先根据净胜球的多少来决定小组的晋级球队和名次，在这样的情况下偶然性与其他因素将很有可能成为小组出线的主导。
 　在抽签结果揭晓之后，2007年女足世界杯的详细对阵形势也已经出炉，根据女足世界杯赛程，中国女足9月12日在武汉体育中心体育场迎来小组赛的首场比赛，对手是丹麦，9月15日仍然在武汉体育中心迎战巴西，9月19日在天津奥林匹克体育场迎战小组赛最后一个对手新西兰。本届女足世界杯揭幕战将于9月10日在上海虹口体育场进行，由卫冕冠军德国队迎战阿根廷，最后的决赛也将于9月30日在上海虹口体育场上演。</description>
     </item>
     
@@ -2612,7 +2810,10 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
 　第18分钟，阿什利-科尔后场长传，德罗巴头球摆渡，舍甫琴科禁区左侧似传似射，皮球滑门而过，中路包抄的乔-科尔稍慢半拍。第19分钟，岑登左路传中，库伊特10码处头球顶出远点。第20分钟，杰拉德铲传，岑登左路28码处抽射偏出近角。第21分钟，乔-科尔右路传中，雷纳及时出击干扰，反越位成功的德罗巴10码处头球漏顶错过机会。
 　第22分钟，岑登左路突破传中，库伊特头球攻门打在上前封堵的阿什利-科尔身上偏转，切赫沉稳没收。第23分钟，阿格尔后场对德罗巴犯规，兰帕德30码处任意球直接射门稍稍偏转后擦左侧立柱偏出。第24分钟，阿隆索在拼抢中蹬踏米克尔，但西班牙人侥幸逃过处罚。
 　切尔西第29分钟取得领先，卡瓦略后场得球直传，德罗巴强行突破阿格尔并在禁区右侧扣过丹麦人后传中，前点10码处抢在阿贝罗阿之前几乎失去重心的乔-科尔推射破门，这是他整整半年来的首粒入球，而上次在冠军联赛中进球还是在18个月之前随后阿贝罗阿两度在右路传中均缺乏威胁。**　利物浦第37分钟错过迄今的最好机会，库伊特左路传中，杰拉德7码处抢在阿什利-科尔之前头球冲顶稍稍高出。切尔西半场最后时刻沉稳防守，利物浦的进攻未能带来足够威胁。只是里瑟在左路的一脚传中带有突然性地径直偏向大门远角，切赫稳妥起见飞身扑出底线。半场蓝军取得1球领先。** ****
-**　第46分钟，岑登左路传中，马斯切拉诺前传被挡，杰拉德22码处左脚射门高出。第49分钟，里瑟30码外远射被切赫没收。随后阿贝罗阿后场解围时踢空并手球犯规，但德国裁判默克并未判罚。第50分钟，里瑟左路传中，库伊特10码处头球攻门高出。第52分钟，克劳奇换下无所表现的贝拉米。　第53分钟，里瑟边路掷出界外球被米克尔头球顶出，杰拉德22码处左脚半凌空抽射，切赫飞身用指尖将皮球蹭出右下角。第56分钟，舍甫琴科右路连突里瑟和阿格尔后传中，蓝军的包抄缺乏层次，在德罗巴前点漏过皮球后，皮球落在远点包抄的乔-科尔身后。第58分钟，费雷拉冒顶，岑登突入禁区左侧错过传中最佳时机。
+ [coolplayer width=&amp;#8221;480&amp;#8243; height=&amp;#8221;380&amp;#8243; autoplay=&amp;#8221;0&amp;#8243; loop=&amp;#8221;0&amp;#8243; charset=&amp;#8221;utf-8&amp;#8243; download=&amp;#8221;1&amp;#8243; mediatype=&amp;#8221;&amp;#8221;]
+乔科尔打入制胜球
+[/coolplayer]  **　第46分钟，岑登左路传中，马斯切拉诺前传被挡，杰拉德22码处左脚射门高出。第49分钟，里瑟30码外远射被切赫没收。随后阿贝罗阿后场解围时踢空并手球犯规，但德国裁判默克并未判罚。第50分钟，里瑟左路传中，库伊特10码处头球攻门高出。第52分钟，克劳奇换下无所表现的贝拉米。
+　第53分钟，里瑟边路掷出界外球被米克尔头球顶出，杰拉德22码处左脚半凌空抽射，切赫飞身用指尖将皮球蹭出右下角。第56分钟，舍甫琴科右路连突里瑟和阿格尔后传中，蓝军的包抄缺乏层次，在德罗巴前点漏过皮球后，皮球落在远点包抄的乔-科尔身后。第58分钟，费雷拉冒顶，岑登突入禁区左侧错过传中最佳时机。
 　第59分钟，岑登开出左侧角球，卡拉格远点12码处的头球攻门偏出。随后德罗巴头球摆渡，乔-科尔中路25码处左脚抽射高出。利物浦一直压制切尔西，但难以施加致命威胁。第69分钟，克劳奇直传库伊特，荷兰人右路传中，但岑登和克劳奇中路双双错过皮球。第73分钟，杰拉德任意球传入禁区，库伊特头球摆渡，克劳奇冲撞门将犯规。
 　第75分钟，乔-科尔传球，德罗巴禁区右侧18码处抽射近角被雷纳没收。第76分钟，卡劳换下舍甫琴科，科特迪瓦人出场前竟然穿错了赖特-菲利普斯的24号球衣。第77分钟，兰帕德中场断球后突破被马斯切拉诺战术犯规放倒，阿根廷人得到全场首张黄牌。兰帕德任意球传入禁区，德罗巴禁区左肋10码处头球攻门稍稍偏出近角。
 　第81分钟，阿什利-科尔长传，德罗巴第一时间杂耍般轻敲，兰帕德禁区左肋16码处凌空抽射被雷纳飞身救出，卡劳禁区右侧再传门前被阿格尔封堵。第83分钟，彭南特换下阿隆索，杰拉德换位到中路。随后穆里尼奥也用赖特-菲利普斯换下乔-科尔。第87分钟，米克尔30码处远射偏出。
@@ -2632,7 +2833,37 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
  有一些网址与色情有关，但会牵扯Google，败坏Google形象，例如：porngoogle.com、googleporn.com 、googlesex.com等。  还有一些，却可能与Google的未来发展有关，例如：gbrowser.com（浏览器）、googlewifi.com（WIFI，哈哈，前不久我们都听说了google这方面的信息）、gcalendar.com（日历）、gchat.com（难道除了Google Talk，他们还有别的聊天想法？）、googlebuy.com（在线购物）googlemusic.com（在线线音乐）。  有趣得是，Google 还拥有googlesucks.com 的网址。微软曾经被敌意用户注册过一个“windows-sucks” 的地址，看来Google也不想每天对着这么一个恶心自己的站点，让自己不高兴，不如自己买下来，好过被别人用来在自己头上拉屎。
  这里还有一个纯数字的网址466453.com。400多域名中，Google单单挑选了这么一个数字域名，不知道是无聊还是别有企图？小庸搜索了一下才找到答案“ Google提供数字化的查询，即用数字代替字母；由于手机上键位比较少，例如要输入Google是，按下的其实是466453几个键，因此就用466453来代替Google这个单词进行查询。”看来google就是google，不服不行。
 我非常喜欢GOOGLE这个公司,原因有很多,重要的是他们在用科技和创新改变着这个社会.加油.
-`466453.comAdsbygoogle.comAdsense.netAdwords.comAdwords.netAdwords.orgAdwordsexample.comAdwordsgoogle.comAdwords-select.comAdwordselect.comAdwordsselect.comAdwordsselect.netAdwordsselect.orgAkwan.com (still not registered as a Google domain)Android.com (still not registered as a Google domain)Answergoogle.comAnswer-google.comAnswersgoogle.comAnswers-google.comAppliedSemantics.comAppsem.comArabgoogle.comArabicgoogle.comAskgoogle.com转自:庄磊</description>
+以下是 Google 注册域名的详细清单： `466453.com
+Adsbygoogle.com
+Adsense.net
+Adwords.com
+Adwords.net
+Adwords.org
+Adwordsexample.com
+Adwordsgoogle.com
+Adwords-select.com
+Adwordselect.com
+Adwordsselect.com
+Adwordsselect.net
+Adwordsselect.org
+Akwan.com (still not registered as a Google domain)
+Android.com (still not registered as a Google domain)
+Answergoogle.com
+Answer-google.com
+Answersgoogle.com
+Answers-google.com
+AppliedSemantics.com
+Appsem.com
+Arabgoogle.com
+Arabicgoogle.com
+Askgoogle.com
+Blogger.com
+Blogspot.com
+Catalogsgoogle.com
+Chinagoogle.com
+Cobrasearch.com
+Deja.com
+Deja.net</description>
     </item>
     
     <item>
@@ -2641,7 +2872,33 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
       <pubDate>Wed, 25 Apr 2007 13:46:47 +0000</pubDate>
       
       <guid>https://lsvking.github.io/18/</guid>
-      <description>新百家姓排行。 此次调查人口接近3亿，其中李姓人口有9000多万，全国已收集到23000多个姓氏据新华社10日电在国家自然科学基金姓氏研究项目的支持下，中国科学院遗传与发育生物学研究所与深圳市鼎昌实业有限公司，历时两年对中国人姓氏进行了一次大规模调查。调查结果显示，虽然在总人口中所占的比例有所下降，但是李、王、张继续位列姓氏三甲。三大姓氏占总人口21.4%%调查负责人、中国科学院遗传与发育生物学研究所袁义达研究员说，两年的调查涉及全国 1110个县和市，得到了2．96亿人口的数据，共获得姓氏4100个。调查结果表明，在调查的4100个姓氏中，位列前三位的李、王、张，分别占我国总 人口的7．4％、7．2％和6．8％，三大姓氏总人口均不超过1亿人。调查涉及近40％的县袁义达说：“李姓作为第一大姓，之所以比例从1987年统计的7．9％降到目前的7．4％，是因为原来样本数只有57万，而现在达到了将近3个亿。”与20年前的调查相比，这次调查的样本范围更大，涉及中国近40％的县，而且几乎都是使用汉字姓的地区。据了解，科学家还将陆续发表中国前300个姓氏的数据和分布地图，重新出版《中国姓氏大辞典》，包括至今已收集到的23000多个姓氏，以推进姓氏文化产业的发展。9000多万人姓李在新“百家姓”中，名列榜首的“李”姓，目前在我国有9000多万人口使用，比第二位的“王”姓多了200万余人。老《百家姓》来源赵钱孙李，周吴郑王，一本《百家姓》在中国几乎是家喻户晓。这个版本的《百家姓》是 北宋初年钱塘（杭州）的一个书生所编撰的蒙学读物，他将常见的姓氏编成四字一句的韵文，像一首四言诗，便于诵读和记忆，因此流传至今。老《百家姓》本来收 集了411个姓，后经增补到了504个，因宋朝皇帝姓赵，所以赵姓排在了第一位。综合李姓：李子救命李姓本来是以官职为氏的。臬陶是传说中的东夷部落首领，活动地点在今天山东曲阜市一 带。尧为炎黄夷联盟首领时，臬陶担任理官一职，掌管刑法，他的后代就因袭他的官职命族为理氏。臬陶以正直著称，舜继尧位后，继续受到重用。后人理征在商朝 为官，敢于直谏，得罪了商纣王，受罚而死。他的妻子契和氏带着儿子利贞逃往伊侯之墟，隐藏在那，靠采食木子（李树果实）得以活命。于是从利贞起，改理氏为 李氏，以此纪念使理姓保全下来的李子。王姓：以爵为氏王姓是一个源头众多、族派纷繁的姓氏。具体地说，有出自周朝姬姓之王，有出自虞舜妫姓之王，有出自商朝子姓之王，还有少数民族中的王姓及赐姓、冒姓王氏。它们的共同点在于多数是以爵为氏的。张姓：黄帝之后张姓是一个古老的姓氏，它起源于遥远的传说时代。据说张姓的始祖名“挥”，他是黄帝 的孙子，他发明了弓箭和网罟(gu)。弓箭和网罟作为当时的新的生产工具，使人们可以猎取更多的鸟兽，捕捞更多的鱼虾，又能够减少猛兽对自身的伤害。挥所 在的氏族部落世代以生产弓箭和网罟为业，于是他的后裔就以“张”作为自己的姓氏。新华社电　根据国家自然科学基金委支持的一项最新研究表明，我国新的“百家姓”顺序已经新鲜出炉。李、王、张位列姓氏前三甲。这项调查和研究是由中国科学院遗传与发育生物学研究所袁义达研究员主持完成的，历时两年。调查涉及全国１１１０个县和市，得到了２．９６亿人口的数据，共获得姓氏４１００个。调查结果表明，在调查的４１００个姓氏中，位列前三位的李、王、张，分别占我国总人口的７．４％、７．２％和６．８％，按我国总人口约１３亿计 算，李姓９６00万人；王姓９４00万人；张姓８８00万人，但三大姓氏总人口均不超过１亿人；占我国总人口１％以上的姓氏有１８个，占人口０．１％以上 的姓氏共１２９个，而这１２９个姓氏的人口约占我国总人口的８７％。袁义达在其研究成果中指出，中国李姓源远流长，从古至今，单单李姓称帝先后建立的政权就有12个。据历史考证，先秦时期，李姓的活动由河南开始。唐朝是李姓的鼎盛时期。李姓分布目前主要集中于河南、四川、山东，而河南为李姓第一大省。据悉，中国目前已收集到２３０００多个姓氏。百家姓新座次李 王 张 刘 陈 杨 黄 赵 周 吴徐 孙 朱 马 胡 郭 林 何 高 梁郑 罗 宋 谢 唐 韩 曹 许 邓 萧冯 曾 程 蔡 彭 潘 袁 于 董 余苏 叶 吕 魏 蒋 田 杜 丁 沈 姜范 江 傅 钟 卢 汪 戴 崔 任 陆廖 姚 方 金 邱 夏 谭 韦 贾 邹石 熊 孟 秦 阎 薛 侯 雷 白 龙段 郝 孔 邵 史 毛 常 万 顾 赖武 康 贺 严 尹 钱 施 牛 洪 龚十大姓氏人口数李：9６00万 王：９４00万 张：8８00万刘：6400万 陈：5400万 杨：3700万黄：2700万 赵：2600万 周：2500万吴：2400万PS:王姓排第一，哈哈自豪啊，我就姓王，我们姓王的天下第一，哈哈～</description>
+      <description>新百家姓排行。 
+此次调查人口接近3亿，其中李姓人口有9000多万，全国已收集到23000多个姓氏
+据新华社10日电在国家自然科学基金姓氏研究项目的支持下，中国科学院遗传与发育生物学研究所与深圳市鼎昌实业有限公司，历时两年对中国人姓氏进行了一次大规模调查。调查结果显示，虽然在总人口中所占的比例有所下降，但是李、王、张继续位列姓氏三甲。
+&amp;nbsp;  &amp;nbsp; &amp;nbsp; 三大姓氏占总人口21.4%%
+调查负责人、中国科学院遗传与发育生物学研究所袁义达研究员说，两年的调查涉及全国 1110个县和市，得到了2．96亿人口的数据，共获得姓氏4100个。调查结果表明，在调查的4100个姓氏中，位列前三位的李、王、张，分别占我国总 人口的7．4％、7．2％和6．8％，三大姓氏总人口均不超过1亿人。
+调查涉及近40％的县
+袁义达说：“李姓作为第一大姓，之所以比例从1987年统计的7．9％降到目前的7．4％，是因为原来样本数只有57万，而现在达到了将近3个亿。”与20年前的调查相比，这次调查的样本范围更大，涉及中国近40％的县，而且几乎都是使用汉字姓的地区。
+据了解，科学家还将陆续发表中国前300个姓氏的数据和分布地图，重新出版《中国姓氏大辞典》，包括至今已收集到的23000多个姓氏，以推进姓氏文化产业的发展。
+9000多万人姓李
+在新“百家姓”中，名列榜首的“李”姓，目前在我国有9000多万人口使用，比第二位的“王”姓多了200万余人。
+老《百家姓》来源
+赵钱孙李，周吴郑王，一本《百家姓》在中国几乎是家喻户晓。这个版本的《百家姓》是 北宋初年钱塘（杭州）的一个书生所编撰的蒙学读物，他将常见的姓氏编成四字一句的韵文，像一首四言诗，便于诵读和记忆，因此流传至今。老《百家姓》本来收 集了411个姓，后经增补到了504个，因宋朝皇帝姓赵，所以赵姓排在了第一位。综合
+李姓：李子救命
+李姓本来是以官职为氏的。臬陶是传说中的东夷部落首领，活动地点在今天山东曲阜市一 带。尧为炎黄夷联盟首领时，臬陶担任理官一职，掌管刑法，他的后代就因袭他的官职命族为理氏。臬陶以正直著称，舜继尧位后，继续受到重用。后人理征在商朝 为官，敢于直谏，得罪了商纣王，受罚而死。他的妻子契和氏带着儿子利贞逃往伊侯之墟，隐藏在那，靠采食木子（李树果实）得以活命。于是从利贞起，改理氏为 李氏，以此纪念使理姓保全下来的李子。
+王姓：以爵为氏
+王姓是一个源头众多、族派纷繁的姓氏。具体地说，有出自周朝姬姓之王，有出自虞舜妫姓之王，有出自商朝子姓之王，还有少数民族中的王姓及赐姓、冒姓王氏。它们的共同点在于多数是以爵为氏的。
+张姓：黄帝之后
+张姓是一个古老的姓氏，它起源于遥远的传说时代。据说张姓的始祖名“挥”，他是黄帝 的孙子，他发明了弓箭和网罟(gu)。弓箭和网罟作为当时的新的生产工具，使人们可以猎取更多的鸟兽，捕捞更多的鱼虾，又能够减少猛兽对自身的伤害。挥所 在的氏族部落世代以生产弓箭和网罟为业，于是他的后裔就以“张”作为自己的姓氏。
+新华社电　根据国家自然科学基金委支持的一项最新研究表明，我国新的“百家姓”顺序已经新鲜出炉。李、王、张位列姓氏前三甲。
+这项调查和研究是由中国科学院遗传与发育生物学研究所袁义达研究员主持完成的，历时两年。调查涉及全国１１１０个县和市，得到了２．９６亿人口的数据，共获得姓氏４１００个。
+调查结果表明，在调查的４１００个姓氏中，位列前三位的李、王、张，分别占我国总人口的７．４％、７．２％和６．８％，按我国总人口约１３亿计 算，李姓９６00万人；王姓９４00万人；张姓８８00万人，但三大姓氏总人口均不超过１亿人；占我国总人口１％以上的姓氏有１８个，占人口０．１％以上 的姓氏共１２９个，而这１２９个姓氏的人口约占我国总人口的８７％。
+袁义达在其研究成果中指出，中国李姓源远流长，从古至今，单单李姓称帝先后建立的政权就有12个。据历史考证，先秦时期，李姓的活动由河南开始。唐朝是李姓的鼎盛时期。李姓分布目前主要集中于河南、四川、山东，而河南为李姓第一大省。
+据悉，中国目前已收集到２３０００多个姓氏。
+百家姓新座次
+李 王 张 刘 陈 杨 黄 赵 周 吴
+徐 孙 朱 马 胡 郭 林 何 高 梁
+郑 罗 宋 谢 唐 韩 曹 许 邓 萧</description>
     </item>
     
     <item>
@@ -2650,7 +2907,9 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
       <pubDate>Tue, 24 Apr 2007 17:57:21 +0000</pubDate>
       
       <guid>https://lsvking.github.io/17/</guid>
-      <description>这张4月23日由美国国家航空和航天局(NASA)公布的拼合照片显示的是太阳的三维图像。当日，美国国家航空和航天局首次公布太阳三维图像，可能有助于科学家更好地预报太阳耀斑爆发现象。&amp;lt;center&amp;gt; &amp;lt;img src=&amp;quot;http://image2.sina.com.cn/IT/images/2007-04-23/U1235P2T78D9089F3444DT20070424104801.jpg&amp;quot; alt=&amp;quot;美宇航局首次公布太阳三维图像(组图)(2)&amp;quot; style=&amp;quot;border: 1px solid #000000&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/center&amp;gt; &amp;lt;font style=&amp;quot;font-size: 12px&amp;quot;&amp;gt; &amp;lt;center&amp;gt; 太阳的二维图像(左)和三维图像。(来源：NASA网站) &amp;lt;/center&amp;gt; &amp;lt;center&amp;gt; &amp;lt;/center&amp;gt;　美国国家航空和航天局(NASA)23日首次公布太阳三维图像，可能有助于科学家更好地预报太阳耀斑爆发现象。&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; NASA去年10月发射两台太阳观测仪，围绕太阳运行。一台位于地球围绕太阳运行轨道前面，另一台位于轨道后面。恰似人的两只眼睛，两台仪器可深度感知太阳情况，拍摄三维图像。NASA把这项计划称为“日地关联天文台”行动。 &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; &amp;lt;/font&amp;gt; 转载自：&amp;lt;a href=&amp;quot;http://tech.sina.com.cn/d/2007-04-24/08261479830.shtml&amp;quot;&amp;gt;新浪&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt; </description>
+      <description>这张4月23日由美国国家航空和航天局(NASA)公布的拼合照片显示的是太阳的三维图像。当日，美国国家航空和航天局首次公布太阳三维图像，可能有助于科学家更好地预报太阳耀斑爆发现象。
+太阳三维图像。(来源：NASA网站) 太阳三维图像。(来源：NASA网站) 太阳三维图像。(来源：NASA网站) 美国国家航空和航天局(NASA)23日首次公布太阳三维图像，可能有助于科学家更好地预报太阳耀斑爆发现象。　NASA去年10月发射两台太阳观测仪，围绕太阳运行。一台位于地球围绕太阳运行轨道前面，另一台位于轨道后面。恰似人的两只眼睛，两台仪器可深度感知太阳情况，拍摄三维图像。NASA把这项计划称为“日地关联天文台”行动。 太阳三维图像。(来源：NASA网站)  太阳三维图像。(来源：NASA网站) &amp;nbsp;  
+这张4月23日由美国国家航空和航天局(NASA)公布的拼合图片显示的是，太阳的二维图像（左）和三维图像。当日，美国国家航空和航天局首次公布太阳三维图像，可能有助于科学家更好地预报太阳耀斑爆发现象。 新华社/法新    &amp;lt;center&amp;gt; &amp;lt;img src=&amp;quot;http://image2.sina.com.cn/IT/images/2007-04-23/U1235P2T78D9089F3444DT20070424104801.jpg&amp;quot; alt=&amp;quot;美宇航局首次公布太阳三维图像(组图)(2)&amp;quot; style=&amp;quot;border: 1px solid #000000&amp;quot; /&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/center&amp;gt; &amp;lt;font style=&amp;quot;font-size: 12px&amp;quot;&amp;gt; &amp;lt;center&amp;gt; 太阳的二维图像(左)和三维图像。(来源：NASA网站) &amp;lt;/center&amp;gt; &amp;lt;center&amp;gt; &amp;lt;/center&amp;gt;　美国国家航空和航天局(NASA)23日首次公布太阳三维图像，可能有助于科学家更好地预报太阳耀斑爆发现象。&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; NASA去年10月发射两台太阳观测仪，围绕太阳运行。一台位于地球围绕太阳运行轨道前面，另一台位于轨道后面。恰似人的两只眼睛，两台仪器可深度感知太阳情况，拍摄三维图像。NASA把这项计划称为“日地关联天文台”行动。 &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; &amp;lt;/font&amp;gt; 转载自：&amp;lt;a href=&amp;quot;http://tech.sina.com.cn/d/2007-04-24/08261479830.shtml&amp;quot;&amp;gt;新浪&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt; </description>
     </item>
     
     <item>
@@ -2662,7 +2921,9 @@ ScanSafe关注的重点不仅仅是单一的令人厌恶的内容，还包括那
       <description>人民网4月23日讯 美联社援引俄罗斯媒体的报道称，当地时间23日下午3点45分(北京时间23日晚上8点45分)俄罗斯前总统叶利钦逝世，享年76岁。
 目前克里姆林宫只是证实了叶利钦去世的消息，并没有透露其他细节(比如确切去世原因)。不过，媒体援引消息人士的话说，叶利钦因为心脏衰竭而去世。
 叶利钦在担任总统期间曾患过严重心脏病，他于1999年底宣布辞职，由现任总统普京接任其职务，并且在第二年春天正式当选并担任总统至今
-**　**俄罗斯前总统叶利钦生平简介
+ [coolplayer width=&amp;#8221;480&amp;#8243; height=&amp;#8221;380&amp;#8243; autoplay=&amp;#8221;0&amp;#8243; loop=&amp;#8221;0&amp;#8243; charset=&amp;#8221;utf-8&amp;#8243; download=&amp;#8221;1&amp;#8243; mediatype=&amp;#8221;&amp;#8221;]
+叶利钦
+[/coolplayer]  **　**俄罗斯前总统叶利钦生平简介
 鲍里斯·尼古拉耶维奇·叶利钦 (Boris Nikolayevich Yeltsin) 1931年2月1日出生于斯维尔德洛夫斯克州达里茨基区布特卡村的一个农民家庭，是俄罗斯族人。
 他自1955年在乌拉尔工学院建筑系毕业后，在斯维尔德洛夫斯克工作了30年，曾任该市住房建筑联合公司总工程师、经理，1976年后担任苏共斯维尔德洛夫斯克州委第一书记。
 1985年调往莫斯科担任党、政要职，1985年12月至1987年11月任苏共莫斯科市委第一书记，1987年11月至1989年5月任苏联 国家建设委员会第一副主席。他于1989年3月当选为苏联人民代表，1990年5月在俄罗斯联邦第一次人民代表大会上当选为俄联邦最高苏维埃主席。 1990年7月，在苏共28大上，以叶利钦为代表的“民主纲领派”提出的旨在改造当时苏联社会的一系列主张未被大会接受，他在大会结束时宣布退出苏联共产 党。1991年6月，叶利钦在全民大选中当选为俄罗斯联邦首任总统，同年12月他同原苏联其他10个加盟共和国领导人一起发表联合宣言，宣布建立独立国家 联合体。1996年再次当选为俄联邦总统。1999年12月31日，叶利钦发表电视讲话，宣布提前卸去总统职务，并任命总理普京为代总统。
@@ -2737,7 +2998,8 @@ http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
       <pubDate>Sun, 22 Apr 2007 10:03:23 +0000</pubDate>
       
       <guid>https://lsvking.github.io/11/</guid>
-      <description>核心提示：邯郸农行5100万失窃案疑犯任晓峰交待，他与马向景所盗的4300万元赃款全部买了彩票，却几乎没有中过奖。但河北省公安厅召开新闻发布会宣称，随着任晓峰的落网，已经追回赃款4600万元，与此案有关的6名犯罪嫌疑人全部缉拿归案。</description>
+      <description>核心提示：邯郸农行5100万失窃案疑犯任晓峰交待，他与马向景所盗的4300万元赃款全部买了彩票，却几乎没有中过奖。但河北省公安厅召开新闻发布会宣称，随着任晓峰的落网，已经追回赃款4600万元，与此案有关的6名犯罪嫌疑人全部缉拿归案。
+时代商报4月20日报道 昨天早上9点，江苏省长助理、省公安厅厅长在全省电视电话会议上正式宣布：“潜逃到我省连云港的邯郸农行金库被盗案嫌疑人任晓峰，被成功抓获。”。记者随即在第一时间赶到连云港，详细采访了任晓峰落网的前后经过。 昨天下午，在连云港市公安局新浦分局的审讯室里，记者见到了任晓峰，据他交待，他与马向景用所盗的4300万元赃款全都买了彩票。但据昨天的河北省公安厅召开新闻发布会宣布，随着任晓峰的落网，与此案有关的6名犯罪嫌疑人全部缉拿归案，而且目前已经追回赃款4600万元。 4300万买彩票 记者：5100万是怎么盗出来的？ 任晓峰：不是一次盗这么多的，我们用了1个多月时间，才把这些钱弄出来的。 记者：怎么想到要盗窃金库的钱？ 任晓峰：我和马向景平时都喜欢买彩票，当时是想弄点钱买彩票，等中了大奖，我们再把钱还进去，当时没有想到把金库钱盗走。 记者：你们第一次盗了多少钱买彩票？是谁先提出来从金库里盗窃钱的？ 任晓峰：是我提的建议，马向景听了后表示同意。我们就干了起来。第一次盗窃了5万块钱，全部买了彩票。 记者：你们这样用了多少钱买彩票的，中了几次奖？ 任晓峰：我们第一次没有中，可5万块钱没了，我们也没有钱还，就再次盗窃金库的钱，希望能中了彩票把钱还上。没想到后来越陷越深，可以说后来我们买彩票已经到了疯狂的地步了。1个多月下来，我们共先后盗窃了4300万，全部用来买彩票，但几乎没有中过。 记者：你最多的一次花了多少钱购买的彩票？ 任晓峰：最多的一次我们用了1410万买了彩票，那次是想翻本的，可还是没有中，我们就知道自己完了，再不逃跑就来不及了。 逃亡决定永不回来 记者：1个多月来，你们盗窃了这么多钱，银行怎么没有发现？ 任晓峰：金库就我们两人有钥匙，别人不可能天天来查看金库的钱有多少的，所以我们盗窃金库是很简单的事情。 记者：你们怎么想到要逃跑的，当时偷了多少钱？ 任晓峰：我们自己每天都记账的，知道金库里已经被我们盗窃了4300万了，而这些钱全部买了彩票，我们再不逃跑，万一被发现就来不及了。所以我们在4月14日决定盗窃点钱离开邯郸，永远别再回来。当时我们盗窃了800万，是用几个大包装的。 惶恐去银行存110万 记者：你怎么跑到连云港来了？ 任晓峰：分手后，我也不知道去哪里最安全。先是坐车到了德州，见自己带着这么多钱不方便，就在德州办了一张牡丹卡，存了110万。后来从德州到了青岛，我看青岛好像不安全，就花300块钱包了辆出租车当天到了日照，在日照住了一晚上，第二天我又花300块钱包了出租车来到了连云港。当时也是没有任何目的乱跑的。 记者：你到了连云港后，做的第一件事是什么？ 任晓峰：我是在4月16号早上到连云港的，到了之后，我先在汽车南站附近吃了早点，然后就打车去了一卖广州本田车的4S店，是去买辆车的。 记者：车后来买了吗？ 任晓峰：买了，但我用了一天后，觉得车性能不怎么好，就去把车给退了。可他们不同意退，我就让他们先把车收下来，让他们帮我把车卖了。 幻想把家人接到连云港 记者：你房子是怎么租到的？ 任晓峰：当时我买了车，让销售员陪着我试驾，在试驾的路上，我让销售员帮我找的中介，由于急着要住，16号晚上就租到了一个车库，我想先将就着用，所以花500元一个月，把现在的车库给租了下来。 记者：你当时交给房东多少钱？ 任晓峰：给了她1500块钱，我是想先住3个月，等风头过了再换地方。 记者：4月17日在连云港做什么？ 任晓峰：16日把车库租下来后，我把钱放进了车库。一夜也没有睡着，因为这个地方是市中心。我觉得不大安全。4月17日就出去重新找房子。我花了250块钱，包了辆出租车，后来司机帮我转悠了5个多小时，最后以1万7千块1年的价格，在城东租了一间三室一厅的房子。 记者：租了这么好的房子，是打算在连云港长期住下来吗？ 任晓峰：我想自己先在车库里住一段时间，等风头过去后，再回去把老婆孩子给接过来。 遭罪一天只吃一根火腿肠 记者：那你17日晚上住在哪里？ 任晓峰：就住在我租住的那个车库里，18号哪也不敢去了。我知道全国已经都在通缉我们了。 记者：那你是什么时候知道你的同伙在北京被抓的？ 任晓峰：是在18号晚上，我在车库住的地方看电视，在电视上知道他已经被抓了。 记者：那你知道你同伴被抓了，当时心里是什么感受？ 任晓峰：也没有什么特别感受，就觉得自己好像也很快就要被抓了，所以我也多次想回去投案自首。 记者：那18号你在出租屋里一天也没有出来，那你吃什么？ 任晓峰：没有东西吃，也根本吃不下什么东西。一天下来，我只吃了一根火腿肠。18号晚上几乎又没有睡着，一闭上眼睛就觉得周围有警察。 结局刚开门和警察面对面 记者：几个晚上没有睡觉，你应该很疲倦。那19号早上怎么没有在屋里睡一会儿？ 任晓峰：在屋里已经闷了36个小时了，而且也没有吃饭，当时就想先出去透透气，没有想到警察这么快就找到我了，并且我刚开门，就有一个警察在我门口。 记者：你看到警察，当时心里是怎么想的？有没有打算逃跑？ 任晓峰：第一眼看到有个人在我门口，我就知道应该是警察，所以我也没有挣扎，也没有想到再跑。我想既然警察找来了，那他们一定是布置好了，我没有必要做垂死的挣扎。 表白 每天都很想我的俩孩子 记者：逃亡了5天，终于被抓了。你觉得是解脱了吗？ 任晓峰：说实话，5天来，我没有目标，整天也不知道自己在做什么。现在被抓了，最起码我可以睡个安稳觉了。解脱不解脱我倒没有感觉。 记者：这些天来，你最放心不下的是谁？ 任晓峰：当然是我的两个孩子。我在逃亡前，就把家里的父母、老婆孩子的照片全部带来了。一路上，我看的最多的就是我两个孩子的照片。我好后悔自己稀里糊涂干了这件傻事。 记者：你妈妈因为你都急出病了，这些天来，你想过你的父母是怎么过的吗？ 任晓峰：怎么不想。我知道我连累了他们。如果有下辈子，我会去报答他们的。现在只能对他们说声对不起了。 记者：如果时间可以倒回去，你还会走这条路吗？ 任晓峰：我也不知道我会怎么做。到底会不会走这条路。但时间也是不可能倒回去的。 记者：你之所以沦落到现在的地步，可以说是彩票害了你,你有什么话能对全国老百姓说的？任晓峰：彩票买点玩玩可以，但你不能抱着发财中大奖的心理去买，这样你会着魔的。我想我们就是个例子。我们用了4300万买了彩票。几乎没有中过大奖，就是100块的奖也没有中过。最后我想说的是，你们江苏警察实在厉害，我现在还不知道警察是怎么找到我的。（本组稿件均据南京晨报） </description>
     </item>
     
     <item>
@@ -2747,7 +3009,7 @@ http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
       
       <guid>https://lsvking.github.io/10/</guid>
       <description>核心提示：盗取河北邯郸农行5100万元巨款的疑犯任晓峰，看起来是一脸福气，不像个逃亡嫌犯。从待人接物上看，他还是个素质很高的人。然而他痴迷在彩票上却疯狂得让人无法相信，逃亡时常常饭都顾不上吃，但无时不在想着彩票。
- </description>
+ 现代快报4月22日报道： 他，为了买彩票可以动用银行金库的5100万现金； 他，拿着这笔巨款没有给家人买任何东西； 他，怀揣220万现金逃亡的时候，只花了十几元买方便面充饥； 他，在被捕的时候没有丝毫反抗…… 对于邯郸农业银行金库大盗任晓峰的一系列匪夷所思的举动，人们充满了好奇：他究竟是一个什么样的人？ 一个有“福气”的人 4月19日早晨，当任晓峰在连云港极美苑小区落网时，记者听到了一段围观市民的对话——— “我还以为他长相很凶呢，原来看起来这么温和。胖胖的样子，看起来很有福相呢。” “是啊，刚知道这个人躲在连云港，我还很害怕呢，现在看到真人了，一点都不像传说中的江洋大盗。” “听说他这次逃跑连一把防身刀都没带，身上还有这么多现金。” “警察刚刚抓他的时候，他一点都没反抗，我还担心有一场恶战呢。” 事实上，如果任晓峰没有偷盗这5100万，他在别人眼里的确是一个有福气的人：有着体面的工作，一对龙凤胎儿女，一个幸福的家庭。 记者在采访时也观察到，任晓峰平时生活中养尊处优的痕迹也不自觉地表露出来。即使在审讯的时候，他也不愿意亏待自己。 4月19日，在任晓峰被带进审讯室时，他随即向警官提出口渴想喝水的要求，并给自己调整了一个舒服的坐姿。 结束了8个小时的审讯，任晓峰将被带往河北。此时河北警方正拿着械具等待交换，由于给他换的脚镣比较紧，让他感到一丝的不舒服。任晓峰一边看着脚镣一边对警察说，“这个比刚刚那个脚镣紧多了，我戴着有点疼，能不能给我换个宽松一点的。”也许是说话声音太小，河北警方开始并没有听见他说话。任晓峰又提高声音重复了一遍。河北的民警听了之后，马上调整了一下脚镣的大小，这一次任晓峰的脚舒服了很多。他下意识地说了句：“嗯，松多了，好走路。” 一个有“素质”的人 在任晓峰逃亡期间，也许所有和他有过接触的人现在都有些后怕———他们怕万一一句话惹得任晓峰不高兴，他会做出丧心病狂的事情。但事实上，除了彩票能让任晓峰不顾一切之外，他不会做出任何暴力举动。很多和他接触过的人都说，任晓峰还蛮有素质的。 连云港市广本专卖店张经理也告诉记者，虽然任晓峰多次求其帮忙租房，最后又要求退车，但是这个人并不让人讨厌，他很有素质也很细心。“每次在找我帮忙的时候，总会在一边静静地等待，不妨碍我做事情。等我一切忙完的时候，他才提出他的要求。”而任晓峰在落网后接受记者采访时表示，他最后退车的另外一个原因是认为张经理人很好，想用这辆汽车报答她。 任晓峰的房东也说，在和任晓峰接触的过程中，丝毫没有想到他会是个逃犯。“他付钱很干脆。从他的言行举止来看，我以为他是来连云港做生意的。” 抓捕任晓峰的民警也说：“他基本上没怎么反抗。”当时问他“你是不是任晓峰”，他说“是”，还好声好气地说：“我配合，我配合，我一定好好配合。” 一个活在自己梦里的人 记者在采访任晓峰时，他甚至意识不到事情的后果，可是他说话的神情却一直游离着，感觉像梦游。 面对媒体的一拥而上，面对无数的闪光灯，任晓峰甚至都没有眨眼。虽然嘴上说着后悔，但是没有人知道他内心真正想些什么。只有在听到妻子和儿女的消息时，他才会露出一丝关注，头扭向提问的记者。 对于彩票，任晓峰说他像做了场梦，直到现在梦还没醒。直到被捕的那一刻，他都没能理解自己的所作所为。 在逃亡期间和任晓峰接触最多的广本专卖店张经理告诉记者，现在回想起来，任晓峰像是一个活在自己世界里的人，很难想象一个人在逃亡的路上能有那么灿烂的微笑。一个人无聊的时候能在汽车里看几个小时的报纸，一句话都不说。 一个被彩票迷住心窍的人 任晓峰自己每天都记账，直到金库里已经被盗窃了4300万，而这些钱全部买了彩票，任晓峰才感到害怕。“我再不逃跑，万一被发现就来不及了。”于是任晓峰开始了他慌慌张张的逃亡生涯。 没有电影里那种缜密的逃跑计划，也没有任何目的地，任晓峰在逃跑的时候还在想着彩票，他连看报纸都下意识地翻翻有没有彩票的相关报道。任晓峰在落网后坦言，“我买了这么多彩票，一次都没中过，心里很不甘心。我在逃跑的时候连饭都没心思吃，但是我看到彩票投注点就想下车买点，没什么其他想法，就是手痒痒。” </description>
     </item>
     
     <item>
@@ -2777,7 +3039,10 @@ http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
       <description>FLASH：铁路第六次大提速地图
 　我国第六次铁路大提速将在4月18日正式展开。第六次铁路大提速将在京哈、京沪、京广、京九、陇海、浙赣、兰新、广深、胶济等干线展开，列车运行时速达200公里，其中京哈、京广、京沪、胶济线部分区段时速将达到250公里。
 　此次提速将在以北京、天津为中心的环渤海，以上海为中心的长三角，以广州、深圳为中心的珠三角这三大城市群以及以郑州、武汉为中心的中原城市群，以沈阳、长春和哈尔滨为中心的东北城市群，以西安为中心的西北城市群，大量组织开行高密度的416列城际快速客车。全国主要中心城市间的“D”字头快速客车将新开86列。据悉，通过此次提速，我国铁路客货运输能力将分别增长18%和12%。
-　另据媒体报道，除了新增加的“D”字头的动车组需要制定新的价格以外，其他直达特快列车和普通旅客列车的票价不变。</description>
+　另据媒体报道，除了新增加的“D”字头的动车组需要制定新的价格以外，其他直达特快列车和普通旅客列车的票价不变。
+ [coolplayer width=&amp;#8221;480&amp;#8243; height=&amp;#8221;380&amp;#8243; autoplay=&amp;#8221;1&amp;#8243; loop=&amp;#8221;0&amp;#8243; charset=&amp;#8221;utf-8&amp;#8243; download=&amp;#8221;1&amp;#8243; mediatype=&amp;#8221;&amp;#8221;]
+FLASH 铁路第六次提速地图
+[/coolplayer] </description>
     </item>
     
     <item>
@@ -2790,7 +3055,10 @@ http://www.6rooms.com/p/0qNQE9ZtydjvoDSlAWowjA
 这次大面积提速调图所取得的成果是全方位的，概括起来主要有六大方面的显著变化:一是提速调图规模之大前所未有。二是具有世界先进水平的动车组大量开行。三是客运产品更加丰富多样。四是旅客列车运行时间进一步压缩。五是货运产品更加贴近市场。六是提速安全保障体系更加严密。
 这次大面积提速调图，无论是广泛性，还是技术的先进性，都是以往历次提速所不能比拟的。特别是在主要干线上，将开行时速200公里及以上的动车组，还将大面积地开行5000吨级的货物列车。此外，还有一大批先进的技术装备要投入运用，这些都标志着中国铁路既有线提速水平已经跻身世界先进行列。
 在前五次提速调图铁路运输能力逐步提升的基础上，这次提速调图客货运输能力将分别再增加18%和12%以上。
-这在中国铁路发展史上将是一个重要的里程碑。这次大面积提速调图，将对推进中国铁路现代化建设、促进国民经济又好又快的发展产生积极的影响。</description>
+这在中国铁路发展史上将是一个重要的里程碑。这次大面积提速调图，将对推进中国铁路现代化建设、促进国民经济又好又快的发展产生积极的影响。
+ [coolplayer width=&amp;#8221;480&amp;#8243; height=&amp;#8221;380&amp;#8243; autoplay=&amp;#8221;1&amp;#8243; loop=&amp;#8221;0&amp;#8243; charset=&amp;#8221;utf-8&amp;#8243; download=&amp;#8221;1&amp;#8243; mediatype=&amp;#8221;&amp;#8221;]
+第六次铁路大提速今日零时起正式开始
+[/coolplayer] </description>
     </item>
     
     <item>

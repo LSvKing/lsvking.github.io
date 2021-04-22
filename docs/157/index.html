@@ -23,7 +23,9 @@
 我调试的方法是：
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&gt;更新文档HTML–&gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagelist 标记】的具体代码如下：
-文章标标题:{dede:field name=&ldquo;title&rdquo;/}文章内容:{dede:field name=&ldquo;body&rdquo;/}{dede:pagebreak/}
+文章标标题:{dede:field name=&ldquo;title&rdquo;/}
+文章内容:{dede:field name=&ldquo;body&rdquo;/}
+{dede:pagebreak/}
 得到如下返回数据：
 
 注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。" />
@@ -45,7 +47,9 @@
 我调试的方法是：
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&gt;更新文档HTML–&gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagelist 标记】的具体代码如下：
-文章标标题:{dede:field name=&ldquo;title&rdquo;/}文章内容:{dede:field name=&ldquo;body&rdquo;/}{dede:pagebreak/}
+文章标标题:{dede:field name=&ldquo;title&rdquo;/}
+文章内容:{dede:field name=&ldquo;body&rdquo;/}
+{dede:pagebreak/}
 得到如下返回数据：
 
 注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。"/>
@@ -362,11 +366,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 我调试的方法是：<br>
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&gt;更新文档HTML–&gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。<br>
 我调试【Pagelist 标记】的具体代码如下：<br>
-<!-- raw HTML omitted -->文章标标题:<!-- raw HTML omitted -->{dede:field name=&ldquo;title&rdquo;/}<!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章内容:<!-- raw HTML omitted -->{dede:field name=&ldquo;body&rdquo;/}<!-- raw HTML omitted --><br>
+<font color="red">文章标标题:</font>{dede:field name=&ldquo;title&rdquo;/}<br /><br>
+<font color="red">文章内容:</font>{dede:field name=&ldquo;body&rdquo;/}<br /><br>
 {dede:pagebreak/}<br>
 得到如下返回数据：<br>
-<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-2.gif"><!-- raw HTML omitted --></a><br>
+<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-2.gif"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="280" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmspagebreak-12408clip-image001-thumb.gif" width="604" border="0" /></a><br>
 注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。</p>
 
                     

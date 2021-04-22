@@ -371,11 +371,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>来到~/.mozilla/firefox/***.default（因人而异），下面有一个places.sqlite文件，看看它的大小。如果超过了10MB，理论上就能引起Firefox卡了。像我是21MB，一般用了一年左右的话，会有这个程度。</p>
 <p>这个文件里存了些什么呢？让我用SQLite Manager这个扩展来看看：</p>
 <p><strong>在moz_favicons这张中，存了1500多个站点的Favicon，就是网站的Logo图标</strong></p>
-<p><a href="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-3.png"><!-- raw HTML omitted --></a></p>
+<p><a href="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-3.png"><img title="firefox-3" src="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-3.png" alt="" width="614" height="484" /></a></p>
 <p><strong>moz_historyvisits这张表中，保存着所有访问过的纪录，我这里是六万条！</strong></p>
-<p><a href="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-4.png"><!-- raw HTML omitted --></a></p>
+<p><a href="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-4.png"><img title="firefox-4" src="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-4.png" alt="" width="613" height="474" /></a></p>
 <p><strong>而moz_places这里存着近三万多的places：地址，标题和反转域名信息。</strong></p>
-<p><a href="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-5.png"><!-- raw HTML omitted --></a></p>
+<p><a href="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-5.png"><img title="firefox-5" src="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-5.png" alt="" width="613" height="520" /></a></p>
 <p>这些数据量到底对Firefox的性能有啥影响呢？我试着把places.sqlite改了个名，然后重启Firefox。</p>
 <p>所有的停顿和卡都不复存在了！Firefox变得非常流畅。</p>
 <p>当然问题是所有的历史纪录和地址栏信息都没有了，相当于起到了彻底“清除隐私纪录”的作用，只是这个的程度比“工具”-&gt;“清除隐私纪录”更深。</p>
@@ -395,9 +395,9 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p><strong>browser.history_expire_days_min</strong>：是用户值，即在“Firefox首选项”、“隐私”、“历史”当中，表示“保存我的历史，至少X天”。即使你在首选项中把“至少X天”设置成了了1天，或取消，Firefox还是会保存浏览历史，因为系统保留值为180天。</p>
 <p><strong>browser.history_expire_sites</strong>：这个是最大保存的站点数量，默认是四万个。</p>
 <p>也就是说，系统要么保存180天的纪录，要么保存四万个浏览纪录，不过我上面的moz_historyvisits怎么达到了六万个呢？可能是指moz_places这张表。</p>
-<p><a href="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-1.png"><!-- raw HTML omitted --></a></p>
+<p><a href="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-1.png"><img title="firefox-1" src="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-1.png" alt="" width="617" height="252" /></a></p>
 <p>差不多搞明白后，把值设置成下面的样子，站点数保存四千个就够了，系统保存3天的浏览纪录，用户最少1天。那个mirror随便设置了个值。</p>
-<p><!-- raw HTML omitted --></p>
+<p><img title="firefox-2" src="http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-2.png" alt="" width="620" height="276" /></p>
 <p>需要注意的是，如果你没有手动清理过places.sqlite，仅仅设定了这些值的话，文件是不会有变化的。清理还是得手动来。</p>
 <p>接下来，就用实践来检验一切了，再过个半年查询一下places.sqlite的纪录，看看是否是被限制在了四千以内，这样的话Firefox应该再也卡不起来了。</p>
 <p>另外，建议把“首选项”，“安全”，把有关”嫌疑攻击站点“和”伪造站点“的两个选择勾掉，有关这两个东西的文件也会相当大。不过没有places.sqlite夸张罢了。</p>

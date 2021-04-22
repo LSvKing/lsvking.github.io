@@ -17,10 +17,10 @@
       <description>用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的文件，大的数据迁移都是用的restore导入的。这次遇到一次数据迁移导出的json 文件大概有4.7G左右,再倒入的时候出现了问题
 mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat
 却出现了如下的错误提示
-Mongo的错误提示也是醉了，这也忒不友好了, 完全是再猜,不过通过万能的大G还是搜到了解决方案,原来是因为Mongo对单次处理好像有大小限制（16m）好像是，所以大文件会出问题,这应该是个Bug mongoimport 默认会10000条 为一个批量导入数据，但实际上我的单条数据太大了,每51条数据就达到了16m 所以10000条导入一次肯定是不行的。幸好他有个参数 &amp;ndash;batchSize 可以指定每次批量导入的条数 设置小一些就OK了。
+2016-09-05T23:30:35.773+0800	connected to: 127.0.0.1 2016-09-05T23:30:37.653+0800	Failed: lost connection to server 2016-09-05T23:30:37.653+0800	imported 0 documents  Mongo的错误提示也是醉了，这也忒不友好了, 完全是再猜,不过通过万能的大G还是搜到了解决方案,原来是因为Mongo对单次处理好像有大小限制（16m）好像是，所以大文件会出问题,这应该是个Bug mongoimport 默认会10000条 为一个批量导入数据，但实际上我的单条数据太大了,每51条数据就达到了16m 所以10000条导入一次肯定是不行的。幸好他有个参数 &amp;ndash;batchSize 可以指定每次批量导入的条数 设置小一些就OK了。
 mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat --batchSize 1
 这样你会看到他会分开执行导入任务
-  </description>
+2016-09-05T23:12:48.622+0800	connected to: 127.0.0.1 2016-09-05T23:12:51.632+0800	d.indexs_value	42.6 MB 2016-09-05T23:12:54.626+0800	d.indexs_value	79.4 MB 2016-09-05T23:12:57.607+0800	d.indexs_value	115.9 MB 2016-09-05T23:13:00.618+0800	d.indexs_value	151.5 MB   </description>
     </item>
     
     <item>
@@ -30,7 +30,7 @@ mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat --batchSize 1
       
       <guid>https://lsvking.github.io/1134/</guid>
       <description>在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。
-
+vagrant package --base ubuntu --output ubuntu.box ubuntu: VM not created. Moving on...  
 名称要完全一样，大小写也要一样哦。折腾了半天，也是醉了。。</description>
     </item>
     
@@ -51,7 +51,7 @@ VBoxManage setextradata &amp;quot;虚拟机名称&amp;quot; VBoxInternal2/EfiGop
       <pubDate>Wed, 12 Mar 2014 17:11:16 +0000</pubDate>
       
       <guid>https://lsvking.github.io/944/</guid>
-      <description>幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务：
+      <description>现在网盘服务越来越多，可能不少人都拥有多个网盘。有时需要将一个网盘的文件转移到另一个网盘，我们一般会现将源文件从网盘下载到本地，然后再上传到另一个网盘。每个文件都需要经过本地中转，如果文件数目多或体积大，加上国内网速不给力，这个操作将非常耗时。拷贝操作尚且如此麻烦，网盘间文件的同步操作就更繁琐了。 幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务：
 1、网盘综合管理，你可以将常用的网盘添加到cloudHQ，通过cloudHQ管理所有网盘的文件；
 2、网盘间文件拷贝/移动；
 3、网盘间文件的同步(这是cloudHQ的主打功能)。
@@ -135,7 +135,7 @@ $DB2 = $this-&amp;gt;load-&amp;gt;database(&#39;dedecms&#39;, TRUE);&amp;lt;br /
       <guid>https://lsvking.github.io/794/</guid>
       <description>&lt;p&gt;最近在写东西，看到有些HMVC的教程，于是就花了些时间去了解了一下，下边就来谈一谈。&lt;/p&gt;
 &lt;p&gt;HMVC(Hierarchical-Model-View-Controller)，故名思意，就是按等级划分的MVC模式，MVC我想不必多解释了，至于什么叫做按等级划分的，我们来看几张图就明白了。&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-797&#34; title=&#34;jw0721hmvc1&#34; src=&#34;http://lsvking.github.io/wp-content/uploads/2009/12/jw0721hmvc14.gif&#34; alt=&#34;jw0721hmvc1&#34; width=&#34;425&#34; height=&#34;264&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -186,13 +186,17 @@ table{ border-collapse:collapse; }
 td{ border:#000 solid 1px; }
 您也可以参考：
 与表格边框有关的CSS语法
-http://www.52css.com/article.asp?id=394CSS去除表格td默认间距及制作1px细线表格
-http://www.52css.com/article.asp?id=593实现符合Web标准的细线表格
-http://www.52css.com/article.asp?id=676十五、margin取负值可以在标签使用绝对定位的时候起到相对定位的作用，在页面居中显示时，使用绝对定位的层不适合使用left:XXpx这个属性。把这个层放到一个要相对定位的标签旁，然后使用margin的负值是个好方法。
+http://www.52css.com/article.asp?id=394
+CSS去除表格td默认间距及制作1px细线表格
+http://www.52css.com/article.asp?id=593
+实现符合Web标准的细线表格
+http://www.52css.com/article.asp?id=676
+十五、margin取负值可以在标签使用绝对定位的时候起到相对定位的作用，在页面居中显示时，使用绝对定位的层不适合使用left:XXpx这个属性。把这个层放到一个要相对定位的标签旁，然后使用margin的负值是个好方法。
 十六、绝对定位时使用margin值定位可以达到相对于本身所在位置的定，这与top，left等属性相对与窗口边缘的定位不同。绝对定位的优势在于可以让其它元素忽略它的存在。
 十七、如果文字过长,则将过长的部分变成省略号显示：IE5,FF无效，但可以隐藏，IE6有效
 &amp;lt;DIV STYLE=”width:120px;height:50px;border:1px solid blue;overflow:hidden;text-overflow:ellipsis”&amp;gt;
-就是比如有一行文字，很长，表格内一行显示不下.十八、在IE中可能由于注释带来的文字重复问题时可以把注释改为：
+就是比如有一行文字，很长，表格内一行显示不下.
+十八、在IE中可能由于注释带来的文字重复问题时可以把注释改为：
 &amp;lt;!–[if !IE]&amp;gt;Put your commentary in here…&amp;lt;![endif]–&amp;gt;
 十九、如何用CSS调用外部字体
 语法：
@@ -203,10 +207,7 @@ url(url)：使用绝对或相对 url 地址指定OpenType字体文件
 sRules：样式表定义
 二十、如何让一个表单中的文本框中的文字垂直居中？
 如果用行高与高度的组在FF中是没有效果的，办法就是定义上下补白就可以实现想想的效果了。
-二十一、定义A标签要注意的小问题：
-当我们定义a{color:red;}时，它代表了A的四种状态的样式，如果此时要定义一个鼠标放上的状态只要定义a:hover就可以了，其它三种状态就是A中所定义的样式。只定义了一个a:link时，一定要记得把其它三种状态定义出来！
-二十二、并不是所有样式都要简写：
-当样式表前定义了如p{padding:1px 2px 3px 4px}时，在后续工程中又增加了一个样式上补白5px，下补白6px。我们并不 一定要写成p.</description>
+二十一、定义A标签要注意的小问题：</description>
     </item>
     
     <item>
@@ -215,7 +216,7 @@ sRules：样式表定义
       <pubDate>Tue, 22 Jul 2008 13:00:18 +0000</pubDate>
       
       <guid>https://lsvking.github.io/283/</guid>
-      <description></description>
+      <description> 此方法来自偶爱偶家。   言归正传， 首先我的修改是针对 simple tags 这个插件的， 其他的我就不说了， 你可以参照这里的方法自己研究。   1、在simple-tags.client.php文件中查找该语句  function getColorByScale($scale_color, $min_color, $max_color)  2、注释掉上述函数中的以下语句（其实不注释掉也是无所谓的）  $scale_color = $scale_color / 100; $minr = hexdec(substr($min_color, 1, 2)); $ming = hexdec(substr($min_color, 3, 2)); $minb = hexdec(substr($min_color, 5, 2)); $maxr = hexdec(substr($max_color, 1, 2)); $maxg = hexdec(substr($max_color, 3, 2)); $maxb = hexdec(substr($max_color, 5, 2)); $r = dechex(intval((($maxr - $minr) * $scale_color) + $minr)); $g = dechex(intval((($maxg - $ming) * $scale_color) + $ming)); $b = dechex(intval((($maxb - $minb) * $scale_color) + $minb));  3、 在上述被注释掉的语句后增加如下语句（如果没有注释掉就必须加在后面， 否则无效）  //mod by hongfengye start $r = dechex(rand(0,255)); $g = dechex(rand(0,196)); $b = dechex(rand(0,255)); //mod by hongfengye end  是的， 就是这么简单， 现在你应该就可以发现你的标签云(tags cloud)已经是彩色(colorful)的了。 效果图如下：     </description>
     </item>
     
     <item>
@@ -225,7 +226,7 @@ sRules：样式表定义
       
       <guid>https://lsvking.github.io/262/</guid>
       <description>在本博客右边栏最上边的那个每日一句，当鼠标划过小喇叭还会真人发音，这个其实是用了dict.cn提供的一个小工具，应用起来很简单，将
-这段代码放到Widgets，文本块里就行了！</description>
+Dict.CN 在线词典, 英语学习, 在线翻译   这段代码放到Widgets，文本块里就行了！</description>
     </item>
     
     <item>
@@ -244,13 +245,14 @@ sRules：样式表定义
       <pubDate>Fri, 18 Jul 2008 13:44:56 +0000</pubDate>
       
       <guid>https://lsvking.github.io/229/</guid>
-      <description>今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。
+      <description> 今天给博客升了下级，弄到2.6了，WP的升级实在麻烦，为此我找到了下面这款插件，作者网站好像在维护上不去了，我在这里把它发出来。
  将下载的文件传到插件目录下，启动插件，一直Next就差不多了，第一步他会备份数据库的，会给出个下载地址，大家最好下载到本地。我升级完后却怎么也登录不上后台了，想了一下清除了下Cookie就OK了。
 他是从官方下载的版本安装的，大家安装完后，自己在去下中文包吧。
 此插件是经过了如下几个步骤
  1.备份数据库和文件到本地。 2.从 http://wordpress.org/latest.zip 下载最新的补丁并解压。 3.将你的站点设置为维护状态，主页被提示更新页暂时替换。 4.锁定所有插件。 5.后台更新 WordPress。 6.在新窗口中显示更新后主页 7.自动激活所有插件(按照 Keith 所说这一步应该可以实现，但是在我的 BLOG 上并没有完成，所有插件最后还是由我手动激活)  个人角度来看，这款插件在很大程度上解决了因为 WordPress 版本更新的问题，而且最大限度的避免了数据和文件的丢失(其备份的过程和 WordPress Database Backup 插件基本类似)。由于使用 FTP 来进行更新操作，所以更新完成的速度也是很快的(我的BLOG更新大约前后用了不到一分钟)，基本不会因为更新而导致你的站点无法访问。
 下载地址:http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/
-本站下载:</description>
+本站下载:
+  wordpress-automatic-upgrade.1.2.0.2.zip   </description>
     </item>
     
     <item>
@@ -301,7 +303,10 @@ e9fbc5f7</description>
 我调试的方法是：
 将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Pagetitle 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagetitle 标记】的具体代码如下：
-文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagetitle style=’select’/}{dede:prenext/} 得到如下返回数据：
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}
+文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}
+{dede:pagetitle style=’select’/}
+{dede:prenext/} 得到如下返回数据：
 
 注意：
 想要使用【Pagetitle 标记】的前提条件是，文章存在分页，而且要手动在需分的地方加上#p#副标题#e#，实现分页的。
@@ -320,7 +325,10 @@ e9fbc5f7</description>
 我调试的方法是：
 将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Prenext 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagelist 标记】的具体代码如下：
-文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagebreak/}{dede:prenext/} 得到如下返回数据：</description>
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}
+文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}
+{dede:pagebreak/}
+{dede:prenext/} 得到如下返回数据：</description>
     </item>
     
     <item>
@@ -335,7 +343,9 @@ e9fbc5f7</description>
 我调试的方法是：
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagelist 标记】的具体代码如下：
-文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagebreak/}
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}
+文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}
+{dede:pagebreak/}
 得到如下返回数据：
 
 注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。</description>
@@ -352,7 +362,8 @@ e9fbc5f7</description>
 通过调试了解其使用方法
 我调试的方法是：
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新栏目HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。
-我调试【Pagelist 标记】的具体代码如下：</description>
+我调试【Pagelist 标记】的具体代码如下：
+ {dede:list col=&amp;#8217;1&amp;#8242; row=&amp;#8217;3&amp;#8242; titlelen=&amp;#8217;20&amp;#8217; infolen=&amp;#8217;100&amp;#8242; imgwidth=&amp;#8217;120&amp;#8242; imgheight=&amp;#8217;80&amp;#8217; pagesize=&amp;#8217;3&amp;#8242; typeid=&amp;#8217;95&amp;#8217;} \[field:imglink/\] \[field:textlink/\] [field:info/] {/dede:list}  {dede:pagelist listsize=&amp;#8217;3&amp;#8242; listitem=&amp;#8217;index pre pageno next end option&amp;#8217;/} 得到如下返回数据： [][1] </description>
     </item>
     
     <item>
@@ -368,7 +379,8 @@ e9fbc5f7</description>
 将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Channelartlist 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。
 例1
 我调试【Channelartlist 标记】的具体代码如下：
-{dede:channelArtlist typeid=&amp;ldquo;94&amp;rdquo; col=&amp;ldquo;1&amp;rdquo;}</description>
+{dede:channelArtlist typeid=&amp;ldquo;94&amp;rdquo; col=&amp;ldquo;1&amp;rdquo;}
+{dede:type} [field:typename/] {/dede:type}   {dede:arclist row=&#34;5&#34;} [field:textlink/] {/dede:arclist}    {/dede:channelArtlist} 得到如下返回数据： [][1] 注意：细心的朋友会发现，使用【Channelartlist 标记】时，需要你对div + css或者table的控制能力较强，否则在页面中很难控制它。请大家他细看下面例2，例1与例2代码上相差很小，但得到的布局却相差很大。仔细对比一下吧！ 例2 我调试【Channelartlist 标记】的具体代码如下： {dede:channelArtlist typeid=&#34;94&#34; col=&#34;1&#34;} {dede:type} [field:typename/] {/dede:type}   {dede:arclist row=&#34;5&#34;} [field:textlink/] {/dede:arclist}    {/dede:channelArtlist} 得到如下返回数据： [][2] </description>
     </item>
     
     <item>
@@ -409,7 +421,11 @@ e9fbc5f7</description>
 补充：
 
 我调试【Flink 标记】的具体代码如下：
-全部用文字显示：{dede:flink type=’textall’ row=’4’ titlelen=’20’}{/dede:flink}文字和图文混合排列：{dede:flink type=’textimage’ row=’4’ titlelen=’20’}{/dede:flink}仅显示不带Logo的链接：{dede:flink type=’text’ row=’4’ titlelen=’20’}{/dede:flink}仅显示带Logo的链接：{dede:flink type=’image’ row=’4’ titlelen=’20’}{/dede:flink}得到如下返回数据：</description>
+全部用文字显示：{dede:flink type=’textall’ row=’4’ titlelen=’20’}{/dede:flink}
+文字和图文混合排列：{dede:flink type=’textimage’ row=’4’ titlelen=’20’}{/dede:flink}
+仅显示不带Logo的链接：{dede:flink type=’text’ row=’4’ titlelen=’20’}{/dede:flink}
+仅显示带Logo的链接：{dede:flink type=’image’ row=’4’ titlelen=’20’}{/dede:flink}
+得到如下返回数据：</description>
     </item>
     
     <item>
@@ -461,7 +477,8 @@ titlebackground=” tablebgcolor=’#FFFFFF’}
 当然，自定义宏标记里面也可以加入dedecms的标记内容，适合当前栏目的显示内容，不过需要在调用代码中将ismake设为yes才可以，也可以通过设置typeid使自定义宏标记在特定栏目中显示。
 有人会问，我已经生成了很多页面了，现在想更改了一下自定义宏标记的内容，那岂不是要更改后重新再生成一遍，那样就不方便了。
 其实柏拉图早就考虑到这点，在自定义宏标记中可以使用javascript调用，这样以来，只要改变一次就可以实现全局改变的效果。
-具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&amp;lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&amp;gt;我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
+具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&amp;lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&amp;gt;
+我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
 怎么样，自定义宏标记内容强大吧，相信他的引入会给你的模板制作带来更好的效果。</description>
     </item>
     
@@ -497,7 +514,8 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
 我调试【Channel 标记】的具体代码如下：
 {dede:type typeid=’96’}{/dede:type}
 {dede:channel typeid=’96’}
-&amp;lt;a href=&#39;[field:typelink /]’&amp;gt;[field:typename/]{/dede:channel}
+&amp;lt;a href=&#39;[field:typelink /]’&amp;gt;[field:typename/]
+{/dede:channel}
 得到如下返回数据：
 
 通过以上两行代码的对比，相信你的认识会更深刻。前者是生成单一的数据，后者通过数组生成一组的数据。</description>
@@ -522,13 +540,15 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
 调用方法一：
 我调试【Channel 标记】的具体代码如下：
 {dede:channel row=’3′ type=’top’}
-[field:typename/]{/dede:channel}
+[field:typename/]
+{/dede:channel}
 得到如下返回数据：
 
 调用方法二：
 我调试【imglist标记】的具体代码如下：
 {dede:channel row=’3′ type=’sun’ typeid=’96’}
-[field:typename/]{/dede:channel}
+[field:typename/]
+{/dede:channel}
 得到如下返回数据：</description>
     </item>
     
@@ -553,13 +573,20 @@ index_article.htm、list_article.htm、article_article.htm等类似的模板文�
 用法一：
 这种用法，主要是从数据库获取相关的数据，特别是系统变量的数据。
 我调试【Arclist 标记】的具体代码如下：
-调用position标记,得到:栏目一 &amp;gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}插件路径：{dede:field name=’phpurl’/}模板路径：{dede:field name=’templeturl’/}版权信息：{dede:field name=’powerby’/}主页路径：{dede:field name=’indexurl’/}主页名称：{dede:field name=’indexname’/}得到如下返回数据：
+调用position标记,得到:栏目一 &amp;gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}
+插件路径：{dede:field name=’phpurl’/}
+模板路径：{dede:field name=’templeturl’/}
+版权信息：{dede:field name=’powerby’/}
+主页路径：{dede:field name=’indexurl’/}
+主页名称：{dede:field name=’indexname’/}
+得到如下返回数据：
 
 请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。
 用法二：
 这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，
 我调试【Arclist 标记】的具体代码如下：
-注意：本页面的文字和链接都是经过dede.css处理的织梦论坛得到如下返回数据：</description>
+注意：本页面的文字和链接都是经过dede.css处理的
+织梦论坛 得到如下返回数据：</description>
     </item>
     
     <item>
@@ -592,7 +619,8 @@ imgwidth=’100′ imgheight=’80’}
 我调试【imglist标记】的具体代码如下：
 {dede:imglist typeid=” row=’2′ col=’1’ titlelen=’20’ infolen=”
 imgwidth=’100′ imgheight=’80’}
-[field:imglink/] [field:textlink/]{/dede:imglist}
+[field:imglink/] [field:textlink/]
+{/dede:imglist}
 得到如下返回数据：
 
 如上例，其它的别名标记，朋友们可以举一反三，融会贯通！</description>
@@ -615,8 +643,11 @@ C、{dede:标记名称 属性=’值’}自定义样式模板(InnerText){/dede:�
 将templets\default\文件夹下的index.html文件代码，全部掏空。放入自己想要调试的标签，再在IE中访问网站主页index.php，就可以得到返回的数据。
 比如：
 a、放入标签{dede:global name=&amp;ldquo;cfg_webname&amp;rdquo; /}就得到了“网站名称”
-b、放入标签{dede:artlist typeid=” row=5}[field:title/]{/dede:artlist}就返回5篇文章的标题。
-c、放入标签{dede:arclist infolen=’100′ row=5}[field:textlink/][field:info/]{/dede:arclist}就返回5篇文章的标题和相应的内容简介
+b、放入标签{dede:artlist typeid=” row=5}[field:title/]
+{/dede:artlist}就返回5篇文章的标题。
+c、放入标签{dede:arclist infolen=’100′ row=5}[field:textlink/]
+[field:info/]
+{/dede:arclist}就返回5篇文章的标题和相应的内容简介
 注意：abc实例是与上面ABC三种形式相对应的。大家可以按照官方的文档，逐个测试，举一反三。
 至于DedeCMS程序是怎样实现的，我不懂PHP，搞不清楚，我觉得也没必要全都弄懂，搞模板的就专心搞模板，程序的归由技术人员去处理。
 搞清楚上面内容，基本上就会调用数据库中自己需要的数据了。
@@ -716,8 +747,10 @@ DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合�
       
       <guid>https://lsvking.github.io/106/</guid>
       <description>视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用 Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影 “a Sora in Prospect Park”：
- 对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
- autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的 John F. Kennedy 的就职演说。</description>
+1: &amp;lt;video src=&#34;http://www.cafeaulait.org/birds/sora.mov&#34; /&amp;gt;
+   对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
+1: &amp;lt;audio src=&#34;spacemusic.mp3&#34; autoplay=&#34;autoplay&#34; loop=&#34;20000&#34; /&amp;gt;
+   autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的 John F.</description>
     </item>
     
     <item>
@@ -728,7 +761,7 @@ DedeCMS网站制作的实例敬请期待，我现正在策划制作一个综合�
       <guid>https://lsvking.github.io/105/</guid>
       <description>HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HTML 5 提供了几个新的内联元素来满足非技术作者的需求。  m
 m 元素表示文本被 “加上标志”，但是不一定要强调。可以把它想像成书中突出显示的一节。Google 的缓存页面就是典型的用例。如果链接到一个缓存的副本，搜索词就被加上标志。例如，如果搜索 “Egret”，那么缓存的 Google 页面可能像下面这样：
-&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; American &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Egret&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;) is a large white wading bird found worldwide.</description>
+1: The Great &amp;lt;m&amp;gt;Egret&amp;lt;/m&amp;gt; (also known as the &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; American &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Egret&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;m&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;) is a large white wading bird found worldwide.</description>
     </item>
     
     <item>
@@ -738,7 +771,7 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
       
       <guid>https://lsvking.github.io/104/</guid>
       <description>HTML 5 还增加了一些纯语义性的块级元素： aside figure dialog 我在文章和书中一直使用前两个元素。第三个元素我不经常用，它主要用于书面文本。 aside aside 元素代表说明、提示、边栏、引用、附加注释等，也就是叙述主线之外的内容。例如，在 developerWorks 文章中，常常会看到用表格形式编写的边栏，见代码3 用 HTML 4 编写的 developerWorks 边栏。
-&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;10&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;img&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;alt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;src&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;//www.</description>
+1: &amp;lt;table align=&#34;right&#34; border=&#34;0&#34; cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; width=&#34;40%&#34;&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tbody&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;tr&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;td&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;width&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;10&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;img&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;alt&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;&amp;quot;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;src&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;//www.</description>
     </item>
     
     <item>
@@ -750,7 +783,7 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
       <description>转载 52CSS
  由于缺少结构，即使是形式良好的 HTML 页面也比较难以处理。必须分析标题的级别，才能看出各个部分的划分方式。边栏、页脚、页眉、导航条、主内容区和各篇文章都由通用的 div 元素来表示。HTML 5 添加了一些新元素，专门用来标识这些常见的结构： · section：这可以是书中的一章或一节，实际上可以是在 HTML 4 中有自己的标题的任何东西 · header：页面上显示的页眉；与 head 元素不一样 · footer：页脚；可以显示电子邮件中的签名 · nav：指向其他页面的一组链接 · article：blog、杂志、文章汇编等中的一篇文章 我们来考虑一个典型的 blog 主页，它的顶部有页眉，底部有页脚，还有几篇文章、一个导航区和一个边栏，见代码
  1 典型的 blog 页面
-&amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Mokka mit Schlag &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 4:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 5:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;body&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 6:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;page&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 7:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;header&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 8:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h1&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;href&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;http://www.</description>
+1: &amp;lt;html&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 2:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 3:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;Mokka mit Schlag &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;title&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 4:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;head&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 5:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;body&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 6:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;page&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 7:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;div&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;header&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;pre style=&amp;quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;amp;#39;Courier New&amp;amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #606060&amp;quot;&amp;gt; 8:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;h1&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;&amp;amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #800000&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #ff0000&amp;quot;&amp;gt;href&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff&amp;quot;&amp;gt;=&amp;quot;http://www.</description>
     </item>
     
     <item>
@@ -771,7 +804,7 @@ m 元素表示文本被 “加上标志”，但是不一定要强调。可以�
       <pubDate>Sat, 23 Feb 2008 13:41:13 +0000</pubDate>
       
       <guid>https://lsvking.github.io/88/</guid>
-      <description>———————————————————————————————————————————–
+      <description>&amp;#160; 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.  ———————————————————————————————————————————–
 目录  介绍 针对浏览器的选择器 让IE6支持PNG透明 移除超链接的虚线 给行内元素定义宽度 让固定宽度的页面居中 图片替换技术 最小宽度 隐藏水平滚动条  ———————————————————————————————————————————–
 一. 介绍 这篇文章包括了8个非常有用的解决办法, 在进行css设计遇到问题时你就会用到它们.
 二. 针对浏览器的选择器 这些选择器在你需要针对某款浏览器进行css设计时将非常有用.
@@ -805,16 +838,17 @@ width: 250px;
       <pubDate>Fri, 15 Feb 2008 16:20:50 +0000</pubDate>
       
       <guid>https://lsvking.github.io/74/</guid>
-      <description>这个是用来出售的模板，但看起来太简单了，估计没人会买，我就共享出来吧！
-这个是列表页
+      <description>&amp;#160; 先看看效果图吧 这个是用来出售的模板，但看起来太简单了，估计没人会买，我就共享出来吧！
+&amp;#160; 这个是首页  这个是列表页
 
-
+这个是文章页 
 本人做了一批英文模板有兴趣的可以去看看http://shop34694996.taobao.com/
 同时本人接模板制作生意，中英文都可以，价格绝对优惠～
 我的QQ:262532051
 安装方法:把default放到templets下
 index_files放到根目录
-下载地址：</description>
+下载地址：
+ 模板包  </description>
     </item>
     
     <item>
@@ -833,8 +867,8 @@ index_files放到根目录
       <pubDate>Sun, 06 Jan 2008 07:51:03 +0000</pubDate>
       
       <guid>https://lsvking.github.io/68/</guid>
-      <description>下面是 Matt Mullenweg 在 WordPress Hackers 邮件列表中给出的信息。
-In light of the big changes happening in the codebase and admin section, we’re going to push back the next release to be aimed for early March. This is the timeframe when 2.5 was originally schedule for, so we’re treating the originally planned 2.4 in December as a skipped release, as a result of both the holidays and the large changes which we weren’t able to start on until late October.</description>
+      <description>WordPress 2.4 本来预计在 1 月 24 日发布，不过现在看来这是不可能了。Matt Mullenweg 在 WordPress Hackers 邮件列表 中指出，WordPress 2.4 将直接跳过，而下一个重要版本 WordPress 2.5 则将在 3 月 28 日发布。 下面是 Matt Mullenweg 在 WordPress Hackers 邮件列表中给出的信息。
+In light of the big changes happening in the codebase and admin section, we’re going to push back the next release to be aimed for early March. This is the timeframe when 2.5 was originally schedule for, so we’re treating the originally planned 2.</description>
     </item>
     
   </channel>

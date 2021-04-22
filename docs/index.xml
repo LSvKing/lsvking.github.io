@@ -21,14 +21,19 @@
         <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/1152/ -&lt;p&gt;用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的文件，大的数据迁移都是用的restore导入的。这次遇到一次数据迁移导出的json 文件大概有4.7G左右,再倒入的时候出现了问题&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;却出现了如下的错误提示&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;2016-09-05T23:30:35.773+0800	connected to: 127.0.0.1
+2016-09-05T23:30:37.653+0800	Failed: lost connection to server
+2016-09-05T23:30:37.653+0800	imported 0 documents
+&lt;/pre&gt;
 &lt;p&gt;Mongo的错误提示也是醉了，这也忒不友好了, 完全是再猜,不过通过万能的大G还是搜到了解决方案,原来是因为Mongo对单次处理好像有大小限制（16m）好像是，所以大文件会出问题,这应该是个Bug mongoimport 默认会10000条 为一个批量导入数据，但实际上我的单条数据太大了,每51条数据就达到了16m 所以10000条导入一次肯定是不行的。幸好他有个参数 &amp;ndash;batchSize 可以指定每次批量导入的条数 设置小一些就OK了。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;mongoimport -h127.0.0.1 -d database -c indexs &amp;lt; indexs.dat --batchSize 1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;这样你会看到他会分开执行导入任务&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;blockquote&gt;
+&lt;pre&gt;2016-09-05T23:12:48.622+0800	connected to: 127.0.0.1
+2016-09-05T23:12:51.632+0800	d.indexs_value	42.6 MB
+2016-09-05T23:12:54.626+0800	d.indexs_value	79.4 MB
+2016-09-05T23:12:57.607+0800	d.indexs_value	115.9 MB
+2016-09-05T23:13:00.618+0800	d.indexs_value	151.5 MB
+&lt;/pre&gt;&lt;blockquote&gt;
 &lt;/blockquote&gt;
 - https://lsvking.github.io/1152/ - This is a customized copyright.</description>
         </item>
@@ -76,9 +81,10 @@
         
         <guid>https://lsvking.github.io/1134/</guid>
         <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/1134/ -&lt;p&gt;在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;a href=&#34;http://bcs.duapp.com/lsvking-wp//blog/201411//QQ%E5%9B%BE%E7%89%87201411131745041.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;vagrant package --base ubuntu --output ubuntu.box
+ubuntu: VM not created. Moving on...
+&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;http://bcs.duapp.com/lsvking-wp//blog/201411//QQ%E5%9B%BE%E7%89%87201411131745041.jpg&#34;&gt;&lt;img src=&#34;http://bcs.duapp.com/lsvking-wp//blog/201411//QQ图片201411131745041.jpg&#34; alt=&#34;QQ图片20141113174504&#34; width=&#34;449&#34; height=&#34;191&#34; class=&#34;alignnone size-full wp-image-1136&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;名称要完全一样，大小写也要一样哦。折腾了半天，也是醉了。。&lt;/p&gt;
 - https://lsvking.github.io/1134/ - This is a customized copyright.</description>
         </item>
@@ -777,7 +783,7 @@ unicode.CaseRange{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&
         <pubDate>Wed, 12 Mar 2014 17:11:16 +0000</pubDate>
         
         <guid>https://lsvking.github.io/944/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/944/ -&lt;!-- raw HTML omitted --&gt;
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/944/ -&lt;!--markdown--&gt;现在网盘服务越来越多，可能不少人都拥有多个网盘。有时需要将一个网盘的文件转移到另一个网盘，我们一般会现将源文件从网盘下载到本地，然后再上传到另一个网盘。每个文件都需要经过本地中转，如果文件数目多或体积大，加上国内网速不给力，这个操作将非常耗时。拷贝操作尚且如此麻烦，网盘间文件的同步操作就更繁琐了。
 &lt;p&gt;幸好已经有厂商看到了这个市场并推出了相应的服务，cloudHQ就是其中一家。cloudHQ主要提供以下几种服务：&lt;/p&gt;
 &lt;p&gt;1、网盘综合管理，你可以将常用的网盘添加到cloudHQ，通过cloudHQ管理所有网盘的文件；&lt;/p&gt;
 &lt;p&gt;2、网盘间文件拷贝/移动；&lt;/p&gt;
@@ -797,9 +803,10 @@ unicode.CaseRange{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&
         <pubDate>Mon, 16 Dec 2013 15:18:00 +0000</pubDate>
         
         <guid>https://lsvking.github.io/939/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/939/ -&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;blockquote&gt;
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/939/ -&lt;pre&gt;result=&#39;week(now(),-1) 49&#39;;
+var=`echo $result|awk &#39;{print substr($result,16,3)}&#39;`;
+echo $var;
+&lt;/pre&gt;&lt;blockquote&gt;
 &lt;/blockquote&gt;
 - https://lsvking.github.io/939/ - This is a customized copyright.</description>
         </item>
@@ -828,19 +835,40 @@ unicode.CaseRange{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&
         <pubDate>Thu, 13 Oct 2011 03:18:00 +0000</pubDate>
         
         <guid>https://lsvking.github.io/932/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/932/ -&lt;h3 id=&#34;a-idtar-styledirection-ltr-nametarstrong-styledirection-ltrtar命令stronga&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;tar命令&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-- https://lsvking.github.io/932/ - This is a customized copyright.</description>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/932/ -&lt;h3 id=&#34;a-idtar-styledirection-ltr-nametarstrong-styledirection-ltrtar命令stronga&#34;&gt;&lt;a id=&#34;tar&#34; style=&#34;direction: ltr;&#34; name=&#34;tar&#34;&gt;&lt;strong style=&#34;direction: ltr;&#34;&gt;tar命令&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div&gt;
+  &lt;p&gt;
+    &lt;strong&gt;tar [-cxtzjvfpPN] 文件与目录 &amp;#8230;.&lt;br /&gt; 参数：&lt;br /&gt; -c ：建立一个压缩文件的参数指令(create 的意思)；&lt;br /&gt; -x ：解开一个压缩文件的参数指令！&lt;br /&gt; -t ：查看 tarfile 里面的文件！&lt;br /&gt; 特别注意，在参数的下达中， c/x/t 仅能存在一个！不可同时存在！&lt;br /&gt; 因为不可能同时压缩与解压缩。&lt;br /&gt; -z ：是否同时具有 gzip 的属性？亦即是否需要用 gzip 压缩？&lt;br /&gt; -j ：是否同时具有 bzip2 的属性？亦即是否需要用 bzip2 压缩？&lt;br /&gt; -v ：压缩的过程中显示文件！这个常用，但不建议用在背景执行过程！&lt;br /&gt; -f ：使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！&lt;br /&gt; 例如使用『 tar -zcvfP tfile sfile』就是错误的写法，要写成&lt;br /&gt; 『 tar -zcvPf tfile sfile』才对喔！&lt;br /&gt; -p ：使用原文件的原来属性（属性不会依据使用者而变）&lt;br /&gt; -P ：可以使用绝对路径来压缩！&lt;br /&gt; -N ：比后面接的日期(yyyy/mm/dd)还要新的才会被打包进新建的文件中！&lt;br /&gt; &amp;#8211;exclude FILE：在压缩的过程中，不要将 FILE 打包！&lt;br /&gt; 范例：&lt;br /&gt; 范例一：将整个 /etc 目录下的文件全部打包成为 /tmp/etc.tar&lt;br /&gt; [root@linux ~]#&lt;/strong&gt; tar -cvf /tmp/etc.tar /etc&lt;==仅打包，不压缩！&lt;br /&gt; [root@linux ~]# &lt;strong&gt;tar -zcvf /tmp/etc.tar.gz /etc&lt;/strong&gt;&lt;==打包后，以 gzip 压缩&lt;br /&gt; [root@linux ~]# &lt;strong&gt;tar -jcvf /tmp/etc.tar.bz2 /etc&lt;/strong&gt;&lt;==打包后，以 bzip2 压缩&lt;br /&gt; # 特别注意，在参数 f 之后的文件档名是自己取的，我们习惯上都用 .tar 来作为辨识。&lt;br /&gt; # 如果加 z 参数，则以 .tar.gz 或 .tgz 来代表 gzip 压缩过的 tar file ～&lt;br /&gt; # 如果加 j 参数，则以 .tar.bz2 来作为附档名啊～&lt;br /&gt; # 上述指令在执行的时候，会显示一个警告讯息：&lt;br /&gt; # 『tar: Removing leading `/&amp;#8221; from member names』那是关於绝对路径的特殊设定。
+  &lt;/p&gt;
+  &lt;p&gt;
+    范例二：查阅上述 /tmp/etc.tar.gz 文件内有哪些文件？&lt;br /&gt; [root@linux ~]# &lt;strong&gt;tar -ztvf /tmp/etc.tar.gz&lt;/strong&gt;&lt;br /&gt; # 由於我们使用 gzip 压缩，所以要查阅该 tar file 内的文件时，&lt;br /&gt; # 就得要加上 z 这个参数了！这很重要的！
+  &lt;/p&gt;
+  &lt;p&gt;
+    范例三：将 /tmp/etc.tar.gz 文件解压缩在 /wp-content/local/src 底下&lt;br /&gt; [root@linux ~]# &lt;strong&gt;cd /wp-content/local/src&lt;/strong&gt;&lt;br /&gt; [root@linux src]# &lt;strong&gt;tar -zxvf /tmp/etc.tar.gz&lt;/strong&gt;&lt;br /&gt; # 在预设的情况下，我们可以将压缩档在任何地方解开的！以这个范例来说，&lt;br /&gt; # 我先将工作目录变换到 /wp-content/local/src 底下，并且解开 /tmp/etc.tar.gz ，&lt;br /&gt; # 则解开的目录会在 /wp-content/local/src/etc 呢！另外，如果您进入 /wp-content/local/src/etc&lt;br /&gt; # 则会发现，该目录下的文件属性与 /etc/ 可能会有所不同喔！
+  &lt;/p&gt;
+  &lt;p&gt;
+    范例四：在 /tmp 底下，我只想要将 /tmp/etc.tar.gz 内的 etc/passwd 解开而已&lt;br /&gt; [root@linux ~]# &lt;strong&gt;cd /tmp&lt;/strong&gt;&lt;br /&gt; [root@linux tmp]# &lt;strong&gt;tar -zxvf /tmp/etc.tar.gz etc/passwd&lt;/strong&gt;&lt;br /&gt; # 我可以透过 tar -ztvf 来查阅 tarfile 内的文件名称，如果单只要一个文件，&lt;br /&gt; # 就可以透过这个方式来下达！注意到！ etc.tar.gz 内的根目录 / 是被拿掉了！
+  &lt;/p&gt;
+  &lt;p&gt;
+    范例五：将 /etc/ 内的所有文件备份下来，并且保存其权限！&lt;br /&gt; [root@linux ~]# &lt;strong&gt;tar -zxvpf /tmp/etc.tar.gz /etc&lt;/strong&gt;&lt;br /&gt; # 这个 -p 的属性是很重要的，尤其是当您要保留原本文件的属性时！
+  &lt;/p&gt;
+  &lt;p&gt;
+    范例六：在 /home 当中，比 2005/06/01 新的文件才备份&lt;br /&gt; [root@linux ~]# &lt;strong&gt;tar -N &amp;#8220;2005/06/01&amp;#8221; -zcvf home.tar.gz /home&lt;/strong&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    范例七：我要备份 /home, /etc ，但不要 /home/dmtsai&lt;br /&gt; [root@linux ~]# &lt;strong&gt;tar &amp;#8211;exclude /home/dmtsai -zcvf myfile.tar.gz /home/* /etc&lt;/strong&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    范例八：将 /etc/ 打包后直接解开在 /tmp 底下，而不产生文件！&lt;br /&gt; [root@linux ~]# &lt;strong&gt;cd /tmp&lt;/strong&gt;&lt;br /&gt; [root@linux tmp]# &lt;strong&gt;tar -cvf &amp;#8211; /etc | tar -xvf &amp;#8211;&lt;/strong&gt;&lt;br /&gt; # 这个动作有点像是 cp -r /etc /tmp 啦～依旧是有其有用途的！&lt;br /&gt; # 要注意的地方在於输出档变成 &amp;#8211; 而输入档也变成 &amp;#8211; ，又有一个 | 存在～&lt;br /&gt; # 这分别代表 standard output, standard input 与管线命令啦！&lt;br /&gt; # 这部分我们会在 Bash shell 时，再次提到这个指令跟大家再解释啰！
+  &lt;/p&gt;
+  &lt;p&gt;
+    &amp;nbsp;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &amp;nbsp;
+  &lt;/p&gt;
+  &lt;p&gt;
+    转自：&lt;a href=&#34;http://www.21andy.com/blog/20060820/389.html&#34;&gt;21Andy&amp;#8217;s(大婶)&lt;/a&gt;&lt;br /&gt; &lt;!--EndFragment--&gt;&lt;/div&gt;- https://lsvking.github.io/932/ - This is a customized copyright.</description>
         </item>
     
     
@@ -852,7 +880,7 @@ unicode.CaseRange{&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;A&amp;#39;&
         
         <guid>https://lsvking.github.io/927/</guid>
         <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/927/ -&lt;p&gt;Google+邀请数枚，请留言。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://bcs.duapp.com/lsvking-wp//blog/201410//131939415.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://bcs.duapp.com/lsvking-wp//blog/201410//131939415.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-1131&#34; src=&#34;http://bcs.duapp.com/lsvking-wp//blog/201410//131939415.jpg&#34; alt=&#34;131939415&#34; width=&#34;300&#34; height=&#34;297&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 - https://lsvking.github.io/927/ - This is a customized copyright.</description>
         </item>
     

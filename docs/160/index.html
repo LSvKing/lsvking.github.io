@@ -23,7 +23,10 @@
 我调试的方法是：
 将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Prenext 标记】的代码，再在管理后台进行操作，如下：HTML更新–&gt;更新文档HTML–&gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagelist 标记】的具体代码如下：
-文章标标题:{dede:field name=&ldquo;title&rdquo;/}文章内容:{dede:field name=&ldquo;body&rdquo;/}{dede:pagebreak/}{dede:prenext/} 得到如下返回数据：" />
+文章标标题:{dede:field name=&ldquo;title&rdquo;/}
+文章内容:{dede:field name=&ldquo;body&rdquo;/}
+{dede:pagebreak/}
+{dede:prenext/} 得到如下返回数据：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lsvking.github.io/160/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2008-03-22T21:08:15&#43;00:00" />
@@ -42,7 +45,10 @@
 我调试的方法是：
 将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Prenext 标记】的代码，再在管理后台进行操作，如下：HTML更新–&gt;更新文档HTML–&gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagelist 标记】的具体代码如下：
-文章标标题:{dede:field name=&ldquo;title&rdquo;/}文章内容:{dede:field name=&ldquo;body&rdquo;/}{dede:pagebreak/}{dede:prenext/} 得到如下返回数据："/>
+文章标标题:{dede:field name=&ldquo;title&rdquo;/}
+文章内容:{dede:field name=&ldquo;body&rdquo;/}
+{dede:pagebreak/}
+{dede:prenext/} 得到如下返回数据："/>
 
 
 
@@ -356,12 +362,12 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 我调试的方法是：<br>
 将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Prenext 标记】的代码，再在管理后台进行操作，如下：HTML更新–&gt;更新文档HTML–&gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。<br>
 我调试【Pagelist 标记】的具体代码如下：<br>
-<!-- raw HTML omitted -->文章标标题:<!-- raw HTML omitted -->{dede:field name=&ldquo;title&rdquo;/}<!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章内容:<!-- raw HTML omitted -->{dede:field name=&ldquo;body&rdquo;/}<!-- raw HTML omitted --><br>
-{dede:pagebreak/}<!-- raw HTML omitted --><br>
-{dede:prenext/} <!-- raw HTML omitted --><br>
+<font color="red">文章标标题:</font>{dede:field name=&ldquo;title&rdquo;/}<br /><br>
+<font color="red">文章内容:</font>{dede:field name=&ldquo;body&rdquo;/}<br /><br>
+{dede:pagebreak/}<br /><br>
+{dede:prenext/} <br /><br>
 得到如下返回数据：<br>
-<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-2.gif"><!-- raw HTML omitted --></a></p>
+<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-2.gif"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="307" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsprenext-1288aclip-image001-thumb.gif" width="621" border="0" /></a></p>
 
                     
                     <HR width="100%" id="EOF">

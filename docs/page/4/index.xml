@@ -18,14 +18,20 @@
         <pubDate>Fri, 01 May 2009 22:03:10 +0000</pubDate>
         
         <guid>https://lsvking.github.io/337/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/337/ -&lt;!-- raw HTML omitted --&gt;
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/337/ -&lt;div class=&#34;entry-body&#34;&gt;
+  &lt;div&gt;
+    &lt;div class=&#34;item-body&#34;&gt;
+      &lt;div&gt;
+        &lt;p&gt;
+          盘古说：我开；&lt;br /&gt; 女娲说：我补；&lt;br /&gt; 共工说：我撞；&lt;br /&gt; 神农说：我尝；&lt;br /&gt; 精卫说：我填；&lt;br /&gt; 夸父说：我追；&lt;br /&gt; 后羿说：我射；&lt;br /&gt; 嫦娥说：没射着！
+        &lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    &amp;lt;p&amp;gt;
       黄帝说：我们做什么；&amp;lt;br /&amp;gt; 尧说：我让；&amp;lt;br /&amp;gt; 舜说：我也让；&amp;lt;br /&amp;gt; 禹说：咱爷们怎么办？&amp;lt;br /&amp;gt; 启说：让他们球！
     &amp;lt;/p&amp;gt;
     
     &amp;lt;p&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    &amp;lt;p&amp;gt;
       桀说：好玩；汤说：造反有理了；夏亡了……&amp;lt;br /&amp;gt; 纣说：痛快；武王说：我也反了；商亡了……&amp;lt;br /&amp;gt; 幽王说：点火；褒姒说：刺激；周也亡了……
     &amp;lt;/p&amp;gt;
@@ -112,7 +118,8 @@
   &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;- https://lsvking.github.io/337/ - This is a customized copyright.</description>
+  &lt;/div&gt;
+&lt;/div&gt;- https://lsvking.github.io/337/ - This is a customized copyright.</description>
         </item>
     
     
@@ -174,11 +181,11 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D&lt;/p&gt;
 &lt;p&gt;来到~/.mozilla/firefox/***.default（因人而异），下面有一个places.sqlite文件，看看它的大小。如果超过了10MB，理论上就能引起Firefox卡了。像我是21MB，一般用了一年左右的话，会有这个程度。&lt;/p&gt;
 &lt;p&gt;这个文件里存了些什么呢？让我用SQLite Manager这个扩展来看看：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;在moz_favicons这张中，存了1500多个站点的Favicon，就是网站的Logo图标&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-3.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-3.png&#34;&gt;&lt;img title=&#34;firefox-3&#34; src=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-3.png&#34; alt=&#34;&#34; width=&#34;614&#34; height=&#34;484&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;moz_historyvisits这张表中，保存着所有访问过的纪录，我这里是六万条！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-4.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-4.png&#34;&gt;&lt;img title=&#34;firefox-4&#34; src=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-4.png&#34; alt=&#34;&#34; width=&#34;613&#34; height=&#34;474&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;而moz_places这里存着近三万多的places：地址，标题和反转域名信息。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-5.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-5.png&#34;&gt;&lt;img title=&#34;firefox-5&#34; src=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-5.png&#34; alt=&#34;&#34; width=&#34;613&#34; height=&#34;520&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这些数据量到底对Firefox的性能有啥影响呢？我试着把places.sqlite改了个名，然后重启Firefox。&lt;/p&gt;
 &lt;p&gt;所有的停顿和卡都不复存在了！Firefox变得非常流畅。&lt;/p&gt;
 &lt;p&gt;当然问题是所有的历史纪录和地址栏信息都没有了，相当于起到了彻底“清除隐私纪录”的作用，只是这个的程度比“工具”-&amp;gt;“清除隐私纪录”更深。&lt;/p&gt;
@@ -198,9 +205,9 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;browser.history_expire_days_min&lt;/strong&gt;：是用户值，即在“Firefox首选项”、“隐私”、“历史”当中，表示“保存我的历史，至少X天”。即使你在首选项中把“至少X天”设置成了了1天，或取消，Firefox还是会保存浏览历史，因为系统保留值为180天。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;browser.history_expire_sites&lt;/strong&gt;：这个是最大保存的站点数量，默认是四万个。&lt;/p&gt;
 &lt;p&gt;也就是说，系统要么保存180天的纪录，要么保存四万个浏览纪录，不过我上面的moz_historyvisits怎么达到了六万个呢？可能是指moz_places这张表。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-1.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-1.png&#34;&gt;&lt;img title=&#34;firefox-1&#34; src=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-1.png&#34; alt=&#34;&#34; width=&#34;617&#34; height=&#34;252&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;差不多搞明白后，把值设置成下面的样子，站点数保存四千个就够了，系统保存3天的浏览纪录，用户最少1天。那个mirror随便设置了个值。&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img title=&#34;firefox-2&#34; src=&#34;http://linuxdesktop.cn/wp-content/uploads/2008/09/firefox-2.png&#34; alt=&#34;&#34; width=&#34;620&#34; height=&#34;276&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;需要注意的是，如果你没有手动清理过places.sqlite，仅仅设定了这些值的话，文件是不会有变化的。清理还是得手动来。&lt;/p&gt;
 &lt;p&gt;接下来，就用实践来检验一切了，再过个半年查询一下places.sqlite的纪录，看看是否是被限制在了四千以内，这样的话Firefox应该再也卡不起来了。&lt;/p&gt;
 &lt;p&gt;另外，建议把“首选项”，“安全”，把有关”嫌疑攻击站点“和”伪造站点“的两个选择勾掉，有关这两个东西的文件也会相当大。不过没有places.sqlite夸张罢了。&lt;/p&gt;
@@ -215,7 +222,7 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D&lt;/p&gt;
         <pubDate>Fri, 14 Nov 2008 12:25:17 +0000</pubDate>
         
         <guid>https://lsvking.github.io/326/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/326/ -&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/326/ -&lt;p&gt;&lt;img src=&#34;http://www.walkerplus.com/phtml/all/movie/image/flyer/mo5825_f1.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;◎译　　名　少林少女&lt;/p&gt;
 &lt;p&gt;◎片　　名　Shaolin Girl&lt;/p&gt;
 &lt;p&gt;◎年　　代　2008&lt;/p&gt;
@@ -243,16 +250,16 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D&lt;/p&gt;
 &lt;p&gt;第二天一早，一个女孩来找阿凛。她是中国餐馆里的女服务生刘珉珉，昨天看到阿凛的功夫后对她非常感兴趣，想拉她进女子曲棍球队。阿凛跟着珉珉来到了国际星馆大学女子曲棍球队的活动室，她以所有队员跟她学少林拳为交换条件，加入了球队。&lt;/p&gt;
 &lt;p&gt;学长大场雄一郎察觉到了阿凛非凡的斗气，一直追求强敌的他，提出要和阿凛一比高下。热血少女阿凛的战斗刚刚拉开序幕……&lt;/p&gt;
 &lt;p&gt;◎剧　　照&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.allcinema.net/images/3/3284/327993_02_01_02.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.allcinema.net/images/1/1249/327993_01_01_02.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.allcinema.net/images/1/1250/327993_01_02_02.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.allcinema.net/images/1/1251/327993_01_03_02.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.allcinema.net/images/1/1252/327993_01_04_02.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.allcinema.net/images/1/1253/327993_01_05_02.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.allcinema.net/images/1/1254/327993_01_06_02.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.allcinema.net/images/1/1255/327993_01_07_02.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.allcinema.net/images/1/1256/327993_01_08_02.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.allcinema.net/images/1/1257/327993_01_09_02.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;幕后制作：&lt;/p&gt;
 &lt;p&gt;日本每年春季的黄金周假期都是电影旺季，许多新片都选择此时上映抢占票房。今年黄金周的大银幕依然精彩纷呈，在接踵出炉的本土新片中，最引人注目的当属号称第一部正宗日产武打片的《少林少女》。&lt;/p&gt;
 &lt;p&gt;虽然《少林少女》并没有展开狂轰滥炸式的宣传攻势，但它强大的阵容足以让每一个影迷为之怦然心动。缔造《跳跃大搜查线》神话的制作人龟山千广和香港著名电影人周星驰携手创意，富士电视台金牌导演本广克行执掌导筒，再加上性格美女柴崎幸领衔主演，这几个响当当的名字本身就是影片最好的宣传词。&lt;/p&gt;
@@ -263,11 +270,11 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D&lt;/p&gt;
 &lt;p&gt;花絮：&lt;/p&gt;
 &lt;p&gt;本片中，有一场柴崎幸和一群黑衣人大战的精彩动作戏，出演黑衣人头领的其实是柴崎幸的功夫教练兼本片制作人西冬彦。&lt;/p&gt;
 &lt;p&gt;配合《少林少女》的上映，《少林足球》于2008年4月2日在日本推出了特别版DVD。&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://i3.6.cn/cvbnm/05/71/06/14a7a1ffbf705ec5da78591b0bb66dde.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://i3.6.cn/cvbnm/d0/dd/07/6c94a3cad78af6ce35375ff481ec83ff.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://i3.6.cn/cvbnm/b2/d2/de/ac17bfb75d6fc7a285a097c023b72bbc.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://i3.6.cn/cvbnm/13/13/e7/ee65d77d6763f91237a4d177ef3c913b.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://i3.6.cn/cvbnm/a1/27/ac/f4673748e89ae6853f02babaed22d5ce.jpg&#34; border=&#34;0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;【下载地址】&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;CD1&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;ftp://dygod1:dygod1@d062.dygod.cn:3009/%E5%B0%91%E6%9E%97%E5%B0%91%E5%A5%B3DVD%E4%B8%AD%E5%AD%97%EF%BC%88DYGOD%E9%A6%96%E5%8F%91%EF%BC%89/%5B%E7%94%B5%E5%BD%B1%E5%A4%A9%E5%A0%82www.dygod.cn%E9%A6%96%E5%8F%91%5D%E5%B0%91%E6%9E%97%E5%B0%91%E5%A5%B3DVD%E4%B8%AD%E5%AD%97cd1.rmvb&#34;&gt;ftp://dygod1:dygod1@d062.dygod.cn:3009/少林少女DVD中字（DYGOD首发）/[电影天堂www.dygod.cn首发]少林少女DVD中字cd1.rmvb&lt;/a&gt;&lt;/p&gt;
@@ -297,9 +304,9 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D&lt;/p&gt;
         <guid>https://lsvking.github.io/315/</guid>
         <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/315/ -&lt;p&gt;  在网易看到这篇帖子转一下。&lt;/p&gt;
 &lt;p&gt;在古巴出差，一个偶然的机会，居然发现古巴发行的国库券上，出现了长城皮卡的身影？！看来长城的皮卡在当地很有知名度啊。我询问了当地政府的有关官员，他们说长城在古巴一直很有市场，前一段时间古巴政府还采购了长城4500台皮卡，成为两国间最大的一笔汽车采购，这也属于社会主义国家之间的惺惺相惜吧。还有，我们熟悉的卡斯特罗老先生的专用车也是长城生产的加长车——哈弗派。在国外看到了中国的产品这么有知名度，高兴啊！！&lt;br&gt;
-&lt;a href=&#34;http://img1.bbs.163.com/20081021/auto_aaac/cu/cubatrip/e54ad216b74635c5f99c4e0530d33540.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;http://img2.bbs.163.com/20081021/auto_aaac/cu/cubatrip/993d1cf31a7aded73e45dd7a65180f1c.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;http://img3.bbs.163.com/20081021/auto_aaac/cu/cubatrip/685cbb07daca74347739ace96490e8cd.jpg&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://img1.bbs.163.com/20081021/auto_aaac/cu/cubatrip/e54ad216b74635c5f99c4e0530d33540.jpg&#34;&gt;&lt;img src=&#34;http://img1.bbs.163.com/20081021/auto_aaac/cu/cubatrip/e54ad216b74635c5f99c4e0530d33540.jpg&#34; width=&#34;600&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://img2.bbs.163.com/20081021/auto_aaac/cu/cubatrip/993d1cf31a7aded73e45dd7a65180f1c.jpg&#34;&gt;&lt;img src=&#34;http://img2.bbs.163.com/20081021/auto_aaac/cu/cubatrip/993d1cf31a7aded73e45dd7a65180f1c.jpg&#34; width=&#34;600&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://img3.bbs.163.com/20081021/auto_aaac/cu/cubatrip/685cbb07daca74347739ace96490e8cd.jpg&#34;&gt;&lt;img src=&#34;http://img3.bbs.163.com/20081021/auto_aaac/cu/cubatrip/685cbb07daca74347739ace96490e8cd.jpg&#34; width=&#34;600&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 - https://lsvking.github.io/315/ - This is a customized copyright.</description>
         </item>
     
@@ -328,8 +335,9 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D&lt;/p&gt;
 &lt;p&gt;问题：刘翔不能比赛的原因&lt;/p&gt;
 &lt;p&gt;单选题：&lt;/p&gt;
 &lt;p&gt;A&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-- https://lsvking.github.io/313/ - This is a customized copyright.</description>
+&lt;div&gt;
+  刘翔确实有伤，伤势使他退出比赛&lt;br /&gt; B 刘翔状态不好,以某种特殊方式退出比赛
+&lt;/div&gt;- https://lsvking.github.io/313/ - This is a customized copyright.</description>
         </item>
     
     
@@ -341,8 +349,9 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D&lt;/p&gt;
         
         <guid>https://lsvking.github.io/311/</guid>
         <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/311/ -&lt;p&gt;1、Google推出的3维聊天空间，可以设计自己的形象和房间&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-- https://lsvking.github.io/311/ - This is a customized copyright.</description>
+&lt;div id=&#34;message14069686&#34; class=&#34;t_msgfont&#34;&gt;
+  &lt;a href=&#34;http://www.lively.com/&#34; target=&#34;_blank&#34;&gt;http://www.lively.com/&lt;/a&gt;&lt;br /&gt; 2、可以在线听和免费下载最新《读者》《科幻世界》等著名杂志有声版，不用再买杂志&lt;br /&gt; &lt;a href=&#34;http://www.ilisten.cn/ZZ&#34; target=&#34;_blank&#34;&gt;http://www.ilisten.cn/ZZ&lt;/a&gt;&lt;br /&gt; 3、可以一键免费把自己博客印成书的网站&lt;br /&gt; &lt;a href=&#34;http://blog.mrprint.cn/&#34; target=&#34;_blank&#34;&gt;http://blog.mrprint.cn&lt;/a&gt;&lt;br /&gt; 4、可以修改每一本书内容的在线图书馆&lt;br /&gt; &lt;a href=&#34;http://www.bookgg.com/library.asp&#34; target=&#34;_blank&#34;&gt;http://www.bookgg.com/library.asp&lt;/a&gt;&lt;br /&gt; 5、一个比Google还强，每天看别人在搜索什么东西的搜索引擎&lt;br /&gt; &lt;a href=&#34;http://www.bearsou.com/&#34; target=&#34;_blank&#34;&gt;http://www.bearsou.com&lt;/a&gt;&lt;br /&gt; 6、每天可以免费买彩票，每天百万现金奖的精彩网站&lt;br /&gt; &lt;a href=&#34;http://www.lotcome.com/&#34; target=&#34;_blank&#34;&gt;http://www.lotcome.com&lt;/a&gt;&lt;br /&gt; 7、可以访问任何网页的Google隐藏入口&lt;br /&gt; &lt;a href=&#34;http://www.google.com/gwt/n&#34; target=&#34;_blank&#34;&gt;http://www.google.com/gwt/n&lt;/a&gt;&lt;br /&gt; 8、可以把你的网址缩短的网站&lt;br /&gt; &lt;a href=&#34;http://tinyurl.com/&#34; target=&#34;_blank&#34;&gt;http://tinyurl.com/&lt;/a&gt;&lt;br /&gt; 9、爱因斯坦写汉字&lt;br /&gt; &lt;a href=&#34;http://www.sbfun.org/einstein/index.php&#34; target=&#34;_blank&#34;&gt;http://www.sbfun.org/einstein/index.php&lt;/a&gt;&lt;br /&gt; 10、你可以在线做个以自己照片做硬币人物的硬币图片，好酷哦！！&lt;br /&gt; &lt;a href=&#34;http://onlinewahn.de/generator/m-maker.htm&#34; target=&#34;_blank&#34;&gt;http://onlinewahn.de/generator/m-maker.htm&lt;/a&gt;
+&lt;/div&gt;- https://lsvking.github.io/311/ - This is a customized copyright.</description>
         </item>
     
     
@@ -368,22 +377,22 @@ CCLH4-FHJ47-RJ4S9-A4SVF-JGL6D&lt;/p&gt;
 &lt;p&gt;十、与内容无关的图片请使用background。时刻记住表现与内容分离。&lt;/p&gt;
 &lt;p&gt;十一、定义颜色可以缩写#8899FF=#89F&lt;/p&gt;
 &lt;p&gt;十二、table在某些方面还是有用武之地的，在遇到内容为数据表格时，不要对它产生憎恨的心理。&lt;/p&gt;
-&lt;p&gt;十三、&lt;!-- raw HTML omitted --&gt;没有language这个属性，应该写成这样:&amp;lt;script type=”text/javascript”&amp;gt;&lt;/p&gt;
+&lt;p&gt;十三、&lt;script&gt;没有language这个属性，应该写成这样:&amp;lt;script type=”text/javascript”&amp;gt;&lt;/p&gt;
 &lt;p&gt;十四、完美的单象素外框线表格（在IE5、IE6、IE7及FF1.0.4以上中均可通过测试）&lt;/p&gt;
 &lt;p&gt;table{ border-collapse:collapse; }&lt;/p&gt;
 &lt;p&gt;td{ border:#000 solid 1px; }&lt;/p&gt;
 &lt;p&gt;您也可以参考：&lt;/p&gt;
 &lt;p&gt;与表格边框有关的CSS语法&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=394&#34;&gt;http://www.52css.com/article.asp?id=394&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=394&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=394&#34;&gt;http://www.52css.com/article.asp?id=394&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;CSS去除表格td默认间距及制作1px细线表格&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=593&#34;&gt;http://www.52css.com/article.asp?id=593&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=593&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=593&#34;&gt;http://www.52css.com/article.asp?id=593&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;实现符合Web标准的细线表格&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=676&#34;&gt;http://www.52css.com/article.asp?id=676&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=676&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.52css.com/article.asp?id=676&#34;&gt;http://www.52css.com/article.asp?id=676&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;十五、margin取负值可以在标签使用绝对定位的时候起到相对定位的作用，在页面居中显示时，使用绝对定位的层不适合使用left:XXpx这个属性。把这个层放到一个要相对定位的标签旁，然后使用margin的负值是个好方法。&lt;/p&gt;
 &lt;p&gt;十六、绝对定位时使用margin值定位可以达到相对于本身所在位置的定，这与top，left等属性相对与窗口边缘的定位不同。绝对定位的优势在于可以让其它元素忽略它的存在。&lt;/p&gt;
 &lt;p&gt;十七、如果文字过长,则将过长的部分变成省略号显示：IE5,FF无效，但可以隐藏，IE6有效&lt;/p&gt;
 &lt;p&gt;&amp;lt;DIV STYLE=”width:120px;height:50px;border:1px solid blue;overflow:hidden;text-overflow:ellipsis”&amp;gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;就是比如有一行文字，很长，表格内一行显示不下.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;NOBR&gt;就是比如有一行文字，很长，表格内一行显示不下.&lt;/NOBR&gt;&lt;/p&gt;
 &lt;p&gt;十八、在IE中可能由于注释带来的文字重复问题时可以把注释改为：&lt;/p&gt;
 &lt;p&gt;&amp;lt;!–[if !IE]&amp;gt;Put your commentary in here…&amp;lt;![endif]–&amp;gt;&lt;/p&gt;
 &lt;p&gt;十九、如何用CSS调用外部字体&lt;/p&gt;

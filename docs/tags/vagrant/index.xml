@@ -15,7 +15,7 @@
       
       <guid>https://lsvking.github.io/1134/</guid>
       <description>在使用vagrant 打包我本地的虚拟机的时候,提示 “VM not created. Moving on…”，折腾半天发现原来是名字大小写弄错了。。
-
+vagrant package --base ubuntu --output ubuntu.box ubuntu: VM not created. Moving on...  
 名称要完全一样，大小写也要一样哦。折腾了半天，也是醉了。。</description>
     </item>
     

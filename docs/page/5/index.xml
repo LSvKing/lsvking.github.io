@@ -26,9 +26,11 @@
 &lt;p&gt;摘要&lt;/p&gt;
 &lt;p&gt;此安全更新可解决 Windows 域名系统 (DNS) 中两个秘密报告的漏洞，这些漏洞可允许欺骗。 DNS 客户端和 DNS 服务器中均存在这些漏洞，这些漏洞可能会允许远程攻击者将 Internet 上针对系统的网络通信重定向至攻击者自己的系统。&lt;/p&gt;
 &lt;p&gt;打上这个补丁953230（KB951748）后TCP/IP连接数会恢复到原来的限制10 ，原来的关于破解TCP/IP的都失效了。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-- https://lsvking.github.io/305/ - This is a customized copyright.</description>
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;a href=&#34;http://lsvking.cn/wp-content/uploads/2008/07/sp3-tcpipe5b9b6e58f91e8bf9ee68ea5e695b0e4bfaee694b9.rar&#34;&gt;这里下载：SP3 TCPIP并发连接数修改&lt;/a&gt;
+&lt;/p&gt;
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;pre lang=’html‘&gt; 文件: SP3 TCPIP并发连接数修改.exe 大小: 326656 字节 MD5: CD096C24DC2AA10CC004022C4FD04E82 SHA1: EEB6B8558771CBECAE9B615FCE9B3F1CD3969D97 CRC32: 6A8FF18C &lt;/pre&gt;- https://lsvking.github.io/305/ - This is a customized copyright.</description>
         </item>
     
     
@@ -39,7 +41,7 @@
         <pubDate>Mon, 28 Jul 2008 15:45:57 +0000</pubDate>
         
         <guid>https://lsvking.github.io/297/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/297/ -&lt;p&gt;&lt;!-- raw HTML omitted --&gt;SourceForge&lt;!-- raw HTML omitted --&gt; 俗称SF，大家经常去的地方，有很多的软件项目都托管在这个网站，不过我一直记不住这个域名，你也记不住，没关系 &lt;!-- raw HTML omitted --&gt;SF.Net&lt;!-- raw HTML omitted --&gt; 你总记住了吧。&lt;/p&gt;
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/297/ -&lt;p&gt;&lt;a href=&#34;http://sourceforge.net/&#34; target=&#34;_blank&#34;&gt;SourceForge&lt;/a&gt; 俗称SF，大家经常去的地方，有很多的软件项目都托管在这个网站，不过我一直记不住这个域名，你也记不住，没关系 &lt;a href=&#34;http://SF.Net&#34; target=&#34;_blank&#34;&gt;SF.Net&lt;/a&gt; 你总记住了吧。&lt;/p&gt;
 &lt;p&gt;前些日子被封了，造成不少麻烦，今天玩玩PHPBB3，偶然点了一个链接，居然打开了，再看自己也没挂代理，让别人看了下，也开了，HOHo 解封了。&lt;/p&gt;
 - https://lsvking.github.io/297/ - This is a customized copyright.</description>
         </item>
@@ -52,37 +54,99 @@
         <pubDate>Mon, 28 Jul 2008 14:02:21 +0000</pubDate>
         
         <guid>https://lsvking.github.io/300/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/300/ -&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/300/ -&lt;div id=&#34;Published By Juziyue:[4]1_690157F66711400EBF06BBEE787EC84A_408E8526B2324CADA8A59CF9C26490E7&#34;&gt;
+  &lt;div&gt;
+    原文：&lt;a href=&#34;http://woork.blogspot.com/2008/03/write-well-structured-css-file-without.html&#34; target=&#34;_blank&#34;&gt;Write a well structured CSS file without becoming crazy&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    译文：&lt;a href=&#34;http://hi.baidu.com/oceaniver/blog/item/ccc2282e4a1b02554fc22659.html&#34; target=&#34;_blank&#34;&gt;编写具有良好结构的CSS文件&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;hr size=&#34;1&#34; noshade=&#34;noshade&#34; /&gt;
+  这是一篇关于如何编写具有良好结构的CSS文件的帖子。我已经讲过
+  &lt;a href=&#34;http://hi.baidu.com/oceaniver/blog/item/684bd609a5f80587d1581b5b.html&#34; target=&#34;_blank&#34;&gt;CSS文件的代码可读性&lt;/a&gt;，但在讨论之后，一些更具体的要求被提出（主要是关于一些读者在管理具有大量布局元素CSS文件时的困难之处），所以我决定在这些案例中说明我自己的开发流程。&lt;/p&gt; 
+  &lt;p&gt;
+    以我的经验，项目流程中如果缺乏&amp;#8221;顺序&amp;#8221;或一个关于项目的清晰视图是非常不利的而且你还得冒风险去添加，更改，删除class及其属性，如此在你的最终产品中得到的将只有混乱的代码和大量未使用的元素。
+  &lt;/p&gt;
+  &lt;p&gt;
+    我建议在你直接编写CSS代码之前，先把你的网站的所有区块都在草稿里画出来。然后依照下面的简单规制优化你的工作：
+  &lt;/p&gt;
+  &lt;p&gt;
+    1：简洁的
+  &lt;/p&gt;
+  &lt;p&gt;
+    2：以&amp;#8221;优雅的代码&amp;#8221;为导向
+  &lt;/p&gt;
+  &lt;p&gt;
+    3：有条理的
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;strong&gt;简洁的&lt;br /&gt; &lt;/strong&gt;避免使用任何非必需的元素。两个&lt;em&gt;&lt;div&gt;&lt;/em&gt;层就可以达到目的那就不要用六个。如果你觉得得用很复杂的CSS才能完成一个特定的设计结构，那你可能在某些地方犯了错误。请尝试用其他的方式来实现它。通常情况下事情都是很简单的，复杂的是我们自己。
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;strong&gt;以&amp;#8221;优雅的代码&amp;#8221;为导向&lt;/strong&gt;&lt;br /&gt; 缩进你的代码以&lt;em&gt;强调依赖关系&lt;/em&gt;的CSS元素，使用空白和注释分割不同逻辑的代码块。使用如下所示的简洁的，行内的注释：
+  &lt;/p&gt;
+  &lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://www.cnblogs.com/images/cnblogs_com/dudu/060808_0946_CSS1.png&#34; alt=&#34;&#34; /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    不用写一本&amp;#8221;书&amp;#8221;来说明一个div ID为何叫&lt;em&gt;#column-left&lt;/em&gt;。只要你选对名字，就足够清晰的说明了。（译注：此处取名为&lt;em&gt;#column-leftqian&lt;/em&gt;欠妥，用#content-column会更好些，如此就不必担心因布局的变动而产生歧义，比如把当需要把&lt;em&gt;#column-left&lt;/em&gt; 列移到右边时）
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;strong&gt;有条理的&lt;/strong&gt;&lt;br /&gt; 在所有项目中均用同样的名字标示相同的区块（&lt;em&gt;#logo&lt;/em&gt;, &lt;em&gt;#navbar&lt;/em&gt;, &lt;em&gt;#left-column&lt;/em&gt;, &lt;em&gt;#footer&lt;/em&gt;&amp;#8230;）。给不同类型的类分组并按字母循序排列CSS属性可以提高代码的可读性。一旦你在项目中发现正确的方法，就应该在所有的新项目中重复使用。这样，代码会变得越来越熟悉，越来越容易管理，而你也会写得越来越快。
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;strong&gt;在开始编码之前问问你自己：我要做什么？&lt;br /&gt; &lt;/strong&gt;在打开你最喜欢的编辑软件之前你必须先想想这个好问题。现在你只需要做的就是用铅笔和橡皮在纸上画出整个网站的主要区块：
+  &lt;/p&gt;
+  &lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://www.cnblogs.com/images/cnblogs_com/dudu/060808_0946_CSS2.png&#34; alt=&#34;&#34; /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    在这一流程，你不需要在你的手写&amp;#8221;草稿&amp;#8221;上增加太多的细节：每个标签的大小（width，以pixel或percentage的形式）,内边距, 边框和外边距就足够了。
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;strong&gt;让我们开始吧，但请先重新设置CSS的浏览器默认样式&lt;br /&gt; &lt;/strong&gt;这个操作将重新设置HTML标准标签(h1, p, ul, li&amp;#8230;)的浏览器默认样式。最近我读了很多关于这个主题的有趣的帖子。我不知道你如何。。。但在我的项目中一般需要重新设置的是：
+  &lt;/p&gt;
+  &lt;p&gt;
+    body, h1, h2, h3, p, ul, li, form
+  &lt;/p&gt;
+  &lt;p&gt;
+    没有其他的了。表格标签(&lt;em&gt;&lt;table&gt;&lt;/em&gt;, &lt;em&gt;&lt;tr&gt;&lt;/em&gt; and &lt;em&gt;&lt;td&gt;&lt;/em&gt;)很少用到。在任何情况下，你可以通过下面的链接了解完整的CSS重设技术：
+  &lt;/p&gt;
+  &lt;p&gt;
+    &amp;#8211; &lt;a href=&#34;http://developer.yahoo.com/yui/reset/&#34;&gt;Yahoo! UI Library: Reset CSS&lt;/a&gt;&lt;br /&gt; &amp;#8211; &lt;a href=&#34;http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/&#34;&gt;Eric&amp;#8217;s Archived Thoughts: Reset Reloaded&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;strong&gt;开始编写CSS代码&lt;/strong&gt;&lt;br /&gt; 现在，你已经准备好写代码了。我编写的具有代表性的代码就如下所示：
+  &lt;/p&gt;
+  &lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://www.cnblogs.com/images/cnblogs_com/dudu/060808_0946_CSS3.png&#34; alt=&#34;&#34; /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    好看，优雅和简洁 :)因为代码也是有一定的魅力的！
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;strong&gt;页面结构&lt;/strong&gt;&lt;br /&gt; OK，现在你可以开始设计网站的结构了。如果网站的布局草稿已经准备好，那是可以很快就完成。不管你选择那一种布局类型（流式或固定宽度），我建议你定义一个.&lt;em&gt;container 类&lt;/em&gt;，并让它包含具有相同的宽度的CSS标签，在这种情况下，如果你想改变页面的宽度，只需修改.&lt;em&gt;container &lt;/em&gt;类的宽度就可以了，它所包含的元素的宽度会自动适应。
+  &lt;/p&gt;
+  &lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://www.cnblogs.com/images/cnblogs_com/dudu/060808_0946_CSS4.png&#34; alt=&#34;&#34; /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    这是我的 &lt;a href=&#34;http://woork.blogspot.com/2008/03/how-to-design-sexy-header-for-your-site.html&#34;&gt;welcome section&lt;/a&gt; 的一个例子(导航栏下的绿色部分）:
+  &lt;/p&gt;
+  &lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://www.cnblogs.com/images/cnblogs_com/dudu/060808_0946_CSS5.png&#34; alt=&#34;&#34; /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &amp;#8230;而下面这些CSS代码是我的左列（包含帖子的主体）和边栏的：
+  &lt;/p&gt;
+  &lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://www.cnblogs.com/images/cnblogs_com/dudu/060808_0946_CSS6.png&#34; alt=&#34;&#34; /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;strong&gt;HTML 代码&lt;/strong&gt;&lt;br /&gt; 一旦站点的主要区块已经用CSS定义完毕，你就可以开始编写HTML代码。那没有什么复杂的，只需按正确的顺序添加正确的DIV层的ID即可：
+  &lt;/p&gt;&lt;pre lang=&#34;html&#39;&gt; 
+  &lt;div class=&#34;container&#34;&gt;
+    &lt;!-- Header --&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;logo&amp;quot;&amp;gt;
 &amp;lt;/div&amp;gt;
 
@@ -105,15 +169,29 @@
 &amp;lt;div id=&amp;quot;footer&amp;quot;&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-- https://lsvking.github.io/300/ - This is a customized copyright.</description>
+  &lt;/div&gt;&lt;/pre&gt; 
+  &lt;p&gt;
+    如果在浏览器上测试正常，你就可以逐步为各个区块（navigation, sidebar, footer&amp;#8230;）添加新的具体的CSS代码，即按结构的方式完成你的CSS并整合HTML代码。缩进所有依赖于同一个类的代码：
+  &lt;/p&gt;
+  &lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://www.cnblogs.com/images/cnblogs_com/dudu/060808_0946_CSS7.png&#34; alt=&#34;&#34; /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    当你不得不在你的CSS代码中寻找一个具体的标签时这点小聪明将起到意想不到的效果。
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;strong&gt;自定义类放在最后&lt;br /&gt; &lt;/strong&gt;通常，如果有些类多个区块都会用到，那我会以这样的方式把它们添加到CSS文件的末尾：
+  &lt;/p&gt;
+  &lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://www.cnblogs.com/images/cnblogs_com/dudu/060808_0946_CSS8.png&#34; alt=&#34;&#34; /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    我以能很快认出其主要属性的语义名字来命名每个类
+  &lt;/p&gt;
+  &lt;p&gt;
+    我希望这些小窍门能简化你编写和管理CSS代码的方式。
+  &lt;/p&gt;
+&lt;/div&gt;- https://lsvking.github.io/300/ - This is a customized copyright.</description>
         </item>
     
     
@@ -148,19 +226,45 @@
         <pubDate>Tue, 22 Jul 2008 13:00:18 +0000</pubDate>
         
         <guid>https://lsvking.github.io/283/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/283/ -&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-- https://lsvking.github.io/283/ - This is a customized copyright.</description>
+        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/283/ -&lt;div id=&#34;Published By Juziyue:[4]1_A58B526FD28B4A2FB81A900DDB6B45F8_0A8DB854012046C1A14FD0BBC1385213&#34;&gt;
+  &lt;div&gt;
+    此方法来&lt;a href=&#34;http://blog.2i2j.com/2008/07/add-colorful-tags-cloud-for-simple-tags.html&#34;&gt;自偶爱偶家&lt;/a&gt;。
+  &lt;/div&gt;
+  &lt;div&gt;
+    言归正传， 首先我的修改是针对 simple tags 这个插件的， 其他的我就不说了， 你可以参照这里的方法自己研究。
+  &lt;/div&gt;
+  &lt;div&gt;
+    1、在simple-tags.client.php文件中查找该语句
+  &lt;/div&gt;
+  &lt;pre lang=&#34;html&#34;&gt;function getColorByScale($scale_color, $min_color, $max_color)&lt;/pre&gt;
+  &lt;div&gt;
+    2、注释掉上述函数中的以下语句（其实不注释掉也是无所谓的）
+  &lt;/div&gt;
+  &lt;pre lang=&#34;html&#34;&gt;    $scale_color = $scale_color / 100;
+$minr = hexdec(substr($min_color, 1, 2));
+$ming = hexdec(substr($min_color, 3, 2));
+$minb = hexdec(substr($min_color, 5, 2));
+$maxr = hexdec(substr($max_color, 1, 2));
+$maxg = hexdec(substr($max_color, 3, 2));
+$maxb = hexdec(substr($max_color, 5, 2));
+$r = dechex(intval((($maxr - $minr) * $scale_color) + $minr));
+$g = dechex(intval((($maxg - $ming) * $scale_color) + $ming));
+$b = dechex(intval((($maxb - $minb) * $scale_color) + $minb));&lt;/pre&gt;
+  &lt;div&gt;
+    3、 在上述被注释掉的语句后增加如下语句（如果没有注释掉就必须加在后面， 否则无效）
+  &lt;/div&gt;
+  &lt;pre lang=&#34;html&#34;&gt;//mod by hongfengye start
+$r = dechex(rand(0,255));
+$g = dechex(rand(0,196));
+$b = dechex(rand(0,255));
+//mod by hongfengye end&lt;/pre&gt;
+  &lt;div&gt;
+    是的， 就是这么简单， 现在你应该就可以发现你的标签云(tags cloud)已经是彩色(colorful)的了。 效果图如下：
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;a href=&#34;0&#34;&gt;&lt;img src=&#34;http://lsvking.github.io/wp-content/uploads/2008/07/a409af749acac6b825ab8cceb9b6998c4ce8cc0c1.png&#34; alt=&#34;&#34; width=&#34;207&#34; height=&#34;357&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;- https://lsvking.github.io/283/ - This is a customized copyright.</description>
         </item>
     
     
@@ -172,8 +276,11 @@
         
         <guid>https://lsvking.github.io/262/</guid>
         <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/262/ -&lt;p&gt;在本博客右边栏最上边的那个每日一句，当鼠标划过小喇叭还会真人发音，这个其实是用了&lt;a href=&#34;http://dict.cn&#34;&gt;dict.cn&lt;/a&gt;提供的一个小工具，应用起来很简单，将&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;pre lang=&#34;html&#34;&gt;&lt;span id=&#34;dict_daily&#34;&gt;
+&lt;a href=&#34;http://dict.cn/&#34; target=&#34;_blank&#34;&gt;Dict.CN 在线词典, 英语学习, 在线翻译&lt;/a&gt;
+&lt;/span&gt;
+
+&lt;/pre&gt;
 &lt;p&gt;这段代码放到Widgets，文本块里就行了！&lt;/p&gt;
 - https://lsvking.github.io/262/ - This is a customized copyright.</description>
         </item>
@@ -215,7 +322,13 @@
 &lt;p&gt;个人角度来看，这款插件在很大程度上解决了因为 WordPress 版本更新的问题，而且最大限度的避免了数据和文件的丢失(其备份的过程和 WordPress Database Backup 插件基本类似)。由于使用 FTP 来进行更新操作，所以更新完成的速度也是很快的(我的BLOG更新大约前后用了不到一分钟)，基本不会因为更新而导致你的站点无法访问。&lt;/p&gt;
 &lt;p&gt;下载地址:&lt;a href=&#34;http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/&#34; title=&#34;http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/&#34;&gt;http://wordpress.org/extend/plugins/wordpress-automatic-upgrade/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本站下载:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;wlWriterSmartContent&#34; id=&#34;scid:8eb9d37f-1541-4f29-b6f4-1eea890d4876:387820d1-de5f-450f-8ced-dd5c5447f104&#34; style=&#34;padding-right: 0px; display: inline; padding-left: 0px; padding-bottom: 0px; margin: 0px; padding-top: 0px&#34;&gt;
+  &lt;p&gt;
+    &lt;div&gt;
+      &lt;a href=&#34;http://lsvking.cn/wp-content/uploads/2008/07/wordpress-automatic-upgrade12021.zip&#34; target=&#34;_self&#34;&gt;wordpress-automatic-upgrade.1.2.0.2.zip&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
 - https://lsvking.github.io/229/ - This is a customized copyright.</description>
         </item>
     

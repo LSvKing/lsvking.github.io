@@ -22,7 +22,8 @@
 通过调试了解其使用方法
 我调试的方法是：
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&gt;更新栏目HTML–&gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。
-我调试【Pagelist 标记】的具体代码如下：" />
+我调试【Pagelist 标记】的具体代码如下：
+ {dede:list col=&#8217;1&#8242; row=&#8217;3&#8242; titlelen=&#8217;20&#8217; infolen=&#8217;100&#8242; imgwidth=&#8217;120&#8242; imgheight=&#8217;80&#8217; pagesize=&#8217;3&#8242; typeid=&#8217;95&#8217;} \[field:imglink/\] \[field:textlink/\] [field:info/] {/dede:list}  {dede:pagelist listsize=&#8217;3&#8242; listitem=&#8217;index pre pageno next end option&#8217;/} 得到如下返回数据： [][1] " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lsvking.github.io/154/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2008-03-22T20:44:49&#43;00:00" />
@@ -40,7 +41,8 @@
 通过调试了解其使用方法
 我调试的方法是：
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&gt;更新栏目HTML–&gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。
-我调试【Pagelist 标记】的具体代码如下："/>
+我调试【Pagelist 标记】的具体代码如下：
+ {dede:list col=&#8217;1&#8242; row=&#8217;3&#8242; titlelen=&#8217;20&#8217; infolen=&#8217;100&#8242; imgwidth=&#8217;120&#8242; imgheight=&#8217;80&#8217; pagesize=&#8217;3&#8242; typeid=&#8217;95&#8217;} \[field:imglink/\] \[field:textlink/\] [field:info/] {/dede:list}  {dede:pagelist listsize=&#8217;3&#8242; listitem=&#8217;index pre pageno next end option&#8217;/} 得到如下返回数据： [][1] "/>
 
 
 
@@ -354,7 +356,15 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 我调试的方法是：<br>
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&gt;更新栏目HTML–&gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。<br>
 我调试【Pagelist 标记】的具体代码如下：</p>
-<!-- raw HTML omitted -->
+<ul>   
+{dede:list col=&#8217;1&#8242; row=&#8217;3&#8242; titlelen=&#8217;20&#8217;   
+infolen=&#8217;100&#8242; imgwidth=&#8217;120&#8242; imgheight=&#8217;80&#8217; pagesize=&#8217;3&#8242; typeid=&#8217;95&#8217;}   
+<li>\[field:imglink/\] \[field:textlink/\] <font style="color:gray;">[field:info/]</font></li>   
+{/dede:list}   
+</ul>   
+{dede:pagelist listsize=&#8217;3&#8242; listitem=&#8217;index pre pageno next end option&#8217;/}   
+得到如下返回数据：   
+[<img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="362" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmspagelist-1230cclip-image001-thumb.gif" width="624" border="0" />][1]
 
                     
                     <HR width="100%" id="EOF">

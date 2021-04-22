@@ -18,8 +18,10 @@
 
 <meta property="og:title" content="HTML5的结构和语义——内嵌媒体（五）" />
 <meta property="og:description" content="视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用 Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影 “a Sora in Prospect Park”：
- 对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
- autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的 John F. Kennedy 的就职演说。" />
+1: &lt;video src=&#34;http://www.cafeaulait.org/birds/sora.mov&#34; /&gt;
+   对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
+1: &lt;audio src=&#34;spacemusic.mp3&#34; autoplay=&#34;autoplay&#34; loop=&#34;20000&#34; /&gt;
+   autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的 John F." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lsvking.github.io/106/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2008-03-09T14:09:35&#43;00:00" />
@@ -33,8 +35,10 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="HTML5的结构和语义——内嵌媒体（五）"/>
 <meta name="twitter:description" content="视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用 Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影 “a Sora in Prospect Park”：
- 对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
- autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的 John F. Kennedy 的就职演说。"/>
+1: &lt;video src=&#34;http://www.cafeaulait.org/birds/sora.mov&#34; /&gt;
+   对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和 MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了 BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：
+1: &lt;audio src=&#34;spacemusic.mp3&#34; autoplay=&#34;autoplay&#34; loop=&#34;20000&#34; /&gt;
+   autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的 John F."/>
 
 
 
@@ -337,14 +341,24 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 <div class="post-body" v-pre>
                 
                     <p>  视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用  Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影  “a Sora in Prospect Park”：</p>
-<!-- raw HTML omitted -->
+<div style="border-right: gray 1px solid; padding-right: 4px; border-top: gray 1px solid; padding-left: 4px; font-size: 8pt; padding-bottom: 4px; margin: 20px 0px 10px; overflow: auto; border-left: gray 1px solid; width: 97.5%; cursor: text; line-height: 12pt; padding-top: 4px; border-bottom: gray 1px solid; font-family: consolas, &#39;Courier New&#39;, courier, monospace; background-color: #f4f4f4; max-height: 200px">
+  <div style="padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &#39;Courier New&#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none">
+    <pre style="padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &#39;Courier New&#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none"><span style="color: #606060">   1:</span> <span style="color: #0000ff">&lt;</span><span style="color: #800000">video</span> <span style="color: #ff0000">src</span><span style="color: #0000ff">="http://www.cafeaulait.org/birds/sora.mov"</span> <span style="color: #0000ff">/&gt;</span></pre></p>
+  </div>
+</div>
 <p>    对于以哪种格式和解码器作为首选，仍然有争议。可能会强力推荐或要求使用 Ogg Theora。还可以可选地支持 QuickTime 等专有格式和  MPEG-4 等受专利限制的格式。实际使用的格式很可能由市场决定，就像是 GIF、JPEG 和 PNG 格式那样（这些格式通过市场竞争压倒了  BMP、X-Bitmap 和 JPEG 2000 等竞争者，成为 img 元素的首选格式）。  <br>
 还提议引入 audio 元素。例如，可以使用以下代码给 Web 页面加上背景音乐：</p>
-<!-- raw HTML omitted -->
+<div style="border-right: gray 1px solid; padding-right: 4px; border-top: gray 1px solid; padding-left: 4px; font-size: 8pt; padding-bottom: 4px; margin: 20px 0px 10px; overflow: auto; border-left: gray 1px solid; width: 97.5%; cursor: text; line-height: 12pt; padding-top: 4px; border-bottom: gray 1px solid; font-family: consolas, &#39;Courier New&#39;, courier, monospace; background-color: #f4f4f4; max-height: 200px">
+  <div style="padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &#39;Courier New&#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none">
+    <pre style="padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &#39;Courier New&#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none"><span style="color: #606060">   1:</span> <span style="color: #0000ff">&lt;</span><span style="color: #800000">audio</span> <span style="color: #ff0000">src</span><span style="color: #0000ff">="spacemusic.mp3"</span>   <span style="color: #ff0000">autoplay</span><span style="color: #0000ff">="autoplay"</span> <span style="color: #ff0000">loop</span><span style="color: #0000ff">="20000"</span> <span style="color: #0000ff">/&gt;</span></pre></p>
+  </div>
+</div>
 <p>  autoplay 属性指示浏览器在装载页面后立即开始播放，而不等待明确的用户请求。音频循环播放 20,000 次，然后停止（或者在用户关闭窗口或转到另一个页面时停止）。当然，浏览器可以（而且应该）允许用户关闭内嵌的媒体，不应该只按页面作者的要求去做。  <br>
 浏览器必须支持 WAV 格式，还可以支持 MP3 等其他格式。  <br>
 因为老式浏览器不支持这些元素，而且它们对于盲人和聋人用户来说没有意义，所以 audio 和 video 元素可以包含额外的标记，用来描述音频和视频的内容。这对搜索引擎也有帮助。在理想情况下，这些标记是音频和视频内容的完整文字版本。例如，代码8 显示 用 HTML 5 编写的  John F. Kennedy 的就职演说。</p>
-<!-- raw HTML omitted -->
+<div style="border-right: gray 1px solid; padding-right: 4px; border-top: gray 1px solid; padding-left: 4px; font-size: 8pt; padding-bottom: 4px; margin: 20px 0px 10px; overflow: auto; border-left: gray 1px solid; width: 97.5%; cursor: text; line-height: 12pt; padding-top: 4px; border-bottom: gray 1px solid; font-family: consolas, &#39;Courier New&#39;, courier, monospace; background-color: #f4f4f4; max-height: 200px">
+  <div style="padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &#39;Courier New&#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none">
+    <pre style="padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &#39;Courier New&#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none"><span style="color: #606060">   1:</span> <span style="color: #0000ff">&lt;</span><span style="color: #800000">audio</span> <span style="color: #ff0000">src</span><span style="color: #0000ff">="kennedyinauguraladdrees.mp3"</span><span style="color: #0000ff">&gt;</span></pre>
 <pre><code>&lt;pre style=&quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;#39;Courier New&amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&quot;&gt;&lt;span style=&quot;color: #606060&quot;&gt;   2:&lt;/span&gt;     &lt;span style=&quot;color: #0000ff&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot;color: #800000&quot;&gt;p&lt;/span&gt;&lt;span style=&quot;color: #0000ff&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
 
 &lt;pre style=&quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;#39;Courier New&amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&quot;&gt;&lt;span style=&quot;color: #606060&quot;&gt;   3:&lt;/span&gt;     Vice President Johnson, Mr. Speaker, Mr. Chief Justice,&lt;/pre&gt;
@@ -401,7 +415,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &lt;pre style=&quot;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;#39;Courier New&amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&quot;&gt;&lt;span style=&quot;color: #606060&quot;&gt;  29:&lt;/span&gt;     &lt;span style=&quot;color: #0000ff&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&quot;color: #800000&quot;&gt;audio&lt;/span&gt;&lt;span style=&quot;color: #0000ff&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;&lt;/p&gt;
 </code></pre>
-<!-- raw HTML omitted -->
+  </div>
+</div>
 <p> </p>
 <p>转载自:<a href="http://52CSS.com">52CSS</a></p>
 

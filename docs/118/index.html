@@ -32,13 +32,20 @@ index_article.htm、list_article.htm、article_article.htm等类似的模板文�
 用法一：
 这种用法，主要是从数据库获取相关的数据，特别是系统变量的数据。
 我调试【Arclist 标记】的具体代码如下：
-调用position标记,得到:栏目一 &gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}插件路径：{dede:field name=’phpurl’/}模板路径：{dede:field name=’templeturl’/}版权信息：{dede:field name=’powerby’/}主页路径：{dede:field name=’indexurl’/}主页名称：{dede:field name=’indexname’/}得到如下返回数据：
+调用position标记,得到:栏目一 &gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}
+插件路径：{dede:field name=’phpurl’/}
+模板路径：{dede:field name=’templeturl’/}
+版权信息：{dede:field name=’powerby’/}
+主页路径：{dede:field name=’indexurl’/}
+主页名称：{dede:field name=’indexname’/}
+得到如下返回数据：
 
 请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。
 用法二：
 这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，
 我调试【Arclist 标记】的具体代码如下：
-注意：本页面的文字和链接都是经过dede.css处理的织梦论坛得到如下返回数据：" />
+注意：本页面的文字和链接都是经过dede.css处理的
+织梦论坛 得到如下返回数据：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lsvking.github.io/118/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2008-03-22T17:54:06&#43;00:00" />
@@ -66,13 +73,20 @@ index_article.htm、list_article.htm、article_article.htm等类似的模板文�
 用法一：
 这种用法，主要是从数据库获取相关的数据，特别是系统变量的数据。
 我调试【Arclist 标记】的具体代码如下：
-调用position标记,得到:栏目一 &gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}插件路径：{dede:field name=’phpurl’/}模板路径：{dede:field name=’templeturl’/}版权信息：{dede:field name=’powerby’/}主页路径：{dede:field name=’indexurl’/}主页名称：{dede:field name=’indexname’/}得到如下返回数据：
+调用position标记,得到:栏目一 &gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}
+插件路径：{dede:field name=’phpurl’/}
+模板路径：{dede:field name=’templeturl’/}
+版权信息：{dede:field name=’powerby’/}
+主页路径：{dede:field name=’indexurl’/}
+主页名称：{dede:field name=’indexname’/}
+得到如下返回数据：
 
 请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。
 用法二：
 这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，
 我调试【Arclist 标记】的具体代码如下：
-注意：本页面的文字和链接都是经过dede.css处理的织梦论坛得到如下返回数据："/>
+注意：本页面的文字和链接都是经过dede.css处理的
+织梦论坛 得到如下返回数据："/>
 
 
 
@@ -395,23 +409,23 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 用法一：<br>
 这种用法，主要是从数据库获取相关的数据，特别是系统变量的数据。<br>
 我调试【Arclist 标记】的具体代码如下：<br>
-<!-- raw HTML omitted -->调用position标记,得到:栏目一 &gt; 栏目二” 这样形式的链接：<!-- raw HTML omitted -->{dede:field name=’position’/}<!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->插件路径：<!-- raw HTML omitted -->{dede:field name=’phpurl’/}<!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->模板路径：<!-- raw HTML omitted -->{dede:field name=’templeturl’/}<!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->版权信息：<!-- raw HTML omitted -->{dede:field name=’powerby’/}<!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->主页路径：<!-- raw HTML omitted -->{dede:field name=’indexurl’/}<!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->主页名称：<!-- raw HTML omitted -->{dede:field name=’indexname’/}<!-- raw HTML omitted --><br>
+<font color="red">调用position标记,得到:栏目一 &gt; 栏目二” 这样形式的链接：</font>{dede:field name=’position’/}<br/><br>
+<font color="red">插件路径：</font>{dede:field name=’phpurl’/}<br/><br>
+<font color="red">模板路径：</font>{dede:field name=’templeturl’/}<br/><br>
+<font color="red">版权信息：</font>{dede:field name=’powerby’/}<br/><br>
+<font color="red">主页路径：</font>{dede:field name=’indexurl’/}<br/><br>
+<font color="red">主页名称：</font>{dede:field name=’indexname’/}<br/><br>
 得到如下返回数据：<br>
-<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-2.gif"><!-- raw HTML omitted --></a><br>
+<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-2.gif"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="231" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image001-thumb.gif" width="389" border="0" /></a><br>
 请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。<br>
 用法二：<br>
 这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，<br>
 我调试【Arclist 标记】的具体代码如下：<br>
-  <!-- raw HTML omitted --><br>
-注意：本页面的文字和链接都是经过dede.css处理的<!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->织梦论坛<!-- raw HTML omitted --> <!-- raw HTML omitted --><br>
+  <link href="{dede:field name=&#8217;templeturl&#8217;/}/style/dede.css" rel="stylesheet" type="text/css" /><br>
+注意：本页面的文字和链接都是经过dede.css处理的<br /><br>
+<a href="http://bbs.dedecms.com/">织梦论坛</a> <br /><br>
 得到如下返回数据：<br>
-<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif"><!-- raw HTML omitted --></a></p>
+<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-2.gif"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="94" alt="clip_image002" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsfield-faffclip-image002-thumb.gif" width="289" border="0" /></a></p>
 
                     
                     <HR width="100%" id="EOF">

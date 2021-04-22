@@ -41,7 +41,8 @@ imgwidth=’100′ imgheight=’80’}
 我调试【imglist标记】的具体代码如下：
 {dede:imglist typeid=” row=’2′ col=’1’ titlelen=’20’ infolen=”
 imgwidth=’100′ imgheight=’80’}
-[field:imglink/] [field:textlink/]{/dede:imglist}
+[field:imglink/] [field:textlink/]
+{/dede:imglist}
 得到如下返回数据：
 
 如上例，其它的别名标记，朋友们可以举一反三，融会贯通！" />
@@ -81,7 +82,8 @@ imgwidth=’100′ imgheight=’80’}
 我调试【imglist标记】的具体代码如下：
 {dede:imglist typeid=” row=’2′ col=’1’ titlelen=’20’ infolen=”
 imgwidth=’100′ imgheight=’80’}
-[field:imglink/] [field:textlink/]{/dede:imglist}
+[field:imglink/] [field:textlink/]
+{/dede:imglist}
 得到如下返回数据：
 
 如上例，其它的别名标记，朋友们可以举一反三，融会贯通！"/>
@@ -407,30 +409,30 @@ index_识别ID.htm模板、list_识别ID.htm模板、article_识别ID.htm模板�
 我调试【Arclist 标记】的具体代码如下：<br>
 {dede:arclist typeid=” row=’1’  titlelen=’20’ infolen=”<br>
 imgwidth=’100′ imgheight=’80’}<br>
-<!-- raw HTML omitted -->文章ID:<!-- raw HTML omitted -->[field:ID/] <!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章标题:<!-- raw HTML omitted -->[field:title/] <!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章短标题:<!-- raw HTML omitted -->[field:shorttitle/] <!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章标题的文字链接:<!-- raw HTML omitted -->[field:textlink/] <!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章作者:<!-- raw HTML omitted -->[field:writer/] <!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章发表日期:<!-- raw HTML omitted -->[field:stime/] <!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章所属栏目的目录:<!-- raw HTML omitted -->[field:typedir/] <!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章所属栏目的名称:<!-- raw HTML omitted -->[field:typename/] <!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章所属栏目的文字链接:<!-- raw HTML omitted -->[field:typelink/] <!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章的图片链接:<!-- raw HTML omitted -->[field:imglink/] <!-- raw HTML omitted --><br>
-<!-- raw HTML omitted -->文章的缩略图:<!-- raw HTML omitted -->[field:image/] <!-- raw HTML omitted --><br>
+<font color="red">文章ID:</font>[field:ID/] <br /><br>
+<font color="red">文章标题:</font>[field:title/] <br /><br>
+<font color="red">文章短标题:</font>[field:shorttitle/] <br /><br>
+<font color="red">文章标题的文字链接:</font>[field:textlink/] <br /><br>
+<font color="red">文章作者:</font>[field:writer/] <br /><br>
+<font color="red">文章发表日期:</font>[field:stime/] <br /><br>
+<font color="red">文章所属栏目的目录:</font>[field:typedir/] <br /><br>
+<font color="red">文章所属栏目的名称:</font>[field:typename/] <br /><br>
+<font color="red">文章所属栏目的文字链接:</font>[field:typelink/] <br /><br>
+<font color="red">文章的图片链接:</font>[field:imglink/] <br /><br>
+<font color="red">文章的缩略图:</font>[field:image/] <br /><br>
 {/dede:arclist}<br>
 得到如下返回数据：<br>
-<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image001-2.gif"><!-- raw HTML omitted --></a><br>
+<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image001-2.gif"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="476" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image001-thumb.gif" width="500" border="0" /></a><br>
 文章篇幅所限，未能列出所有的属性和字段调用的方法。请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。<br>
 三、【Arclist 标记】延伸出来的别名标记（实用又个性化，建议关注使用）<br>
 为了使网页内容更具个性化，人性化，官方在【Arclist 标记】的基础上延伸出来一些别外标签，如：hotart、coolart、likeart、artlist、imglist、imginfolist、specart、autolist 。非常好！<br>
 我调试【imglist标记】的具体代码如下：<br>
 {dede:imglist typeid=” row=’2′ col=’1’  titlelen=’20’ infolen=”<br>
 imgwidth=’100′ imgheight=’80’}<br>
-[field:imglink/]  [field:textlink/]<!-- raw HTML omitted --><br>
+[field:imglink/]  [field:textlink/]<br /><br>
 {/dede:imglist}<br>
 得到如下返回数据：<br>
-<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-2.gif"><!-- raw HTML omitted --></a><br>
+<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-2.gif"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="287" alt="clip_image002" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsarclist-f6d4clip-image002-thumb.gif" width="392" border="0" /></a><br>
 如上例，其它的别名标记，朋友们可以举一反三，融会贯通！</p>
 
                     

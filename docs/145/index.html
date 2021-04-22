@@ -370,13 +370,13 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 我调试的方法是：<br>
 将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Mynews 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。<br>
 我调试【Mynews 标记】的具体代码如下：<br>
-{dede:mynews row=’2′ titlelen=’30’}标题：[field:title/] <!-- raw HTML omitted --><br>
-作者：[field:writer/] <!-- raw HTML omitted --><br>
-时间：[field:senddate function=&ldquo;strftime(‘%y-%m-%d %H:%M’,@me)&quot;/] <!-- raw HTML omitted --><br>
-内容：[field:body/] <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><br>
+{dede:mynews row=’2′ titlelen=’30’}标题：[field:title/] <br /><br>
+作者：[field:writer/] <br /><br>
+时间：[field:senddate function=&ldquo;strftime(‘%y-%m-%d %H:%M’,@me)&quot;/] <br /><br>
+内容：[field:body/] <br /><br /><br /><br>
 {/dede:mynews}<br>
 得到如下返回数据：<br>
-<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmynews-119fdclip-image001-2.gif"><!-- raw HTML omitted --></a></p>
+<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmynews-119fdclip-image001-2.gif"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="386" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmynews-119fdclip-image001-thumb.gif" width="456" border="0" /></a></p>
 
                     
                     <HR width="100%" id="EOF">

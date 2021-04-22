@@ -39,7 +39,8 @@
 当然，自定义宏标记里面也可以加入dedecms的标记内容，适合当前栏目的显示内容，不过需要在调用代码中将ismake设为yes才可以，也可以通过设置typeid使自定义宏标记在特定栏目中显示。
 有人会问，我已经生成了很多页面了，现在想更改了一下自定义宏标记的内容，那岂不是要更改后重新再生成一遍，那样就不方便了。
 其实柏拉图早就考虑到这点，在自定义宏标记中可以使用javascript调用，这样以来，只要改变一次就可以实现全局改变的效果。
-具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&gt;我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
+具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&gt;
+我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
 怎么样，自定义宏标记内容强大吧，相信他的引入会给你的模板制作带来更好的效果。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lsvking.github.io/134/" /><meta property="article:section" content="posts" />
@@ -75,7 +76,8 @@
 当然，自定义宏标记里面也可以加入dedecms的标记内容，适合当前栏目的显示内容，不过需要在调用代码中将ismake设为yes才可以，也可以通过设置typeid使自定义宏标记在特定栏目中显示。
 有人会问，我已经生成了很多页面了，现在想更改了一下自定义宏标记的内容，那岂不是要更改后重新再生成一遍，那样就不方便了。
 其实柏拉图早就考虑到这点，在自定义宏标记中可以使用javascript调用，这样以来，只要改变一次就可以实现全局改变的效果。
-具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&gt;我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
+具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&gt;
+我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
 怎么样，自定义宏标记内容强大吧，相信他的引入会给你的模板制作带来更好的效果。"/>
 
 
@@ -400,13 +402,13 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 我有一个网站模板底部信息，其长度已经超出了系统可以设置的网站版权（cfg_powerby）的长度，但是我想实现一段代码，可以在不同模板（页面）中显示相同内容的效果。<br>
 我们就可以使用自定义宏标记来实现这个效果<br>
 如图进行设置：<br>
-<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-2.gif"><!-- raw HTML omitted --></a><br>
+<a href="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-2.gif"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="450" alt="clip_image001" src="http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmsmytag-10f34clip-image001-thumb.gif" width="599" border="0" /></a><br>
 然后我们回到模板制作的界面，将模板中的{dede:global name=’cfg_powerby’/}，替换为我们设置的自定义宏标记：<br>
 {dede:mytag name=’footer’/},更新下，是不是已经变为我们设置的标记内容了啊。<br>
 当然，自定义宏标记里面也可以加入dedecms的标记内容，适合当前栏目的显示内容，不过需要在调用代码中将ismake设为yes才可以，也可以通过设置typeid使自定义宏标记在特定栏目中显示。<br>
 有人会问，我已经生成了很多页面了，现在想更改了一下自定义宏标记的内容，那岂不是要更改后重新再生成一遍，那样就不方便了。<br>
 其实柏拉图早就考虑到这点，在自定义宏标记中可以使用javascript调用，这样以来，只要改变一次就可以实现全局改变的效果。<br>
-具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&gt;<!-- raw HTML omitted --><br>
+具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&gt;</script><br>
 我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。<br>
 怎么样，自定义宏标记内容强大吧，相信他的引入会给你的模板制作带来更好的效果。</p>
 

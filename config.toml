@@ -19,6 +19,11 @@ publishDir = "docs"
     style = "perldoc"
     tabWidth = 4
 
+[markup.goldmark]
+    [markup.goldmark.renderer]
+        unsafe = true
+            
+            
 [params]
 subtitle = "透过我的双眼看世界"
 enableGitalk = true

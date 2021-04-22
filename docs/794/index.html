@@ -338,12 +338,52 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                     <p>最近在写东西，看到有些HMVC的教程，于是就花了些时间去了解了一下，下边就来谈一谈。</p>
 <p>HMVC(Hierarchical-Model-View-Controller)，故名思意，就是按等级划分的MVC模式，MVC我想不必多解释了，至于什么叫做按等级划分的，我们来看几张图就明白了。</p>
-<p><!-- raw HTML omitted --></p>
+<p><img class="alignnone size-full wp-image-797" title="jw0721hmvc1" src="http://lsvking.github.io/wp-content/uploads/2009/12/jw0721hmvc14.gif" alt="jw0721hmvc1" width="425" height="264" /></p>
 <p>这张图，你搜索所有的HMVC教程都会看到这个，一句话简单的解释一下，HMVC模式就是吧MVC又细分成了多个MVC，每个模块就分成一个MVC。拿CI的结构来说：</p>
-<!-- raw HTML omitted -->
+<div>
+  <pre>application
+	|- controllers
+		|- controllers1.php
+		|- controllers2.php
+		|- ...
+	|- models
+		|- models1.php
+		|- models2.php
+		|- ...
+	|- views
+		|- views1
+			|- index.php
+			|- footer.php
+			|- ...
+		|- views2
+			|- index.php
+			|- footer.php
+			|- ...
+		|- ...
+	|-...</pre>
+</div>
 <p>这个就是CI原来的结构，如果是HMVC的话 结构就是：</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>application
+	|- ....  modules
+	|- modules1
+		|- controllers
+			|- controllers.php
+		|- models
+			|- models.php
+		|- views
+			|- index.php
+			|- footer.php
+			|- ...
+	|- modules2
+		|- controllers
+			|- controllers.php
+		|- models
+			|- models.php
+		|- views
+			|- index.php
+			|- footer.php
+			|- ...
+	|-...</pre>
 <p>这样大家就应该很直观的看到区别了，这样的好处就是每个模块的工作分的更细致了，具体的体现应该就是能够实现类似AJAX的效果，需要那块就刷新那块，从而提高代码的重用性，提升用户体验，当然也使得项目更复杂了。</p>
 <p>这个还是适合稍微大一的的项目了。 最后给几个CI的 HMVC解决方案：</p>
 <p>CI 很有名的应用：OpenBlog所使用的 <a href="http://www.phpall.cn/forum/read.php?tid=263">http://www.phpall.cn/forum/read.php?tid=263</a></p>

@@ -21,7 +21,10 @@
 我调试的方法是：
 将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Pagetitle 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagetitle 标记】的具体代码如下：
-文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagetitle style=’select’/}{dede:prenext/} 得到如下返回数据：
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}
+文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}
+{dede:pagetitle style=’select’/}
+{dede:prenext/} 得到如下返回数据：
 
 注意：
 想要使用【Pagetitle 标记】的前提条件是，文章存在分页，而且要手动在需分的地方加上#p#副标题#e#，实现分页的。
@@ -40,7 +43,10 @@
 我调试的方法是：
 将templets\default\文件夹下的article_article.htm文件中的代码，全部掏空。放入调用【Prenext 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagelist 标记】的具体代码如下：
-文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagebreak/}{dede:prenext/} 得到如下返回数据：</description>
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}
+文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}
+{dede:pagebreak/}
+{dede:prenext/} 得到如下返回数据：</description>
     </item>
     
     <item>
@@ -55,7 +61,9 @@
 我调试的方法是：
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新文档HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各个文档，就 可以得到返回的数据。
 我调试【Pagelist 标记】的具体代码如下：
-文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}{dede:pagebreak/}
+文章标标题:{dede:field name=&amp;ldquo;title&amp;rdquo;/}
+文章内容:{dede:field name=&amp;ldquo;body&amp;rdquo;/}
+{dede:pagebreak/}
 得到如下返回数据：
 
 注意：想要使用【Pagebreak 标记】的前提条件是，文章存在分页。文章较短，我是手动在需分的地方加上 #p#分页标题#e# ，实现分页的。如果没有分页，调用这个标记，返回的都是空数据，徒劳。</description>
@@ -72,7 +80,8 @@
 通过调试了解其使用方法
 我调试的方法是：
 将templets\default\文件夹下的list_default.htm和htmlist_article.htm文件中的代码，全部掏空。放 入调用【Pagelist 标记】的代码，再在管理后台进行操作，如下：HTML更新–&amp;gt;更新栏目HTML–&amp;gt;开始生成HTML。再在IE中访问网站的各栏封面和列 表，就可以得到返回的数据。
-我调试【Pagelist 标记】的具体代码如下：</description>
+我调试【Pagelist 标记】的具体代码如下：
+ {dede:list col=&amp;#8217;1&amp;#8242; row=&amp;#8217;3&amp;#8242; titlelen=&amp;#8217;20&amp;#8217; infolen=&amp;#8217;100&amp;#8242; imgwidth=&amp;#8217;120&amp;#8242; imgheight=&amp;#8217;80&amp;#8217; pagesize=&amp;#8217;3&amp;#8242; typeid=&amp;#8217;95&amp;#8217;} \[field:imglink/\] \[field:textlink/\] [field:info/] {/dede:list}  {dede:pagelist listsize=&amp;#8217;3&amp;#8242; listitem=&amp;#8217;index pre pageno next end option&amp;#8217;/} 得到如下返回数据： [][1] </description>
     </item>
     
     <item>
@@ -88,7 +97,8 @@
 将templets\default\文件夹下的index.html文件代码，全部掏空。放入调用【Channelartlist 标记】的代码，再在IE中访问网站主页index.php，就可以得到返回的数据。
 例1
 我调试【Channelartlist 标记】的具体代码如下：
-{dede:channelArtlist typeid=&amp;ldquo;94&amp;rdquo; col=&amp;ldquo;1&amp;rdquo;}</description>
+{dede:channelArtlist typeid=&amp;ldquo;94&amp;rdquo; col=&amp;ldquo;1&amp;rdquo;}
+{dede:type} [field:typename/] {/dede:type}   {dede:arclist row=&#34;5&#34;} [field:textlink/] {/dede:arclist}    {/dede:channelArtlist} 得到如下返回数据： [][1] 注意：细心的朋友会发现，使用【Channelartlist 标记】时，需要你对div + css或者table的控制能力较强，否则在页面中很难控制它。请大家他细看下面例2，例1与例2代码上相差很小，但得到的布局却相差很大。仔细对比一下吧！ 例2 我调试【Channelartlist 标记】的具体代码如下： {dede:channelArtlist typeid=&#34;94&#34; col=&#34;1&#34;} {dede:type} [field:typename/] {/dede:type}   {dede:arclist row=&#34;5&#34;} [field:textlink/] {/dede:arclist}    {/dede:channelArtlist} 得到如下返回数据： [][2] </description>
     </item>
     
     <item>
@@ -129,7 +139,11 @@
 补充：
 
 我调试【Flink 标记】的具体代码如下：
-全部用文字显示：{dede:flink type=’textall’ row=’4’ titlelen=’20’}{/dede:flink}文字和图文混合排列：{dede:flink type=’textimage’ row=’4’ titlelen=’20’}{/dede:flink}仅显示不带Logo的链接：{dede:flink type=’text’ row=’4’ titlelen=’20’}{/dede:flink}仅显示带Logo的链接：{dede:flink type=’image’ row=’4’ titlelen=’20’}{/dede:flink}得到如下返回数据：</description>
+全部用文字显示：{dede:flink type=’textall’ row=’4’ titlelen=’20’}{/dede:flink}
+文字和图文混合排列：{dede:flink type=’textimage’ row=’4’ titlelen=’20’}{/dede:flink}
+仅显示不带Logo的链接：{dede:flink type=’text’ row=’4’ titlelen=’20’}{/dede:flink}
+仅显示带Logo的链接：{dede:flink type=’image’ row=’4’ titlelen=’20’}{/dede:flink}
+得到如下返回数据：</description>
     </item>
     
     <item>
@@ -181,7 +195,8 @@ titlebackground=” tablebgcolor=’#FFFFFF’}
 当然，自定义宏标记里面也可以加入dedecms的标记内容，适合当前栏目的显示内容，不过需要在调用代码中将ismake设为yes才可以，也可以通过设置typeid使自定义宏标记在特定栏目中显示。
 有人会问，我已经生成了很多页面了，现在想更改了一下自定义宏标记的内容，那岂不是要更改后重新再生成一遍，那样就不方便了。
 其实柏拉图早就考虑到这点，在自定义宏标记中可以使用javascript调用，这样以来，只要改变一次就可以实现全局改变的效果。
-具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&amp;lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&amp;gt;我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
+具体操作：进入自定义标记管理，在相对应的标记管理项目中有JS调用这个选项，单击，dedecms自动生成调用该ID标记的js代码，例如&amp;lt; script src=’/plus/mytag_js.php?aid=1′ language=’javascript’&amp;gt;
+我们将刚才的{dede:mytag name=’footer’/}用js替换掉，更新下，是不是还是原来的效果，我们再修改下标记的内容，怎么样？全局发生了变化。
 怎么样，自定义宏标记内容强大吧，相信他的引入会给你的模板制作带来更好的效果。</description>
     </item>
     
@@ -217,7 +232,8 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
 我调试【Channel 标记】的具体代码如下：
 {dede:type typeid=’96’}{/dede:type}
 {dede:channel typeid=’96’}
-&amp;lt;a href=&#39;[field:typelink /]’&amp;gt;[field:typename/]{/dede:channel}
+&amp;lt;a href=&#39;[field:typelink /]’&amp;gt;[field:typename/]
+{/dede:channel}
 得到如下返回数据：
 
 通过以上两行代码的对比，相信你的认识会更深刻。前者是生成单一的数据，后者通过数组生成一组的数据。</description>
@@ -242,13 +258,15 @@ autochannel，autolist 是专门给懒人用的，partsort 的属性是表示排
 调用方法一：
 我调试【Channel 标记】的具体代码如下：
 {dede:channel row=’3′ type=’top’}
-[field:typename/]{/dede:channel}
+[field:typename/]
+{/dede:channel}
 得到如下返回数据：
 
 调用方法二：
 我调试【imglist标记】的具体代码如下：
 {dede:channel row=’3′ type=’sun’ typeid=’96’}
-[field:typename/]{/dede:channel}
+[field:typename/]
+{/dede:channel}
 得到如下返回数据：</description>
     </item>
     
@@ -273,13 +291,20 @@ index_article.htm、list_article.htm、article_article.htm等类似的模板文�
 用法一：
 这种用法，主要是从数据库获取相关的数据，特别是系统变量的数据。
 我调试【Arclist 标记】的具体代码如下：
-调用position标记,得到:栏目一 &amp;gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}插件路径：{dede:field name=’phpurl’/}模板路径：{dede:field name=’templeturl’/}版权信息：{dede:field name=’powerby’/}主页路径：{dede:field name=’indexurl’/}主页名称：{dede:field name=’indexname’/}得到如下返回数据：
+调用position标记,得到:栏目一 &amp;gt; 栏目二” 这样形式的链接：{dede:field name=’position’/}
+插件路径：{dede:field name=’phpurl’/}
+模板路径：{dede:field name=’templeturl’/}
+版权信息：{dede:field name=’powerby’/}
+主页路径：{dede:field name=’indexurl’/}
+主页名称：{dede:field name=’indexname’/}
+得到如下返回数据：
 
 请朋友们举一反三，增删属性和写入代码进行调试，加深印象。最好是对照官方的Dedecms文档进行调试，我这样做收获很大的。
 用法二：
 这一种用法比较灵活，作用也非常大，但必须有HTML知识才能运用的比较好，
 我调试【Arclist 标记】的具体代码如下：
-注意：本页面的文字和链接都是经过dede.css处理的织梦论坛得到如下返回数据：</description>
+注意：本页面的文字和链接都是经过dede.css处理的
+织梦论坛 得到如下返回数据：</description>
     </item>
     
     <item>
@@ -312,7 +337,8 @@ imgwidth=’100′ imgheight=’80’}
 我调试【imglist标记】的具体代码如下：
 {dede:imglist typeid=” row=’2′ col=’1’ titlelen=’20’ infolen=”
 imgwidth=’100′ imgheight=’80’}
-[field:imglink/] [field:textlink/]{/dede:imglist}
+[field:imglink/] [field:textlink/]
+{/dede:imglist}
 得到如下返回数据：
 
 如上例，其它的别名标记，朋友们可以举一反三，融会贯通！</description>
@@ -335,8 +361,11 @@ C、{dede:标记名称 属性=’值’}自定义样式模板(InnerText){/dede:�
 将templets\default\文件夹下的index.html文件代码，全部掏空。放入自己想要调试的标签，再在IE中访问网站主页index.php，就可以得到返回的数据。
 比如：
 a、放入标签{dede:global name=&amp;ldquo;cfg_webname&amp;rdquo; /}就得到了“网站名称”
-b、放入标签{dede:artlist typeid=” row=5}[field:title/]{/dede:artlist}就返回5篇文章的标题。
-c、放入标签{dede:arclist infolen=’100′ row=5}[field:textlink/][field:info/]{/dede:arclist}就返回5篇文章的标题和相应的内容简介
+b、放入标签{dede:artlist typeid=” row=5}[field:title/]
+{/dede:artlist}就返回5篇文章的标题。
+c、放入标签{dede:arclist infolen=’100′ row=5}[field:textlink/]
+[field:info/]
+{/dede:arclist}就返回5篇文章的标题和相应的内容简介
 注意：abc实例是与上面ABC三种形式相对应的。大家可以按照官方的文档，逐个测试，举一反三。
 至于DedeCMS程序是怎样实现的，我不懂PHP，搞不清楚，我觉得也没必要全都弄懂，搞模板的就专心搞模板，程序的归由技术人员去处理。
 搞清楚上面内容，基本上就会调用数据库中自己需要的数据了。
