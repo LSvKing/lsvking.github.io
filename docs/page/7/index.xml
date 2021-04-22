@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <title>龙舍·嬴皇志</title>
     <link>https://lsvking.github.io/</link>
-    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <description>Recent content on 龙舍·嬴皇志</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
     
@@ -18,7 +18,7 @@
         <pubDate>Sat, 22 Mar 2008 21:08:15 +0000</pubDate>
         
         <guid>https://lsvking.github.io/160/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/160/ -&lt;p&gt;【Prenext 标记】表示获取文档“上一篇／下一篇”的链接列表。&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/160/ -&lt;p&gt;【Prenext 标记】表示获取文档“上一篇／下一篇”的链接列表。&lt;br&gt;
 适用范围：仅文档模板。&lt;br&gt;
 通过调试了解其使用方法&lt;br&gt;
 我调试的方法是：&lt;br&gt;
@@ -41,7 +41,7 @@
         <pubDate>Sat, 22 Mar 2008 20:49:16 +0000</pubDate>
         
         <guid>https://lsvking.github.io/157/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/157/ -&lt;p&gt;【Pagebreak 标记】表示文档的分页链接列表。&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/157/ -&lt;p&gt;【Pagebreak 标记】表示文档的分页链接列表。&lt;br&gt;
 适用范围：仅文档模板。&lt;br&gt;
 通过调试了解其使用方法&lt;br&gt;
 我调试的方法是：&lt;br&gt;
@@ -64,7 +64,7 @@
         <pubDate>Sat, 22 Mar 2008 20:44:49 +0000</pubDate>
         
         <guid>https://lsvking.github.io/154/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/154/ -&lt;p&gt;【Pagelist 标记】表示分页页码列表&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/154/ -&lt;p&gt;【Pagelist 标记】表示分页页码列表&lt;br&gt;
 适用范围：列表模板&lt;br&gt;
 通过调试了解其使用方法&lt;br&gt;
 我调试的方法是：&lt;br&gt;
@@ -90,7 +90,7 @@ infolen=&amp;#8217;100&amp;#8242; imgwidth=&amp;#8217;120&amp;#8242; imgheight=&
         <pubDate>Sat, 22 Mar 2008 20:38:28 +0000</pubDate>
         
         <guid>https://lsvking.github.io/151/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/151/ -&lt;p&gt;【Channelartlist 标记】用于获取当前频道的下级栏目的内容列表。该标记在封面模板（包括主页）中的经常被用到，具体用法见下面实例。&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/151/ -&lt;p&gt;【Channelartlist 标记】用于获取当前频道的下级栏目的内容列表。该标记在封面模板（包括主页）中的经常被用到，具体用法见下面实例。&lt;br&gt;
 除了宏标记外，channelArtlist 是唯一一个可以直接嵌套其它标记的标记，不过仅限于嵌套 {dede:type}{/dede:type} 和 {dede:arclist}{/dede:arclist} 两个标记。&lt;br&gt;
 通过调试了解其使用方法&lt;br&gt;
 我调试的方法是：&lt;br&gt;
@@ -147,7 +147,7 @@ infolen=&amp;#8217;100&amp;#8242; imgwidth=&amp;#8217;120&amp;#8242; imgheight=&
         <pubDate>Sat, 22 Mar 2008 20:06:15 +0000</pubDate>
         
         <guid>https://lsvking.github.io/145/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/145/ -&lt;p&gt;【Mynews 标记】用于获取站内新闻。&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/145/ -&lt;p&gt;【Mynews 标记】用于获取站内新闻。&lt;br&gt;
 站内新闻有利于站长及时与会员沟通。&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
@@ -175,7 +175,7 @@ infolen=&amp;#8217;100&amp;#8242; imgwidth=&amp;#8217;120&amp;#8242; imgheight=&
         <pubDate>Sat, 22 Mar 2008 20:04:25 +0000</pubDate>
         
         <guid>https://lsvking.github.io/142/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/142/ -&lt;p&gt;【Flink 标记】用于获取友情链接。&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/142/ -&lt;p&gt;【Flink 标记】用于获取友情链接。&lt;br&gt;
 调用该标记后可以得到四种友情链接的形式。&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
@@ -204,7 +204,7 @@ infolen=&amp;#8217;100&amp;#8242; imgwidth=&amp;#8217;120&amp;#8242; imgheight=&
         <pubDate>Sat, 22 Mar 2008 19:29:03 +0000</pubDate>
         
         <guid>https://lsvking.github.io/137/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/137/ -&lt;p&gt;【Vote 标记】用于获取一组投票表单。&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/137/ -&lt;p&gt;【Vote 标记】用于获取一组投票表单。&lt;br&gt;
 其使用范围限于：封面模板。&lt;br&gt;
 可先进入后台，按下面操作方法填写好调查内容：&lt;br&gt;
 辅助插件–&amp;gt;投票模块–&amp;gt;增加一组投票&lt;br&gt;
@@ -229,7 +229,7 @@ titlebackground=” tablebgcolor=’#FFFFFF’}&lt;br&gt;
         <pubDate>Sat, 22 Mar 2008 19:20:13 +0000</pubDate>
         
         <guid>https://lsvking.github.io/134/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/134/ -&lt;p&gt;自定义宏标记【Mytag 标记】的作用：&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/134/ -&lt;p&gt;自定义宏标记【Mytag 标记】的作用：&lt;br&gt;
   可以将模板中多次出现的相同元素用一个自定义标记表示出来，从而达到，一次更改，全局更换的效果。辅助插件的广告管理也有相似的效果。&lt;/p&gt;
 &lt;p&gt;今天天涯来介绍下自定义宏标记的应用，大家可以进入后台，在“模板管理”-》“自定义宏标记”中查看到该选项。&lt;br&gt;
 自定义宏标记的作用：&lt;br&gt;
@@ -265,7 +265,7 @@ titlebackground=” tablebgcolor=’#FFFFFF’}&lt;br&gt;
         <pubDate>Sat, 22 Mar 2008 19:16:50 +0000</pubDate>
         
         <guid>https://lsvking.github.io/131/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/131/ -&lt;p&gt;{dede:autochannel partsort=’1’/}&lt;/p&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/131/ -&lt;p&gt;{dede:autochannel partsort=’1’/}&lt;/p&gt;
 &lt;p&gt;{dede:channel typeid=’1′} [field:typename/] {/dede:channel}&lt;/p&gt;
 &lt;p&gt;{dede:autolist row=12 titlelen=38 orderby=pubdate partsort=’1′}&lt;/p&gt;
 &lt;p&gt;[field:textlink/] {/dede:autolist}&lt;/p&gt;
@@ -281,7 +281,7 @@ titlebackground=” tablebgcolor=’#FFFFFF’}&lt;br&gt;
         <pubDate>Sat, 22 Mar 2008 18:28:03 +0000</pubDate>
         
         <guid>https://lsvking.github.io/130/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/130/ -&lt;p&gt;【Type 标记】表示指定的单个栏目的链接，用法非常简单。&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/130/ -&lt;p&gt;【Type 标记】表示指定的单个栏目的链接，用法非常简单。&lt;br&gt;
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmstype-102f8clip-image001-2.gif&#34;&gt;&lt;img style=&#34;border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px&#34; height=&#34;347&#34; alt=&#34;clip_image001&#34; src=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmstype-102f8clip-image001-thumb.gif&#34; width=&#34;438&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;br&gt;
 使用思路、步骤：&lt;br&gt;

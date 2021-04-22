@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>龙舍·嬴皇志 - 透过我的双眼看世界</title>
+    <title>龙舍·嬴皇志</title>
     <link>https://lsvking.github.io/</link>
-    <description>Recent content on 龙舍·嬴皇志 - 透过我的双眼看世界</description>
+    <description>Recent content on 龙舍·嬴皇志</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Mon, 05 Sep 2016 15:41:13 +0000</lastBuildDate>
     
@@ -18,7 +18,7 @@
         <pubDate>Sat, 22 Mar 2008 18:03:48 +0000</pubDate>
         
         <guid>https://lsvking.github.io/125/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/125/ -&lt;/p&gt; 
+        <description>龙舍·嬴皇志 https://lsvking.github.io/125/ -&lt;/p&gt; 
 &lt;p&gt;【Channel 标记】主要用于获取栏目列表，用法非常简单，主要是区分“type = top,sun/son,self ”的所调用的对象就行了。&lt;br&gt;
 说明：为了便于下面内容的理解，我将数据库中网站频道的截图如下：&lt;br&gt;
 &lt;a href=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-2.gif&#34;&gt;&lt;img style=&#34;border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px&#34; height=&#34;347&#34; alt=&#34;clip_image001&#34; src=&#34;http://lsvking.github.io/wp-content/uploads/2008/03/windowslivewriterdedecmschannel-fd47clip-image001-thumb.gif&#34; width=&#34;438&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;br&gt;
@@ -54,7 +54,7 @@
         <pubDate>Sat, 22 Mar 2008 17:54:06 +0000</pubDate>
         
         <guid>https://lsvking.github.io/118/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/118/ -&lt;p&gt;【Field 标记】在封面模板、列表模板、文档模板的使用频率很高，实用。主要用来获得到系统变量的值或者路径，用法很灵活。可以直接展示数据，如调用 position，得到栏目一 &amp;gt; 栏目二” 这样形式的链接；或者，调用templeturl得到/templets这样路径。&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/118/ -&lt;p&gt;【Field 标记】在封面模板、列表模板、文档模板的使用频率很高，实用。主要用来获得到系统变量的值或者路径，用法很灵活。可以直接展示数据，如调用 position，得到栏目一 &amp;gt; 栏目二” 这样形式的链接；或者，调用templeturl得到/templets这样路径。&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
 我们在使用【Field 标记】的过程中，必须明确其使用的范围，否则可能无法正常调用该标签，其使用范围是：&lt;br&gt;
@@ -97,7 +97,7 @@
         <pubDate>Sat, 22 Mar 2008 17:36:00 +0000</pubDate>
         
         <guid>https://lsvking.github.io/109/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/109/ -&lt;p&gt;从本文开始，我将根据我的学习心得写一系列的实例教程。通过实例说明DedeCMS标记的使用方法。本实例教程使用的版本是DedeCms 2007 V5.0版，在本地架设的php+mysql （APMServ）环境中测试。安装、架设等相关方法参阅寂寞天涯的整理：&lt;a href=&#34;http://bbs.dedecms.com/read.php?tid=33332&#34;&gt;http://bbs.dedecms.com/read.php?tid=33332&lt;/a&gt;。以后一系列教程都是在这个环境中使用，不再重复。因测试需要数据，我已事先在数据库录入，就不理啰嗦，马上进入正题。&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/109/ -&lt;p&gt;从本文开始，我将根据我的学习心得写一系列的实例教程。通过实例说明DedeCMS标记的使用方法。本实例教程使用的版本是DedeCms 2007 V5.0版，在本地架设的php+mysql （APMServ）环境中测试。安装、架设等相关方法参阅寂寞天涯的整理：&lt;a href=&#34;http://bbs.dedecms.com/read.php?tid=33332&#34;&gt;http://bbs.dedecms.com/read.php?tid=33332&lt;/a&gt;。以后一系列教程都是在这个环境中使用，不再重复。因测试需要数据，我已事先在数据库录入，就不理啰嗦，马上进入正题。&lt;br&gt;
 现在先讲【Arclist 标记】。【Arclist 标记】是使用率很高，相当实用，所以我们使用都必须熟练掌握。它的详细使用说明在官方Dedecms文档中已经有严密的解释，见：&lt;a href=&#34;http://www.dedecms.com/archives/templethelp/help/index.htm&#34;&gt;http://www.dedecms.com/archives/templethelp/help/index.htm&lt;/a&gt;，我们在使用过程中可以随时查阅。&lt;br&gt;
 使用思路、步骤：&lt;br&gt;
 一、明确使用范围&lt;br&gt;
@@ -148,7 +148,7 @@ imgwidth=’100′ imgheight=’80’}&lt;br&gt;
         <pubDate>Sat, 22 Mar 2008 17:21:34 +0000</pubDate>
         
         <guid>https://lsvking.github.io/108/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/108/ -&lt;p&gt;1、怎样调用数据？&lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/108/ -&lt;p&gt;1、怎样调用数据？&lt;br&gt;
     DedeCMS是大型的动态网站程序，其数据主要在存储在数据库中的，做模板就必须知道，数据是如何从数据库读取并展示在大家面前的。官方写了很多程序，将数据的提取过程变得相当简单。大家只要懂得调用适当的&amp;quot;DedeCMS标记&amp;quot;就可以调取相应的数据。调用&amp;quot;DedeCMS标记&amp;quot;的三种代码样式：&lt;br&gt;
     A、{dede:标记名称 属性=’值’/}&lt;br&gt;
     B、{dede:标记名称 属性=’值’}{/dede:标记名称}&lt;br&gt;
@@ -209,7 +209,7 @@ imgwidth=’100′ imgheight=’80’}&lt;br&gt;
         <pubDate>Sat, 22 Mar 2008 00:31:38 +0000</pubDate>
         
         <guid>https://lsvking.github.io/107/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/107/ -&lt;p&gt;在XHTML中定义ID时都用得上，主要是方便CSS定义样式时能一眼看穿。所以，CSS命名仅作参考。&lt;/p&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/107/ -&lt;p&gt;在XHTML中定义ID时都用得上，主要是方便CSS定义样式时能一眼看穿。所以，CSS命名仅作参考。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(1)页面结构类&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;容器: container&lt;/p&gt;
 &lt;p&gt;页头：header&lt;/p&gt;
@@ -279,7 +279,7 @@ imgwidth=’100′ imgheight=’80’}&lt;br&gt;
         <pubDate>Sun, 09 Mar 2008 14:09:35 +0000</pubDate>
         
         <guid>https://lsvking.github.io/106/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/106/ -&lt;p&gt;  视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用  Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影  “a Sora in Prospect Park”：&lt;/p&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/106/ -&lt;p&gt;  视频已经在 Web 上广泛流行了，但是其格式几乎都是专有的。YouTube 使用 Flash，Microsoft 使用  Windows Media®，Apple 使用 QuickTime。在一种浏览器中用来嵌入这些内容的标记在另一种浏览器中是无效的。因此， WhatWG 提议引入一个新的 video 元素，用来嵌入任意视频格式。例如，可以用以下代码嵌入我的 QuickTime 电影  “a Sora in Prospect Park”：&lt;/p&gt;
 &lt;div style=&#34;border-right: gray 1px solid; padding-right: 4px; border-top: gray 1px solid; padding-left: 4px; font-size: 8pt; padding-bottom: 4px; margin: 20px 0px 10px; overflow: auto; border-left: gray 1px solid; width: 97.5%; cursor: text; line-height: 12pt; padding-top: 4px; border-bottom: gray 1px solid; font-family: consolas, &amp;#39;Courier New&amp;#39;, courier, monospace; background-color: #f4f4f4; max-height: 200px&#34;&gt;
   &lt;div style=&#34;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;#39;Courier New&amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: #f4f4f4; border-bottom-style: none&#34;&gt;
     &lt;pre style=&#34;padding-right: 0px; padding-left: 0px; font-size: 8pt; padding-bottom: 0px; margin: 0em; overflow: visible; width: 100%; color: black; border-top-style: none; line-height: 12pt; padding-top: 0px; font-family: consolas, &amp;#39;Courier New&amp;#39;, courier, monospace; border-right-style: none; border-left-style: none; background-color: white; border-bottom-style: none&#34;&gt;&lt;span style=&#34;color: #606060&#34;&gt;   1:&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #800000&#34;&gt;video&lt;/span&gt; &lt;span style=&#34;color: #ff0000&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;=&#34;http://www.cafeaulait.org/birds/sora.mov&#34;&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;/pre&gt;&lt;/p&gt;
@@ -369,7 +369,7 @@ imgwidth=’100′ imgheight=’80’}&lt;br&gt;
         <pubDate>Sun, 09 Mar 2008 14:04:39 +0000</pubDate>
         
         <guid>https://lsvking.github.io/105/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/105/ -&lt;p&gt;HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HTML 5 提供了几个新的内联元素来满足非技术作者的需求。 &lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/105/ -&lt;p&gt;HTML4用5个不同的内联元素表示略有差异的计算机代码：var、code、kbd、tt 和 samp。但是，它无法表示时间、数字等基本数值。HTML 5 提供了几个新的内联元素来满足非技术作者的需求。 &lt;br&gt;
 &lt;strong&gt;   m&lt;/strong&gt;&lt;br&gt;
 m 元素表示文本被 “加上标志”，但是不一定要强调。可以把它想像成书中突出显示的一节。Google 的缓存页面就是典型的用例。如果链接到一个缓存的副本，搜索词就被加上标志。例如，如果搜索 “Egret”，那么缓存的 Google 页面可能像下面这样：&lt;/p&gt;
 &lt;div style=&#34;border-right: gray 1px solid; padding-right: 4px; border-top: gray 1px solid; padding-left: 4px; font-size: 8pt; padding-bottom: 4px; margin: 20px 0px 10px; overflow: auto; border-left: gray 1px solid; width: 97.5%; cursor: text; line-height: 12pt; padding-top: 4px; border-bottom: gray 1px solid; font-family: consolas, &amp;#39;Courier New&amp;#39;, courier, monospace; background-color: #f4f4f4; max-height: 200px&#34;&gt;
@@ -463,7 +463,7 @@ optimum &lt;br&gt;
         <pubDate>Sun, 09 Mar 2008 13:59:11 +0000</pubDate>
         
         <guid>https://lsvking.github.io/104/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/104/ -&lt;p&gt;     HTML 5 还增加了一些纯语义性的块级元素： &lt;br&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/104/ -&lt;p&gt;     HTML 5 还增加了一些纯语义性的块级元素： &lt;br&gt;
 &lt;strong&gt;aside figure  dialog&lt;/strong&gt; &lt;br&gt;
 我在文章和书中一直使用前两个元素。第三个元素我不经常用，它主要用于书面文本。 &lt;br&gt;
 &lt;strong&gt;aside&lt;/strong&gt; &lt;br&gt;
@@ -710,7 +710,7 @@ aside 元素代表说明、提示、边栏、引用、附加注释等，也就�
         <pubDate>Sun, 09 Mar 2008 13:53:25 +0000</pubDate>
         
         <guid>https://lsvking.github.io/103/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/103/ -&lt;p&gt;转载 &lt;a href=&#34;http://www.52css.com/article.asp?id=672&#34;&gt;52CSS&lt;/a&gt;&lt;/p&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/103/ -&lt;p&gt;转载 &lt;a href=&#34;http://www.52css.com/article.asp?id=672&#34;&gt;52CSS&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;    由于缺少结构，即使是形式良好的 HTML 页面也比较难以处理。必须分析标题的级别，才能看出各个部分的划分方式。边栏、页脚、页眉、导航条、主内容区和各篇文章都由通用的 div 元素来表示。HTML 5 添加了一些新元素，专门用来标识这些常见的结构：  &lt;br&gt;
 · section：这可以是书中的一章或一节，实际上可以是在 HTML 4 中有自己的标题的任何东西  &lt;br&gt;
 · header：页面上显示的页眉；与 head 元素不一样  &lt;br&gt;
@@ -912,7 +912,7 @@ aside 元素代表说明、提示、边栏、引用、附加注释等，也就�
         <pubDate>Thu, 06 Mar 2008 20:28:33 +0000</pubDate>
         
         <guid>https://lsvking.github.io/100/</guid>
-        <description>龙舍·嬴皇志 - 透过我的双眼看世界 https://lsvking.github.io/100/ -&lt;p&gt;          LanQQ 修改自十分著名的飞鸽传输，在原传输功能基础上，增加了添加好友，聊天室等功能。俨然一个局域网版本的 QQ 聊天加文件传输工具。&lt;/p&gt;
+        <description>龙舍·嬴皇志 https://lsvking.github.io/100/ -&lt;p&gt;          LanQQ 修改自十分著名的飞鸽传输，在原传输功能基础上，增加了添加好友，聊天室等功能。俨然一个局域网版本的 QQ 聊天加文件传输工具。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.yupoo.com/photos/view?id=ff808081187e95a701187f4ab5c10802&#34; onclick=&#34;javascript:pageTracker._trackPageview (&#39;/outbound/www.yupoo.com&#39;);&#34; title=&#34;来YUPOO看我的照片&#34;&gt;&lt;/p&gt;&lt;/p&gt;
 &lt;p style=&#34;text-align: center&#34;&gt;
   &lt;img src=&#34;http://pic.yupoo.com/rijatftf/5728153220a2/4yrovlhm.jpg&#34; alt=&#34;lanqq&#34; border=&#34;0&#34; height=&#34;527&#34; width=&#34;277&#34; /&gt;

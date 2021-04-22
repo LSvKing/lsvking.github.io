@@ -1,7 +1,7 @@
 baseURL = "https://lsvking.github.io/"
-DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
-languageCode = "en-us"
-title = "龙舍·嬴皇志 - 透过我的双眼看世界"
+DefaultContentLanguage = "zh" # Theme's display language, supports: en, fr, zh, zh-hant
+languageCode = "zh-cn"
+title = "龙舍·嬴皇志"
 copyright = "This is a customized copyright."
 theme = "diary"
 publishDir = "docs"
