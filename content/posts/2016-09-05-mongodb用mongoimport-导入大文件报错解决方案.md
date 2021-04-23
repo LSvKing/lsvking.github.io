@@ -8,7 +8,7 @@ categories:
   - 技术
 tags:
   - Mongodb
-
+description: 用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的文件，大的数据迁移都是用的restore导入的。这次遇到一次数据迁移导出的json 文件大概有4.7G左右,再倒入的时候出现了问题
 ---
 用Mongoexport 可以很方便的导出一个集合到Json格式 同时也可以用MongoImport 将数据导入进去,之前用的时候都没有导入太大的文件，大的数据迁移都是用的restore导入的。这次遇到一次数据迁移导出的json 文件大概有4.7G左右,再倒入的时候出现了问题
 
